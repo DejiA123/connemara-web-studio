@@ -1,8 +1,8 @@
-# Connemara Web Studio
+# Book Direct Connemara
 
 This repo holds your business website, a template that turns out a client site from one file, three demo sites, and the paperwork. You don't need a domain: it's hosted free on Vercel (with GitHub Pages as a backup copy).
 
-**Live site:** https://connemara-web-studio.vercel.app/ (Irish: `/ga/`)
+**Live site:** https://bookdirectconnemara.vercel.app/ (Irish: `/ga/`)
 
 Backup copy: https://dejia123.github.io/connemara-web-studio/
 
@@ -37,7 +37,7 @@ node build.mjs --serve
 Then open http://localhost:8080/sites/ardmor-country-house/ (and `/ga/` for Irish).
 
 To publish it, commit and push. About a minute later it's live at
-`https://connemara-web-studio.vercel.app/sites/ardmor-country-house/`.
+`https://bookdirectconnemara.vercel.app/sites/ardmor-country-house/`.
 
 Every sample shows a banner saying "Sample website prepared for …" and is hidden from Google. Its booking form only *shows* the message the owner would get; nothing is sent.
 

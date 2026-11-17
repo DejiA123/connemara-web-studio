@@ -17,7 +17,7 @@ Commit and push: the site rebuilds itself in about a minute.
 - Keep every receipt from today. Use `tools/invoice.html` for invoices.
 
 ## 4. Google Business Profile (15 min)
-business.google.com → "Connemara Web Studio" → Service-area business (hide your home address) → areas: Connemara, Galway, Aran Islands → website: your GitHub Pages link.
+business.google.com → "Book Direct Connemara" → Service-area business (hide your home address) → areas: Connemara, Galway, Aran Islands → website: https://bookdirectconnemara.vercel.app.
 
 ## 5. WhatsApp Business (10 min)
 Install, set the business name and description, add a catalogue with the 3 packages and your site link.

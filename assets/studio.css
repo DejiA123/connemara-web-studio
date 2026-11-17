@@ -1,4 +1,4 @@
-/* Connemara Web Studio: your own site */
+/* Book Direct Connemara: your own site */
 *,*::before,*::after{box-sizing:border-box}
 :root{--ink:#14212b;--muted:#5a6870;--bg:#f7f4ee;--alt:#eef2f2;--card:#fff;--line:#e2ddd3;--sea:#1f4e6b;--sea2:#2f6f8f;--heather:#7a4f7d;--gold:#d9a441;--radius:16px;--shadow:0 1px 2px rgba(0,0,0,.05),0 10px 30px rgba(20,35,45,.09);--accent:var(--sea);--accent-ink:#fff}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -151,3 +151,4 @@ p{margin:0 0 1em}
 .legal h2{font-size:1.3rem;margin-top:1.6em}
 .cost small{font-family:Inter,sans-serif;font-size:.9rem;color:var(--muted);margin-right:4px}
 .hero-bg .art circle{display:none}
+.logo span{font-weight:500}.logo b{font-weight:700;color:var(--sea)}

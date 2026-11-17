@@ -82,7 +82,7 @@ export function renderStudio(studio, lang, ctx) {
 </head>
 <body>
 <header class="top"><div class="wrap topin">
-  <a class="logo" href="#top">${icon('sea', 26)}<span>${esc(s.studioName)}</span></a>
+  <a class="logo" href="#top">${icon('sea', 26)}<span>${esc(s.studioName).replace(/^Book Direct/, "<b>Book Direct</b>")}</span></a>
   <nav class="nav"><a href="#how">${x('How it works', 'Conas a oibríonn sé')}</a><a href="#prices">${x('Prices', 'Praghsanna')}</a><a href="#examples">${x('Examples', 'Samplaí')}</a><a href="#faq">${x('Questions', 'Ceisteanna')}</a></nav>
   <div class="top-actions"><a class="lang" href="${langHref}" hreflang="${other}" lang="${other}">${x('Gaeilge', 'English')}</a><a class="btn btn-sm" href="#contact">${x('Free sample', 'Sampla saor in aisce')}</a></div>
 </div></header>

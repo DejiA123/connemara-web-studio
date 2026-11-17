@@ -1,6 +1,6 @@
 # Website Agreement
 
-**Between:** [YOUR NAME], trading as Connemara Web Studio, [your address] ("I")
+**Between:** Ayodeji Augustine, trading as Book Direct Connemara, [your address] ("I")
 **and:** [CLIENT NAME], [BUSINESS NAME], [address] ("you")
 **Date:** [DATE]
 
@@ -58,7 +58,7 @@ This agreement is governed by Irish law.
 | | |
 |---|---|
 | **Signed (client):** ______________________ | **Signed:** ______________________ |
-| Name: | Name: [YOUR NAME] |
+| Name: | Name: Ayodeji Augustine |
 | Date: | Date: |
 
 *Template only: not legal advice. Have it checked once (e.g. through LEO Galway's mentoring) before relying on it.*
