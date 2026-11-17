@@ -230,3 +230,5 @@ blockquote{border-top-color:var(--warm)}
 .card-text{border-top:4px solid var(--accent)}
 .card-ic{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 0;color:var(--accent)}
 .ptag-in{position:static;box-shadow:none;background:color-mix(in srgb,var(--accent) 8%,#fff);padding:5px 11px}
+
+.req input:not([type=checkbox]),.req select{height:46px}

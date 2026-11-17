@@ -120,8 +120,8 @@
       calc.querySelector('[data-out=saved]').textContent = fmt(saved);
       var months = saved > 0 ? Math.ceil(price / (saved / 12)) : 0;
       calc.querySelector('[data-out=payback]').innerHTML = !saved ? '' : months <= 12
-        ? (ga ? 'Íocann an suíomh €570 as féin i thart ar <b>' + months + ' mhí</b>. Ina dhiaidh sin, is leatsa an t-airgead.' : 'The €570 website pays for itself in about <b>' + months + (months === 1 ? ' month' : ' months') + '</b>. After that, the money is yours.')
-        : (ga ? 'Íocann an suíomh €570 as féin i thart ar <b>' + months + ' mí</b>.' : 'The €570 website pays for itself in about <b>' + months + ' months</b>.');
+        ? (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>. Ina dhiaidh sin, is airgead breise duit é, gach bliain.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + (months === 1 ? ' month' : ' months') + '</b>. After that, the savings are extra money for you, every year.')
+        : (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + ' months</b>.');
     };
     calc.addEventListener('input', run);
     run();

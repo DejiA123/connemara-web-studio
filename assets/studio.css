@@ -248,3 +248,10 @@ body{background:var(--bg)}
 .calc-line b{color:var(--ink)}
 .calc-big{margin:0;background:linear-gradient(135deg,var(--sea),var(--navy));color:#fff;border-radius:12px;padding:16px 18px;font-size:1.08rem;line-height:1.45}
 .calc-big b{font-family:Fraunces,Georgia,serif;font-size:1.9rem;color:var(--gold2);display:inline-block;vertical-align:-3px}
+.calc .row2{align-items:end}
+.calc .row2 label{grid-template-rows:auto auto;align-content:end}
+.calc .eur::before{line-height:1;font-size:1rem;font-weight:600;color:var(--ink)}
+.calc input[type=number]{font:600 1rem/1.2 Inter,system-ui,sans-serif;height:46px;padding-top:0;padding-bottom:0}
+.calc .eur input{padding-left:30px}
+
+.req input:not([type=checkbox]),.req select{height:46px}
