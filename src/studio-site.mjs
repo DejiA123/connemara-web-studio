@@ -78,6 +78,8 @@ export function renderStudio(studio, lang, ctx) {
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${rel}assets/studio.css">
+<link rel="preload" as="image" href="${rel}assets/img/roundstone-golden.jpg">
+<script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'ProfessionalService', name: s.studioName, areaServed: ['Connemara', 'County Galway', 'Aran Islands'], telephone: s.phone?.startsWith('TODO') ? undefined : s.phone, url: s.siteUrl?.includes('TODO') ? undefined : s.siteUrl, knowsLanguage: ['en', 'ga'] })}</script>
 </head>
 <body>
@@ -88,18 +90,26 @@ export function renderStudio(studio, lang, ctx) {
 </div></header>
 
 <section class="hero" id="top">
-  <div class="hero-bg">${landscape('atlantic', 0)}</div>
+  <div class="hero-bg"><img src="${rel}assets/img/roundstone-golden.jpg" alt="${x('Roundstone harbour in Connemara at sunset', 'Cuan Chloch na Rón i gConamara ag luí na gréine')}" fetchpriority="high"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       ${left > 0 ? `<p class="pill">${icon('star', 16)} ${x(`Founding offer: ${left} ${left === 1 ? 'place' : 'places'} left at 40% off, book by ${esc(deadline)}`, `Tairiscint bhunaidh: ${left} ${left === 1 ? 'áit' : 'áit'} fágtha ar 40% lascaine, cuir in áirithe roimh ${esc(deadline)}`)}</p>` : ''}
-      <h1>${x('Websites that take bookings, for Connemara businesses.', 'Suíomhanna a ghlacann le háirithintí, do ghnólachtaí Chonamara.')}</h1>
-      <p class="lead">${x('Stop paying 15% commission on guests who already know your name. I’ll make you a <b>free sample homepage first</b>, and you only pay if you love it.', 'Ná híoc 15% coimisiúin ar aíonna a bhfuil d’ainm acu cheana. Déanfaidh mé <b>leathanach baile samplach saor in aisce</b> duit ar dtús, agus ní íocann tú ach má thaitníonn sé leat.')}</p>
-      <div class="ctas"><a class="btn btn-lg" href="#contact">${x('Get my free sample', 'Faigh mo shampla saor in aisce')}</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-ghost" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
+      <p class="eyebrow">${x('Websites that take bookings · Connemara & Galway', 'Suíomhanna a ghlacann le háirithintí · Conamara & Gaillimh')}</p>
+      <h1>${x('Your guests already love you. <em>Let them book you direct.</em>', 'Is breá le d’aíonna thú cheana. <em>Lig dóibh áirithint a dhéanamh go díreach.</em>')}</h1>
+      <p class="lead">${x('Stop paying 15% commission on guests who already know your name. I’ll build your new website as a <b>free sample first</b>, and you only pay if you love it.', 'Ná híoc 15% coimisiúin ar aíonna a bhfuil d’ainm acu cheana. Tógfaidh mé do shuíomh nua mar <b>shampla saor in aisce ar dtús</b>, agus ní íocann tú ach má thaitníonn sé leat.')}</p>
+      <div class="ctas"><a class="btn btn-lg btn-gold" href="#contact">${x('Get my free sample', 'Faigh mo shampla saor in aisce')} →</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-glass" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
       <ul class="trust"><li>${icon('irish', 18)} ${x('Irish & English', 'Gaeilge & Béarla')}</li><li>${icon('calendar', 18)} ${x('Synced with Booking.com & Airbnb', 'Sioncronaithe le Booking.com & Airbnb')}</li><li>${icon('pin', 18)} ${x('Local: I call in and answer the phone', 'Áitiúil: tagaim ar cuairt agus freagraím an fón')}</li></ul>
     </div>
     ${demos[0] ? `<div class="phone" aria-hidden="true"><div class="phone-in"><iframe src="${rel}${esc(demos[0].path)}" title="Example" tabindex="-1" loading="lazy"></iframe></div></div>` : ''}
   </div>
 </section>
+
+<section class="stats"><div class="wrap stats-in">
+  <div class="rv"><b>15%</b><span>${x('commission you stop paying on direct guests', 'coimisiún nach n-íocann tú ar aíonna díreacha')}</span></div>
+  <div class="rv"><b>48h</b><span>${x('to see your free sample site', 'chun do shuíomh samplach saor in aisce a fheiceáil')}</span></div>
+  <div class="rv"><b>€0</b><span>${x('until you love it', 'go dtí go dtaitníonn sé leat')}</span></div>
+  <div class="rv"><b>2</b><span>${x('languages: Irish and English', 'theanga: Gaeilge agus Béarla')}</span></div>
+</div></section>
 
 <section class="sec calc-sec" id="cost"><div class="wrap two">
   <div>
@@ -123,10 +133,10 @@ export function renderStudio(studio, lang, ctx) {
 <section class="sec" id="how"><div class="wrap">
   <h2 class="center">${x('How it works', 'Conas a oibríonn sé')}</h2>
   <ol class="steps">
-    <li><span class="n">1</span><h3>${x('Free sample', 'Sampla saor in aisce')}</h3><p>${x('Tell me about your place. Within 48 hours I make a sample homepage for your business. No cost, no obligation.', 'Inis dom faoi d’áit. Laistigh de 48 uair an chloig déanfaidh mé leathanach baile samplach do do ghnó. Saor in aisce, gan cheangal.')}</p></li>
-    <li><span class="n">2</span><h3>${x('Five-minute look', 'Breathnú cúig nóiméad')}</h3><p>${x('I call in (or we do a quick video call) and show it to you on your phone.', 'Tagaim ar cuairt (nó déanaimid glao físe gearr) agus taispeánaim duit é ar do ghuthán.')}</p></li>
-    <li><span class="n">3</span><h3>${x('Half to start', 'Leath chun tosú')}</h3><p>${x('Like it? Pay half to start. I collect your prices, photos and booking rules and build the rest.', 'Taitníonn sé leat? Íoc leath chun tosú. Bailím do phraghsanna, grianghraif agus rialacha áirithinte agus tógaim an chuid eile.')}</p></li>
-    <li><span class="n">4</span><h3>${x('Live, and booking', 'Beo, agus ag glacadh áirithintí')}</h3><p>${x('You see the whole finished site before paying the balance. Then it goes live and guests book you direct.', 'Feiceann tú an suíomh críochnaithe ar fad sula n-íocann tú an t-iarmhéid. Ansin téann sé beo agus cuireann aíonna in áirithe leat go díreach.')}</p></li>
+    <li class="rv"><span class="n">1</span><h3>${x('Free sample', 'Sampla saor in aisce')}</h3><p>${x('Tell me about your place. Within 48 hours I make a sample homepage for your business. No cost, no obligation.', 'Inis dom faoi d’áit. Laistigh de 48 uair an chloig déanfaidh mé leathanach baile samplach do do ghnó. Saor in aisce, gan cheangal.')}</p></li>
+    <li class="rv"><span class="n">2</span><h3>${x('Five-minute look', 'Breathnú cúig nóiméad')}</h3><p>${x('I call in (or we do a quick video call) and show it to you on your phone.', 'Tagaim ar cuairt (nó déanaimid glao físe gearr) agus taispeánaim duit é ar do ghuthán.')}</p></li>
+    <li class="rv"><span class="n">3</span><h3>${x('Half to start', 'Leath chun tosú')}</h3><p>${x('Like it? Pay half to start. I collect your prices, photos and booking rules and build the rest.', 'Taitníonn sé leat? Íoc leath chun tosú. Bailím do phraghsanna, grianghraif agus rialacha áirithinte agus tógaim an chuid eile.')}</p></li>
+    <li class="rv"><span class="n">4</span><h3>${x('Live, and booking', 'Beo, agus ag glacadh áirithintí')}</h3><p>${x('You see the whole finished site before paying the balance. Then it goes live and guests book you direct.', 'Feiceann tú an suíomh críochnaithe ar fad sula n-íocann tú an t-iarmhéid. Ansin téann sé beo agus cuireann aíonna in áirithe leat go díreach.')}</p></li>
   </ol>
 </div></section>
 
@@ -134,7 +144,7 @@ export function renderStudio(studio, lang, ctx) {
   <h2 class="center">${x('Simple, fixed prices', 'Praghsanna simplí, socraithe')}</h2>
   <p class="center muted">${left > 0 ? x(`Founding prices for the first 3 businesses booked by ${esc(deadline)}. ${left} left.`, `Praghsanna bunaidh don chéad 3 ghnó a chuireann in áirithe roimh ${esc(deadline)}. ${left} fágtha.`) : x('Half to start, half at launch.', 'Leath chun tosú, leath ag an seoladh.')}</p>
   <div class="pkgs">
-  ${packages.map((p) => `<article class="pkg${p.featured ? ' featured' : ''}">
+  ${packages.map((p) => `<article class="rv pkg${p.featured ? ' featured' : ''}">
     ${p.featured ? `<span class="ribbon">${x('Most popular for B&Bs', 'Is mó éileamh i measc B&Banna')}</span>` : ''}
     <h3>${p.name}</h3><p class="who">${p.who}</p>
     <p class="cost">${p.from ? `<small>${p.from}</small> ` : ''}${left > 0 ? `<s>${p.normal}</s> <b>${p.founding}</b>` : `<b>${p.normal}</b>`}</p>
@@ -153,21 +163,26 @@ export function renderStudio(studio, lang, ctx) {
   </div>
 </div></section>
 
+<section class="band" style="background-image:url('${rel}assets/img/beach.jpg')"><div class="wrap band-in rv">
+  <p class="band-q">${x('“Every guest who books you on Booking.com and then Googles your name is a guest you could have had for free.”', '“Gach aoi a chuireann in áirithe trí Booking.com agus a chuardaíonn d’ainm ar Google ina dhiaidh sin, d’fhéadfá é a bheith agat saor in aisce.”')}</p>
+  <a class="btn btn-lg btn-gold" href="#contact">${x('Show me what mine would look like', 'Taispeáin dom cén chuma a bheadh ar mo cheann')} →</a>
+</div></section>
+
 <section class="sec" id="guarantee"><div class="wrap">
   <h2 class="center">${x('No risk to you', 'Gan riosca duit')}</h2>
   <div class="guar">
-    <div>${icon('euro', 30)}<h3>${x('See it before paying anything', 'Feic é sula n-íocann tú faic')}</h3><p>${x('Your sample is free. If you don’t love it, you owe nothing.', 'Tá do shampla saor in aisce. Mura dtaitníonn sé leat, níl faic le híoc.')}</p></div>
-    <div>${icon('shield', 30)}<h3>${x('Booking guarantee', 'Ráthaíocht áirithinte')}</h3><p>${x('If your site hasn’t brought you a direct booking by 30 June 2027, your care plan is free until it does.', 'Mura bhfuil áirithint dhíreach faighte agat ó do shuíomh faoi 30 Meitheamh 2027, beidh do phlean cúraim saor in aisce go dtí go bhfaighidh.')}</p></div>
-    <div>${icon('calendar', 30)}<h3>${x('Live before Easter', 'Beo roimh an gCáisc')}</h3><p>${x('Founding sites go live by 1 March 2027, or you get your deposit back.', 'Beidh suíomhanna bunaidh beo faoi 1 Márta 2027, nó gheobhaidh tú d’éarlais ar ais.')}</p></div>
-    <div>${icon('irish', 30)}<h3>${x('Irish and English', 'Gaeilge agus Béarla')}</h3><p>${x('Every site is bilingual at no extra cost. Is féidir linn labhairt as Gaeilge.', 'Bíonn gach suíomh dátheangach gan aon chostas breise.')}</p></div>
+    <div class="rv">${icon('euro', 30)}<h3>${x('See it before paying anything', 'Feic é sula n-íocann tú faic')}</h3><p>${x('Your sample is free. If you don’t love it, you owe nothing.', 'Tá do shampla saor in aisce. Mura dtaitníonn sé leat, níl faic le híoc.')}</p></div>
+    <div class="rv">${icon('shield', 30)}<h3>${x('Booking guarantee', 'Ráthaíocht áirithinte')}</h3><p>${x('If your site hasn’t brought you a direct booking by 30 June 2027, your care plan is free until it does.', 'Mura bhfuil áirithint dhíreach faighte agat ó do shuíomh faoi 30 Meitheamh 2027, beidh do phlean cúraim saor in aisce go dtí go bhfaighidh.')}</p></div>
+    <div class="rv">${icon('calendar', 30)}<h3>${x('Live before Easter', 'Beo roimh an gCáisc')}</h3><p>${x('Founding sites go live by 1 March 2027, or you get your deposit back.', 'Beidh suíomhanna bunaidh beo faoi 1 Márta 2027, nó gheobhaidh tú d’éarlais ar ais.')}</p></div>
+    <div class="rv">${icon('irish', 30)}<h3>${x('Irish and English', 'Gaeilge agus Béarla')}</h3><p>${x('Every site is bilingual at no extra cost. Is féidir linn labhairt as Gaeilge.', 'Bíonn gach suíomh dátheangach gan aon chostas breise.')}</p></div>
   </div>
 </div></section>
 
 ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   <h2 class="center">${x('See what you’d get', 'Feic cad a gheobhfá')}</h2>
   <p class="center muted">${x('Example sites for made-up businesses. Open them on your phone: they work, including the booking form.', 'Suíomhanna samplacha do ghnólachtaí samhailteacha. Oscail ar do ghuthán iad: oibríonn siad, an fhoirm áirithinte san áireamh.')}</p>
-  <div class="demos">${demos.map((d, i) => `<a class="demo" href="${rel}${esc(d.path)}${lang === 'ga' && d.bilingual ? 'ga/' : ''}">
-    <div class="demo-art">${landscape(d.theme, i)}</div>
+  <div class="demos">${demos.map((d, i) => `<a class="demo rv" href="${rel}${esc(d.path)}${lang === 'ga' && d.bilingual ? 'ga/' : ''}">
+    <div class="demo-art">${d.image ? `<img src="${rel}${esc(d.image)}" alt="" loading="lazy">` : landscape(d.theme, i)}</div>
     <div class="demo-body"><span class="kind">${esc(lang === 'ga' ? d.kindGa : d.kind)}</span><h3>${esc(d.name)}</h3><p>${esc(d.blurb[lang] || d.blurb.en)}</p><span class="go">${x('Open example', 'Oscail an sampla')} →</span></div>
   </a>`).join('')}</div>
 </div></section>` : ''}
@@ -182,7 +197,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
 </div></section>
 
 <section class="sec alt" id="about"><div class="wrap two">
-  <div class="about-art">${landscape('heather', 2)}</div>
+  <div class="about-art"><img src="${rel}assets/img/boardwalk.jpg" alt="${x('Boardwalk on Diamond Hill, Connemara National Park', 'Cosán adhmaid ar an gCnoc Diamant, Páirc Náisiúnta Chonamara')}" loading="lazy"></div>
   <div>
     <h2>${s.ownerName ? `${x('Hi, I’m', 'Dia duit, is mise')} ${esc(s.ownerName)}` : x('About me', 'Fúm féin')}</h2>
     <p>${x(`I’m a web developer based in ${esc(s.baseArea)}. I build websites that do one job: bring local businesses more direct bookings and customers, with less paid to the big platforms.`, `Is forbróir gréasáin mé atá lonnaithe i ${esc(s.baseArea)}. Tógaim suíomhanna a dhéanann jab amháin: níos mó áirithintí díreacha agus custaiméirí a thabhairt do ghnólachtaí áitiúla, le níos lú íoctha leis na hardáin mhóra.`)}</p>
@@ -195,7 +210,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   ${faq.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}
 </div></section>
 
-<section class="sec contact" id="contact"><div class="wrap two">
+<section class="sec contact" id="contact" style="background-image:url('${rel}assets/img/harbour-bens.jpg')"><div class="wrap two">
   <div>
     <h2>${x('Get your free sample', 'Faigh do shampla saor in aisce')}</h2>
     <p>${x('Tell me the name of your business and I’ll have a sample homepage ready within 48 hours. No cost, no obligation.', 'Inis dom ainm do ghnó agus beidh leathanach baile samplach réidh agam laistigh de 48 uair an chloig. Saor in aisce, gan cheangal.')}</p>
@@ -222,7 +237,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
 
 <footer class="foot"><div class="wrap footin">
   <div><b>${esc(s.studioName)}</b><br>${esc(s.ownerName)} · ${esc(s.baseArea)}</div>
-  <div class="foot-r"><a href="${lang === 'en' ? '' : '../'}privacy.html">${x('Privacy', 'Príobháideachas')}</a>${s.social?.facebook ? ` · <a href="${esc(s.social.facebook)}">Facebook</a>` : ''}${s.social?.instagram ? ` · <a href="${esc(s.social.instagram)}">Instagram</a>` : ''}<br><small>© ${new Date().getFullYear()} ${esc(s.studioName)}</small></div>
+  <div class="foot-r"><a href="${lang === 'en' ? '' : '../'}privacy.html">${x('Privacy', 'Príobháideachas')}</a> · <a href="${lang === 'en' ? '' : '../'}credits.html">${x('Photo credits', 'Creidiúintí grianghraf')}</a>${s.social?.facebook ? ` · <a href="${esc(s.social.facebook)}">Facebook</a>` : ''}${s.social?.instagram ? ` · <a href="${esc(s.social.instagram)}">Instagram</a>` : ''}<br><small>© ${new Date().getFullYear()} ${esc(s.studioName)}</small></div>
 </div></footer>
 
 <nav class="mbar" aria-label="Quick actions">

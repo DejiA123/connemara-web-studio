@@ -44,14 +44,14 @@ export function renderClient(site, lang, ctx) {
   // highlights
   if (has(site.highlights)) {
     S.push(`<section class="sec highlights"><div class="wrap"><h2>${L.highlights}</h2><ul class="hl">${site.highlights
-      .map((h) => `<li>${icon(h.icon || 'check', 26)}<span>${esc(T(h, lang))}</span></li>`).join('')}</ul></div></section>`);
+      .map((h) => `<li class="rv">${icon(h.icon || 'check', 26)}<span>${esc(T(h, lang))}</span></li>`).join('')}</ul></div></section>`);
   }
 
   // rooms
   if (has(site.rooms)) {
     nav.push(['rooms', L.rooms]);
     S.push(`<section id="rooms" class="sec rooms"><div class="wrap"><h2>${L.rooms}</h2><div class="cards">${site.rooms
-      .map((r, i) => `<article class="card">
+      .map((r, i) => `<article class="card rv">
         <div class="card-img">${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}</div>
         <div class="card-body"><h3>${esc(T(r.name, lang))}</h3>
         <p>${esc(T(r.desc, lang))}</p>
@@ -73,7 +73,7 @@ export function renderClient(site, lang, ctx) {
   if (has(site.services)) {
     nav.push(['services', L.services]);
     S.push(`<section id="services" class="sec services"><div class="wrap"><h2>${L.services}</h2><div class="svc">${site.services.filter((x) => T(x.name, lang))
-      .map((s) => `<div class="svc-item">${icon(s.icon || 'tool', 28)}<h3>${esc(T(s.name, lang))}</h3><p>${esc(T(s.desc, lang))}</p></div>`).join('')}</div>
+      .map((s) => `<div class="svc-item rv">${icon(s.icon || 'tool', 28)}<h3>${esc(T(s.name, lang))}</h3><p>${esc(T(s.desc, lang))}</p></div>`).join('')}</div>
       ${has(site.areas) ? `<h3 class="areas-h">${L.areas}</h3><p class="areas">${site.areas.map(esc).join(' · ')}</p>` : ''}
       ${has(site.credentials) ? `<ul class="creds">${site.credentials.map((c) => `<li>${icon('shield', 18)} ${esc(T(c, lang))}</li>`).join('')}</ul>` : ''}
     </div></section>`);
@@ -84,7 +84,7 @@ export function renderClient(site, lang, ctx) {
     nav.push(['reviews', L.reviews]);
     S.push(`<section id="reviews" class="sec reviews"><div class="wrap"><h2>${L.reviews}</h2>
       ${site.rating ? `<p class="rating-line">${'★'.repeat(Math.round(Number(site.rating.score) > 5 ? Number(site.rating.score) / 2 : Number(site.rating.score)))} ${esc(L.ratedOn(site.rating.score, site.rating.count, site.rating.source))}</p>` : ''}
-      <div class="quotes">${site.reviews.map((r) => `<blockquote><p>“${esc(T(r.text, lang))}”</p><footer>${esc(r.author || '')}${r.source ? ` · ${esc(r.source)}` : ''}</footer></blockquote>`).join('')}</div></div></section>`);
+      <div class="quotes">${site.reviews.map((r) => `<blockquote class="rv"><p>“${esc(T(r.text, lang))}”</p><footer>${esc(r.author || '')}${r.source ? ` · ${esc(r.source)}` : ''}</footer></blockquote>`).join('')}</div></div></section>`);
   }
 
   // gallery
@@ -202,6 +202,7 @@ ${bilingual ? `<link rel="alternate" hreflang="${other}" href="${langHref}">` : 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${rel}assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
 <style>:root{--accent:${th.accent};--accent-ink:${th.accentInk};--paper:${th.paper};--sea:${th.sea};--soft:${th.sky1};--soft2:${th.sky2}}</style>
 ${isSample ? '' : `<script type="application/ld+json">${JSON.stringify(ld)}</script>`}
 </head>
@@ -229,7 +230,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
 
 <footer class="foot"><div class="wrap footin">
   <div><b>${esc(site.name)}</b>${site.address ? `<br>${esc(site.address)}` : ''}${phone ? `<br><a href="tel:${esc(phone.replace(/\s/g, ''))}">${esc(phone)}</a>` : ''}${site.email ? `<br><a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ''}</div>
-  <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a> · <small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a></small></div>
+  <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a> · <small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a>${site.photos?.some((ph) => String(ph.src).startsWith('assets/img/')) ? ` · <a href="${esc(studio.siteUrl || rel)}credits.html">Photos</a>` : ''}</small></div>
 </div></footer>
 
 <nav class="mbar" aria-label="Quick actions">

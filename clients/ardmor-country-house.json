@@ -112,7 +112,15 @@
       "source": "Google"
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Connemara",
+        "ga": "Conamara"
+      }
+    }
+  ],
   "_photos_example": [
     {
       "src": "photos/SLUG/front.jpg",
@@ -143,5 +151,6 @@
   "faq": [],
   "slug": "ardmor-country-house",
   "_check": "Owner is happy to talk in Irish. Lead with the Irish version of the sample.",
-  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false."
+  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
 }

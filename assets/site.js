@@ -141,6 +141,19 @@
     run();
   }
 
+  // ---- reveal on scroll ----
+  var rv = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+  } else { rv.forEach(function (el) { el.classList.add('in'); }); }
+
+  // ---- header shadow after scrolling ----
+  var top = document.querySelector('.top');
+  if (top) { var onS = function () { top.classList.toggle('scrolled', window.scrollY > 10); }; addEventListener('scroll', onS, { passive: true }); onS(); }
+
   // ---- remember language choice ----
   document.querySelectorAll('a.lang').forEach(function (a) {
     a.addEventListener('click', function () { try { localStorage.setItem('lang', a.getAttribute('hreflang')); } catch (e) {} });

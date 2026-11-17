@@ -52,7 +52,7 @@ for (const f of files) {
   if ((site.languages || []).includes('ga')) write(base + 'ga/index.html', renderClient(site, 'ga', { rel: rel + '../', studio }));
   write(base + 'privacy.html', renderClientPrivacy(site, { rel }));
   built.push({ f, url: base });
-  if (site.demo) demos.push({ path: base, name: site.name, theme: site.theme || 'atlantic', bilingual: (site.languages || []).includes('ga'), kind: site.demoKind?.en || site.type, kindGa: site.demoKind?.ga || site.type, blurb: { en: T(site.demoBlurb, 'en'), ga: T(site.demoBlurb, 'ga') } });
+  if (site.demo) demos.push({ path: base, name: site.name, theme: site.theme || 'atlantic', bilingual: (site.languages || []).includes('ga'), image: site.photos?.[0]?.src, kind: site.demoKind?.en || site.type, kindGa: site.demoKind?.ga || site.type, blurb: { en: T(site.demoBlurb, 'en'), ga: T(site.demoBlurb, 'ga') } });
 }
 const order = { bnb: 0, cafe: 1, trades: 2 };
 demos.sort((a, b) => (order[a.kind] ?? 0) - (order[b.kind] ?? 0));
@@ -61,6 +61,11 @@ demos.sort((a, b) => (order[a.kind] ?? 0) - (order[b.kind] ?? 0));
 write('index.html', renderStudio(studio, 'en', { rel: '', demos }));
 write('ga/index.html', renderStudio(studio, 'ga', { rel: '../', demos }));
 write('privacy.html', renderStudioPrivacy(studio));
+{
+  const cr = readJSON(path.join(ROOT, 'assets/img/credits.json'));
+  const e = (t) => String(t || '').replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  write('credits.html', `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Photo credits · ${e(studio.studioName)}</title><link rel="stylesheet" href="assets/studio.css"></head><body><main class="sec"><div class="wrap narrow legal"><p><a href="./">← ${e(studio.studioName)}</a></p><h1>Photo credits</h1><p>Thank you to the photographers whose work is used on this site and on our example sites.</p><ul class="credits">${cr.map((c) => `<li><a href="assets/img/${e(c.file)}"><img src="assets/img/${e(c.file)}" alt="" loading="lazy"></a><div><b>${e(c.title)}</b><br>by ${e(c.artist)} · <a href="${e(c.source)}" rel="noopener">${e(c.license)}</a>${c.license.startsWith('CC') ? ' · resized' : ''}</div></li>`).join('')}</ul></div></main></body></html>`);
+}
 write('404.html', `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found</title><link rel="stylesheet" href="${studio.siteUrl ? new URL('assets/studio.css', studio.siteUrl).pathname : '/assets/studio.css'}"><main class="sec"><div class="wrap narrow"><h1>Page not found</h1><p><a href="${studio.siteUrl || '/'}">Back to ${studio.studioName}</a></p></div></main>`);
 const site = (studio.siteUrl || '').replace(/\/?$/, '/');
 write('robots.txt', `User-agent: *\nDisallow: /sites/\nDisallow: /demos/\n${site.startsWith('http') ? `Sitemap: ${site}sitemap.xml\n` : ''}`);

@@ -107,7 +107,15 @@
       "source": "Google"
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "Connemara",
+        "ga": "Conamara"
+      }
+    }
+  ],
   "_photos_example": [
     {
       "src": "photos/SLUG/front.jpg",
@@ -138,5 +146,6 @@
   "faq": [],
   "slug": "rockfield-house",
   "_check": "Get Found (€210) prospect. Confirm distance to Galway.",
-  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false."
+  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
 }
