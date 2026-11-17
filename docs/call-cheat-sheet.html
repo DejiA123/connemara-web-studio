@@ -1,156 +1,102 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Call Cheat Sheet · Book Direct Connemara</title>
-<style>
-  @page{size:A4;margin:9mm}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sheet 1: How to call · Book Direct Connemara</title><style>
+  @page{size:A4;margin:8mm}
   *{box-sizing:border-box}
-  body{margin:0;font:8.3pt/1.28 "Inter","Helvetica Neue",Arial,sans-serif;color:#14212b;background:#fff}
-  .page{max-width:192mm;margin:0 auto}
-  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid #17506b;padding-bottom:4px;margin-bottom:6px}
+  body{margin:0;font:8.4pt/1.3 "Inter","Helvetica Neue",Arial,sans-serif;color:#14212b;background:#fff}
+  .page{max-width:194mm;margin:0 auto}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid #17506b;padding-bottom:4px;margin-bottom:6px}
   h1{font:700 15pt/1 Georgia,serif;margin:0;color:#17506b}
   h1 span{color:#c98a12}
-  .me{text-align:right;font-size:8pt;color:#44535c}
-  .me b{color:#14212b;font-size:9pt}
-  h2{font:700 9.6pt/1.1 Georgia,serif;margin:0 0 3px;color:#17506b;text-transform:uppercase;letter-spacing:.04em}
+  .me{text-align:right;font-size:8pt;color:#44535c}.me b{color:#14212b;font-size:9pt}
+  h2{font:700 9.4pt/1.1 Georgia,serif;margin:0 0 4px;color:#17506b;text-transform:uppercase;letter-spacing:.04em}
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-  .box{border:1px solid #d6dde1;border-radius:6px;padding:4px 7px;margin-bottom:5px;break-inside:avoid}
-  .gold{background:#fff8e8;border-color:#ecd59c}
-  .blue{background:#eef4f7;border-color:#c7d8e2}
-  ol,ul{margin:0;padding-left:14px}
-  li{margin:1.5px 0}
-  .say{font-style:italic}
-  .step b{color:#17506b}
+  .box{border:1px solid #d6dde1;border-radius:6px;padding:5px 7px;margin-bottom:6px;break-inside:avoid}
+  .gold{background:#fff8e8;border-color:#ecd59c}.blue{background:#eef4f7;border-color:#c7d8e2}
+  .goal{background:#17506b;color:#fff;border-radius:6px;padding:6px 9px;margin-bottom:6px;font-size:9pt}
+  .goal b{color:#f3c25e}
+  ul{margin:0;padding-left:13px}li{margin:1.5px 0}
+  .say{font-weight:700}
+  .step{display:grid;grid-template-columns:20px 1fr;gap:6px;align-items:start;margin:0 0 6px}
+  .n{width:20px;height:20px;border-radius:50%;background:#e7a93c;color:#2a1b03;font-weight:800;display:grid;place-items:center;font-size:9.5pt}
+  .step p{margin:0}.step .t{font-weight:700;color:#17506b;font-size:8.8pt}
+  .yn{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:2px}
+  .yes,.no{border-radius:6px;padding:5px 7px}
+  .yes{background:#e6f4ea;border:1.3px solid #2e8b57}.no{background:#f8ecea;border:1.3px solid #b5523f}
+  .yes b.h{color:#1f6b3e}.no b.h{color:#9a3a28}
+  .yes ol,.no ol{margin:2px 0 0;padding-left:14px}
   table{width:100%;border-collapse:collapse}
-  td,th{border-bottom:1px solid #e3e7ea;padding:2px 3px;vertical-align:top;text-align:left}
-  th{font-size:7.6pt;text-transform:uppercase;letter-spacing:.04em;color:#5a6870;border-bottom:1.5px solid #14212b}
+  td,th{border-bottom:1px solid #e3e7ea;padding:2.4px 3px;vertical-align:top;text-align:left}
+  th{font-size:7.4pt;text-transform:uppercase;letter-spacing:.04em;color:#5a6870;border-bottom:1.5px solid #14212b}
   .calls td:first-child{width:12px}
-  .tick{display:inline-block;width:10px;height:10px;border:1.3px solid #14212b;border-radius:2px}
+  .tick{display:inline-block;width:10px;height:10px;border:1.3px solid #14212b;border-radius:2px;margin-top:1px}
   .num{white-space:nowrap;font-weight:700}
-  .hook{color:#33424b;font-size:8pt}
-  .url{font-size:7.4pt;color:#17506b;word-break:break-all}
-  .res{width:58px}
-  .obj td:first-child{width:36%;font-weight:600}
-  .money{display:flex;justify-content:space-between;gap:6px;font-weight:700;text-align:center}
-  .money div{flex:1;border:1.5px solid #17506b;border-radius:5px;padding:3px}
-  .money small{display:block;font-weight:400;font-size:7.4pt;color:#44535c}
-  .codes{font-size:7.8pt;color:#33424b}
-  .no{color:#a23b2a;font-weight:700}
-  footer{font-size:7.2pt;color:#6b777e;text-align:center;margin-top:2px}
-  @media screen{body{background:#e9edef;padding:16px}.page{background:#fff;padding:12mm;box-shadow:0 8px 30px rgba(0,0,0,.12)}}
-</style>
-</head>
-<body>
-<div class="page">
-<header>
-  <h1>Call Cheat Sheet <span>· Book Direct Connemara</span></h1>
-  <div class="me"><b>Ayodeji Augustine</b> · 086 073 6836<br>bookdirectconnemara.vercel.app</div>
-</header>
+  .hook{color:#33424b;font-size:7.9pt}
+  .url{font-size:7.3pt;color:#17506b}
+  .res{width:62px;border-left:1px dashed #cfd6da}
+  .offer{display:inline-block;font-size:7.3pt;font-weight:700;border-radius:3px;padding:0 4px;margin-left:3px;background:#17506b;color:#fff;vertical-align:1px}
+  .offer.f{background:#2e8b57}.offer.s{background:#7a5a9c}
+  .chk{font-size:7.3pt;font-weight:700;color:#9a3a28}
+  .obj td:first-child{width:33%;font-weight:700}
+  .money{display:flex;gap:5px;text-align:center;font-weight:800;font-size:10pt}
+  .money div{flex:1;border:1.5px solid #17506b;border-radius:5px;padding:2px;background:#fff}
+  .money small{display:block;font-weight:400;font-size:7.2pt;color:#44535c}
+  .codes{display:grid;grid-template-columns:auto 1fr;gap:1px 7px;font-size:8pt}
+  .codes b{color:#17506b}
+  footer{font-size:7.2pt;color:#6b777e;text-align:center;margin-top:1px}
+  @media screen{body{background:#e9edef;padding:16px}.page{background:#fff;padding:10mm;box-shadow:0 8px 30px rgba(0,0,0,.12)}}
+</style><style>body{font-size:9.4pt}.obj td{padding:3.5px 3px}.box{margin-bottom:8px}</style></head><body><div class="page">
+<header><h1>Sheet 1: How to call <span>· Book Direct Connemara</span></h1><div class="me"><b>Ayodeji Augustine</b> · 086 073 6836<br>bookdirectconnemara.vercel.app</div></header>
+<div class="goal">Your only goal on the phone: <b>get a YES to the free sample</b> and book a 5-minute look. Don't sell on the phone.</div>
+<div class="cols"><div>
+<div class="box gold"><h2>Before you dial</h2><ul>
+<li><b>Only ring numbers starting 091, 095 or 099.</b> Never cold-call a mobile (08…): visit instead.</li>
+<li>Best times: <b>Tue–Thu, 10:30–12:00 or 2–4pm</b>.</li>
+<li>Only send a link or email <b>after they say yes</b> to it.</li></ul></div>
 
-<div class="cols">
-<div>
-  <div class="box gold">
-    <h2>Before you dial</h2>
-    <ul>
-      <li><b>Landlines only</b> (091, 095, 099). <span class="no">Never cold-call mobiles</span> (08x): visit instead.</li>
-      <li><b>Tue–Thu, 10:30–12:00 or 2–4pm.</b> Not breakfast or check-in time.</li>
-      <li>Goal of the call: <b>a yes to the free sample + a 5-min look.</b> Not a sale.</li>
-      <li>Send a link or email <b>only after they say yes</b> to it.</li>
-    </ul>
-  </div>
+<div class="box"><h2>Say this, in this order</h2>
+<div class="step"><span class="n">1</span><p><span class="t">Hello</span><br><span class="say">"Hi, is that [business]? My name is Ayodeji. I'm a web developer based locally. Have you got two minutes?"</span><br>Gaeltacht: start with <span class="say">"Dia duit"</span> and offer Irish.</p></div>
+<div class="step"><span class="n">2</span><p><span class="t">Why you're calling</span><br>Read their line from Sheet 2 or 3, then:<br><span class="say">"Booking.com takes about 15% of every booking. You're allowed to offer a better price on your own website now."</span></p></div>
+<div class="step"><span class="n">3</span><p><span class="t">The ask</span><br><span class="say">"I've made you a free sample website. No cost, no catch. Can I send you the link on WhatsApp, and call in for five minutes to show you?"</span></p></div>
+<div class="step"><span class="n">4</span><p><span class="t">Book a time</span><br><span class="say">"What day suits you, and what time?"</span> Write it down before you hang up.</p></div>
+<div class="yn">
+<div class="yes"><b class="h">IF YES</b><ol><li>Send the sample link on WhatsApp (or email)</li><li>Write <b>Y</b> + the day</li><li>Message Claude (box below)</li></ol></div>
+<div class="no"><b class="h">IF NO</b><ol><li><span class="say">"No problem at all, thanks for your time."</span></li><li>Write <b>N</b></li><li>Next call. Don't take it personally</li></ol></div>
+</div></div>
 
-  <div class="box">
-    <h2>The call: 4 steps, 2 minutes</h2>
-    <ol class="step">
-      <li><b>Open:</b> <span class="say">"Hi, is that [business]? My name is Ayodeji, I'm a web developer based locally. Have you got two minutes?"</span> (Gaeltacht: <span class="say">"Dia duit"</span>, and offer Irish.)</li>
-      <li><b>Hook:</b> their opening line (right), then <span class="say">"Booking.com takes around 15% of every booking. Since 2024 it can't stop you offering a better price on your own website."</span></li>
-      <li><b>Ask:</b> <span class="say">"I've made you a free sample website, no obligation. Can I send you the link on WhatsApp or email, and call in for five minutes to show you?"</span></li>
-      <li><b>Close:</b> fix a <b>day and time</b> before you hang up. Then send the link.</li>
-    </ol>
-  </div>
 
-  <div class="box blue">
-    <h2>When they like it: the offer</h2>
-    <div class="money">
-      <div>€570<small>instead of €950</small></div>
-      <div>€285<small>to start</small></div>
-      <div>€285<small>at launch</small></div>
-      <div>3 × €190<small>if easier</small></div>
-    </div>
-    <ul style="margin-top:4px">
-      <li>First 3 businesses, booked by <b>20 December</b>. Live by <b>1 March</b> or deposit back.</li>
-      <li><b>Guarantee:</b> no direct booking by 30 June 2027 → care plan free until it does.</li>
-      <li>Small B&B, just wants Google + a page: <b>Get Found €210</b>, live in a week.</li>
-    </ul>
-  </div>
 
-  <div class="box">
-    <h2>Answers to objections</h2>
-    <table class="obj">
-      <tr><td>"Send me an email."</td><td><span class="say">"Happy to. What address is best?"</span></td></tr>
-      <tr><td>"How much?"</td><td><span class="say">"€570 this month instead of €950. €285 to start, and you see it all before paying the rest."</span></td></tr>
-      <tr><td>"Too expensive."</td><td><span class="say">"At 15% commission it pays for itself after a handful of direct guests. Or 3 × €190."</span></td></tr>
-      <tr><td>"Happy with Booking.com."</td><td><span class="say">"Keep it. This just stops the commission on guests who already know your name."</span></td></tr>
-      <tr><td>"We have a website."</td><td><span class="say">"Great. Can it take bookings with a deposit and sync with Booking.com? That's the part I add."</span></td></tr>
-      <tr><td>"No hassle, please."</td><td><span class="say">"You won't have any. I set it all up and look after it."</span></td></tr>
-      <tr><td>"Call me in the new year."</td><td><span class="say">"Sure, shall I ring on [date] in January? Live before Easter is what matters."</span> Write the date down.</td></tr>
-      <tr><td>"How do I know it works?"</td><td><span class="say">"No direct booking by 30 June, your care plan is free until there is."</span></td></tr>
-      <tr><td>"Not interested / don't call."</td><td><span class="say">"No problem at all, thanks for your time."</span> <b>Never contact again.</b></td></tr>
-    </table>
-  </div>
-
-  <div class="box">
-    <h2>Voicemail (landlines only)</h2>
-    <p class="say" style="margin:0">"Hi, this is Ayodeji, a local web developer. This month I'm offering three Connemara B&Bs a free sample website with direct booking. I'll try you again on [day], or call me on 086 073 6836. Thanks!"</p>
-  </div>
+<div class="box"><h2>Voicemail (only on 091/095/099 numbers)</h2>
+<p style="margin:0" class="say">"Hi, this is Ayodeji, a local web developer. I've made a free sample website for [business], with direct booking. I'll try you again on [day], or ring me on 086 073 6836. Thanks!"</p></div>
 </div>
 
 <div>
-  <div class="box">
-    <h2>Day 1: Spiddal · Bearna · Moycullen</h2>
-    <table class="calls">
-      <tr><th></th><th>Business · number · hook</th><th class="res">Result</th></tr>
-      <tr><td><span class="tick"></span></td><td><b>Teach na Mara</b> <span class="num">091 553 047</span><div class="hook">Glowing reviews on VRBO & fivestar.ie. At ~€4,000 a week, one direct booking pays for the site.</div><div class="url">…/sites/teach-na-mara</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Ardmor Country House</b> <span class="num">091 553 145</span><div class="hook">Fáilte Ireland 4★, but "Visit website" lands on an Irish Farm Holidays listing. <b>Speak Irish, be warm.</b></div><div class="url">…/sites/ardmor-country-house/ga</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Radharc Árainn (Aran View)</b> <span class="num">091 553 632</span><div class="hook">800+ reviews across booking sites, which is a lot of commission. Direct, synced with Booking.com.</div><div class="url">…/sites/radharc-arainn-bnb</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Briseadh na Carraige</b> <span class="num">091 553 212</span><div class="hook">4.9 on Google but only 16 reviews. Direct booking + QR review card.</div><div class="url">…/sites/briseadh-na-carraige-bnb</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Rockfield House</b> <span class="num">091 555 586</span><div class="hook">A guest called it a "fairy house". Get Found <b>€210</b>: a page about the farm + Google profile.</div><div class="url">…/sites/rockfield-house</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Villa De Porres</b> <span class="num">091 592 239</span><div class="hook">Check villadeporresbandb.com first. Dog-friendly: add direct booking to their site.</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Freeport House</b> <span class="num">091 592 199</span><div class="hook">Check freeport-house.com. Guests rave about the sea views; the site doesn't show it on a phone.</div></td><td></td></tr>
-    </table>
-    <p style="margin:3px 0 0;font-size:7.4pt;color:#17506b">Sample links start with <b>bookdirectconnemara.vercel.app</b>. Add <b>/ga</b> for Irish.</p>
-  </div>
-
-  <div class="box">
-    <h2>Day 2: Oughterard</h2>
-    <table class="calls">
-      <tr><td><span class="tick"></span></td><td><b>Riverwalk House</b> <span class="num">091 552 788</span><div class="hook">Fáilte Ireland 4★, no site. Anglers and walkers Google your name.</div></td><td class="res"></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Carrown Tober House</b> <span class="num">091 552 166</span><div class="hook">4.8 from 168 Google reviews, no site. Golfers and anglers could book direct.</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Mountain View Guesthouse</b> <span class="num">091 550 306</span><div class="hook">4.8 Google, 9.8 Expedia, no site. Near Aughnanure Castle.</div></td><td></td></tr>
-      <tr><td><span class="tick"></span></td><td><b>Crossriver B&B</b> <span class="num">091 552 676</span><div class="hook">20+ years, breakfast in the sunroom. Get Found €210.</div></td><td></td></tr>
-    </table>
-  </div>
-
-  <div class="box gold">
-    <h2>Result codes</h2>
-    <p class="codes" style="margin:0"><b>Y</b> yes, sample sent + visit booked · <b>VM</b> voicemail, retry [day] · <b>CB</b> call back [date] · <b>J</b> January, ring [date] · <b>N</b> not interested, never again</p>
-  </div>
-
-  <div class="box blue">
-    <h2>After a yes: one message to Claude</h2>
-    <p style="margin:0" class="say">"[Business] said yes. Booking.com link: … Room prices: … OK to use their photos: yes/no. Visit on [day]."</p>
-    <p style="margin:3px 0 0">I update their sample in an hour. You visit, show it on your phone, and collect the €285 (bank transfer is fine).</p>
-  </div>
-
-  <div class="money" style="margin-top:2px">
-    <div>Target by 20 Dec<small>3 deposits + 1 Get Found</small></div>
-    <div>€1,065<small>≈ 30 calls · 1 in 8 buys</small></div>
-  </div>
-</div>
-</div>
-<footer>Be friendly, be brief, take "no" gracefully. Every "January" is money in the pre-season.</footer>
-</div>
-</body>
-</html>
+<div class="box"><h2>If they say…</h2><table class="obj">
+<tr><td>"Just email me."</td><td><span class="say">"Happy to. What's the best address?"</span></td></tr>
+<tr><td>"How much is it?"</td><td><span class="say">"€570 instead of €950 this month. Half to start, and you see it all before paying the rest."</span></td></tr>
+<tr><td>"Too expensive."</td><td><span class="say">"A handful of guests booking you directly covers it. Or 3 payments of €190."</span></td></tr>
+<tr><td>"We're happy with Booking.com."</td><td><span class="say">"Keep it! This just saves the 15% on guests who already know you."</span></td></tr>
+<tr><td>"We have a website."</td><td><span class="say">"Great. Can guests book and pay a deposit on it? That's the part I add."</span></td></tr>
+<tr><td>"Sounds like hassle."</td><td><span class="say">"None for you. I set it all up and look after it."</span></td></tr>
+<tr><td>"Ring me in the new year."</td><td><span class="say">"Sure, what date in January?"</span> Write <b>J</b> + date.</td></tr>
+<tr><td>"How do I know it'll work?"</td><td><span class="say">"If it brings no booking by 30 June, your monthly support is free until it does."</span></td></tr>
+</table></div>
+<div class="box blue"><h2>The offer (when they like the sample)</h2>
+<div class="money"><div>€570<small>launch price (normally €950)</small></div><div>€285<small>now, to start</small></div><div>€285<small>when it's online</small></div></div>
+<ul style="margin-top:4px">
+<li>Or <b>3 payments of €190</b>. Launch price for the first 3 clients, until <b>20 December</b>.</li>
+<li>Online by <b>1 March</b>, or they get the deposit back.</li>
+<li>No booking from the website by 30 June 2027? Their <b>monthly support is free</b> until there is.</li>
+<li>Small place that only needs Google + one page: <b>Get Found, €210</b>, ready in a week.</li>
+<li>Payment: bank transfer is fine. Send the invoice from <code>tools/invoice.html</code>.</li></ul></div>
+<div class="box blue"><h2>After a YES: send Claude one message</h2>
+<p style="margin:0" class="say">"[Business] said yes. Booking.com link: … Room prices: … OK to use their photos: yes/no. Visit on [day]."</p>
+<p style="margin:2px 0 0">Claude updates their sample before your visit.</p></div>
+<div class="box gold"><h2>Write one code in "Result"</h2><div class="codes">
+<b>Y</b><span>Yes: link sent, visit or video call booked</span>
+<b>VM</b><span>Voicemail left: try again on [day]</span>
+<b>CB</b><span>Call back on [date + time]</span>
+<b>J</b><span>"Ring me in January": write the date</span>
+<b>N</b><span>Not interested: never contact again</span></div></div>
+<div class="money"><div>€1,065 by 20 Dec<small>3 × €285 deposits + 1 × €210</small></div><div>≈ 30 calls<small>about 1 in 8 says yes</small></div></div>
+</div></div>
+<footer>Be friendly, be brief, take "no" well. Every "ring me in January" is money in the new year.</footer>
+</div></body></html>
