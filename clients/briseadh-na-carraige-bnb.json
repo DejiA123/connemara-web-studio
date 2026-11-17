@@ -1,7 +1,7 @@
 {
   "_help": "Copied by new-sample.mjs. Anything starting with TODO is left blank on the site until you fill it in. Keys starting with _ are notes and are ignored.",
   "sample": true,
-  "draft": true,
+  "draft": false,
   "type": "bnb",
   "theme": "stone",
   "_themes": "atlantic | heather | bog | stone | turf",
@@ -183,7 +183,7 @@
   "faq": [],
   "slug": "briseadh-na-carraige-bnb",
   "_check": "Add a QR review card upsell: only 16 Google reviews. Verify the stats strip with the owner (drive times are approximate). Swap in their own photos.",
-  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
+  "_status": "PUBLISHED as a sample (banner shown, hidden from Google, form sends nothing). Fill prices and swap in owner photos once they agree.",
   "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
   "stats": [
     {
