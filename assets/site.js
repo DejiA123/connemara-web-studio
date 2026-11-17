@@ -110,32 +110,18 @@
   if (calc) {
     var rate = calc.querySelector('[name=rate]');
     var nightsIn = calc.querySelector('[name=nights]');
-    var pct = calc.querySelector('[name=pct]');
-    var share = calc.querySelector('[name=share]');
-    var out = {
-      paid: calc.querySelector('[data-out=paid]'),
-      saved: calc.querySelector('[data-out=saved]'),
-      payback: calc.querySelector('[data-out=payback]'),
-      shareLbl: calc.querySelector('[data-out=share]'),
-    };
     var price = Number(calc.dataset.price || 570);
     var ga = calc.dataset.lang === 'ga';
     var fmt = function (n) { return '€' + Math.round(n).toLocaleString('en-IE'); };
     var run = function () {
-      var r = Math.max(0, Number(rate.value) || 0);
-      var n = Math.max(0, Number(nightsIn.value) || 0);
-      var p = Math.max(0, Number(pct.value) || 0) / 100;
-      var s = Math.max(0, Number(share.value) || 0) / 100;
-      var paid = r * n * p;
-      var saved = paid * s;
-      out.paid.textContent = fmt(paid);
-      out.saved.textContent = fmt(saved);
-      out.shareLbl.textContent = Math.round(s * 100) + '%';
-      var perNight = r * p;
-      var nightsToPay = perNight > 0 ? Math.ceil(price / perNight) : 0;
-      out.payback.textContent = perNight > 0
-        ? (ga ? nightsToPay + ' oíche' : nightsToPay + ' direct nights')
-        : '–';
+      var paid = Math.max(0, Number(rate.value) || 0) * Math.max(0, Number(nightsIn.value) || 0) * 0.15;
+      var saved = paid / 4;
+      calc.querySelector('[data-out=paid]').textContent = fmt(paid);
+      calc.querySelector('[data-out=saved]').textContent = fmt(saved);
+      var months = saved > 0 ? Math.ceil(price / (saved / 12)) : 0;
+      calc.querySelector('[data-out=payback]').innerHTML = !saved ? '' : months <= 12
+        ? (ga ? 'Íocann an suíomh €570 as féin i thart ar <b>' + months + ' mhí</b>. Ina dhiaidh sin, is leatsa an t-airgead.' : 'The €570 website pays for itself in about <b>' + months + (months === 1 ? ' month' : ' months') + '</b>. After that, the money is yours.')
+        : (ga ? 'Íocann an suíomh €570 as féin i thart ar <b>' + months + ' mí</b>.' : 'The €570 website pays for itself in about <b>' + months + ' months</b>.');
     };
     calc.addEventListener('input', run);
     run();

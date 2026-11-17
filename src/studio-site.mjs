@@ -93,11 +93,11 @@ export function renderStudio(studio, lang, ctx) {
   <div class="hero-bg"><img src="${rel}assets/img/roundstone-golden.jpg" alt="${x('Roundstone harbour in Connemara at sunset', 'Cuan Chloch na Rón i gConamara ag luí na gréine')}" fetchpriority="high"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      ${left > 0 ? `<p class="pill">${icon('star', 16)} ${x(`Founding offer: ${left} ${left === 1 ? 'place' : 'places'} left at 40% off, book by ${esc(deadline)}`, `Tairiscint bhunaidh: ${left} ${left === 1 ? 'áit' : 'áit'} fágtha ar 40% lascaine, cuir in áirithe roimh ${esc(deadline)}`)}</p>` : ''}
       <p class="eyebrow">${x('Websites that take bookings · Connemara & Galway', 'Suíomhanna a ghlacann le háirithintí · Conamara & Gaillimh')}</p>
       <h1>${x('Your guests already love you. <em>Let them book you direct.</em>', 'Is breá le d’aíonna thú. <em>Faigh a n-áirithintí go díreach.</em>')}</h1>
       <p class="lead">${x('Stop paying 15% commission on guests who already know your name. I’ll build your new website as a <b>free sample first</b>, and you only pay if you love it.', 'Ná híoc 15% coimisiúin ar aíonna a bhfuil d’ainm acu cheana. Tógfaidh mé do shuíomh nua mar <b>shampla saor in aisce ar dtús</b>, agus ní íocann tú ach má thaitníonn sé leat.')}</p>
       <div class="ctas"><a class="btn btn-lg btn-gold" href="#contact">${x('Get my free sample', 'Faigh mo shampla saor in aisce')} →</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-glass" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
+      ${left > 0 ? `<p class="offer-note">${x(`Founding price for my first three clients: <b>€570</b> instead of €950, until ${esc(deadline)}. <u>${left} ${left === 1 ? 'place' : 'places'} left.</u>`, `Praghas bunaidh do mo chéad trí chliant: <b>€570</b> in ionad €950, go dtí ${esc(deadline)}. <u>${left} áit fágtha.</u>`)}</p>` : ''}
       <ul class="trust"><li>${icon('irish', 18)} ${x('Irish & English', 'Gaeilge & Béarla')}</li><li>${icon('calendar', 18)} ${x('Synced with Booking.com & Airbnb', 'Sioncronaithe le Booking.com & Airbnb')}</li><li>${icon('pin', 18)} ${x('Local: I call in and answer the phone', 'Áitiúil: tagaim ar cuairt agus freagraím an fón')}</li></ul>
     </div>
     ${demos[0] ? `<div class="phone" aria-hidden="true"><div class="phone-in"><iframe src="${rel}${esc(demos[0].path)}${lang === 'ga' && demos[0].bilingual ? 'ga/' : ''}" title="Example" tabindex="-1" loading="lazy"></iframe></div></div>` : ''}
@@ -115,18 +115,16 @@ export function renderStudio(studio, lang, ctx) {
   <div>
     <h2>${x('What the booking sites really cost you', 'Cad a chosnaíonn na suíomhanna áirithinte duit i ndáiríre')}</h2>
     <p>${x('Booking.com takes around 15% of every stay, even when the guest has stayed before or found you by word of mouth. Move just some of those guests to your own site and it pays for itself, then keeps paying.', 'Tógann Booking.com thart ar 15% de gach fanacht, fiú nuair a d’fhan an t-aoi cheana nó nuair a chuala sé fút ó dhuine eile. Bog cuid de na haíonna sin chuig do shuíomh féin agus íocann sé as féin, agus leanann sé ag íoc.')}</p>
-    <p class="muted small">${x('Move the sliders to match your business.', 'Bog na sleamhnáin le hoiriúint do do ghnó.')}</p>
+    <p class="muted small">${x('Type in your own numbers.', 'Cuir isteach d’uimhreacha féin.')}</p>
   </div>
   <form class="calc" data-calc data-price="570" data-lang="${lang}" onsubmit="return false">
-    <label>${x('Average room rate per night (€)', 'Meánráta seomra san oíche (€)')}<input name="rate" type="number" inputmode="numeric" value="100" min="0"></label>
-    <label>${x('Nights booked through booking sites per year', 'Oícheanta curtha in áirithe trí shuíomhanna áirithinte in aghaidh na bliana')}<input name="nights" type="number" inputmode="numeric" value="200" min="0"></label>
-    <label>${x('Commission (%)', 'Coimisiún (%)')}<input name="pct" type="number" inputmode="numeric" value="15" min="0" max="40"></label>
-    <label>${x('Share of those guests who would book you direct', 'Cion de na haíonna sin a chuirfeadh in áirithe go díreach')}: <b data-out="share">25%</b><input name="share" type="range" min="0" max="60" step="5" value="25"></label>
-    <div class="calc-out">
-      <div><small>${x('Commission you pay now, per year', 'Coimisiún a íocann tú anois, in aghaidh na bliana')}</small><b data-out="paid">€3,000</b></div>
-      <div class="hi"><small>${x('You could keep, per year', 'D’fhéadfá a choinneáil, in aghaidh na bliana')}</small><b data-out="saved">€750</b></div>
-      <div><small>${x('A €570 site pays for itself after', 'Oícheanta díreacha chun suíomh €570 a íoc')}</small><b data-out="payback">38</b></div>
+    <div class="row2">
+      <label>${x('Your price per night', 'Do phraghas san oíche')}<span class="eur"><input name="rate" type="number" inputmode="numeric" value="100" min="0"></span></label>
+      <label>${x('Nights booked through Booking.com etc. in a year', 'Oícheanta trí Booking.com srl. in aghaidh na bliana')}<input name="nights" type="number" inputmode="numeric" value="200" min="0"></label>
     </div>
+    <p class="calc-line">${x('You pay the booking sites about', 'Íocann tú thart ar')} <b data-out="paid">€3,000</b> ${x('a year in commission (at 15%).', 'sa bhliain i gcoimisiún leis na suíomhanna áirithinte (ag 15%).')}</p>
+    <p class="calc-big">${x('If just 1 in 4 of those guests booked you direct, you’d keep', 'Dá gcuirfeadh 1 as gach 4 de na haíonna sin in áirithe go díreach, choinneofá')} <b data-out="saved">€750</b> ${x('a year.', 'sa bhliain.')}</p>
+    <p class="calc-line" data-out="payback"></p>
   </form>
 </div></section>
 
