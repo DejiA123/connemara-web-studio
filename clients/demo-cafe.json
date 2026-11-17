@@ -1,0 +1,54 @@
+{
+  "demo": true,
+  "slug": "an-seomra-mona",
+  "demoKind": { "en": "Café · Get Found", "ga": "Caife · Get Found" },
+  "demoBlurb": { "en": "Menu, opening hours, map, and tap-to-call. Shows up properly on Google.", "ga": "Biachlár, uaireanta oscailte, léarscáil agus glao le cnag. Le feiceáil i gceart ar Google." },
+  "type": "cafe",
+  "theme": "turf",
+  "languages": ["en", "ga"],
+  "name": "An Seomra Móna Café",
+  "tagline": { "en": "Coffee, chowder and cake by the turf fire. Walkers, cyclists and dogs all welcome.", "ga": "Caife, seabhdar agus cáca cois tine mhóna. Fáilte roimh shiúlóirí, rothaithe agus madraí." },
+  "area": "Connemara, Co. Galway",
+  "address": "Main Street, Connemara, Co. Galway",
+  "mapQuery": "Clifden, Co. Galway",
+  "ctaLabel": { "en": "Book a table", "ga": "Cuir bord in áirithe" },
+  "rating": { "score": "4.8", "count": 96, "source": "Google" },
+  "about": {
+    "en": ["A small family café with a big turf fire. Everything is baked in our own kitchen each morning, and the fish comes off the boats in Rossaveal."],
+    "ga": ["Caife beag teaghlaigh le tine mhóna mhór. Bácáiltear gach rud inár gcistin féin gach maidin, agus tagann an t-iasc ó na báid i Ros an Mhíl."]
+  },
+  "highlights": [
+    { "icon": "coffee", "en": "Specialty coffee", "ga": "Caife speisialta" },
+    { "icon": "dog", "en": "Dog friendly", "ga": "Fáilte roimh mhadraí" },
+    { "icon": "leaf", "en": "Vegan & gluten-free options", "ga": "Roghanna vegan & saor ó ghlútan" },
+    { "icon": "wifi", "en": "Free Wi-Fi", "ga": "Wi-Fi saor in aisce" }
+  ],
+  "menu": [
+    { "section": { "en": "Breakfast (until 12)", "ga": "Bricfeasta (go dtí 12)" }, "items": [
+      { "name": { "en": "Full Irish", "ga": "Bricfeasta Éireannach" }, "desc": { "en": "Local sausages, rashers, egg, pudding, brown bread", "ga": "Ispíní áitiúla, slisíní, ubh, putóg, arán donn" }, "price": "€13.50" },
+      { "name": { "en": "Porridge", "ga": "Leite" }, "desc": { "en": "With honey, berries and a drop of cream", "ga": "Le mil, caora agus braon uachtair" }, "price": "€7" },
+      { "name": { "en": "Smoked salmon & scrambled egg", "ga": "Bradán deataithe & ubh scrofa" }, "price": "€12" }
+    ] },
+    { "section": { "en": "Lunch", "ga": "Lón" }, "items": [
+      { "name": { "en": "Seafood chowder", "ga": "Seabhdar bia mara" }, "desc": { "en": "With brown bread and butter", "ga": "Le harán donn agus im" }, "price": "€11" },
+      { "name": { "en": "Soup of the day", "ga": "Anraith an lae" }, "price": "€7.50" },
+      { "name": { "en": "Toasted special", "ga": "Ceapaire tósta speisialta" }, "desc": { "en": "Ham, cheese, onion and relish", "ga": "Liamhás, cáis, oinniún agus anlann" }, "price": "€9" }
+    ] },
+    { "section": { "en": "Coffee & cake", "ga": "Caife & cáca" }, "items": [
+      { "name": { "en": "Americano / latte / cappuccino", "ga": "Americano / latte / cappuccino" }, "price": "€3.50–4.20" },
+      { "name": { "en": "Scone with jam & cream", "ga": "Scóna le subh & uachtar" }, "price": "€4" },
+      { "name": { "en": "Carrot cake", "ga": "Cáca cairéid" }, "price": "€5" }
+    ] }
+  ],
+  "menuNote": { "en": "Please tell us about any allergies when you order.", "ga": "Inis dúinn faoi aon ailléirgí nuair a ordaíonn tú." },
+  "hours": [
+    { "days": { "en": "Monday", "ga": "Luan" }, "time": "" },
+    { "days": { "en": "Tuesday – Friday", "ga": "Máirt – Aoine" }, "time": "9:00 – 17:00" },
+    { "days": { "en": "Saturday", "ga": "Satharn" }, "time": "9:00 – 18:00" },
+    { "days": { "en": "Sunday", "ga": "Domhnach" }, "time": "10:00 – 17:00" }
+  ],
+  "reviews": [
+    { "text": { "en": "The chowder alone is worth the drive.", "ga": "Is fiú an turas ar an seabhdar amháin." }, "author": "Example customer", "source": "Google" },
+    { "text": { "en": "Soaked from the Greenway and they sat us by the fire. Lovely people.", "ga": "Fliuch báite ón nGlasbhealach agus chuir siad cois tine sinn. Daoine galánta." }, "author": "Example customer", "source": "Google" }
+  ]
+}

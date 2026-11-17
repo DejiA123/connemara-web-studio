@@ -1,0 +1,24 @@
+{
+  "_help": "Tradesperson (Get Found). TODO values are left blank until filled in.",
+  "sample": true,
+  "draft": false,
+  "type": "trades",
+  "theme": "stone",
+  "languages": ["en", "ga"],
+  "name": "",
+  "tagline": { "en": "Reliable, local and fully insured. Free quotes across Connemara.", "ga": "Iontaofa, áitiúil agus faoi árachas iomlán. Meastacháin saor in aisce ar fud Chonamara." },
+  "area": "",
+  "mapQuery": "",
+  "phone": "",
+  "whatsapp": "",
+  "email": "",
+  "rating": null,
+  "about": { "en": ["TODO who you are and how long you've been in business"], "ga": ["TODO"] },
+  "services": [
+    { "icon": "tool", "name": { "en": "TODO service", "ga": "TODO" }, "desc": { "en": "", "ga": "" } }
+  ],
+  "areas": ["Galway", "Moycullen", "Oughterard", "Spiddal", "Clifden"],
+  "credentials": [{ "en": "Fully insured", "ga": "Árachas iomlán" }, { "en": "Free quotes", "ga": "Meastacháin saor in aisce" }],
+  "reviews": [],
+  "photos": []
+}

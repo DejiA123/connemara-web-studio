@@ -1,0 +1,54 @@
+{
+  "demo": true,
+  "slug": "cnoc-na-gaoithe",
+  "demoKind": { "en": "B&B · Get Booked", "ga": "B&B · Get Booked" },
+  "demoBlurb": { "en": "Direct booking with room prices, live estimate, deposit button and Irish/English.", "ga": "Áirithint dhíreach le praghsanna seomraí, meastachán beo, cnaipe éarlaise agus Gaeilge/Béarla." },
+  "type": "bnb",
+  "theme": "atlantic",
+  "languages": ["en", "ga"],
+  "name": "Cnoc na Gaoithe B&B",
+  "tagline": { "en": "A warm Connemara welcome, sea views from every room and the best breakfast on the coast road.", "ga": "Fáilte chroíúil Chonamara, radharc ar an bhfarraige ó gach seomra agus an bricfeasta is fearr ar bhóthar an chósta." },
+  "area": "Connemara, Co. Galway",
+  "address": "Coast Road, Connemara, Co. Galway",
+  "mapQuery": "Connemara National Park, Letterfrack",
+  "phone": "",
+  "whatsapp": "",
+  "email": "",
+  "rating": { "score": "4.9", "count": 212, "source": "Google" },
+  "about": {
+    "en": ["Máire and Seán have welcomed guests to Cnoc na Gaoithe for over twenty years. The house sits on a hill above the bay, ten minutes from the Connemara National Park and the Wild Atlantic Way.", "Breakfast is homemade: brown bread from the Aga, local eggs and smoked salmon. Ask us about walks, boat trips and the best pub for music tonight."],
+    "ga": ["Tá Máire agus Seán ag cur fáilte roimh aíonna go Cnoc na Gaoithe le breis is fiche bliain. Tá an teach ar chnoc os cionn an chuain, deich nóiméad ó Pháirc Náisiúnta Chonamara agus Slí an Atlantaigh Fhiáin.", "Bricfeasta baile: arán donn ón Aga, uibheacha áitiúla agus bradán deataithe. Fiafraigh dínn faoi shiúlóidí, turais bháid agus an teach tábhairne is fearr le haghaidh ceoil anocht."]
+  },
+  "highlights": [
+    { "icon": "sea", "en": "Sea views from every room", "ga": "Radharc ar an bhfarraige ó gach seomra" },
+    { "icon": "breakfast", "en": "Homemade breakfast included", "ga": "Bricfeasta baile san áireamh" },
+    { "icon": "walk", "en": "10 min to Connemara National Park", "ga": "10 nóiméad go Páirc Náisiúnta Chonamara" },
+    { "icon": "parking", "en": "Free parking and Wi-Fi", "ga": "Páirceáil agus Wi-Fi saor in aisce" },
+    { "icon": "irish", "en": "Fáilte as Gaeilge", "ga": "Fáilte as Gaeilge" },
+    { "icon": "family", "en": "Families welcome", "ga": "Fáilte roimh theaghlaigh" }
+  ],
+  "rooms": [
+    { "name": { "en": "Bay View Double", "ga": "Seomra Dúbailte Radharc an Chuain" }, "desc": { "en": "King bed, ensuite with rain shower, big window over the bay.", "ga": "Leaba mhór, seomra folctha en suite, fuinneog mhór os cionn an chuain." }, "price": "€110", "sleeps": 2 },
+    { "name": { "en": "Twin Room", "ga": "Seomra Cúpla" }, "desc": { "en": "Two single beds, ensuite, garden and mountain view. Ideal for walkers.", "ga": "Dhá leaba shingile, en suite, radharc ar an ngairdín agus ar na sléibhte. Iontach do shiúlóirí." }, "price": "€100", "sleeps": 2 },
+    { "name": { "en": "Family Room", "ga": "Seomra Teaghlaigh" }, "desc": { "en": "A double and two singles, ensuite, plenty of space for bags and boots.", "ga": "Leaba dhúbailte agus dhá leaba shingile, en suite, neart spáis do mhálaí agus bhuataisí." }, "price": "€150", "sleeps": 4 }
+  ],
+  "reviews": [
+    { "text": { "en": "The best breakfast of our whole trip, and the view from the room was unreal.", "ga": "An bricfeasta ab fhearr ar ár dturas ar fad, agus bhí an radharc ón seomra dochreidte." }, "author": "Example guest", "source": "Google" },
+    { "text": { "en": "Máire planned our whole day for us. We felt like family.", "ga": "Phleanáil Máire ár lá ar fad dúinn. Bhraitheamar mar chuid den teaghlach." }, "author": "Example guest", "source": "Google" },
+    { "text": { "en": "Spotless, quiet and so comfortable. We booked again for next summer.", "ga": "Glan, ciúin agus an-chompordach. Chuireamar in áirithe arís don samhradh seo chugainn." }, "author": "Example guest", "source": "Booking.com" }
+  ],
+  "booking": {
+    "mode": "request",
+    "directDiscount": "10%",
+    "depositLink": "",
+    "policies": [
+      { "en": "Check-in 3–8pm, check-out by 11am.", "ga": "Teacht isteach 3–8in, imeacht faoi 11rn." },
+      { "en": "A 25% deposit secures your room.", "ga": "Cinntíonn éarlais 25% do sheomra." },
+      { "en": "Free cancellation up to 7 days before arrival.", "ga": "Cealú saor in aisce suas le 7 lá roimh theacht." }
+    ]
+  },
+  "faq": [
+    { "q": { "en": "Is breakfast included?", "ga": "An bhfuil bricfeasta san áireamh?" }, "a": { "en": "Yes, a full homemade breakfast every morning, with vegetarian and gluten-free options.", "ga": "Tá, bricfeasta baile iomlán gach maidin, le roghanna veigeatóireacha agus saor ó ghlútan." } },
+    { "q": { "en": "Why book direct?", "ga": "Cén fáth a gcuirfinn in áirithe go díreach?" }, "a": { "en": "You get our best price, 10% below the booking sites, and you deal with us directly.", "ga": "Gheobhaidh tú an praghas is fearr, 10% níos ísle ná na suíomhanna áirithinte, agus déileálann tú linn go díreach." } }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "_README": "YOUR details. Edit the values marked TODO, then run: node build.mjs",
+
+  "studioName": "Connemara Web Studio",
+  "ownerName": "TODO Your Name",
+  "phone": "TODO 087 000 0000",
+  "phoneIntl": "TODO 353870000000",
+  "email": "TODO your-email@gmail.com",
+  "baseArea": "Connemara, Co. Galway",
+  "siteUrl": "https://dejia123.github.io/connemara-web-studio/",
+
+  "formEndpoint": "",
+  "_formEndpoint_help": "Optional. Free form inbox from formspree.io or web3forms.com. Leave empty and the contact form opens WhatsApp with the message pre-filled.",
+
+  "stripe": {
+    "getFoundDeposit": "",
+    "getBookedDeposit": "",
+    "getBookedPlan": "",
+    "_help": "Paste Stripe Payment Links here (dashboard.stripe.com > Payment Links). Empty = buttons say 'Call to book'."
+  },
+
+  "founding": {
+    "placesLeft": 3,
+    "deadline": "20 December",
+    "deadlineGa": "20 Nollaig"
+  },
+
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "googleBusiness": ""
+  }
+}

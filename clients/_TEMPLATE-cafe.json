@@ -1,0 +1,31 @@
+{
+  "_help": "Café / pub / takeaway (Get Found). TODO values are left blank until filled in.",
+  "sample": true,
+  "draft": false,
+  "type": "cafe",
+  "theme": "turf",
+  "languages": ["en", "ga"],
+  "name": "",
+  "tagline": { "en": "Good food, good coffee and a warm welcome.", "ga": "Bia maith, caife maith agus fáilte chroíúil." },
+  "area": "",
+  "address": "",
+  "mapQuery": "",
+  "phone": "",
+  "whatsapp": "",
+  "email": "",
+  "ctaLabel": { "en": "Get in touch", "ga": "Déan teagmháil" },
+  "rating": null,
+  "about": { "en": ["TODO two or three sentences about the place"], "ga": ["TODO"] },
+  "highlights": [],
+  "menu": [
+    { "section": { "en": "Menu", "ga": "Biachlár" }, "items": [
+      { "name": { "en": "TODO dish", "ga": "TODO" }, "price": "TODO €" }
+    ] }
+  ],
+  "hours": [
+    { "days": { "en": "Monday – Friday", "ga": "Luan – Aoine" }, "time": "9:00 – 17:00" },
+    { "days": { "en": "Saturday – Sunday", "ga": "Satharn – Domhnach" }, "time": "10:00 – 17:00" }
+  ],
+  "reviews": [],
+  "photos": []
+}

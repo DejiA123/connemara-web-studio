@@ -1,0 +1,34 @@
+{
+  "demo": true,
+  "slug": "fraoch-electrical",
+  "demoKind": { "en": "Tradesperson · Get Found", "ga": "Ceardaí · Get Found" },
+  "demoBlurb": { "en": "Services, areas covered and a quote form that lands on WhatsApp. Built to be found on Google.", "ga": "Seirbhísí, ceantair clúdaithe agus foirm mheastacháin a thagann ar WhatsApp. Déanta le bheith aimsithe ar Google." },
+  "type": "trades",
+  "theme": "stone",
+  "languages": ["en", "ga"],
+  "name": "Fraoch Electrical",
+  "tagline": { "en": "Fully qualified electrician for homes, farms and B&Bs across Connemara. Fast call-outs, fair prices.", "ga": "Leictreoir cáilithe do thithe, feirmeacha agus B&Banna ar fud Chonamara. Glaonna tapa, praghsanna córa." },
+  "area": "Covering all of Connemara",
+  "mapQuery": "Oughterard, Co. Galway",
+  "rating": { "score": "5.0", "count": 41, "source": "Google" },
+  "about": {
+    "en": ["Local, Safe Electric registered, and I turn up when I say I will. From a new socket to a full rewire, EV charger or heat-pump wiring, you get a clear price before any work starts."],
+    "ga": ["Áitiúil, cláraithe le Safe Electric, agus tagaim nuair a deirim go dtiocfaidh mé. Ó soicéad nua go hathshreangú iomlán, luchtaire EV nó sreangú teaschaidéil, gheobhaidh tú praghas soiléir sula dtosaíonn aon obair."]
+  },
+  "services": [
+    { "icon": "bolt", "name": { "en": "Rewiring & fault finding", "ga": "Athshreangú & lochtanna" }, "desc": { "en": "Old houses, tripping fuses, flickering lights.", "ga": "Seantithe, fiúsanna ag titim, soilse ag preabadh." } },
+    { "icon": "leaf", "name": { "en": "EV chargers & heat pumps", "ga": "Luchtairí EV & teaschaidéil" }, "desc": { "en": "SEAI-grant compatible installs.", "ga": "Suiteálacha a oireann do dheontais SEAI." } },
+    { "icon": "shield", "name": { "en": "Safety certificates", "ga": "Teastais sábháilteachta" }, "desc": { "en": "For sales, rentals, B&Bs and insurance.", "ga": "Do dhíolacháin, chíosanna, B&Banna agus árachas." } },
+    { "icon": "tool", "name": { "en": "Emergency call-outs", "ga": "Glaonna éigeandála" }, "desc": { "en": "Power out? Ring and I'll get to you.", "ga": "Gan chumhacht? Glaoigh agus tiocfaidh mé." } }
+  ],
+  "areas": ["Oughterard", "Moycullen", "Spiddal", "Bearna", "Carna", "Roundstone", "Clifden", "Letterfrack"],
+  "credentials": [
+    { "en": "Safe Electric registered", "ga": "Cláraithe le Safe Electric" },
+    { "en": "Fully insured", "ga": "Árachas iomlán" },
+    { "en": "Free quotes", "ga": "Meastacháin saor in aisce" }
+  ],
+  "reviews": [
+    { "text": { "en": "Came out the same evening when our power went. Sorted in an hour, fair price.", "ga": "Tháinig sé amach an tráthnóna céanna nuair a chuaigh an chumhacht. Réitithe in uair an chloig, praghas cóir." }, "author": "Example customer", "source": "Google" },
+    { "text": { "en": "Wired our heat pump and dealt with the grant paperwork. Couldn't recommend more.", "ga": "Shreangaigh sé ár dteaschaidéal agus réitigh sé páipéarachas an deontais. Molaim go hard é." }, "author": "Example customer", "source": "Google" }
+  ]
+}

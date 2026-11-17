@@ -1,0 +1,151 @@
+{
+  "_help": "Copied by new-sample.mjs. Anything starting with TODO is left blank on the site until you fill it in. Keys starting with _ are notes and are ignored.",
+  "sample": true,
+  "draft": true,
+  "type": "bnb",
+  "theme": "stone",
+  "_themes": "atlantic | heather | bog | stone | turf",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Briseadh na Carraige B&B",
+  "tagline": {
+    "en": "Rated 4.9 on Google. A peaceful B&B by the shore in An Spidéal.",
+    "ga": "Rátáil 4.9 ar Google. B&B síochánta cois cladaigh sa Spidéal."
+  },
+  "area": "Spiddal, Co. Galway",
+  "address": "",
+  "mapQuery": "Briseadh na Carraige B&B, Spiddal, Co. Galway",
+  "phone": "091 553 212",
+  "whatsapp": "",
+  "_whatsapp": "Mobile in international format, e.g. 353861234567. Only add with the owner's OK.",
+  "email": "",
+  "rating": {
+    "score": "4.9",
+    "count": 16,
+    "source": "Google"
+  },
+  "_rating_example": {
+    "score": "4.9",
+    "count": 120,
+    "source": "Google"
+  },
+  "about": {
+    "en": [
+      "Welcome to our family-run B&B in the heart of Connemara. We look forward to helping you make the most of your stay, from the best walks and beaches to where to find music tonight.",
+      "Breakfast is cooked to order every morning, and book direct with us for our best price."
+    ],
+    "ga": [
+      "Fáilte go dtí ár B&B teaghlaigh i gcroílár Chonamara. Táimid ag tnúth le cabhrú leat an leas is fearr a bhaint as do chuairt, ó na siúlóidí agus na tránna is fearr go dtí an áit le ceol a chloisteáil anocht.",
+      "Bíonn bricfeasta á réiteach gach maidin, agus cuir in áirithe linn go díreach chun an praghas is fearr a fháil."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "breakfast",
+      "en": "Breakfast included",
+      "ga": "Bricfeasta san áireamh"
+    },
+    {
+      "icon": "parking",
+      "en": "Free parking and Wi-Fi",
+      "ga": "Páirceáil agus Wi-Fi saor in aisce"
+    },
+    {
+      "icon": "walk",
+      "en": "Close to walks and beaches",
+      "ga": "Gar do shiúlóidí agus tránna"
+    },
+    {
+      "icon": "irish",
+      "en": "Fáilte as Gaeilge",
+      "ga": "Fáilte as Gaeilge"
+    }
+  ],
+  "_icons": "sea breakfast walk wifi parking dog fish golf ferry irish family bed leaf coffee bolt tool shield",
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "Comfortable ensuite double room.",
+        "ga": "Seomra dúbailte compordach en suite."
+      },
+      "price": "TODO €",
+      "sleeps": 2,
+      "photo": ""
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ensuite.",
+        "ga": "Dhá leaba shingile, en suite."
+      },
+      "price": "TODO €",
+      "sleeps": 2,
+      "photo": ""
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family, ensuite.",
+        "ga": "Spás don teaghlach ar fad, en suite."
+      },
+      "price": "TODO €",
+      "sleeps": 4,
+      "photo": ""
+    }
+  ],
+  "reviews": [],
+  "_reviews_example": [
+    {
+      "text": {
+        "en": "Copy a real review word for word",
+        "ga": "Aistriúchán"
+      },
+      "author": "First name",
+      "source": "Google"
+    }
+  ],
+  "photos": [],
+  "_photos_example": [
+    {
+      "src": "photos/SLUG/front.jpg",
+      "alt": "The house"
+    },
+    {
+      "src": "photos/SLUG/room.jpg",
+      "alt": "Double room"
+    }
+  ],
+  "booking": {
+    "mode": "request",
+    "_mode": "request = form to WhatsApp/email · embed = booking engine iframe (set embedUrl) for full calendar sync",
+    "embedUrl": "",
+    "directDiscount": "",
+    "depositLink": "",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "A deposit secures your room.",
+        "ga": "Cinntíonn éarlais do sheomra."
+      }
+    ]
+  },
+  "faq": [],
+  "slug": "briseadh-na-carraige-bnb",
+  "_check": "Add a QR review card upsell: only 16 Google reviews.",
+  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false."
+}

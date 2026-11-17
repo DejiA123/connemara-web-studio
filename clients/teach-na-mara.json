@@ -1,0 +1,125 @@
+{
+  "_help": "Copied by new-sample.mjs. Anything starting with TODO is left blank on the site until you fill it in. Keys starting with _ are notes and are ignored.",
+  "sample": true,
+  "draft": true,
+  "type": "bnb",
+  "theme": "atlantic",
+  "_themes": "atlantic | heather | bog | stone | turf",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Teach na Mara",
+  "tagline": {
+    "en": "A luxury family villa by the sea in An Spidéal. Book direct with us and save on every stay.",
+    "ga": "Villa só teaghlaigh cois farraige sa Spidéal. Cuir in áirithe linn go díreach agus sábháil ar gach fanacht."
+  },
+  "area": "Spiddal, Co. Galway",
+  "address": "",
+  "mapQuery": "Teach na Mara, Spiddal, Co. Galway",
+  "phone": "091 553 047",
+  "whatsapp": "",
+  "_whatsapp": "Mobile in international format, e.g. 353861234567. Only add with the owner's OK.",
+  "email": "",
+  "rating": null,
+  "_rating_example": {
+    "score": "4.9",
+    "count": 120,
+    "source": "Google"
+  },
+  "about": {
+    "en": [
+      "Teach na Mara is a luxury holiday villa in An Spidéal, on the edge of Galway Bay. Many of our guests come back year after year.",
+      "Returning guests: book direct here and pay your deposit straight to us."
+    ],
+    "ga": [
+      "Is villa saoire só é Teach na Mara sa Spidéal, ar imeall Chuan na Gaillimhe. Filleann go leor dár n-aíonna bliain i ndiaidh bliana.",
+      "Aíonna atá ag filleadh: cuir in áirithe go díreach anseo agus íoc d’éarlais linn féin."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "sea",
+      "en": "By the sea in An Spidéal",
+      "ga": "Cois farraige sa Spidéal"
+    },
+    {
+      "icon": "family",
+      "en": "Perfect for families and groups",
+      "ga": "Foirfe do theaghlaigh agus do ghrúpaí"
+    },
+    {
+      "icon": "star",
+      "en": "Glowing reviews on VRBO and fivestar.ie",
+      "ga": "Léirmheasanna iontacha ar VRBO agus fivestar.ie"
+    },
+    {
+      "icon": "irish",
+      "en": "In the Gaeltacht",
+      "ga": "Sa Ghaeltacht"
+    }
+  ],
+  "_icons": "sea breakfast walk wifi parking dog fish golf ferry irish family bed leaf coffee bolt tool shield",
+  "rooms": [
+    {
+      "name": {
+        "en": "The whole villa",
+        "ga": "An villa ar fad"
+      },
+      "desc": {
+        "en": "TODO bedrooms, bathrooms and what is included.",
+        "ga": "TODO"
+      },
+      "price": "TODO €3,995",
+      "unit": {
+        "en": "per week",
+        "ga": "sa tseachtain"
+      },
+      "sleeps": "TODO",
+      "photo": ""
+    }
+  ],
+  "reviews": [],
+  "_reviews_example": [
+    {
+      "text": {
+        "en": "Copy a real review word for word",
+        "ga": "Aistriúchán"
+      },
+      "author": "First name",
+      "source": "Google"
+    }
+  ],
+  "photos": [],
+  "_photos_example": [
+    {
+      "src": "photos/SLUG/front.jpg",
+      "alt": "The house"
+    },
+    {
+      "src": "photos/SLUG/room.jpg",
+      "alt": "Double room"
+    }
+  ],
+  "booking": {
+    "mode": "request",
+    "_mode": "request = form to WhatsApp/email · embed = booking engine iframe (set embedUrl) for full calendar sync",
+    "embedUrl": "",
+    "directDiscount": "",
+    "depositLink": "",
+    "policies": [
+      {
+        "en": "Saturday to Saturday stays.",
+        "ga": "Fanachtaí ó Shatharn go Satharn."
+      },
+      {
+        "en": "A deposit secures your week.",
+        "ga": "Cinntíonn éarlais do sheachtain."
+      }
+    ]
+  },
+  "faq": [],
+  "slug": "teach-na-mara",
+  "_check": "Weekly price ~€3,995 from the pack; confirm. Changeover day is a guess.",
+  "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false."
+}

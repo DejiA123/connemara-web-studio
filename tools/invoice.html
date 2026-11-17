@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice</title>
+<style>
+  :root{--ink:#14212b;--muted:#5a6870;--sea:#1f4e6b;--line:#e2ddd3}
+  *{box-sizing:border-box}
+  body{margin:0;background:#eef0f1;font:15px/1.5 Inter,system-ui,sans-serif;color:var(--ink)}
+  .bar{max-width:820px;margin:16px auto;padding:0 16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .bar button{background:var(--sea);color:#fff;border:0;border-radius:99px;padding:10px 18px;font:600 14px Inter,sans-serif;cursor:pointer}
+  .bar small{color:var(--muted)}
+  .page{max-width:820px;margin:0 auto 40px;background:#fff;padding:48px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+  [contenteditable]{outline:none;border-radius:4px}
+  [contenteditable]:hover{background:#fff8e5}
+  h1{font:650 34px Georgia,serif;margin:0;color:var(--sea)}
+  .top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .meta{text-align:right}
+  .muted{color:var(--muted)}
+  table{width:100%;border-collapse:collapse;margin:28px 0}
+  th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:2px solid var(--ink);padding:8px 6px}
+  td{padding:10px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.n,th.n{text-align:right;white-space:nowrap}
+  .totals{margin-left:auto;width:280px}
+  .totals div{display:flex;justify-content:space-between;padding:6px 0}
+  .totals .grand{border-top:2px solid var(--ink);font-weight:700;font-size:18px;margin-top:6px;padding-top:10px}
+  .x{border:0;background:none;color:#b33;cursor:pointer;font-size:16px}
+  .pay{background:#f5f7f8;border-radius:10px;padding:16px 18px;margin-top:28px}
+  @media print{body{background:#fff}.bar,.x,.noprint{display:none!important}.page{box-shadow:none;margin:0;padding:0}[contenteditable]:hover{background:none}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <button onclick="addRow()">+ Add line</button>
+  <button onclick="window.print()">Print / Save as PDF</button>
+  <button onclick="save()">Save as my default</button>
+  <small>Click any text to edit it. Your business details are remembered on this computer once you save.</small>
+</div>
+<div class="page" id="inv">
+  <div class="top">
+    <div id="from" contenteditable>
+      <h1>Invoice</h1>
+      <b>[Your Name]</b><br>t/a Connemara Web Studio<br>[Address line]<br>[Town], Co. Galway<br>[Phone] · [Email]
+    </div>
+    <div class="meta">
+      <div>Invoice no. <b contenteditable id="no">2026-001</b></div>
+      <div>Date: <span contenteditable id="date"></span></div>
+      <div>Due: <span contenteditable id="due"></span></div>
+    </div>
+  </div>
+  <p style="margin-top:28px" class="muted">Bill to</p>
+  <div contenteditable><b>[Client name]</b><br>[Business name]<br>[Address]</div>
+  <table>
+    <thead><tr><th>Description</th><th class="n">Qty</th><th class="n">Price</th><th class="n">Amount</th><th class="noprint"></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="totals">
+    <div><span>Subtotal</span><span id="sub"></span></div>
+    <div><span contenteditable>VAT (not registered)</span><span id="vat" contenteditable>€0.00</span></div>
+    <div class="grand"><span>Total due</span><span id="tot"></span></div>
+  </div>
+  <div class="pay" id="pay" contenteditable>
+    <b>How to pay</b><br>
+    Card: [Stripe payment link]<br>
+    Bank transfer: [Account name] · IBAN [IE00 XXXX 0000 0000 0000 00] · BIC [XXXX]<br>
+    Reference: invoice number. Thank you!
+  </div>
+</div>
+<script>
+  var eur = function (n) { return '€' + n.toLocaleString('en-IE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+  var num = function (s) { return Number(String(s).replace(/[^\d.\-]/g, '')) || 0; };
+  var d = new Date(), due = new Date(Date.now() + 14 * 864e5);
+  var fmt = function (x) { return x.toLocaleDateString('en-IE', { day: 'numeric', month: 'long', year: 'numeric' }); };
+  document.getElementById('date').textContent = fmt(d);
+  document.getElementById('due').textContent = fmt(due);
+  function addRow(desc, qty, price) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td contenteditable>' + (desc || 'Description') + '</td><td class="n" contenteditable>' + (qty || 1) + '</td><td class="n" contenteditable>' + eur(price || 0) + '</td><td class="n amt"></td><td class="noprint"><button class="x" title="Remove">×</button></td>';
+    tr.querySelector('.x').onclick = function () { tr.remove(); calc(); };
+    document.getElementById('rows').appendChild(tr); calc();
+  }
+  function calc() {
+    var sub = 0;
+    document.querySelectorAll('#rows tr').forEach(function (tr) {
+      var c = tr.children, a = num(c[1].textContent) * num(c[2].textContent);
+      c[3].textContent = eur(a); sub += a;
+    });
+    document.getElementById('sub').textContent = eur(sub);
+    document.getElementById('tot').textContent = eur(sub + num(document.getElementById('vat').textContent));
+  }
+  document.getElementById('inv').addEventListener('input', calc);
+  document.getElementById('inv').addEventListener('blur', function (e) { if (e.target.matches('td.n')) { var c = e.target.parentNode.children; if (e.target === c[2]) e.target.textContent = eur(num(e.target.textContent)); calc(); } }, true);
+  function save() {
+    try { localStorage.setItem('inv-from', document.getElementById('from').innerHTML); localStorage.setItem('inv-pay', document.getElementById('pay').innerHTML); alert('Saved. Your details will be filled in next time.'); } catch (e) { alert('Could not save in this browser.'); }
+  }
+  try { var f = localStorage.getItem('inv-from'), p = localStorage.getItem('inv-pay'); if (f) document.getElementById('from').innerHTML = f; if (p) document.getElementById('pay').innerHTML = p; } catch (e) {}
+  addRow('Get Booked website: founding price, 50% deposit (total €570)', 1, 285);
+</script>
+</body>
+</html>
