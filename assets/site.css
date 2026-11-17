@@ -171,3 +171,59 @@ blockquote footer{color:var(--muted);font-size:.9rem}
 .js .rv.in{opacity:1;transform:none}
 .js .card.rv.in:hover{transform:translateY(-6px)}
 @media (prefers-reduced-motion:reduce){.hero-media img,.hero-txt>*{animation:none}}
+
+/* v3: demo upgrades */
+:root{--warm:#e7a93c}
+.hero{min-height:min(86vh,720px)}
+.hero-media::after{background:linear-gradient(180deg,rgba(10,20,28,.25) 0%,rgba(10,20,28,.35) 35%,rgba(10,20,28,.82) 100%)}
+.hero h1{font-size:clamp(2.5rem,7.5vw,4.8rem)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.chips .chip{margin:0}
+.chip.is-open{background:rgba(46,160,90,.85);border-color:rgba(255,255,255,.35)}
+.chip.is-open::before,.open-now.is-open::before{content:"";width:8px;height:8px;border-radius:50%;background:#bff5cf;display:inline-block;margin-right:2px;animation:pulse 1.6s infinite}
+.chip.is-closed{background:rgba(0,0,0,.35)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+p.open-now{display:inline-flex;align-items:center;gap:8px;font-weight:600;padding:6px 14px;border-radius:99px;margin:0 0 14px}
+p.open-now.is-open{background:#e3f6ea;color:#17683a}p.open-now.is-closed{background:#f1eeea;color:#6b5f55}
+
+.perks{background:var(--accent);color:var(--accent-ink)}
+.perks-in{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 20px;padding-top:18px;padding-bottom:18px}
+@media(min-width:820px){.perks-in{grid-template-columns:repeat(4,1fr)}}
+.perks-in div{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.93rem}
+.perks .ic{opacity:.9}
+.cstats{background:#fff;border-bottom:1px solid var(--line)}
+.cstats-in{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding-top:30px;padding-bottom:30px;text-align:center}
+@media(min-width:820px){.cstats-in{grid-template-columns:repeat(4,1fr)}}
+.cstats b{display:block;font-family:Fraunces,Georgia,serif;font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--accent);line-height:1.1}
+.cstats span{color:var(--muted);font-size:.9rem}
+
+.sec h2::after{content:"";display:block;width:54px;height:3px;background:var(--warm);border-radius:2px;margin-top:14px}
+.card-img{position:relative}
+.ptag{position:absolute;right:14px;bottom:14px;background:rgba(255,255,255,.95);color:var(--ink);font-weight:700;font-size:1.15rem;padding:6px 12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.ptag small{font-weight:500;font-size:.75rem;color:var(--muted);margin:0 2px}
+.meta .price{display:none}
+
+.rev-wrap{display:grid;gap:22px}
+@media(min-width:900px){.rev-wrap{grid-template-columns:240px 1fr;align-items:start}}
+.score{background:var(--accent);color:var(--accent-ink);border-radius:var(--radius);padding:28px;text-align:center;box-shadow:var(--shadow)}
+.score b{display:block;font-family:Fraunces,Georgia,serif;font-size:4rem;line-height:1}
+.score .stars{display:block;color:var(--warm);font-size:1.4rem;letter-spacing:3px;margin:8px 0}
+.score small{opacity:.85}
+blockquote{border-top-color:var(--warm)}
+.quotes.five blockquote p::before{content:"★★★★★";display:block;color:var(--warm);font-size:.9rem;letter-spacing:2px;margin-bottom:8px;font-family:Inter,sans-serif}
+
+.book-photo{position:relative;background-color:#1b2429;background-size:cover;background-position:center;color:#fff}
+.book-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,20,28,.9),rgba(10,20,28,.6))}
+.book-photo .wrap{position:relative}
+.book-photo .book-intro p,.book-photo .pol ul{color:rgba(255,255,255,.85)}
+.book-photo .contact-list a,.book-photo h2,.book-photo .pol summary{color:#fff}
+.book-photo .save{color:var(--warm)}
+.book-photo .contact-list .ic{color:var(--warm)}
+.book-photo .book-form{box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.book-photo .btn-ghost{color:#fff;border-color:rgba(255,255,255,.7)}
+.sec.book-photo:nth-of-type(even){background-color:#1b2429}
+.foot{background:#121a1f}
+.gallery .grid{display:block;columns:3 260px;column-gap:12px}
+.gallery .grid img,.gallery img:first-child{width:100%;height:auto;aspect-ratio:auto;margin:0 0 12px;break-inside:avoid;grid-column:auto;grid-row:auto}
+.hours-art img{width:100%;height:100%;object-fit:cover}
+.gallery .grid{display:grid;columns:auto;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery .grid img,.gallery img:first-child{margin:0;aspect-ratio:4/3;height:auto;object-fit:cover;border-radius:12px}

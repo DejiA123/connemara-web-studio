@@ -255,5 +255,38 @@
         "ga": "An caife san oíche"
       }
     }
-  ]
+  ],
+  "openingSpec": {
+    "1": null,
+    "2": "09:00-17:00",
+    "3": "09:00-17:00",
+    "4": "09:00-17:00",
+    "5": "09:00-17:00",
+    "6": "09:00-18:00",
+    "0": "10:00-17:00"
+  },
+  "_openingSpec": "Day number (0=Sunday) to \"HH:MM-HH:MM\", or null when closed. Powers the live Open now badge.",
+  "stats": [
+    {
+      "n": "Since 1998",
+      "en": "family run",
+      "ga": "á reáchtáil ag an teaghlach"
+    },
+    {
+      "n": "100%",
+      "en": "baked in our kitchen",
+      "ga": "bácáilte inár gcistin"
+    },
+    {
+      "n": "4.8★",
+      "en": "on Google",
+      "ga": "ar Google"
+    },
+    {
+      "n": "🐕",
+      "en": "dogs welcome",
+      "ga": "fáilte roimh mhadraí"
+    }
+  ],
+  "bookingPhoto": "assets/img/coffee-cheers.jpg"
 }

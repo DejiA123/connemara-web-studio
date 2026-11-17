@@ -224,5 +224,27 @@
         "ga": "Solas tráthnóna ar an loch"
       }
     }
+  ],
+  "stats": [
+    {
+      "n": "20+",
+      "en": "years welcoming guests",
+      "ga": "bliain ag fáiltiú roimh aíonna"
+    },
+    {
+      "n": "4.9★",
+      "en": "212 Google reviews",
+      "ga": "212 léirmheas Google"
+    },
+    {
+      "n": "10 min",
+      "en": "to the National Park",
+      "ga": "go dtí an Pháirc Náisiúnta"
+    },
+    {
+      "n": "10%",
+      "en": "less than booking sites",
+      "ga": "níos lú ná suíomhanna áirithinte"
+    }
   ]
 }

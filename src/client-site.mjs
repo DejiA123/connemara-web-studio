@@ -52,7 +52,7 @@ export function renderClient(site, lang, ctx) {
     nav.push(['rooms', L.rooms]);
     S.push(`<section id="rooms" class="sec rooms"><div class="wrap"><h2>${L.rooms}</h2><div class="cards">${site.rooms
       .map((r, i) => `<article class="card rv">
-        <div class="card-img">${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}</div>
+        <div class="card-img">${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
         <div class="card-body"><h3>${esc(T(r.name, lang))}</h3>
         <p>${esc(T(r.desc, lang))}</p>
         <p class="meta">${r.sleeps ? `<span>${icon('bed', 18)} ${L.sleeps(r.sleeps)}</span>` : ''}${r.price ? `<span class="price">${L.from} <b>${esc(r.price)}</b> ${r.unit ? esc(T(r.unit, lang)) : L.perNight}</span>` : ''}</p>
@@ -82,9 +82,9 @@ export function renderClient(site, lang, ctx) {
   // reviews
   if (has(site.reviews)) {
     nav.push(['reviews', L.reviews]);
-    S.push(`<section id="reviews" class="sec reviews"><div class="wrap"><h2>${L.reviews}</h2>
-      ${site.rating ? `<p class="rating-line">${'★'.repeat(Math.round(Number(site.rating.score) > 5 ? Number(site.rating.score) / 2 : Number(site.rating.score)))} ${esc(L.ratedOn(site.rating.score, site.rating.count, site.rating.source))}</p>` : ''}
-      <div class="quotes">${site.reviews.map((r) => `<blockquote class="rv"><p>“${esc(T(r.text, lang))}”</p><footer>${esc(r.author || '')}${r.source ? ` · ${esc(r.source)}` : ''}</footer></blockquote>`).join('')}</div></div></section>`);
+    S.push(`<section id="reviews" class="sec reviews"><div class="wrap"><h2>${type === 'bnb' ? L.reviews : (lang === 'ga' ? 'Tuairimí na gcustaiméirí' : 'What customers say')}</h2>
+      <div class="rev-wrap">${site.rating ? `<div class="score rv"><b>${esc(site.rating.score)}</b><span class="stars">${'★'.repeat(Math.round(Number(site.rating.score) > 5 ? Number(site.rating.score) / 2 : Number(site.rating.score)))}</span><small>${esc(L.ratedOn(site.rating.score, site.rating.count, site.rating.source)).replace(/^[^·]*· /, '')}<br>${esc(site.rating.source)}</small></div>` : ''}
+      <div class="quotes${site.rating && Number(site.rating.score) >= (Number(site.rating.score) > 5 ? 9 : 4.5) ? ' five' : ''}">${site.reviews.map((r) => `<blockquote class="rv"><p>“${esc(T(r.text, lang))}”</p><footer>${esc(r.author || '')}${r.source ? ` · ${esc(r.source)}` : ''}</footer></blockquote>`).join('')}</div></div></div></section>`);
   }
 
   // gallery
@@ -95,9 +95,9 @@ export function renderClient(site, lang, ctx) {
 
   // hours (café)
   if (has(site.hours)) {
-    S.push(`<section id="hours" class="sec hours"><div class="wrap two"><div><h2>${L.hours}</h2><table class="hours-t">${site.hours
+    S.push(`<section id="hours" class="sec hours"><div class="wrap two"><div><h2>${L.hours}</h2>${site.openingSpec ? `<p class="open-now" data-open='${esc(JSON.stringify(site.openingSpec))}' data-lang="${lang}" hidden></p>` : ''}<table class="hours-t">${site.hours
       .map((h) => `<tr><th>${esc(T(h.days, lang))}</th><td>${h.time ? esc(h.time) : L.closed}</td></tr>`).join('')}</table></div>
-      <div class="hours-art">${landscape(theme, 3)}</div></div></section>`);
+      <div class="hours-art">${site.photos?.length > 1 ? `<img src="${esc(img(site.photos[site.photos.length - 1].src))}" alt="" loading="lazy">` : landscape(theme, 3)}</div></div></section>`);
   }
 
   // booking / quote / contact form
@@ -136,7 +136,8 @@ export function renderClient(site, lang, ctx) {
   }
   const deposit = booking.depositLink ? `<div class="deposit"><a class="btn btn-ghost" href="${esc(booking.depositLink)}" target="_blank" rel="noopener">${icon('shield', 18)} ${L.payDeposit}</a><small>${L.depositNote}</small></div>` : '';
   const policies = has(booking.policies) ? `<details class="pol"><summary>${L.policies}</summary><ul>${booking.policies.map((p) => `<li>${esc(T(p, lang))}</li>`).join('')}</ul></details>` : '';
-  S.push(`<section id="book" class="sec book"><div class="wrap two">
+  const bookBg = site.bookingPhoto || site.photos?.[3]?.src || site.photos?.[0]?.src;
+  S.push(`<section id="book" class="sec book${bookBg ? ' book-photo' : ''}"${bookBg ? ` style="background-image:url('${esc(img(bookBg))}')"` : ''}><div class="wrap two">
     <div class="book-intro"><h2>${type === 'bnb' ? L.bookingTitle : type === 'trades' ? L.quote : L.contact}</h2>
       ${type === 'bnb' ? `<p>${L.bookingIntro}</p>` : ''}
       ${booking.directDiscount ? `<p class="save">${icon('euro', 20)} ${L.saveVs(esc(booking.directDiscount))}</p>` : type === 'bnb' ? `<p class="save">${icon('euro', 20)} ${L.bestPrice}</p>` : ''}
@@ -185,6 +186,11 @@ export function renderClient(site, lang, ctx) {
   const langHref = lang === 'en' ? 'ga/' : '../';
   const primaryCta = type === 'bnb' ? L.bookDirect : type === 'trades' ? L.quote : (site.ctaLabel ? T(site.ctaLabel, lang) : L.contact);
   const studio = ctx.studio;
+  const perkList = has(site.perks) ? site.perks : type === 'bnb' ? (lang === 'ga'
+    ? [['euro', 'An praghas is fearr, ráthaithe'], ['shield', 'Gan táillí áirithinte'], ['calendar', 'Éarlais shlán le cárta'], ['chat', 'Freagra laistigh d’uaireanta']]
+    : [['euro', 'Best price, guaranteed'], ['shield', 'No booking fees'], ['calendar', 'Secure card deposit'], ['chat', 'Reply within hours']]).map(([i, t]) => ({ icon: i, en: t, ga: t })) : [];
+  const perks = perkList.length ? `<section class="perks"><div class="wrap perks-in">${perkList.map((p) => `<div>${icon(p.icon || 'check', 22)}<span>${esc(T(p, lang))}</span></div>`).join('')}</div></section>` : '';
+  const stats = has(site.stats) ? `<section class="cstats"><div class="wrap cstats-in">${site.stats.map((x) => `<div class="rv"><b>${esc(x.n)}</b><span>${esc(T(x, lang))}</span></div>`).join('')}</div></section>` : '';
 
   return `<!doctype html>
 <html lang="${lang}">
@@ -217,7 +223,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
 <section class="hero">
   <div class="hero-media">${heroImg ? `<img src="${esc(img(heroImg))}" alt="${esc(T(site.photos[0].alt, lang))}">` : landscape(theme, 0, { label: site.area || '' })}</div>
   <div class="hero-txt wrap">
-    ${rating}
+    <div class="chips">${rating}${site.openingSpec ? `<span class="chip open-now" data-open='${esc(JSON.stringify(site.openingSpec))}' data-lang="${lang}" hidden></span>` : ''}</div>
     <h1>${esc(site.name)}</h1>
     <p class="tag">${esc(T(site.tagline, lang))}</p>
     ${site.area ? `<p class="where">${icon('pin', 18)} ${esc(site.area)}</p>` : ''}
@@ -226,6 +232,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
   </div>
 </section>
 
+${perks}${stats}
 <main>${S.join('\n')}</main>
 
 <footer class="foot"><div class="wrap footin">

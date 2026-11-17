@@ -138,5 +138,28 @@
         "ga": "Conamara, an áit a n-oibrímid"
       }
     }
-  ]
+  ],
+  "stats": [
+    {
+      "n": "15+",
+      "en": "years' experience",
+      "ga": "bliain taithí"
+    },
+    {
+      "n": "< 2h",
+      "en": "emergency response",
+      "ga": "freagairt éigeandála"
+    },
+    {
+      "n": "5.0★",
+      "en": "41 Google reviews",
+      "ga": "41 léirmheas Google"
+    },
+    {
+      "n": "€0",
+      "en": "for a quote",
+      "ga": "ar mheastachán"
+    }
+  ],
+  "bookingPhoto": "assets/img/twelve-bens.jpg"
 }

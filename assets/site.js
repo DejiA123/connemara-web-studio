@@ -141,6 +141,22 @@
     run();
   }
 
+  // ---- open now / closed now (Irish time) ----
+  document.querySelectorAll('.open-now[data-open]').forEach(function (el) {
+    try {
+      var spec = JSON.parse(el.dataset.open), ga = el.dataset.lang === 'ga';
+      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Dublin', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+      var get = function (t) { return (parts.find(function (p) { return p.type === t; }) || {}).value; };
+      var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'));
+      var now = Number(get('hour')) * 60 + Number(get('minute'));
+      var today = spec[day], open = false, closes = '';
+      if (today) { var r = today.split('-'), a = r[0].split(':'), b = r[1].split(':'); open = now >= a[0] * 60 + +a[1] && now < b[0] * 60 + +b[1]; closes = r[1]; }
+      el.classList.add(open ? 'is-open' : 'is-closed');
+      el.textContent = open ? (ga ? 'Oscailte anois · dúnann ag ' + closes : 'Open now · closes ' + closes) : (ga ? 'Dúnta anois' : 'Closed now');
+      el.hidden = false;
+    } catch (e) {}
+  });
+
   // ---- reveal on scroll ----
   var rv = document.querySelectorAll('.rv');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
