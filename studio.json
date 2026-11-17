@@ -2,12 +2,12 @@
   "_README": "YOUR details. Edit the values marked TODO, then run: node build.mjs",
 
   "studioName": "Connemara Web Studio",
-  "ownerName": "TODO Your Name",
-  "phone": "TODO 087 000 0000",
-  "phoneIntl": "TODO 353870000000",
-  "email": "TODO your-email@gmail.com",
+  "ownerName": "Ayodeji Augustine",
+  "phone": "086 073 6836",
+  "phoneIntl": "353860736836",
+  "email": "dejiaugustine@gmail.com",
   "baseArea": "Connemara, Co. Galway",
-  "siteUrl": "https://dejia123.github.io/connemara-web-studio/",
+  "siteUrl": "https://connemara-web-studio.vercel.app/",
 
   "formEndpoint": "",
   "_formEndpoint_help": "Optional. Free form inbox from formspree.io or web3forms.com. Leave empty and the contact form opens WhatsApp with the message pre-filled.",

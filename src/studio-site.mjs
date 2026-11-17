@@ -6,7 +6,7 @@ export function renderStudio(studio, lang, ctx) {
   const x = (en, ga) => (lang === 'ga' ? ga : en);
   const rel = ctx.rel;
   const s = studio;
-  const tel = (s.phone || '').replace(/\s/g, '');
+  const tel = String(s.phoneIntl || '').replace(/[^\d]/g, '') ? '+' + String(s.phoneIntl).replace(/[^\d]/g, '') : (s.phone || '').replace(/\s/g, '');
   const wa = String(s.phoneIntl || '').replace(/[^\d]/g, '');
   const left = Math.max(0, Number(s.founding?.placesLeft ?? 3));
   const deadline = lang === 'ga' ? s.founding?.deadlineGa : s.founding?.deadline;
