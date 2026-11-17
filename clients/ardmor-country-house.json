@@ -119,6 +119,34 @@
         "en": "Connemara",
         "ga": "Conamara"
       }
+    },
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "Spiddal pier and shore",
+        "ga": "Cé agus cladach an Spidéil"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "Connemara beaches",
+        "ga": "Tránna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Connemara lakes",
+        "ga": "Lochanna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
+      }
     }
   ],
   "_photos_example": [
@@ -150,7 +178,34 @@
   },
   "faq": [],
   "slug": "ardmor-country-house",
-  "_check": "Owner is happy to talk in Irish. Lead with the Irish version of the sample.",
+  "_check": "Owner is happy to talk in Irish. Lead with the Irish version of the sample. Verify the stats strip with the owner (drive times are approximate). Swap in their own photos.",
   "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
-  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
+  "stats": [
+    {
+      "n": "4★",
+      "en": "Fáilte Ireland approved",
+      "ga": "ceadaithe ag Fáilte Ireland"
+    },
+    {
+      "n": "Gaeltacht",
+      "en": "Fáilte as Gaeilge",
+      "ga": "Fáilte as Gaeilge"
+    },
+    {
+      "n": "25 min",
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
+    },
+    {
+      "n": "25 min",
+      "en": "to the Aran Islands ferry",
+      "ga": "go bád farantóireachta Árann"
+    }
+  ],
+  "galleryTitle": {
+    "en": "Explore Connemara",
+    "ga": "Taiscéal Conamara"
+  },
+  "bookingPhoto": "assets/img/beach.jpg"
 }

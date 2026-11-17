@@ -51,8 +51,9 @@ export function renderClient(site, lang, ctx) {
   if (has(site.rooms)) {
     nav.push(['rooms', L.rooms]);
     S.push(`<section id="rooms" class="sec rooms"><div class="wrap"><h2>${L.rooms}</h2><div class="cards">${site.rooms
-      .map((r, i) => `<article class="card rv">
-        <div class="card-img">${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
+      .map((r, i) => `<article class="card rv${r.photo ? '' : ' card-text'}">
+        ${r.photo ? '' : `<div class="card-ic">${icon('bed', 26)}${r.price ? `<span class="ptag ptag-in"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>`}
+        <div class="card-img"${r.photo ? '' : ' hidden'}>${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
         <div class="card-body"><h3>${esc(T(r.name, lang))}</h3>
         <p>${esc(T(r.desc, lang))}</p>
         <p class="meta">${r.sleeps ? `<span>${icon('bed', 18)} ${L.sleeps(r.sleeps)}</span>` : ''}${r.price ? `<span class="price">${L.from} <b>${esc(r.price)}</b> ${r.unit ? esc(T(r.unit, lang)) : L.perNight}</span>` : ''}</p>
@@ -89,7 +90,7 @@ export function renderClient(site, lang, ctx) {
 
   // gallery
   if (has(site.photos) && site.photos.length > 2) {
-    S.push(`<section class="sec gallery"><div class="wrap"><h2>${L.gallery}</h2><div class="grid">${site.photos.slice(2)
+    S.push(`<section class="sec gallery"><div class="wrap"><h2>${site.galleryTitle ? esc(T(site.galleryTitle, lang)) : L.gallery}</h2><div class="grid">${site.photos.slice(2)
       .map((p) => `<img src="${esc(img(p.src))}" alt="${esc(T(p.alt, lang))}" loading="lazy">`).join('')}</div></div></section>`);
   }
 

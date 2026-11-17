@@ -118,10 +118,38 @@
   ],
   "photos": [
     {
+      "src": "assets/img/roundstone-golden.jpg",
+      "alt": {
+        "en": "Connemara at sunset",
+        "ga": "Conamara ag luí na gréine"
+      }
+    },
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "Spiddal pier and shore",
+        "ga": "Cé agus cladach an Spidéil"
+      }
+    },
+    {
       "src": "assets/img/beach.jpg",
       "alt": {
-        "en": "Connemara",
-        "ga": "Conamara"
+        "en": "Connemara beaches",
+        "ga": "Tránna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Connemara harbour",
+        "ga": "Cuan i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
       }
     }
   ],
@@ -154,7 +182,34 @@
   },
   "faq": [],
   "slug": "briseadh-na-carraige-bnb",
-  "_check": "Add a QR review card upsell: only 16 Google reviews.",
+  "_check": "Add a QR review card upsell: only 16 Google reviews. Verify the stats strip with the owner (drive times are approximate). Swap in their own photos.",
   "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
-  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
+  "stats": [
+    {
+      "n": "4.9★",
+      "en": "on Google",
+      "ga": "ar Google"
+    },
+    {
+      "n": "Gaeltacht",
+      "en": "Fáilte as Gaeilge",
+      "ga": "Fáilte as Gaeilge"
+    },
+    {
+      "n": "25 min",
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
+    },
+    {
+      "n": "25 min",
+      "en": "to the Aran Islands ferry",
+      "ga": "go bád farantóireachta Árann"
+    }
+  ],
+  "galleryTitle": {
+    "en": "Explore Connemara",
+    "ga": "Taiscéal Conamara"
+  },
+  "bookingPhoto": "assets/img/beach.jpg"
 }

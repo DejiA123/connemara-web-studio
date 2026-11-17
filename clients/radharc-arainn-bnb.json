@@ -114,10 +114,38 @@
   ],
   "photos": [
     {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "Looking out to the islands",
+        "ga": "Ag féachaint amach ar na hoileáin"
+      }
+    },
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "Spiddal pier and shore",
+        "ga": "Cé agus cladach an Spidéil"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Connemara harbour",
+        "ga": "Cuan i gConamara"
+      }
+    },
+    {
       "src": "assets/img/lake-light.jpg",
       "alt": {
-        "en": "Connemara",
-        "ga": "Conamara"
+        "en": "Connemara lakes",
+        "ga": "Lochanna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
       }
     }
   ],
@@ -151,5 +179,33 @@
   "faq": [],
   "slug": "radharc-arainn-bnb",
   "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
-  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
+  "stats": [
+    {
+      "n": "800+",
+      "en": "guest reviews",
+      "ga": "léirmheas ó aíonna"
+    },
+    {
+      "n": "Aran",
+      "en": "views across the bay",
+      "ga": "radharc trasna an chuain"
+    },
+    {
+      "n": "25 min",
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
+    },
+    {
+      "n": "25 min",
+      "en": "to the Aran Islands ferry",
+      "ga": "go bád farantóireachta Árann"
+    }
+  ],
+  "galleryTitle": {
+    "en": "Explore Connemara",
+    "ga": "Taiscéal Conamara"
+  },
+  "bookingPhoto": "assets/img/harbour-bens.jpg",
+  "_check": "Verify the stats strip with the owner (drive times are approximate). Swap in their own photos."
 }

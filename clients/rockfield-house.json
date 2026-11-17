@@ -109,10 +109,38 @@
   ],
   "photos": [
     {
+      "src": "assets/img/connemara-pony.jpg",
+      "alt": {
+        "en": "A Connemara pony in Moycullen",
+        "ga": "Capaillín Conamara i Maigh Cuilinn"
+      }
+    },
+    {
       "src": "assets/img/twelve-bens.jpg",
       "alt": {
-        "en": "Connemara",
-        "ga": "Conamara"
+        "en": "Connemara mountains",
+        "ga": "Sléibhte Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Connemara lakes",
+        "ga": "Lochanna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Connemara coast",
+        "ga": "Cósta Chonamara"
       }
     }
   ],
@@ -145,7 +173,34 @@
   },
   "faq": [],
   "slug": "rockfield-house",
-  "_check": "Get Found (€210) prospect. Confirm distance to Galway.",
+  "_check": "Get Found (€210) prospect. Confirm distance to Galway. Verify the stats strip with the owner (drive times are approximate). Swap in their own photos.",
   "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
-  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
+  "galleryTitle": {
+    "en": "Your Connemara base",
+    "ga": "Do bhunáit i gConamara"
+  },
+  "stats": [
+    {
+      "n": "Farm",
+      "en": "a real farmhouse stay",
+      "ga": "fanacht i dteach feirme"
+    },
+    {
+      "n": "15 min",
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
+    },
+    {
+      "n": "Corrib",
+      "en": "Lough Corrib close by",
+      "ga": "Loch Coirib in aice láimhe"
+    },
+    {
+      "n": "Connemara",
+      "en": "on your doorstep",
+      "ga": "ag do dhoras"
+    }
+  ],
+  "bookingPhoto": "assets/img/lake-light.jpg"
 }

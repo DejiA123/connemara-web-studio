@@ -117,5 +117,19 @@
   "artist": "Unsplash",
   "license": "Unsplash License",
   "source": "https://unsplash.com/photos/1621905251189-08b45d6a269e"
+ },
+ {
+  "file": "spiddal-shore.jpg",
+  "title": "Spiddal Pier.jpg",
+  "artist": "User:O'Dea",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Spiddal_Pier.jpg"
+ },
+ {
+  "file": "connemara-pony.jpg",
+  "title": "Moycullen - Grazing Prize-Winning Connemara Pony - geograph.org.uk - 3023410.jpg",
+  "artist": "Joseph Mischyshyn",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Moycullen_-_Grazing_Prize-Winning_Connemara_Pony_-_geograph.org.uk_-_3023410.jpg"
  }
 ]

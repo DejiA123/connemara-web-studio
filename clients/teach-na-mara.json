@@ -67,15 +67,15 @@
         "ga": "An villa ar fad"
       },
       "desc": {
-        "en": "TODO bedrooms, bathrooms and what is included.",
-        "ga": "TODO"
+        "en": "The whole villa for your family or group. Ask us about the week you have in mind.",
+        "ga": "An villa ar fad do do theaghlach nó do ghrúpa. Fiafraigh dínn faoin tseachtain atá uait."
       },
-      "price": "TODO €3,995",
+      "price": "€3,995",
       "unit": {
         "en": "per week",
         "ga": "sa tseachtain"
       },
-      "sleeps": "TODO",
+      "sleeps": "",
       "photo": ""
     }
   ],
@@ -94,8 +94,36 @@
     {
       "src": "assets/img/beach.jpg",
       "alt": {
-        "en": "Connemara",
-        "ga": "Conamara"
+        "en": "Connemara coast",
+        "ga": "Cósta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "Spiddal pier and shore",
+        "ga": "Cé agus cladach an Spidéil"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Connemara harbour",
+        "ga": "Cuan i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Connemara lakes",
+        "ga": "Lochanna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
       }
     }
   ],
@@ -128,7 +156,34 @@
   },
   "faq": [],
   "slug": "teach-na-mara",
-  "_check": "Weekly price ~€3,995 from the pack; confirm. Changeover day is a guess.",
+  "_check": "Weekly price ~€3,995 from the pack; confirm. Changeover day is a guess. Verify the stats strip with the owner (drive times are approximate). Swap in their own photos.",
   "_status": "DRAFT: only publish once the owner has said yes to a free sample. Check every fact, swap in their photos (with permission), then set draft to false.",
-  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing."
+  "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
+  "stats": [
+    {
+      "n": "★★★★★",
+      "en": "reviews on VRBO & fivestar.ie",
+      "ga": "léirmheasanna ar VRBO & fivestar.ie"
+    },
+    {
+      "n": "Sea",
+      "en": "by Galway Bay",
+      "ga": "cois Chuan na Gaillimhe"
+    },
+    {
+      "n": "25 min",
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
+    },
+    {
+      "n": "Gaeltacht",
+      "en": "Irish spoken locally",
+      "ga": "Gaeilge á labhairt go háitiúil"
+    }
+  ],
+  "galleryTitle": {
+    "en": "Explore Connemara",
+    "ga": "Taiscéal Conamara"
+  },
+  "bookingPhoto": "assets/img/harbour-bens.jpg"
 }
