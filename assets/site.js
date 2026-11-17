@@ -134,7 +134,7 @@
       var perNight = r * p;
       var nightsToPay = perNight > 0 ? Math.ceil(price / perNight) : 0;
       out.payback.textContent = perNight > 0
-        ? (ga ? nightsToPay + ' oíche curtha in áirithe go díreach' : nightsToPay + ' direct nights')
+        ? (ga ? nightsToPay + ' oíche' : nightsToPay + ' direct nights')
         : '–';
     };
     calc.addEventListener('input', run);

@@ -95,12 +95,12 @@ export function renderStudio(studio, lang, ctx) {
     <div class="hero-copy">
       ${left > 0 ? `<p class="pill">${icon('star', 16)} ${x(`Founding offer: ${left} ${left === 1 ? 'place' : 'places'} left at 40% off, book by ${esc(deadline)}`, `Tairiscint bhunaidh: ${left} ${left === 1 ? 'áit' : 'áit'} fágtha ar 40% lascaine, cuir in áirithe roimh ${esc(deadline)}`)}</p>` : ''}
       <p class="eyebrow">${x('Websites that take bookings · Connemara & Galway', 'Suíomhanna a ghlacann le háirithintí · Conamara & Gaillimh')}</p>
-      <h1>${x('Your guests already love you. <em>Let them book you direct.</em>', 'Is breá le d’aíonna thú cheana. <em>Lig dóibh áirithint a dhéanamh go díreach.</em>')}</h1>
+      <h1>${x('Your guests already love you. <em>Let them book you direct.</em>', 'Is breá le d’aíonna thú. <em>Faigh a n-áirithintí go díreach.</em>')}</h1>
       <p class="lead">${x('Stop paying 15% commission on guests who already know your name. I’ll build your new website as a <b>free sample first</b>, and you only pay if you love it.', 'Ná híoc 15% coimisiúin ar aíonna a bhfuil d’ainm acu cheana. Tógfaidh mé do shuíomh nua mar <b>shampla saor in aisce ar dtús</b>, agus ní íocann tú ach má thaitníonn sé leat.')}</p>
       <div class="ctas"><a class="btn btn-lg btn-gold" href="#contact">${x('Get my free sample', 'Faigh mo shampla saor in aisce')} →</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-glass" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
       <ul class="trust"><li>${icon('irish', 18)} ${x('Irish & English', 'Gaeilge & Béarla')}</li><li>${icon('calendar', 18)} ${x('Synced with Booking.com & Airbnb', 'Sioncronaithe le Booking.com & Airbnb')}</li><li>${icon('pin', 18)} ${x('Local: I call in and answer the phone', 'Áitiúil: tagaim ar cuairt agus freagraím an fón')}</li></ul>
     </div>
-    ${demos[0] ? `<div class="phone" aria-hidden="true"><div class="phone-in"><iframe src="${rel}${esc(demos[0].path)}" title="Example" tabindex="-1" loading="lazy"></iframe></div></div>` : ''}
+    ${demos[0] ? `<div class="phone" aria-hidden="true"><div class="phone-in"><iframe src="${rel}${esc(demos[0].path)}${lang === 'ga' && demos[0].bilingual ? 'ga/' : ''}" title="Example" tabindex="-1" loading="lazy"></iframe></div></div>` : ''}
   </div>
 </section>
 
@@ -125,7 +125,7 @@ export function renderStudio(studio, lang, ctx) {
     <div class="calc-out">
       <div><small>${x('Commission you pay now, per year', 'Coimisiún a íocann tú anois, in aghaidh na bliana')}</small><b data-out="paid">€3,000</b></div>
       <div class="hi"><small>${x('You could keep, per year', 'D’fhéadfá a choinneáil, in aghaidh na bliana')}</small><b data-out="saved">€750</b></div>
-      <div><small>${x('A €570 site pays for itself after', 'Íocann suíomh €570 as féin tar éis')}</small><b data-out="payback">38</b></div>
+      <div><small>${x('A €570 site pays for itself after', 'Oícheanta díreacha chun suíomh €570 a íoc')}</small><b data-out="payback">38</b></div>
     </div>
   </form>
 </div></section>
