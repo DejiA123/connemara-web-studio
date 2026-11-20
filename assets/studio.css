@@ -255,3 +255,17 @@ body{background:var(--bg)}
 .calc .eur input{padding-left:30px}
 
 .req input:not([type=checkbox]),.req select{height:46px}
+.vs{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-top:24px}
+.vs table{width:100%;border-collapse:collapse;font-size:.95rem}
+.vs th,.vs td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--line);vertical-align:middle}
+.vs th{background:var(--navy);color:#fff;font-weight:600}
+.vs th.us{background:var(--sea)}
+.vs td:first-child,.vs th:first-child{text-align:left;font-weight:600;color:var(--ink)}
+.vs td.us{background:#f4f9fb}
+.vs small{display:block;font-size:.76rem;color:var(--muted);font-weight:400}
+.vs th small{color:#cfe0ea}
+.vs .bad{color:#b5523f;font-weight:700;font-size:1.1rem}
+.vs .good{color:#1f7a45;font-weight:700;font-size:1.1rem}
+.vs tr:last-child td{border-bottom:0}
+@media(max-width:560px){.vs table{font-size:.82rem}.vs th,.vs td{padding:9px 5px}}
+.pkg .muted.small b{color:var(--ink)}

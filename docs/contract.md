@@ -21,6 +21,8 @@ Anything not listed here is not included and will be quoted separately, in writi
 - The site does not go live until it is paid for in full.
 - I am [not registered for VAT / registered for VAT, number …].
 
+**Or, monthly option (nothing up front):** €39 a month by card, minimum 12 months, Basic monthly support included. After 12 months it continues month to month and either side can cancel with 30 days' notice. You own the content; if you cancel within the first 12 months, the remaining months up to 12 are due.
+
 ## 3. Timeline
 - You send me your text, prices, photos and booking rules (the "content") by **[DATE]**. I can't start building until I have it.
 - First full version for you to review: within **[10] working days** of receiving the content.
@@ -37,7 +39,7 @@ Two rounds of changes are included in the build. Further changes are charged at 
 - You confirm you have the right to use the photos, text and logos you give me.
 
 ## 6. Care plan (optional)
-- [ ] Basic, €40/month: hosting, security updates, backups, 30 min of changes a month.
+- [ ] Basic, €39/month: hosting, security updates, backups, 30 min of changes a month.
 - [ ] Growth, €90/month: Basic plus 4 Google posts, review replies, 1 hour of changes, monthly report.
 - Paid monthly by card or standing order. 6-month minimum, then cancel with 30 days' notice.
 - If you cancel, I give you all the files and help move the site, free of charge.

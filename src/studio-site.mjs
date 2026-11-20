@@ -28,10 +28,10 @@ export function renderStudio(studio, lang, ctx) {
     {
       key: 'booked', featured: true, name: 'Get Booked', normal: '€950', founding: '€570', time: x('Ready in 2–3 weeks', 'Réidh i gceann 2–3 seachtaine'),
       who: x('B&Bs, guesthouses, holiday homes and activity providers.', 'B&Banna, tithe aíochta, tithe saoire agus soláthraithe gníomhaíochtaí.'),
-      items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Linked to your Booking.com and Airbnb calendars, so you’re never double-booked', 'Your Google Maps listing set up', 'Booking guarantee (see below)'],
-        ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Nasctha le d’fhéilirí Booking.com agus Airbnb, ionas nach mbeidh áirithint dhúbailte agat choíche', 'Do liostáil ar Google Maps socraithe', 'Ráthaíocht áirithinte (féach thíos)']),
+      items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Optional: link to your Booking.com and Airbnb calendars so you’re never double-booked (booking tool about €15–30 a month)', 'Your Google Maps listing set up', 'Booking guarantee (see below)'],
+        ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Roghnach: nasc le d’fhéilirí Booking.com agus Airbnb ionas nach mbeidh áirithint dhúbailte agat choíche (uirlis áirithinte thart ar €15–30 sa mhí)', 'Do liostáil ar Google Maps socraithe', 'Ráthaíocht áirithinte (féach thíos)']),
       payLink: st.getBookedDeposit, payLabel: x('Pay €285 deposit', 'Íoc éarlais €285'),
-      plan: x('Or 3 payments of €190', 'Nó 3 íocaíocht de €190'), planLink: st.getBookedPlan,
+      plan: x('Or 3 payments of €190.<br><b>Or nothing up front: €39 a month</b> (12-month minimum, monthly support included).', 'Nó 3 íocaíocht de €190.<br><b>Nó faic roimh ré: €39 sa mhí</b> (12 mhí ar a laghad, tacaíocht mhíosúil san áireamh).'), planLink: st.getBookedPlan,
     },
     {
       key: 'sell', name: 'Sell Online', normal: '€1,200', founding: '€720', from: x('from', 'ó'), time: x('Ready in 3–4 weeks', 'Réidh i gceann 3–4 seachtaine'),
@@ -42,6 +42,9 @@ export function renderStudio(studio, lang, ctx) {
   ];
 
   const faq = [
+    [x('Why is this cheaper than Booking.com?', 'Cén fáth a bhfuil sé seo níos saoire ná Booking.com?'),
+      x('Booking.com takes 15% of every booking, forever: €15 from every €100 night. A guest who books on your own website costs you only the card fee, about €1.75. You keep Booking.com for new guests, and your own website takes the guests who already know you. With the €39 a month option, about 3 direct nights a month (at €100) already covers it.',
+        'Tógann Booking.com 15% de gach áirithint, go deo: €15 as gach oíche €100. Ní chosnaíonn aoi a chuireann in áirithe ar do shuíomh féin ach táille an chárta, thart ar €1.75. Coinníonn tú Booking.com le haghaidh aíonna nua, agus glacann do shuíomh féin na haíonna a bhfuil aithne acu ort cheana. Leis an rogha €39 sa mhí, clúdaíonn thart ar 3 oíche dhíreacha sa mhí (ag €100) é.')],
     [x('Do I have to leave Booking.com or Airbnb?', 'An gcaithfidh mé Booking.com nó Airbnb a fhágáil?'),
       x('No. Keep them for new guests from abroad. Your own site wins the guests who already know your name: returning guests, word of mouth and people who Google you after finding you on a booking site. Your calendars stay linked, so you’re never double-booked.',
         'Ní chaithfidh. Coinnigh iad le haghaidh aíonna nua ó thar lear. Mealltar le do shuíomh féin na haíonna a bhfuil d’ainm acu cheana: aíonna a thagann ar ais, moladh ó bhéal agus daoine a chuardaíonn ar Google thú. Fanann na féilirí nasctha, ionas nach mbeidh áirithint dhúbailte agat.')],
@@ -51,8 +54,8 @@ export function renderStudio(studio, lang, ctx) {
     [x('What if I don’t like the sample?', 'Cad a tharlaíonn mura dtaitníonn an sampla liom?'),
       x('Then you don’t pay anything and we part as friends. There is no obligation at all.', 'Ansin ní íocann tú faic. Níl aon cheangal ort ar chor ar bith.')],
     [x('What are the running costs?', 'Cad iad na costais reatha?'),
-      x('Your web address (like yourbnb.ie) costs about €15–30 a year and is registered in your name. Optional monthly support (from €40 a month) keeps the website online, safe and up to date, and covers small changes like new prices or photos.',
-        'Cosnaíonn do sheoladh gréasáin (mar shampla yourbnb.ie) thart ar €15–30 sa bhliain agus bíonn sé cláraithe i d’ainm féin. Coinníonn tacaíocht mhíosúil roghnach (ó €40 sa mhí) an suíomh ar líne, slán agus cothrom le dáta, agus clúdaíonn sí athruithe beaga ar nós praghsanna nó grianghraif nua.')],
+      x('Your web address (like yourbnb.ie) costs about €15–30 a year and is registered in your name. Optional monthly support (from €39 a month) keeps the website online, safe and up to date, and covers small changes like new prices or photos. Card payments cost about 1.5% + €0.25 each (Stripe’s fee, not mine).',
+        'Cosnaíonn do sheoladh gréasáin (mar shampla yourbnb.ie) thart ar €15–30 sa bhliain agus bíonn sé cláraithe i d’ainm féin. Coinníonn tacaíocht mhíosúil roghnach (ó €39 sa mhí) an suíomh ar líne, slán agus cothrom le dáta, agus clúdaíonn sí athruithe beaga ar nós praghsanna nó grianghraif nua. Cosnaíonn íocaíocht chárta thart ar 1.5% + €0.25 an ceann (táille Stripe, ní mo cheannsa).')],
     [x('Who owns the website?', 'Cé leis an suíomh?'),
       x('You do, once it is paid for. The web address is in your name from day one.', 'Is leatsa é, nuair a bhíonn sé íoctha. Bíonn an seoladh gréasáin i d’ainm féin ón gcéad lá.')],
     [x('How do guests pay?', 'Conas a íocann aíonna?'),
@@ -128,6 +131,18 @@ export function renderStudio(studio, lang, ctx) {
   </form>
 </div></section>
 
+<section class="sec alt" id="compare-bk"><div class="wrap narrow">
+  <h2 class="center">${x('Booking.com vs your own website', 'Booking.com i gcomparáid le do shuíomh féin')}</h2>
+  <p class="center muted">${x('For a €100 night. Keep Booking.com for new guests. Your website is for the guests who already know you.', 'Do oíche €100. Coinnigh Booking.com le haghaidh aíonna nua. Is do na haíonna a bhfuil aithne acu ort cheana do shuíomh.')}</p>
+  <div class="vs rv"><table>
+    <tr><th></th><th>Booking.com</th><th class="us">${x('Your website', 'Do shuíomh')}<small>${x('€570 once', '€570 uair amháin')}</small></th><th class="us">${x('Your website', 'Do shuíomh')}<small>${x('€39 a month', '€39 sa mhí')}</small></th></tr>
+    <tr><td>${x('To start', 'Le tosú')}</td><td>€0</td><td class="us">€570<small>${x('or 3 × €190', 'nó 3 × €190')}</small></td><td class="us">€0</td></tr>
+    <tr><td>${x('Each €100 night', 'Gach oíche €100')}</td><td class="bad">€15</td><td class="us good">€1.75<small>${x('card fee', 'táille cárta')}</small></td><td class="us good">€1.75<small>${x('card fee', 'táille cárta')}</small></td></tr>
+    <tr><td>${x('Every month', 'Gach mí')}</td><td>€0</td><td class="us">€0<small>${x('support optional', 'tacaíocht roghnach')}</small></td><td class="us">€39<small>${x('support included', 'tacaíocht san áireamh')}</small></td></tr>
+    <tr><td>${x('Cheaper than Booking.com after', 'Níos saoire ná Booking.com tar éis')}</td><td>–</td><td class="us"><b>${x('about 43 direct nights', 'thart ar 43 oíche dhíreach')}</b><small>${x('then you keep the savings, every year', 'ansin coinníonn tú an choigilt, gach bliain')}</small></td><td class="us"><b>${x('about 3 direct nights a month', 'thart ar 3 oíche dhíreach sa mhí')}</b></td></tr>
+  </table></div>
+</div></section>
+
 <section class="sec" id="how"><div class="wrap">
   <h2 class="center">${x('How it works', 'Conas a oibríonn sé')}</h2>
   <ol class="steps">
@@ -155,7 +170,7 @@ export function renderStudio(studio, lang, ctx) {
   </div>
   <div class="care">
     <div><h3>${x('Monthly support (optional)', 'Tacaíocht mhíosúil (roghnach)')}</h3><p class="muted">${x('I keep your website online, safe and up to date, so you never have to think about it. Minimum 6 months, then cancel any time.', 'Coinním do shuíomh ar líne, slán agus cothrom le dáta, ionas nach gcaithfidh tú smaoineamh air choíche. 6 mhí ar a laghad, ansin cealaigh am ar bith.')}</p></div>
-    <div class="care-row"><b>Basic · €40${x('/month', '/mí')}</b><span>${x('Your website kept online, safe and backed up, plus 30 minutes of changes a month (new prices, photos)', 'Do shuíomh coinnithe ar líne, slán agus cúltaca déanta, móide 30 nóiméad d’athruithe sa mhí (praghsanna, grianghraif nua)')}</span></div>
+    <div class="care-row"><b>Basic · €39${x('/month', '/mí')}</b><span>${x('Your website kept online, safe and backed up, plus 30 minutes of changes a month (new prices, photos)', 'Do shuíomh coinnithe ar líne, slán agus cúltaca déanta, móide 30 nóiméad d’athruithe sa mhí (praghsanna, grianghraif nua)')}</span></div>
     <div class="care-row"><b>Growth · €90${x('/month', '/mí')}</b><span>${x('Everything in Basic, plus 4 posts a month on your Google listing, replies to your reviews, 1 hour of changes and a short monthly update', 'Gach rud in Basic, móide 4 phostáil sa mhí ar do liostáil Google, freagraí ar do léirmheasanna, 1 uair an chloig d’athruithe agus nuashonrú gearr míosúil')}</span></div>
     <p class="muted small">${x('Extras: simple logo €150 · a third language (French or German) €150 · photos of your place €100 · Google ads set up €150 (plus whatever you choose to spend on ads).', 'Breiseáin: lógó simplí €150 · tríú teanga (Fraincis nó Gearmáinis) €150 · grianghraif de d’áit €100 · fógraí Google a shocrú €150 (móide an méid a roghnaíonn tú a chaitheamh ar fhógraí).')}</p>
   </div>
@@ -224,7 +239,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
       <label>${x('Business name', 'Ainm an ghnó')}<input name="${x('Business', 'Gnó')}" required></label></div>
       <div class="row2"><label>${x('Phone', 'Fón')}<input name="${x('Phone', 'Fón')}" type="tel" autocomplete="tel"></label>
       <label>${x('Email', 'Ríomhphost')}<input name="${x('Email', 'Ríomhphost')}" type="email" autocomplete="email"></label></div>
-      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>Get Booked (€570)</option><option>Get Found (€210)</option><option>Sell Online</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
+      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>Get Booked (€570)</option><option>${x('Get Booked monthly (€39/month)', 'Get Booked míosúil (€39/mí)')}</option><option>Get Found (€210)</option><option>Sell Online</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
       <label>${x('Anything else? (website, Booking.com link…)', 'Aon rud eile? (suíomh, nasc Booking.com…)')}<textarea name="${x('Message', 'Teachtaireacht')}" rows="3"></textarea></label>
       <label class="chk"><input type="checkbox" required> <span>${x('I agree that my details are used only to reply to me.', 'Aontaím nach n-úsáidfear mo chuid sonraí ach le freagra a thabhairt orm.')}</span></label>
       <button class="btn btn-lg btn-block" type="submit">${x('Send', 'Seol')}</button>
