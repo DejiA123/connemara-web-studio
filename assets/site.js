@@ -115,13 +115,17 @@
     var fmt = function (n) { return '€' + Math.round(n).toLocaleString('en-IE'); };
     var run = function () {
       var paid = Math.max(0, Number(rate.value) || 0) * Math.max(0, Number(nightsIn.value) || 0) * 0.15;
-      var saved = paid / 4;
+      var r0 = Math.max(0, Number(rate.value) || 0);
+      var perNight = r0 * 0.15 - (r0 * 0.015 + 0.25); // commission saved minus card fee
+      var saved = Math.max(0, Math.round((Math.max(0, Number(nightsIn.value) || 0) / 4) * perNight / 10) * 10);
       calc.querySelector('[data-out=paid]').textContent = fmt(paid);
       calc.querySelector('[data-out=saved]').textContent = fmt(saved);
       var months = saved > 0 ? Math.ceil(price / (saved / 12)) : 0;
       calc.querySelector('[data-out=payback]').innerHTML = !saved ? '' : months <= 12
         ? (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>. Ina dhiaidh sin, is airgead breise duit é, gach bliain.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + (months === 1 ? ' month' : ' months') + '</b>. After that, the savings are extra money for you, every year.')
-        : (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + ' months</b>.');
+        : months <= 24
+        ? (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + ' months</b>.')
+        : (ga ? 'Thógfadh sé thart ar <b>' + months + ' mí</b> an suíomh €570 a chlúdach. Do B&B níos ciúine, b’fhéidir gurb fhearr an rogha <b>Get Found €210</b>.' : 'It would take about <b>' + months + ' months</b> to cover the €570 website. For a quieter B&B, the <b>€210 Get Found</b> option probably makes more sense.');
     };
     calc.addEventListener('input', run);
     run();

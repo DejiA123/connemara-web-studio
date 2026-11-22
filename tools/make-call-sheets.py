@@ -85,7 +85,7 @@ OFFER_BOX = """<div class="box blue"><h2>The offer (when they like the sample)</
 <div class="money"><div>€570<small>launch price (normally €950)</small></div><div>€285<small>now, to start</small></div><div>€285<small>when it's online</small></div></div>
 <ul style="margin-top:4px">
 <li>Or <b>3 payments of €190</b>. Launch price for the first 3 clients, until <b>20 December</b>.</li>
-<li><b>"Too much up front?"</b> Offer: <b>nothing up front, €39 a month</b> (12 months minimum, support included). Push the €570 first: deposits are your December money.</li>
+<li><b>"Too much up front?"</b> Offer: <b>nothing up front, €39 a month</b> (12 months minimum, support included). After 15 payments the website is theirs. Push the €570 first: deposits are your December money.</li>
 <li>Online by <b>1 March</b>, or they get the deposit back.</li>
 <li>No booking from the website by 30 June 2027? Their <b>monthly support is free</b> until there is.</li>
 <li>Small place that only needs Google + one page: <b>Get Found, €210</b>, ready in a week.</li>
@@ -103,7 +103,7 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 """
 
 # ---------------------------------------------------------------- Sheet 1 (how to call)
-s1 = head('Sheet 1: How to call').replace('</head>', '<style>body{font-size:9pt}.obj td{padding:2.6px 3px}.box{margin-bottom:6px}</style></head>') + f"""
+s1 = head('Sheet 1: How to call').replace('</head>', '<style>body{font-size:8.7pt}.obj td{padding:2.2px 3px}.box{margin-bottom:5px}</style></head>') + f"""
 <div class="goal">Your only goal on the phone: <b>get a YES to the free sample</b> and book a 5-minute look. Don't sell on the phone.</div>
 <div class="cols"><div>
 <div class="box gold"><h2>Before you dial</h2><ul>
