@@ -5,9 +5,15 @@
   "type": "bnb",
   "theme": "atlantic",
   "_themes": "atlantic | heather | bog | stone | turf",
-  "languages": ["en", "ga"],
+  "languages": [
+    "en",
+    "ga"
+  ],
   "name": "",
-  "tagline": { "en": "A warm Connemara welcome, comfortable rooms and a proper breakfast.", "ga": "Fáilte chroíúil Chonamara, seomraí compordacha agus bricfeasta ceart." },
+  "tagline": {
+    "en": "A warm Connemara welcome, comfortable rooms and a proper breakfast.",
+    "ga": "Fáilte chroíúil Chonamara, seomraí compordacha agus bricfeasta ceart."
+  },
   "area": "",
   "address": "",
   "mapQuery": "",
@@ -16,27 +22,107 @@
   "_whatsapp": "Mobile in international format, e.g. 353861234567. Only add with the owner's OK.",
   "email": "",
   "rating": null,
-  "_rating_example": { "score": "4.9", "count": 120, "source": "Google" },
+  "_rating_example": {
+    "score": "4.9",
+    "count": 120,
+    "source": "Google"
+  },
   "about": {
-    "en": ["Welcome to our family-run B&B in the heart of Connemara. We look forward to helping you make the most of your stay, from the best walks and beaches to where to find music tonight.", "Breakfast is cooked to order every morning, and book direct with us for our best price."],
-    "ga": ["Fáilte go dtí ár B&B teaghlaigh i gcroílár Chonamara. Táimid ag tnúth le cabhrú leat an leas is fearr a bhaint as do chuairt, ó na siúlóidí agus na tránna is fearr go dtí an áit le ceol a chloisteáil anocht.", "Bíonn bricfeasta á réiteach gach maidin, agus cuir in áirithe linn go díreach chun an praghas is fearr a fháil."]
+    "en": [
+      "Welcome! We look forward to helping you make the most of your stay in Connemara, from the best walks and beaches to where to find music tonight.",
+      "Book direct with us for our best price."
+    ],
+    "ga": [
+      "Fáilte romhat! Táimid ag tnúth le cabhrú leat an leas is fearr a bhaint as do chuairt ar Chonamara, ó na siúlóidí agus na tránna is fearr go dtí an áit le ceol a chloisteáil anocht.",
+      "Cuir in áirithe linn go díreach chun an praghas is fearr a fháil."
+    ]
   },
   "highlights": [
-    { "icon": "breakfast", "en": "Breakfast included", "ga": "Bricfeasta san áireamh" },
-    { "icon": "parking", "en": "Free parking and Wi-Fi", "ga": "Páirceáil agus Wi-Fi saor in aisce" },
-    { "icon": "walk", "en": "Close to walks and beaches", "ga": "Gar do shiúlóidí agus tránna" },
-    { "icon": "irish", "en": "Fáilte as Gaeilge", "ga": "Fáilte as Gaeilge" }
+    {
+      "icon": "breakfast",
+      "en": "Breakfast included",
+      "ga": "Bricfeasta san áireamh"
+    },
+    {
+      "icon": "parking",
+      "en": "Free parking and Wi-Fi",
+      "ga": "Páirceáil agus Wi-Fi saor in aisce"
+    },
+    {
+      "icon": "walk",
+      "en": "Close to walks and beaches",
+      "ga": "Gar do shiúlóidí agus tránna"
+    },
+    {
+      "icon": "irish",
+      "en": "Fáilte as Gaeilge",
+      "ga": "Fáilte as Gaeilge"
+    }
   ],
   "_icons": "sea breakfast walk wifi parking dog fish golf ferry irish family bed leaf coffee bolt tool shield",
   "rooms": [
-    { "name": { "en": "Double Room", "ga": "Seomra Dúbailte" }, "desc": { "en": "Comfortable ensuite double room.", "ga": "Seomra dúbailte compordach en suite." }, "price": "TODO €", "sleeps": 2, "photo": "" },
-    { "name": { "en": "Twin Room", "ga": "Seomra Cúpla" }, "desc": { "en": "Two single beds, ensuite.", "ga": "Dhá leaba shingile, en suite." }, "price": "TODO €", "sleeps": 2, "photo": "" },
-    { "name": { "en": "Family Room", "ga": "Seomra Teaghlaigh" }, "desc": { "en": "Room for the whole family, ensuite.", "ga": "Spás don teaghlach ar fad, en suite." }, "price": "TODO €", "sleeps": 4, "photo": "" }
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "Comfortable ensuite double room.",
+        "ga": "Seomra dúbailte compordach en suite."
+      },
+      "price": "TODO €",
+      "sleeps": 2,
+      "photo": ""
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ensuite.",
+        "ga": "Dhá leaba shingile, en suite."
+      },
+      "price": "TODO €",
+      "sleeps": 2,
+      "photo": ""
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family, ensuite.",
+        "ga": "Spás don teaghlach ar fad, en suite."
+      },
+      "price": "TODO €",
+      "sleeps": 4,
+      "photo": ""
+    }
   ],
   "reviews": [],
-  "_reviews_example": [{ "text": { "en": "Copy a real review word for word", "ga": "Aistriúchán" }, "author": "First name", "source": "Google" }],
+  "_reviews_example": [
+    {
+      "text": {
+        "en": "Copy a real review word for word",
+        "ga": "Aistriúchán"
+      },
+      "author": "First name",
+      "source": "Google"
+    }
+  ],
   "photos": [],
-  "_photos_example": [{ "src": "photos/SLUG/front.jpg", "alt": "The house" }, { "src": "photos/SLUG/room.jpg", "alt": "Double room" }],
+  "_photos_example": [
+    {
+      "src": "photos/SLUG/front.jpg",
+      "alt": "The house"
+    },
+    {
+      "src": "photos/SLUG/room.jpg",
+      "alt": "Double room"
+    }
+  ],
   "booking": {
     "mode": "request",
     "_mode": "request = form to WhatsApp/email · embed = booking engine iframe (set embedUrl) for full calendar sync",
@@ -44,8 +130,14 @@
     "directDiscount": "",
     "depositLink": "",
     "policies": [
-      { "en": "Check-in from 3pm, check-out by 11am.", "ga": "Teacht isteach ó 3in, imeacht faoi 11rn." },
-      { "en": "A deposit secures your room.", "ga": "Cinntíonn éarlais do sheomra." }
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "A deposit secures your room.",
+        "ga": "Cinntíonn éarlais do sheomra."
+      }
     ]
   },
   "faq": []

@@ -1,6 +1,5 @@
 {
   "_README": "YOUR details. Edit the values marked TODO, then run: node build.mjs",
-
   "studioName": "Book Direct Connemara",
   "ownerName": "Ayodeji Augustine",
   "phone": "086 073 6836",
@@ -8,26 +7,23 @@
   "email": "dejiaugustine@gmail.com",
   "baseArea": "Connemara, Co. Galway",
   "siteUrl": "https://bookdirectconnemara.vercel.app/",
-
   "formEndpoint": "",
   "_formEndpoint_help": "Optional. Free form inbox from formspree.io or web3forms.com. Leave empty and the contact form opens WhatsApp with the message pre-filled.",
-
   "stripe": {
     "getFoundDeposit": "",
     "getBookedDeposit": "",
     "getBookedPlan": "",
     "_help": "Paste Stripe Payment Links here (dashboard.stripe.com > Payment Links). Empty = buttons say 'Call to book'."
   },
-
   "founding": {
     "placesLeft": 3,
     "deadline": "20 December",
     "deadlineGa": "20 Nollaig"
   },
-
   "social": {
     "facebook": "",
     "instagram": "",
     "googleBusiness": ""
-  }
+  },
+  "baseAreaGa": "gConamara, Co. na Gaillimhe"
 }

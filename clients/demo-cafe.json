@@ -283,10 +283,14 @@
       "ga": "ar Google"
     },
     {
-      "n": "🐕",
-      "en": "dogs welcome",
-      "ga": "fáilte roimh mhadraí"
+      "n": "Dogs",
+      "en": "welcome inside",
+      "ga": "fáilte rompu istigh"
     }
   ],
-  "bookingPhoto": "assets/img/coffee-cheers.jpg"
+  "bookingPhoto": "assets/img/coffee-cheers.jpg",
+  "contactIntro": {
+    "en": "Tell us the day, the time and how many of you, and we’ll confirm by phone or WhatsApp.",
+    "ga": "Inis dúinn an lá, an t-am agus cé mhéad agaibh atá ann, agus deimhneoimid ar an bhfón nó ar WhatsApp é."
+  }
 }

@@ -51,7 +51,7 @@ export const UI = {
     privacy: 'Privacy',
     madeBy: 'Website by',
     sampleBanner: (biz, studio) => `Sample website prepared for ${biz} by ${studio}. Not a live site, and no bookings are taken here.`,
-    demoBanner: (studio) => `Example website for a made-up business, made by ${studio}. Try the booking form: nothing is sent.`,
+    demoBanner: (studio) => `Example website for a made-up business, made by ${studio}. Try the form: nothing is sent.`,
     language: 'Gaeilge',
     service: 'What do you need?',
     details: 'Tell us about the job',

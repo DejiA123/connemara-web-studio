@@ -82,7 +82,7 @@ export function renderClient(site, lang, ctx) {
 
   // reviews
   if (has(site.reviews)) {
-    nav.push(['reviews', L.reviews]);
+    nav.push(['reviews', type === 'bnb' ? L.reviews : (lang === 'ga' ? 'Tuairimí na gcustaiméirí' : 'What customers say')]);
     S.push(`<section id="reviews" class="sec reviews"><div class="wrap"><h2>${type === 'bnb' ? L.reviews : (lang === 'ga' ? 'Tuairimí na gcustaiméirí' : 'What customers say')}</h2>
       <div class="rev-wrap">${site.rating ? `<div class="score rv"><b>${esc(site.rating.score)}</b><span class="stars">${'★'.repeat(Math.round(Number(site.rating.score) > 5 ? Number(site.rating.score) / 2 : Number(site.rating.score)))}</span><small>${esc(L.ratedOn(site.rating.score, site.rating.count, site.rating.source)).replace(/^[^·]*· /, '')}<br>${esc(site.rating.source)}</small></div>` : ''}
       <div class="quotes${site.rating && Number(site.rating.score) >= (Number(site.rating.score) > 5 ? 9 : 4.5) ? ' five' : ''}">${site.reviews.map((r) => `<blockquote class="rv"><p>“${esc(T(r.text, lang))}”</p><footer>${esc(r.author || '')}${r.source ? ` · ${esc(r.source)}` : ''}</footer></blockquote>`).join('')}</div></div></div></section>`);
@@ -139,8 +139,8 @@ export function renderClient(site, lang, ctx) {
   const policies = has(booking.policies) ? `<details class="pol"><summary>${L.policies}</summary><ul>${booking.policies.map((p) => `<li>${esc(T(p, lang))}</li>`).join('')}</ul></details>` : '';
   const bookBg = site.bookingPhoto || site.photos?.[3]?.src || site.photos?.[0]?.src;
   S.push(`<section id="book" class="sec book${bookBg ? ' book-photo' : ''}"${bookBg ? ` style="background-image:url('${esc(img(bookBg))}')"` : ''}><div class="wrap two">
-    <div class="book-intro"><h2>${type === 'bnb' ? L.bookingTitle : type === 'trades' ? L.quote : L.contact}</h2>
-      ${type === 'bnb' ? `<p>${L.bookingIntro}</p>` : ''}
+    <div class="book-intro"><h2>${type === 'bnb' ? L.bookingTitle : type === 'trades' ? L.quote : (site.ctaLabel ? esc(T(site.ctaLabel, lang)) : L.contact)}</h2>
+      ${type === 'bnb' ? `<p>${L.bookingIntro}</p>` : site.contactIntro ? `<p>${esc(T(site.contactIntro, lang))}</p>` : ''}
       ${booking.directDiscount ? `<p class="save">${icon('euro', 20)} ${L.saveVs(esc(booking.directDiscount))}</p>` : type === 'bnb' ? `<p class="save">${icon('euro', 20)} ${L.bestPrice}</p>` : ''}
       <ul class="contact-list">
         ${phone ? `<li><a href="tel:${esc(phone.replace(/\s/g, ''))}">${icon('phone', 20)} ${esc(phone)}</a></li>` : ''}
@@ -238,7 +238,7 @@ ${perks}${stats}
 
 <footer class="foot"><div class="wrap footin">
   <div><b>${esc(site.name)}</b>${site.address ? `<br>${esc(site.address)}` : ''}${phone ? `<br><a href="tel:${esc(phone.replace(/\s/g, ''))}">${esc(phone)}</a>` : ''}${site.email ? `<br><a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ''}</div>
-  <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a> · <small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a>${site.photos?.some((ph) => String(ph.src).startsWith('assets/img/')) ? ` · <a href="${esc(studio.siteUrl || rel)}credits.html">Photos</a>` : ''}</small></div>
+  <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a> · <small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a>${site.photos?.some((ph) => String(ph.src).startsWith('assets/img/')) ? ` · <a href="${esc(studio.siteUrl || rel)}credits.html">${lang === 'ga' ? 'Creidiúintí grianghraf' : 'Photo credits'}</a>` : ''}</small></div>
 </div></footer>
 
 <nav class="mbar" aria-label="Quick actions">
@@ -263,11 +263,11 @@ export function renderClientPrivacy(site, ctx) {
 <h2>What we collect and why</h2>
 <p>When you send a booking request, quote request or message, we receive the details you enter (name, contact details, dates and your message). We use them only to reply to you and, if you book, to manage your stay or job. The legal basis is taking steps at your request before entering a contract (GDPR Art. 6(1)(b)).</p>
 <h2>Who else sees it</h2>
-<p>If you choose WhatsApp, your message is sent through WhatsApp (Meta). Card payments are processed by Stripe; we never see your full card number. The map is provided by Google Maps. We do not sell your data or use it for marketing without your consent.</p>
+<p>If you choose WhatsApp, your message is sent through WhatsApp (Meta). Card payments are processed by Stripe; we never see your full card number. The map is provided by Google Maps, and the website is hosted by Vercel. We do not sell your data or use it for marketing without your consent.</p>
 <h2>How long we keep it</h2>
 <p>Enquiries that do not lead to a booking are deleted within 12 months. Booking records are kept for 6 years for tax purposes.</p>
 <h2>Cookies</h2>
-<p>This site does not set tracking or advertising cookies. The embedded map and payment pages may set their own cookies when you use them.</p>
+<p>This website does not set tracking or advertising cookies. The embedded map and payment pages may set their own cookies when you use them.</p>
 <h2>Your rights</h2>
 <p>You can ask to see, correct or delete your data at any time: ${contact || 'contact us'}. You can also complain to the Data Protection Commission (dataprotection.ie).</p>
 </div></main></body></html>`;

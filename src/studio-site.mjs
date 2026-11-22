@@ -28,8 +28,8 @@ export function renderStudio(studio, lang, ctx) {
     {
       key: 'booked', featured: true, name: 'Get Booked', normal: '€950', founding: '€570', time: x('Ready in 2–3 weeks', 'Réidh i gceann 2–3 seachtaine'),
       who: x('B&Bs, guesthouses, holiday homes and activity providers.', 'B&Banna, tithe aíochta, tithe saoire agus soláthraithe gníomhaíochtaí.'),
-      items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Optional: link to your Booking.com and Airbnb calendars so you’re never double-booked (booking tool about €15–30 a month)', 'Your Google Maps listing set up', 'Booking guarantee (see below)'],
-        ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Roghnach: nasc le d’fhéilirí Booking.com agus Airbnb ionas nach mbeidh áirithint dhúbailte agat choíche (uirlis áirithinte thart ar €15–30 sa mhí)', 'Do liostáil ar Google Maps socraithe', 'Ráthaíocht áirithinte (féach thíos)']),
+      items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Optional: link to your Booking.com and Airbnb calendars so you’re never double-booked (booking tool about €15–30 a month)', 'Your Google Maps listing set up or fixed', 'Booking guarantee (see below)'],
+        ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Roghnach: nasc le d’fhéilirí Booking.com agus Airbnb ionas nach mbeidh áirithint dhúbailte agat choíche (uirlis áirithinte thart ar €15–30 sa mhí)', 'Do liostáil ar Google Maps socraithe nó deisithe', 'Ráthaíocht áirithinte (féach thíos)']),
       payLink: st.getBookedDeposit, payLabel: x('Pay €285 deposit', 'Íoc éarlais €285'),
       plan: x('Or 3 payments of €190.<br><b>Or nothing up front: €39 a month</b> (minimum 12 months, monthly support included). After 15 payments the website is yours.', 'Nó 3 íocaíocht de €190.<br><b>Nó faic roimh ré: €39 sa mhí</b> (12 mhí ar a laghad, tacaíocht mhíosúil san áireamh). Tar éis 15 íocaíocht is leatsa an suíomh.'), planLink: st.getBookedPlan,
     },
@@ -48,9 +48,11 @@ export function renderStudio(studio, lang, ctx) {
     [x('Do I have to leave Booking.com or Airbnb?', 'An gcaithfidh mé Booking.com nó Airbnb a fhágáil?'),
       x('No. Keep them for new guests from abroad. Your own site wins the guests who already know your name: returning guests, word of mouth and people who Google you after finding you on a booking site. Direct guests send you a request and you confirm it, just like a phone booking. Or add the optional booking tool and your calendars update themselves.',
         'Ní chaithfidh. Coinnigh iad le haghaidh aíonna nua ó thar lear. Mealltar le do shuíomh féin na haíonna a bhfuil d’ainm acu cheana: aíonna a thagann ar ais, moladh ó bhéal agus daoine a chuardaíonn ar Google thú. Seolann aíonna díreacha iarratas chugat agus deimhníonn tú é, díreach cosúil le háirithint ar an bhfón. Nó cuir an uirlis áirithinte roghnach leis agus nuashonraíonn na féilirí iad féin.')],
-    [x('Am I allowed to offer a cheaper price on my own site?', 'An bhfuil cead agam praghas níos saoire a thairiscint ar mo shuíomh féin?'),
+    [x('Am I allowed to offer a cheaper price on my own website?', 'An bhfuil cead agam praghas níos saoire a thairiscint ar mo shuíomh féin?'),
       x('Yes. Since 14 November 2024 Booking.com can no longer stop properties in the EU offering better prices on their own websites (an EU law called the Digital Markets Act).',
-        'Tá. Ó 14 Samhain 2024 ní féidir le Booking.com cosc a chur ar áiseanna san AE praghsanna níos fearr a thairiscint ar a suíomhanna féin (Acht AE um Margaí Digiteacha).')],
+        'Tá. Ó 14 Samhain 2024 ní féidir le Booking.com cosc a chur ar áiseanna san AE praghsanna níos fearr a thairiscint ar a suíomhanna féin (dlí de chuid an AE, an Gníomh um Margaí Digiteacha).')],
+    [x('What do I need to give you?', 'Cad a chaithfidh mé a thabhairt duit?'),
+      x('Your room prices, a few photos (phone photos are fine) and your house rules, like deposit and cancellations. I write everything else, in Irish and English.', 'Praghsanna do sheomraí, cúpla grianghraf (is leor grianghraif ón bhfón) agus rialacha an tí, ar nós éarlaise agus cealuithe. Scríobhaim gach rud eile, i nGaeilge agus i mBéarla.')],
     [x('What if I don’t like the sample?', 'Cad a tharlaíonn mura dtaitníonn an sampla liom?'),
       x('Then you don’t pay anything and we part as friends. There is no obligation at all.', 'Ansin ní íocann tú faic. Níl aon cheangal ort ar chor ar bith.')],
     [x('What are the running costs?', 'Cad iad na costais reatha?'),
@@ -59,11 +61,11 @@ export function renderStudio(studio, lang, ctx) {
     [x('Who owns the website?', 'Cé leis an suíomh?'),
       x('You do, once it is paid for: straight away with the €570 option, or after 15 payments on the €39 a month plan. The web address is in your name from day one.', 'Is leatsa é, nuair a bhíonn sé íoctha: láithreach leis an rogha €570, nó tar éis 15 íocaíocht ar an bplean €39 sa mhí. Bíonn an seoladh gréasáin i d’ainm féin ón gcéad lá.')],
     [x('How do guests pay?', 'Conas a íocann aíonna?'),
-      x('By card, through Stripe (a secure payment service), straight into your bank account. You decide the deposit and cancellation rules.', 'Le cárta trí Stripe, díreach isteach i do chuntas bainc. Socraíonn tusa an éarlais agus na rialacha cealaithe.')],
+      x('By card, through Stripe (a secure payment service), straight into your bank account. You decide the deposit and cancellation rules. Stripe is free to join, and I set it up with you.', 'Le cárta, trí Stripe (seirbhís íocaíochta shlán), díreach isteach i do chuntas bainc. Socraíonn tusa an éarlais agus na rialacha cealaithe. Tá sé saor clárú le Stripe, agus socraím é in éineacht leat.')],
     [x('Can we do it all in Irish?', 'An féidir linn é a dhéanamh ar fad i nGaeilge?'),
-      x('Yes. Every site is in Irish and English at no extra cost, and we can talk in Irish too.', 'Is féidir. Bíonn gach suíomh i nGaeilge agus i mBéarla gan aon chostas breise, agus is féidir linn labhairt as Gaeilge freisin.')],
+      x('Yes. Every website is in Irish and English at no extra cost, and we can talk in Irish too.', 'Is féidir. Bíonn gach suíomh i nGaeilge agus i mBéarla gan aon chostas breise, agus is féidir linn labhairt as Gaeilge freisin.')],
     [x('Does it follow data protection rules (GDPR)?', 'An gcloíonn sé le rialacha cosanta sonraí (GDPR)?'),
-      x('Yes. Every site has a privacy notice, doesn’t track visitors, and only asks for what’s needed for a booking.', 'Cloíonn. Bíonn fógra príobháideachais ar gach suíomh, ní rianaítear cuairteoirí, agus ní iarrtar ach a bhfuil ag teastáil le haghaidh áirithinte.')],
+      x('Yes. Every website has a privacy notice, doesn’t track visitors, and only asks for what’s needed for a booking.', 'Cloíonn. Bíonn fógra príobháideachais ar gach suíomh, ní rianaítear cuairteoirí, agus ní iarrtar ach a bhfuil ag teastáil le haghaidh áirithinte.')],
   ];
 
   return `<!doctype html>
@@ -103,27 +105,27 @@ export function renderStudio(studio, lang, ctx) {
       ${left > 0 ? `<p class="offer-note">${x(`Launch price for my first three clients: <b>€570</b> instead of €950, until ${esc(deadline)}. <u>${left} ${left === 1 ? 'place' : 'places'} left.</u>`, `Praghas seolta do mo chéad trí chliant: <b>€570</b> in ionad €950, go dtí ${esc(deadline)}. <u>${left} áit fágtha.</u>`)}</p>` : ''}
       <ul class="trust"><li>${icon('irish', 18)} ${x('Irish & English', 'Gaeilge & Béarla')}</li><li>${icon('calendar', 18)} ${x('Works alongside Booking.com & Airbnb', 'Oibríonn sé taobh le Booking.com & Airbnb')}</li><li>${icon('pin', 18)} ${x('Local: I call in and answer the phone', 'Áitiúil: tagaim ar cuairt agus freagraím an fón')}</li></ul>
     </div>
-    ${demos[0] ? `<div class="phone" aria-hidden="true"><div class="phone-in"><iframe src="${rel}${esc(demos[0].path)}${lang === 'ga' && demos[0].bilingual ? 'ga/' : ''}" title="Example" tabindex="-1" loading="lazy"></iframe></div></div>` : ''}
+    ${demos[0] ? `<div class="phone" aria-hidden="true"><div class="phone-in"><iframe src="${rel}${esc(demos[0].path)}${lang === 'ga' && demos[0].bilingual ? 'ga/' : ''}" title="${x('Example B&B website', 'Suíomh B&B samplach')}" tabindex="-1" loading="lazy"></iframe></div></div>` : ''}
   </div>
 </section>
 
 <section class="stats"><div class="wrap stats-in">
-  <div class="rv"><b>15%</b><span>${x('is what Booking.com takes. You keep most of it when guests book you directly.', 'a thógann Booking.com. Coinníonn tú an chuid is mó de nuair a chuireann aíonna in áirithe leat go díreach.')}</span></div>
-  <div class="rv"><b>48h</b><span>${x('to see your free sample', 'chun do shampla saor in aisce a fheiceáil')}</span></div>
-  <div class="rv"><b>€0</b><span>${x('to see your sample. You only pay if you love it.', 'chun do shampla a fheiceáil. Ní íocann tú ach má thaitníonn sé leat.')}</span></div>
+  <div class="rv"><b>15%</b><span>${x('Booking.com’s cut of every booking. Most of it stays with you when guests book you directly.', 'An méid a thógann Booking.com as gach áirithint. Fanann an chuid is mó de agatsa nuair a chuireann aíonna in áirithe leat go díreach.')}</span></div>
+  <div class="rv"><b>48h</b><span>${x('to see a free sample of your website', 'chun sampla saor in aisce de do shuíomh a fheiceáil')}</span></div>
+  <div class="rv"><b>€0</b><span>${x('to try it. You only pay if you love it.', 'chun triail a bhaint as. Ní íocann tú ach má thaitníonn sé leat.')}</span></div>
   <div class="rv"><b>2</b><span>${x('languages: Irish and English', 'theanga: Gaeilge agus Béarla')}</span></div>
 </div></section>
 
 <section class="sec calc-sec" id="cost"><div class="wrap two">
   <div>
     <h2>${x('What the booking sites really cost you', 'Cad a chosnaíonn na suíomhanna áirithinte duit i ndáiríre')}</h2>
-    <p>${x('Booking.com takes around 15% of every stay, even when the guest has stayed before or found you by word of mouth. If even some of those guests book on your own website instead, that money stays with you.', 'Tógann Booking.com thart ar 15% de gach fanacht, fiú nuair a d’fhan an t-aoi cheana nó nuair a chuala sé fút ó dhuine eile. Má chuireann fiú cuid de na haíonna sin in áirithe ar do shuíomh féin, fanann an t-airgead sin agatsa.')}</p>
+    <p>${x('Booking.com takes about 15% of every booking, even when the guest has stayed before or found you by word of mouth. If even some of those guests book on your own website instead, that money stays with you.', 'Tógann Booking.com thart ar 15% de gach áirithint, fiú nuair a d’fhan an t-aoi cheana nó nuair a chuala sé fút ó dhuine eile. Má chuireann fiú cuid de na haíonna sin in áirithe ar do shuíomh féin, fanann an t-airgead sin agatsa.')}</p>
     <p class="muted small">${x('Type in your own numbers.', 'Cuir isteach d’uimhreacha féin.')}</p>
   </div>
   <form class="calc" data-calc data-price="570" data-lang="${lang}" onsubmit="return false">
     <label class="q">${x('1. What do you charge for a room, per night?', '1. Cé mhéad a ghearrann tú ar sheomra, san oíche?')}<small>${x('For example €100.', 'Mar shampla €100.')}</small><span class="eur"><input name="rate" type="number" inputmode="numeric" value="100" min="0"></span></label>
-    <label class="q">${x('2. Roughly how many nights a year do guests book you through Booking.com or Airbnb?', '2. Thart ar cé mhéad oíche sa bhliain a chuireann aíonna in áirithe leat trí Booking.com nó Airbnb?')}<small>${x('A rough guess is fine. A busy B&B might have about 200.', 'Is leor buille faoi thuairim. B’fhéidir go mbeadh thart ar 200 ag B&B gnóthach.')}</small><input name="nights" type="number" inputmode="numeric" value="200" min="0"></label>
-    <p class="calc-line">${x('Booking sites take about', 'Tógann suíomhanna áirithinte thart ar')} <b data-out="paid">€3,000</b> ${x('a year from you (15% of each booking).', 'sa bhliain uait (15% de gach áirithint).')}</p>
+    <label class="q">${x('2. Roughly how many nights a year do guests book you through Booking.com?', '2. Thart ar cé mhéad oíche sa bhliain a chuireann aíonna in áirithe leat trí Booking.com?')}<small>${x('A rough guess is fine. A busy B&B might have about 200.', 'Is leor buille faoi thuairim. B’fhéidir go mbeadh thart ar 200 ag B&B gnóthach.')}</small><input name="nights" type="number" inputmode="numeric" value="200" min="0"></label>
+    <p class="calc-line">${x('Booking.com takes about', 'Tógann Booking.com thart ar')} <b data-out="paid">€3,000</b> ${x('a year from you (about 15% of each booking).', 'sa bhliain uait (thart ar 15% de gach áirithint).')}</p>
     <p class="calc-big">${x('If just 1 in 4 of those guests booked on your own website instead, you’d save', 'Dá gcuirfeadh 1 as gach 4 de na haíonna sin in áirithe ar do shuíomh féin, shábhálfá')} <b data-out="saved">€660</b> ${x('a year, after card fees.', 'sa bhliain, tar éis táillí cárta.')}</p>
     <p class="calc-line" data-out="payback"></p>
   </form>
@@ -146,7 +148,7 @@ export function renderStudio(studio, lang, ctx) {
   <ol class="steps">
     <li class="rv"><span class="n">1</span><h3>${x('Free sample', 'Sampla saor in aisce')}</h3><p>${x('Tell me about your place. Within 48 hours I make a sample homepage for your business. No cost, no obligation.', 'Inis dom faoi d’áit. Laistigh de 48 uair an chloig déanfaidh mé leathanach baile samplach do do ghnó. Saor in aisce, gan cheangal.')}</p></li>
     <li class="rv"><span class="n">2</span><h3>${x('Five-minute look', 'Breathnú cúig nóiméad')}</h3><p>${x('I call in (or we do a quick video call) and show it to you on your phone.', 'Tagaim ar cuairt (nó déanaimid glao físe gearr) agus taispeánaim duit é ar do ghuthán.')}</p></li>
-    <li class="rv"><span class="n">3</span><h3>${x('Pay half to start', 'Íoc leath chun tosú')}</h3><p>${x('Like it? Pay half to start. I collect your prices, photos and house rules (deposit, cancellations) and build the rest.', 'Taitníonn sé leat? Íoc leath chun tosú. Bailím do phraghsanna, grianghraif agus rialacha an tí (éarlais, cealuithe) agus tógaim an chuid eile.')}</p></li>
+    <li class="rv"><span class="n">3</span><h3>${x('Pay half to start', 'Íoc leath chun tosú')}</h3><p>${x('Like it? Pay half to start (or choose the €39 a month plan). I collect your prices, photos and house rules (deposit, cancellations) and build the rest.', 'Taitníonn sé leat? Íoc leath chun tosú (nó roghnaigh an plean €39 sa mhí). Bailím do phraghsanna, grianghraif agus rialacha an tí (éarlais, cealuithe) agus tógaim an chuid eile.')}</p></li>
     <li class="rv"><span class="n">4</span><h3>${x('Your website goes online', 'Téann do shuíomh ar líne')}</h3><p>${x('You see the finished website before you pay the rest. Then it goes online and guests can book you directly.', 'Feiceann tú an suíomh críochnaithe sula n-íocann tú an chuid eile. Ansin téann sé ar líne agus is féidir le haíonna áirithint a dhéanamh leat go díreach.')}</p></li>
   </ol>
 </div></section>
@@ -167,15 +169,15 @@ export function renderStudio(studio, lang, ctx) {
   </article>`).join('')}
   </div>
   <div class="care">
-    <div><h3>${x('Monthly support (optional)', 'Tacaíocht mhíosúil (roghnach)')}</h3><p class="muted">${x('For owners who bought their website. I keep it online, safe and up to date, so you never have to think about it. Minimum 6 months, then cancel any time. (Already included in the €39 a month plan.)', 'Dóibh siúd a cheannaigh a suíomh. Coinním ar líne é, slán agus cothrom le dáta, ionas nach gcaithfidh tú smaoineamh air choíche. 6 mhí ar a laghad, ansin cealaigh am ar bith. (San áireamh cheana sa phlean €39 sa mhí.)')}</p></div>
+    <div><h3>${x('Monthly support (optional)', 'Tacaíocht mhíosúil (roghnach)')}</h3><p class="muted">${x('If you bought your website outright, I keep it online, safe and up to date, so you never have to think about it. Minimum 6 months, then cancel any time. (Already included in the €39 a month plan.)', 'Má cheannaigh tú do shuíomh go hiomlán, coinním ar líne é, slán agus cothrom le dáta, ionas nach gcaithfidh tú smaoineamh air choíche. 6 mhí ar a laghad, ansin cealaigh am ar bith. (San áireamh cheana sa phlean €39 sa mhí.)')}</p></div>
     <div class="care-row"><b>Basic · €19${x('/month', '/mí')}</b><span>${x('Your website kept online, safe and backed up, plus 30 minutes of changes a month (new prices, photos)', 'Do shuíomh coinnithe ar líne, slán agus cúltaca déanta, móide 30 nóiméad d’athruithe sa mhí (praghsanna, grianghraif nua)')}</span></div>
     <div class="care-row"><b>Growth · €90${x('/month', '/mí')}</b><span>${x('Everything in Basic, plus 4 posts a month on your Google listing, replies to your reviews, 1 hour of changes and a short monthly update', 'Gach rud in Basic, móide 4 phostáil sa mhí ar do liostáil Google, freagraí ar do léirmheasanna, 1 uair an chloig d’athruithe agus nuashonrú gearr míosúil')}</span></div>
-    <p class="muted small">${x('Extras: simple logo €150 · a third language (French or German) €150 · photos of your place €100 · Google ads set up €150 (plus whatever you choose to spend on ads).', 'Breiseáin: lógó simplí €150 · tríú teanga (Fraincis nó Gearmáinis) €150 · grianghraif de d’áit €100 · fógraí Google a shocrú €150 (móide an méid a roghnaíonn tú a chaitheamh ar fhógraí).')}</p>
+    <p class="muted small">${x('Extras: simple logo €150 · a third language (French or German) €150 · photos of your place €100 · Google Ads set up €150 (plus whatever you choose to spend on ads).', 'Breiseáin: lógó simplí €150 · tríú teanga (Fraincis nó Gearmáinis) €150 · grianghraif de d’áit €100 · fógraí Google a shocrú €150 (móide an méid a roghnaíonn tú a chaitheamh ar fhógraí).')}</p>
   </div>
 </div></section>
 
 <section class="band" style="background-image:url('${rel}assets/img/beach.jpg')"><div class="wrap band-in rv">
-  <p class="band-q">${x('“Every guest who books you on Booking.com and then Googles your name is a guest you could have had for free.”', '“Gach aoi a chuireann in áirithe trí Booking.com agus a chuardaíonn d’ainm ar Google ina dhiaidh sin, d’fhéadfá é a bheith agat saor in aisce.”')}</p>
+  <p class="band-q">${x('“Every guest who books you on Booking.com and then Googles your name is a guest you could have had without paying commission.”', '“Gach aoi a chuireann in áirithe trí Booking.com agus a chuardaíonn d’ainm ar Google ina dhiaidh sin, is aoi é a d’fhéadfá a fháil gan coimisiún a íoc.”')}</p>
   <a class="btn btn-lg btn-gold" href="#contact">${x('Show me what mine would look like', 'Taispeáin dom cén chuma a bheadh ar mo cheann')} →</a>
 </div></section>
 
@@ -183,15 +185,15 @@ export function renderStudio(studio, lang, ctx) {
   <h2 class="center">${x('No risk to you', 'Gan riosca duit')}</h2>
   <div class="guar">
     <div class="rv">${icon('euro', 30)}<h3>${x('See it before paying anything', 'Feic é sula n-íocann tú faic')}</h3><p>${x('Your sample is free. If you don’t love it, you owe nothing.', 'Tá do shampla saor in aisce. Mura dtaitníonn sé leat, níl faic le híoc.')}</p></div>
-    <div class="rv">${icon('shield', 30)}<h3>${x('Booking guarantee', 'Ráthaíocht áirithinte')}</h3><p>${x('If your website hasn’t brought you at least one booking by 30 June 2027, you pay nothing for monthly support until it does.', 'Mura bhfuil áirithint amháin ar a laghad faighte agat ó do shuíomh faoi 30 Meitheamh 2027, ní íocann tú faic ar thacaíocht mhíosúil go dtí go bhfaighidh.')}</p></div>
-    <div class="rv">${icon('calendar', 30)}<h3>${x('Live before Easter', 'Beo roimh an gCáisc')}</h3><p>${x('Sign up now and your website will be online by 1 March 2027, or I’ll refund your deposit.', 'Cláraigh anois agus beidh do shuíomh ar líne faoi 1 Márta 2027, nó gheobhaidh tú d’éarlais ar ais.')}</p></div>
+    <div class="rv">${icon('shield', 30)}<h3>${x('Booking guarantee', 'Ráthaíocht áirithinte')}</h3><p>${x('If your website hasn’t brought you at least one direct booking by 30 June 2027, you pay nothing for monthly support until it does.', 'Mura bhfuil áirithint dhíreach amháin ar a laghad faighte agat ó do shuíomh faoi 30 Meitheamh 2027, ní íocann tú faic ar thacaíocht mhíosúil go dtí go bhfaighidh.')}</p></div>
+    <div class="rv">${icon('calendar', 30)}<h3>${x('Live before Easter', 'Beo roimh an gCáisc')}</h3><p>${x('Sign up by 20 December and your website will be online by 1 March 2027, or I’ll refund your deposit.', 'Cláraigh roimh 20 Nollaig agus beidh do shuíomh ar líne faoi 1 Márta 2027, nó gheobhaidh tú d’éarlais ar ais.')}</p></div>
     <div class="rv">${icon('irish', 30)}<h3>${x('Irish and English', 'Gaeilge agus Béarla')}</h3><p>${x('Every website comes in Irish and English at no extra cost. Is féidir linn labhairt as Gaeilge.', 'Bíonn gach suíomh dátheangach gan aon chostas breise.')}</p></div>
   </div>
 </div></section>
 
 ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   <h2 class="center">${x('See what you’d get', 'Feic cad a gheobhfá')}</h2>
-  <p class="center muted">${x('Example sites for made-up businesses. Open them on your phone: they work, including the booking form.', 'Suíomhanna samplacha do ghnólachtaí samhailteacha. Oscail ar do ghuthán iad: oibríonn siad, an fhoirm áirithinte san áireamh.')}</p>
+  <p class="center muted">${x('Example websites for made-up businesses. Open them on your phone: everything works, including the booking form.', 'Suíomhanna samplacha do ghnólachtaí samhailteacha. Oscail ar do ghuthán iad: oibríonn gach rud, an fhoirm áirithinte san áireamh.')}</p>
   <div class="demos">${demos.map((d, i) => `<a class="demo rv" href="${rel}${esc(d.path)}${lang === 'ga' && d.bilingual ? 'ga/' : ''}">
     <div class="demo-art">${d.image ? `<img src="${rel}${esc(d.image)}" alt="" loading="lazy">` : landscape(d.theme, i)}</div>
     <div class="demo-body"><span class="kind">${esc(lang === 'ga' ? d.kindGa : d.kind)}</span><h3>${esc(d.name)}</h3><p>${esc(d.blurb[lang] || d.blurb.en)}</p><span class="go">${x('Open example', 'Oscail an sampla')} →</span></div>
@@ -201,9 +203,9 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
 <section class="sec" id="compare"><div class="wrap narrow">
   <h2>${x('Why not just…', 'Cén fáth nach…')}</h2>
   <div class="cmp">
-    <div><h3>${x('…stay on Booking.com?', '…fanacht ar Booking.com?')}</h3><p>${x('Keep it. It brings new guests. Your own site stops you paying 15% on the guests who would have found you anyway.', 'Coinnigh é. Tugann sé aíonna nua. Stopann do shuíomh féin tú ó 15% a íoc ar na haíonna a d’aimseodh thú ar aon nós.')}</p></div>
-    <div><h3>${x('…build it myself with Wix?', '…é a thógáil mé féin le Wix?')}</h3><p>${x('You can, if you have the evenings. I set it up, write it in both languages, link your calendars, keep it running, and answer the phone.', 'Is féidir, má tá na tráthnónta agat. Socraím é, scríobhaim i dhá theanga é, nascaim na féilirí, coinním ag rith é, agus freagraím an fón.')}</p></div>
-    <div><h3>${x('…hire a Galway agency?', '…gníomhaireacht i nGaillimh a fhostú?')}</h3><p>${x('Many build websites that look nice but can’t take a booking. Mine take bookings, link to your Booking.com calendar, and you see a working sample before you pay.', 'Tógann go leor acu suíomhanna deasa nach féidir leo áirithint a ghlacadh. Glacann mo cheannsa le háirithintí, nasctar iad le d’fhéilire Booking.com, agus feiceann tú sampla oibre sula n-íocann tú.')}</p></div>
+    <div><h3>${x('…stay on Booking.com?', '…fanacht ar Booking.com?')}</h3><p>${x('Keep it. It brings new guests. Your own website stops you paying 15% on the guests who would have found you anyway.', 'Coinnigh é. Tugann sé aíonna nua. Stopann do shuíomh féin tú ó 15% a íoc ar na haíonna a d’aimseodh thú ar aon nós.')}</p></div>
+    <div><h3>${x('…build it myself with Wix?', '…é a thógáil mé féin le Wix?')}</h3><p>${x('You can, if you have the evenings. I set it up, write it in both languages, keep it running, and answer the phone.', 'Is féidir, má tá na tráthnónta agat. Socraím é, scríobhaim i dhá theanga é, coinním ag rith é, agus freagraím an fón.')}</p></div>
+    <div><h3>${x('…hire a Galway agency?', '…gníomhaireacht i nGaillimh a fhostú?')}</h3><p>${x('Many build websites that look nice but can’t take a booking. Mine take bookings, and you see a working sample before you pay.', 'Tógann go leor acu suíomhanna deasa nach féidir leo áirithint a ghlacadh. Glacann mo cheannsa le háirithintí, agus feiceann tú sampla oibre sula n-íocann tú.')}</p></div>
   </div>
 </div></section>
 
@@ -211,7 +213,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   <div class="about-art"><img src="${rel}assets/img/boardwalk.jpg" alt="${x('Boardwalk on Diamond Hill, Connemara National Park', 'Cosán adhmaid ar an gCnoc Diamant, Páirc Náisiúnta Chonamara')}" loading="lazy"></div>
   <div>
     <h2>${s.ownerName ? `${x('Hi, I’m', 'Dia duit, is mise')} ${esc(s.ownerName)}` : x('About me', 'Fúm féin')}</h2>
-    <p>${x(`I’m a web developer based in ${esc(s.baseArea)}. I build websites that do one job: bring local businesses more direct bookings and customers, with less money going to the big booking sites.`, `Is forbróir gréasáin mé atá lonnaithe i ${esc(s.baseArea)}. Tógaim suíomhanna a dhéanann jab amháin: níos mó áirithintí díreacha agus custaiméirí a thabhairt do ghnólachtaí áitiúla, le níos lú airgid ag dul chuig na suíomhanna móra áirithinte.`)}</p>
+    <p>${x(`I’m a web developer based in ${esc(s.baseArea)}. I build websites that do one job: bring local businesses more direct bookings and customers, with less money going to the big booking sites.`, `Is forbróir gréasáin mé atá lonnaithe i ${esc(s.baseAreaGa || s.baseArea)}. Tógaim suíomhanna a dhéanann jab amháin: níos mó áirithintí díreacha agus custaiméirí a thabhairt do ghnólachtaí áitiúla, le níos lú airgid ag dul chuig na suíomhanna móra áirithinte.`)}</p>
     <p>${x('I’m local, so I can call in, sit at your kitchen table and show you everything on your phone. And when something needs changing, you ring me, not a helpdesk.', 'Táim áitiúil, mar sin is féidir liom teacht ar cuairt, suí ag bord do chistine agus gach rud a thaispeáint duit ar do ghuthán. Agus nuair is gá rud a athrú, glaonn tú ormsa, ní ar dheasc cabhrach.')}</p>
   </div>
 </div></section>
@@ -237,7 +239,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
       <label>${x('Business name', 'Ainm an ghnó')}<input name="${x('Business', 'Gnó')}" required></label></div>
       <div class="row2"><label>${x('Phone', 'Fón')}<input name="${x('Phone', 'Fón')}" type="tel" autocomplete="tel"></label>
       <label>${x('Email', 'Ríomhphost')}<input name="${x('Email', 'Ríomhphost')}" type="email" autocomplete="email"></label></div>
-      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>Get Booked (€570)</option><option>${x('Get Booked monthly (€39/month)', 'Get Booked míosúil (€39/mí)')}</option><option>Get Found (€210)</option><option>Sell Online</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
+      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>${x('Get Booked: €570 once', 'Get Booked: €570 uair amháin')}</option><option>${x('Get Booked: €39 a month', 'Get Booked: €39 sa mhí')}</option><option>Get Found: €210</option><option>${x('Sell Online: from €720', 'Sell Online: ó €720')}</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
       <label>${x('Anything else? (website, Booking.com link…)', 'Aon rud eile? (suíomh, nasc Booking.com…)')}<textarea name="${x('Message', 'Teachtaireacht')}" rows="3"></textarea></label>
       <label class="chk"><input type="checkbox" required> <span>${x('I agree that my details are used only to reply to me.', 'Aontaím nach n-úsáidfear mo chuid sonraí ach le freagra a thabhairt orm.')}</span></label>
       <button class="btn btn-lg btn-block" type="submit">${x('Send', 'Seol')}</button>
@@ -268,9 +270,10 @@ export function renderStudioPrivacy(s) {
 <body><main class="sec"><div class="wrap narrow legal"><p><a href="./">← ${esc(s.studioName)}</a></p>
 <h1>Privacy notice</h1>
 <p>${esc(s.studioName)} is run by ${esc(s.ownerName)}, a sole trader in ${esc(s.baseArea)}. This notice explains how I handle personal data.</p>
-<h2>What I collect</h2><p>If you contact me, I receive what you send: your name, business, contact details and message. I use it only to reply and, if we work together, to deliver and invoice the work (GDPR Art. 6(1)(b)). Invoices are kept for 6 years for Revenue.</p>
+<h2>What I collect</h2><p>If you contact me, I receive what you send: your name, business, contact details and message. I use it only to reply and, if we work together, to deliver and invoice the work (GDPR Art. 6(1)(b)).</p>
+<h2>How long I keep it</h2><p>Messages that don’t lead to work are deleted within 12 months. Client records and invoices are kept for 6 years, as Revenue requires.</p>
 <h2>Marketing</h2><p>I don’t send marketing emails without your consent, and I don’t make marketing calls to mobile numbers without your agreement. If you ask me not to contact you again, I won’t.</p>
-<h2>Who else sees it</h2><p>Messages sent by WhatsApp go through WhatsApp (Meta). Card payments are handled by Stripe. I never sell your data.</p>
+<h2>Who else sees it</h2><p>Messages sent by WhatsApp go through WhatsApp (Meta). Card payments are handled by Stripe. This website is hosted by Vercel. I never sell your data.</p>
 <h2>Cookies</h2><p>This website sets no tracking or advertising cookies.</p>
 <h2>Your rights</h2><p>Ask to see, correct or delete your data any time: ${contact}. You can complain to the Data Protection Commission at dataprotection.ie.</p>
 </div></main></body></html>`;
