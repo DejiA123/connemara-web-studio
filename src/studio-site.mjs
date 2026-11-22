@@ -121,10 +121,8 @@ export function renderStudio(studio, lang, ctx) {
     <p class="muted small">${x('Type in your own numbers.', 'Cuir isteach d’uimhreacha féin.')}</p>
   </div>
   <form class="calc" data-calc data-price="570" data-lang="${lang}" onsubmit="return false">
-    <div class="row2">
-      <label>${x('Price per night', 'Praghas san oíche')}<span class="eur"><input name="rate" type="number" inputmode="numeric" value="100" min="0"></span></label>
-      <label>${x('Nights via booking sites, per year', 'Oícheanta trí shuíomhanna, sa bhliain')}<input name="nights" type="number" inputmode="numeric" value="200" min="0"></label>
-    </div>
+    <label class="q">${x('1. What do you charge for a room, per night?', '1. Cé mhéad a ghearrann tú ar sheomra, san oíche?')}<small>${x('For example €100.', 'Mar shampla €100.')}</small><span class="eur"><input name="rate" type="number" inputmode="numeric" value="100" min="0"></span></label>
+    <label class="q">${x('2. Roughly how many nights a year do guests book you through Booking.com or Airbnb?', '2. Thart ar cé mhéad oíche sa bhliain a chuireann aíonna in áirithe leat trí Booking.com nó Airbnb?')}<small>${x('A rough guess is fine. A busy B&B might have about 200.', 'Is leor buille faoi thuairim. B’fhéidir go mbeadh thart ar 200 ag B&B gnóthach.')}</small><input name="nights" type="number" inputmode="numeric" value="200" min="0"></label>
     <p class="calc-line">${x('Booking sites take about', 'Tógann suíomhanna áirithinte thart ar')} <b data-out="paid">€3,000</b> ${x('a year from you (15% of each booking).', 'sa bhliain uait (15% de gach áirithint).')}</p>
     <p class="calc-big">${x('If just 1 in 4 of those guests booked on your own website instead, you’d save', 'Dá gcuirfeadh 1 as gach 4 de na haíonna sin in áirithe ar do shuíomh féin, shábhálfá')} <b data-out="saved">€750</b> ${x('a year.', 'sa bhliain.')}</p>
     <p class="calc-line" data-out="payback"></p>

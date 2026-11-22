@@ -269,3 +269,5 @@ body{background:var(--bg)}
 .vs tr:last-child td{border-bottom:0}
 @media(max-width:560px){.vs table{font-size:.82rem}.vs th,.vs td{padding:9px 5px}}
 .pkg .muted.small b{color:var(--ink)}
+.calc label.q{font-size:.98rem;color:var(--ink);gap:6px}
+.calc label.q small{font-weight:400;color:var(--muted);font-size:.86rem;margin-top:-4px}
