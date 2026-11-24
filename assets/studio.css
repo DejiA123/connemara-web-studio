@@ -271,3 +271,34 @@ body{background:var(--bg)}
 .pkg .muted.small b{color:var(--ink)}
 .calc label.q{font-size:.98rem;color:var(--ink);gap:6px}
 .calc label.q small{font-weight:400;color:var(--muted);font-size:.86rem;margin-top:-4px}
+
+/* v4 mobile polish */
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:860px){body{padding-bottom:0}}
+details summary{min-height:44px;display:flex;align-items:center;gap:10px;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+";flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e8f0f4;color:var(--sea);font-weight:700}
+details[open] summary::before{content:"–";background:var(--gold2);color:var(--gold-ink)}
+.lang{min-height:40px;display:inline-flex;align-items:center;padding:0 14px}
+.btn-sm{min-height:42px;padding:0 18px}
+.vs-cards{display:none}
+@media(max-width:640px){
+  .vs{display:none}
+  .vs-cards{display:grid;gap:14px;margin-top:22px}
+  .vc{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;border-top:5px solid var(--sea)}
+  .vc-bk{border-top-color:#b5523f}
+  .vc h3{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 8px;font-size:1.2rem}
+  .vc h3 small{font-family:Inter,sans-serif;font-size:.85rem;color:var(--muted);font-weight:600}
+  .vc p{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin:0;padding:9px 0;border-bottom:1px solid var(--line)}
+  .vc p span{color:#44535c}
+  .vc p b{text-align:right;font-size:1.05rem}
+  .vc p b small{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
+  .vc .bad{color:#b5523f;font-size:1.25rem}.vc .good{color:#1f7a45;font-size:1.25rem}
+  .vc p.vc-foot{display:block;border:0;padding:10px 0 0;color:#33424b;font-size:.95rem}
+  .vc.vc-us p.vc-foot{background:#f0f7f3;margin:8px -18px -16px;padding:12px 18px;border-radius:0 0 var(--radius) var(--radius)}
+}
+.foot-r{text-align:left}
+@media(min-width:700px){.foot-r{text-align:right}}
+.req .chk input{width:20px;height:20px;margin-top:1px;accent-color:var(--sea);flex:none}
+
+.mbar a span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}

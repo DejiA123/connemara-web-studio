@@ -101,7 +101,7 @@ export function renderStudio(studio, lang, ctx) {
       <p class="eyebrow">${x('Websites for B&Bs and local businesses · Connemara & Galway', 'Suíomhanna do B&Banna agus do ghnólachtaí áitiúla · Conamara & Gaillimh')}</p>
       <h1>${x('Your guests already love you. <em>Let them book you direct.</em>', 'Is breá le d’aíonna thú. <em>Faigh a n-áirithintí go díreach.</em>')}</h1>
       <p class="lead">${x('Stop paying 15% commission on guests who already know your name. I’ll build your new website as a <b>free sample first</b>, and you only pay if you love it.', 'Ná híoc 15% coimisiúin ar aíonna a bhfuil d’ainm acu cheana. Tógfaidh mé do shuíomh nua mar <b>shampla saor in aisce ar dtús</b>, agus ní íocann tú ach má thaitníonn sé leat.')}</p>
-      <div class="ctas"><a class="btn btn-lg btn-gold" href="#contact">${x('Get my free sample', 'Faigh mo shampla saor in aisce')} →</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-glass" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
+      <div class="ctas"><a class="btn btn-lg btn-gold" href="#contact">${x('Get my free sample', 'Sampla saor in aisce')} →</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-glass" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
       ${left > 0 ? `<p class="offer-note">${x(`Launch price for my first three clients: <b>€570</b> instead of €950, until ${esc(deadline)}. <u>${left} ${left === 1 ? 'place' : 'places'} left.</u>`, `Praghas seolta do mo chéad trí chliant: <b>€570</b> in ionad €950, go dtí ${esc(deadline)}. <u>${left} áit fágtha.</u>`)}</p>` : ''}
       <ul class="trust"><li>${icon('irish', 18)} ${x('Irish & English', 'Gaeilge & Béarla')}</li><li>${icon('calendar', 18)} ${x('Works alongside Booking.com & Airbnb', 'Oibríonn sé taobh le Booking.com & Airbnb')}</li><li>${icon('pin', 18)} ${x('Local: I call in and answer the phone', 'Áitiúil: tagaim ar cuairt agus freagraím an fón')}</li></ul>
     </div>
@@ -141,6 +141,23 @@ export function renderStudio(studio, lang, ctx) {
     <tr><td>${x('Every month', 'Gach mí')}</td><td>€0</td><td class="us">€0<small>${x('support optional: €19', 'tacaíocht roghnach: €19')}</small></td><td class="us">€39<small>${x('support included', 'tacaíocht san áireamh')}</small></td></tr>
     <tr><td>${x('Cheaper than Booking.com after', 'Níos saoire ná Booking.com tar éis')}</td><td>–</td><td class="us"><b>${x('about 43 direct nights', 'thart ar 43 oíche dhíreach')}</b><small>${x('then you keep the savings, every year', 'ansin coinníonn tú an choigilt, gach bliain')}</small></td><td class="us"><b>${x('about 3 direct nights a month', 'thart ar 3 oíche dhíreach sa mhí')}</b></td></tr>
   </table></div>
+  <div class="vs-cards">
+    <div class="vc vc-bk rv"><h3>Booking.com</h3>
+      <p><span>${x('To start', 'Le tosú')}</span><b>€0</b></p>
+      <p><span>${x('Each €100 night', 'Gach oíche €100')}</span><b class="bad">€15</b></p>
+      <p><span>${x('Every month', 'Gach mí')}</span><b>€0</b></p>
+      <p class="vc-foot">${x('Takes 15% of every booking, forever.', 'Tógann sé 15% de gach áirithint, go deo.')}</p></div>
+    <div class="vc vc-us rv"><h3>${x('Your website', 'Do shuíomh')} <small>${x('€570 once', '€570 uair amháin')}</small></h3>
+      <p><span>${x('To start', 'Le tosú')}</span><b>€570 <small>${x('or 3 × €190', 'nó 3 × €190')}</small></b></p>
+      <p><span>${x('Each €100 night', 'Gach oíche €100')}</span><b class="good">€1.75 <small>${x('card fee', 'táille cárta')}</small></b></p>
+      <p><span>${x('Every month', 'Gach mí')}</span><b>€0 <small>${x('support optional: €19', 'tacaíocht roghnach: €19')}</small></b></p>
+      <p class="vc-foot">${x('Cheaper than Booking.com after <b>about 43 direct nights</b>. Then you keep the savings, every year.', 'Níos saoire ná Booking.com tar éis <b>thart ar 43 oíche dhíreach</b>. Ansin coinníonn tú an choigilt, gach bliain.')}</p></div>
+    <div class="vc vc-us rv"><h3>${x('Your website', 'Do shuíomh')} <small>${x('€39 a month', '€39 sa mhí')}</small></h3>
+      <p><span>${x('To start', 'Le tosú')}</span><b>€0</b></p>
+      <p><span>${x('Each €100 night', 'Gach oíche €100')}</span><b class="good">€1.75 <small>${x('card fee', 'táille cárta')}</small></b></p>
+      <p><span>${x('Every month', 'Gach mí')}</span><b>€39 <small>${x('support included', 'tacaíocht san áireamh')}</small></b></p>
+      <p class="vc-foot">${x('Cheaper than Booking.com with <b>about 3 direct nights a month</b>.', 'Níos saoire ná Booking.com le <b>thart ar 3 oíche dhíreach sa mhí</b>.')}</p></div>
+  </div>
 </div></section>
 
 <section class="sec" id="how"><div class="wrap">
@@ -164,7 +181,7 @@ export function renderStudio(studio, lang, ctx) {
     <p class="time">${icon('clock', 16)} ${p.time}</p>
     <ul>${p.items.map((i) => `<li>${icon('check', 18)} ${i}</li>`).join('')}</ul>
     ${p.plan ? `<p class="muted small">${p.plan}</p>` : ''}
-    <a class="btn btn-block" href="#contact" data-pkg="${p.name}">${x('Free sample first', 'Sampla saor in aisce ar dtús')}</a>
+    <a class="btn btn-block" href="#contact" data-pkg="${p.name}">${x('Free sample first', 'Sampla saor in aisce')}</a>
     ${pay(p.payLink, p.payLabel)}${pay(p.planLink, x('Pay in 3 instalments', 'Íoc i 3 thráthchuid'))}
   </article>`).join('')}
   </div>
@@ -178,7 +195,7 @@ export function renderStudio(studio, lang, ctx) {
 
 <section class="band" style="background-image:url('${rel}assets/img/beach.jpg')"><div class="wrap band-in rv">
   <p class="band-q">${x('“Every guest who books you on Booking.com and then Googles your name is a guest you could have had without paying commission.”', '“Gach aoi a chuireann in áirithe trí Booking.com agus a chuardaíonn d’ainm ar Google ina dhiaidh sin, is aoi é a d’fhéadfá a fháil gan coimisiún a íoc.”')}</p>
-  <a class="btn btn-lg btn-gold" href="#contact">${x('Show me what mine would look like', 'Taispeáin dom cén chuma a bheadh ar mo cheann')} →</a>
+  <a class="btn btn-lg btn-gold" href="#contact">${x('Show me my free sample', 'Taispeáin mo shampla dom')} →</a>
 </div></section>
 
 <section class="sec" id="guarantee"><div class="wrap">
@@ -256,7 +273,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
 <nav class="mbar" aria-label="Quick actions">
   ${tel && !tel.startsWith('TODO') ? `<a href="tel:${esc(tel)}">${icon('phone', 20)}<span>${x('Call', 'Glaoigh')}</span></a>` : ''}
   ${wa ? `<a href="https://wa.me/${wa}" target="_blank" rel="noopener">${icon('chat', 20)}<span>WhatsApp</span></a>` : ''}
-  <a class="mbar-main" href="#contact">${icon('star', 20)}<span>${x('Free sample', 'Sampla saor in aisce')}</span></a>
+  <a class="mbar-main" href="#contact">${icon('star', 20)}<span>${x('Free sample', 'Sampla')}</span></a>
 </nav>
 <script src="${rel}assets/site.js" defer></script>
 <script>document.querySelectorAll('[data-pkg]').forEach(function(a){a.addEventListener('click',function(){var s=document.querySelector('#contact select');if(!s)return;for(var i=0;i<s.options.length;i++){if(s.options[i].text.indexOf(a.dataset.pkg)===0)s.selectedIndex=i}})})</script>

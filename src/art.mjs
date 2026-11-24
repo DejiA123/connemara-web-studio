@@ -4,7 +4,7 @@
 export const THEMES = {
   atlantic: { sky1: '#e6eef3', sky2: '#c9dbe6', sun: '#f2c66d', far: '#8fa7b5', mid: '#5b7f86', near: '#3b5f5a', sea: '#2c5d7c', sea2: '#3f7898', accent: '#1f4e6b', accentInk: '#ffffff', paper: '#f7f4ee' },
   heather: { sky1: '#f1e9ef', sky2: '#dccbdc', sun: '#f4c27a', far: '#b39bb5', mid: '#7f5d86', near: '#55405e', sea: '#41566f', sea2: '#5a7290', accent: '#6b3f6f', accentInk: '#ffffff', paper: '#f8f4f4' },
-  bog: { sky1: '#eef0e6', sky2: '#d9dcc6', sun: '#efc46b', far: '#a5ae8f', mid: '#76835a', near: '#4e5a37', sea: '#4b6264', sea2: '#61797a', accent: '#5a4a2a', accentInk: '#ffffff', paper: '#f6f3ea' },
+  bog: { sky1: '#eef0e6', sky2: '#d9dcc6', sun: '#efc46b', far: '#a5ae8f', mid: '#76835a', near: '#4e5a37', sea: '#4b6264', sea2: '#61797a', accent: '#2d5a4a', accentInk: '#ffffff', paper: '#f5f4ee' },
   stone: { sky1: '#eceeef', sky2: '#d5d9dc', sun: '#e9c477', far: '#a3abb1', mid: '#76818a', near: '#4d5760', sea: '#3c5566', sea2: '#56707f', accent: '#2f3e48', accentInk: '#ffffff', paper: '#f5f4f1' },
   turf: { sky1: '#f4ece4', sky2: '#e8d4c2', sun: '#f0b964', far: '#c0a28c', mid: '#8f6a52', near: '#5e4434', sea: '#3d5a6a', sea2: '#58768a', accent: '#8a3b22', accentInk: '#ffffff', paper: '#faf6f0' },
 };

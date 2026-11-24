@@ -238,14 +238,14 @@ ${perks}${stats}
 
 <footer class="foot"><div class="wrap footin">
   <div><b>${esc(site.name)}</b>${site.address ? `<br>${esc(site.address)}` : ''}${phone ? `<br><a href="tel:${esc(phone.replace(/\s/g, ''))}">${esc(phone)}</a>` : ''}${site.email ? `<br><a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ''}</div>
-  <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a> · <small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a>${site.photos?.some((ph) => String(ph.src).startsWith('assets/img/')) ? ` · <a href="${esc(studio.siteUrl || rel)}credits.html">${lang === 'ga' ? 'Creidiúintí grianghraf' : 'Photo credits'}</a>` : ''}</small></div>
+  <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a>${site.photos?.some((ph) => String(ph.src).startsWith('assets/img/')) ? ` · <a href="${esc(studio.siteUrl || rel)}credits.html">${lang === 'ga' ? 'Creidiúintí grianghraf' : 'Photo credits'}</a>` : ''}<br><small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a></small></div>
 </div></footer>
 
 <nav class="mbar" aria-label="Quick actions">
   ${phone ? `<a href="tel:${esc(phone.replace(/\s/g, ''))}">${icon('phone', 20)}<span>${L.call}</span></a>` : ''}
   ${wa ? `<a href="https://wa.me/${wa}" target="_blank" rel="noopener">${icon('chat', 20)}<span>WhatsApp</span></a>` : ''}
   ${site.mapQuery ? `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapQuery)}" target="_blank" rel="noopener">${icon('pin', 20)}<span>${L.directions}</span></a>` : ''}
-  <a class="mbar-main" href="#book">${icon(type === 'bnb' ? 'calendar' : 'mail', 20)}<span>${esc(primaryCta)}</span></a>
+  <a class="mbar-main" href="#book">${icon(type === 'bnb' ? 'calendar' : 'mail', 20)}<span>${esc(type === 'bnb' ? L.bookNow : primaryCta)}</span></a>
 </nav>
 <script src="${rel}assets/site.js" defer></script>
 </body>
