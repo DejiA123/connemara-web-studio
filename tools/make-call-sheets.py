@@ -44,6 +44,10 @@ STYLE = """<style>
   .offer{display:inline-block;font-size:7.3pt;font-weight:700;border-radius:3px;padding:0 4px;margin-left:3px;background:#17506b;color:#fff;vertical-align:1px}
   .offer.f{background:#2e8b57}.offer.s{background:#7a5a9c}
   .chk{font-size:7.3pt;font-weight:700;color:#9a3a28}
+  .stt{font-size:7.6pt;font-weight:800;margin:2px 0 1px;padding:1px 5px;border-radius:3px;display:inline-block}
+  .stt.done{background:#eceff1;color:#5a6870}.stt.again{background:#e8f0f4;color:#17506b}.stt.cb{background:#fff3e0;color:#8a4b00;border:1px solid #e0a040}.stt.wait{background:#f3eef7;color:#5d3d78}.stt.hot{background:#e6f4ea;color:#1f6b3e;border:1.3px solid #2e8b57}
+  tr.done td{opacity:.42}tr.done .hook{display:none}tr.done b{text-decoration:line-through}
+  .tick.on{background:#14212b}
   .smp{display:inline-block;font-size:7pt;font-weight:800;border-radius:3px;padding:0 4px;margin-left:3px;vertical-align:1px}.smp.ok{background:#e6f4ea;color:#1f6b3e;border:1px solid #2e8b57}.smp.no{background:#fff3e0;color:#8a4b00;border:1px solid #e0a040}
   .obj td:first-child{width:33%;font-weight:700}
   .money{display:flex;gap:5px;text-align:center;font-weight:800;font-size:10pt}
@@ -63,6 +67,24 @@ def head(title):
 <header><h1>{title} <span>· Book Direct Connemara</span></h1><div class="me"><b>{ME}</b> · {PHONE}<br>{SITE}</div></header>"""
 
 
+STATUS = {
+  # name: (kind, text)   kind: done | again | wait | hot | cb
+  'Teach na Mara': ('again', '24 Nov: no answer. Ring again'),
+  'Ardmor Country House': ('again', '24 Nov: no answer. Ring again'),
+  'Radharc Árainn (Aran View)': ('cb', '24 Nov: asked for a call back. RING WED 25 NOV'),
+  'Briseadh na Carraige': ('again', '24 Nov: voicemail left. Ring again Thu 26 Nov'),
+  'Rockfield House': ('done', '24 Nov: no longer in business'),
+  'Villa De Porres': ('wait', '24 Nov: will ring back if her husband agrees'),
+  'Freeport House': ('done', '24 Nov: number not working'),
+  'Riverwalk House': ('hot', '24 Nov: INTERESTED. Sample sent, book the visit'),
+  'Carrown Tober House': ('done', '24 Nov: already has a web developer'),
+  'Mountain View Guesthouse': ('done', '24 Nov: not interested. Never contact again'),
+  'Crossriver B&B': ('done', '24 Nov: already has a web developer'),
+  'Dormer House': ('done', '24 Nov: number not working'),
+  'Claí Bán': ('again', '24 Nov: no answer. Ring again'),
+  'Rooms @ An Móinéar': ('again', '24 Nov: no answer. Ring again'),
+}
+
 def calls(title, rows, first_col='Business · number · what to say', show_sample=False):
     out = [f'<div class="box"><h2>{title}</h2><table class="calls"><tr><th></th><th>{first_col}</th><th class="res">Result</th></tr>']
     for r in rows:
@@ -72,18 +94,25 @@ def calls(title, rows, first_col='Business · number · what to say', show_sampl
         st = ''
         if show_sample:
             st = '<span class="smp ok">✓ SAMPLE READY</span>' if 'Sample' in extra else '<span class="smp no">NO SAMPLE: ask "Could I make you one?"</span>'
-        out.append(f'<tr><td><span class="tick"></span></td><td><b>{name}</b> <span class="num">{num}</span><span class="offer {cls}">{label}</span>{st}'
-                   f'<div class="hook">{hook}</div>{extra}</td><td class="res"></td></tr>')
+        kind, note = STATUS.get(name, ('', ''))
+        stt = f'<div class="stt {kind}">{note}</div>' if note else ''
+        res = {'done': 'N', 'again': 'NA', 'cb': 'CB', 'wait': 'CB', 'hot': 'Y'}.get(kind, '')
+        if 'voicemail' in note: res = 'VM'
+        if 'not working' in note or 'no longer' in note: res = '✗'
+        out.append(f'<tr class="{"done" if kind == "done" else ""}"><td><span class="tick{" on" if kind else ""}"></span></td><td><b>{name}</b> <span class="num">{num}</span><span class="offer {cls}">{label}</span>{st}'
+                   f'{stt}<div class="hook">{hook}</div>{extra}</td><td class="res"><b>{res}</b></td></tr>')
     out.append('</table></div>')
     return ''.join(out)
 
 
 CODES = """<div class="box gold"><h2>Write one code in "Result"</h2><div class="codes">
 <b>Y</b><span>Yes: link sent, visit or video call booked</span>
+<b>NA</b><span>No answer: try again at a different time</span>
 <b>VM</b><span>Voicemail left: try again on [day]</span>
 <b>CB</b><span>Call back on [date + time]</span>
 <b>J</b><span>"Ring me in January": write the date</span>
-<b>N</b><span>Not interested: never contact again</span></div></div>"""
+<b>N</b><span>Not interested: never contact again</span>
+<b>✗</b><span>Number not working, or closed</span></div></div>"""
 
 OFFER_BOX = """<div class="box blue"><h2>The offer (when they like the sample)</h2>
 <div class="money"><div>€570<small>launch price (normally €950)</small></div><div>€285<small>now, to start</small></div><div>€285<small>when it's online</small></div></div>
@@ -105,6 +134,47 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 <tr><td><span class="tick"></span></td><td><b>Portarra Lodge</b> · Moycullen<span class="offer">€570 Get Booked</span><div class="hook"><span class="chk">Might be sold: check first.</span> "Anglers love your lakeside spot."</div></td><td class="res"></td></tr>
 </table><p class="hook" style="margin:3px 0 0">Ask Claude for their sample the day before, and bring it on your phone.</p></div>
 """
+
+
+# ---------------------------------------------------------------- Follow-ups (front page)
+s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 14 calls · <b>1 hot lead</b> · 1 call-back.</div>
+<div class="cols"><div>
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House</h2>
+<table class="fl"><tr><td class="n2">091 552 788</td><td>Interested on 24 Nov. <b>Sample is ready:</b><br><span class="url">bookdirectconnemara.vercel.app/sites/riverwalk-house</span></td></tr></table>
+<ul><li>Send the link the way they agreed (WhatsApp or email) with a friendly line.</li>
+<li><b>Book the visit:</b> <span class="say">"Would [day] at [time] suit for five minutes?"</span></li>
+<li>At the visit, ask: <b>which rooms</b> (double/twin/family), <b>prices per night</b>, and <b>"Can I use your Booking.com photos?"</b> Then follow Sheet 1 (back).</li>
+<li>Message Claude straight after. The sample gets their rooms, prices and photos within the hour.</li></ul></div>
+
+<div class="box" style="border:2px solid #e0a040;background:#fffaf0"><h2 style="color:#8a4b00">2. Call back: Wednesday 25 Nov</h2>
+<table class="fl"><tr><td><span class="tick"></span></td><td><b>Radharc Árainn (Aran View)</b></td><td class="n2">091 553 632</td></tr>
+<tr><td></td><td colspan="2">They asked you to ring back. <b>✓ Sample ready.</b> Open with: <span class="say">"Hi, it's Ayodeji, you asked me to ring back today about the free sample website."</span></td></tr></table></div>
+
+<div class="box"><h2>3. Waiting</h2>
+<table class="fl"><tr><td><span class="tick"></span></td><td><b>Villa De Porres</b> · 091 592 239</td></tr>
+<tr><td></td><td>Will ring back if her husband agrees. No word by <b>Tue 1 Dec</b>? One friendly call, then leave it.</td></tr></table></div>
+</div><div>
+<div class="box blue"><h2>4. Ring again (try a different time)</h2>
+<p style="margin:0 0 4px">Rang in the morning? Try <b>2–4pm</b> this time, or the other way round. Say: <span class="say">"Hi, it's Ayodeji, a local web developer. I tried you on Tuesday…"</span> then Sheet 1.</p>
+<table class="fl">
+<tr><td><span class="tick"></span></td><td><b>Teach na Mara</b> <span class="smp ok">✓ SAMPLE READY</span></td><td class="n2">091 553 047</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Ardmor Country House</b> <span class="smp ok">✓ SAMPLE READY</span> (Irish)</td><td class="n2">091 553 145</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Briseadh na Carraige</b> <span class="smp ok">✓ SAMPLE READY</span><br><small>Voicemail left. Ring <b>Thu 26 Nov</b>: "I left you a message on Tuesday…"</small></td><td class="n2">091 553 212</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Claí Bán</b> (Inis Mór)</td><td class="n2">099 61111</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Rooms @ An Móinéar</b> (Inis Oírr)</td><td class="n2">099 75960</td></tr>
+</table><p style="margin:4px 0 0" class="hook">Three tries with no answer? Mark N and move on.</p></div>
+
+<div class="box"><h2>5. New calls next</h2><ul>
+<li><b>Sheet 3, Day 3:</b> Tigh Ruairí (099 75002). The others there are done or on this page.</li>
+<li><b>Sheet 3, Day 4:</b> Roundstone and Carna (6 calls), then Day 5 and Day 6.</li>
+<li><b>Visits</b> (Sheet 2, bottom right): 5 places with mobile numbers. Go when you're out that way. Ask Claude for their sample the day before.</li></ul></div>
+
+<div class="box" style="background:#f4f5f6"><h2 style="color:#5a6870">Done: don't call again</h2>
+<p style="margin:0;color:#5a6870">Rockfield House (closed) · Freeport House and Dormer House (numbers not working) · Carrown Tober and Crossriver (already have a web developer) · Mountain View (not interested)</p></div>
+</div></div>
+<footer>One hot lead after one day is a good start. Keep going.</footer>
+</div></body></html>"""
 
 # ---------------------------------------------------------------- Sheet 1 (how to call)
 s1 = head('Sheet 1 (front): On the phone').replace('</head>', '<style>body{font-size:9.2pt}.obj td{padding:3px 3px}.box{margin-bottom:7px}</style></head>') + f"""
@@ -194,7 +264,7 @@ s2 = head('Sheet 2: Days 1–2') + f"""
 <p class="url" style="margin:-3px 0 6px">Every sample link starts with <b>{SITE}</b>. Add <b>/ga</b> for Irish.</p>
 </div><div>
 {calls('Day 2: Oughterard', show_sample=True, rows=[
- ('Riverwalk House', '091 552 788', '"You\'re Fáilte Ireland 4-star but have no website of your own. Anglers and walkers Google your name."', '570'),
+ ('Riverwalk House', '091 552 788', '"You\'re Fáilte Ireland 4-star but have no website of your own. Anglers and walkers Google your name."', '570', '<div class="url">Sample: …/sites/riverwalk-house</div>'),
  ('Carrown Tober House', '091 552 166', '"4.8 on Google from 168 reviews, but no website of your own."', '570'),
  ('Mountain View Guesthouse', '091 550 306', '"Guests rate you 9.8 on Expedia, but you have no website of your own."', '570'),
  ('Crossriver B&B', '091 552 676', '"20 years running and guests love breakfast in your sunroom." A simple page + your Google Maps listing.', '210'),
@@ -248,6 +318,7 @@ s3 = head('Sheet 3: Days 3–6') + f"""
 <footer>The script, answers and the offer are on Sheet 1. One yes a week is a good week.</footer>
 </div></body></html>"""
 
+open(os.path.join(ROOT, 'docs/follow-ups.html'), 'w').write(s0)
 open(os.path.join(ROOT, 'docs/call-cheat-sheet.html'), 'w').write(s1)
 open(os.path.join(ROOT, 'docs/call-cheat-sheet-1b.html'), 'w').write(s1b)
 open(os.path.join(ROOT, 'docs/call-cheat-sheet-2.html'), 'w').write(s2)
