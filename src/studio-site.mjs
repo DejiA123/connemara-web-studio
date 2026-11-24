@@ -75,7 +75,14 @@ export function renderStudio(studio, lang, ctx) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(s.studioName)} · ${x('Booking websites for Connemara businesses', 'Suíomhanna áirithinte do ghnólachtaí Chonamara')}</title>
 <meta name="description" content="${x('Websites with direct booking for B&Bs, guesthouses and local businesses in Connemara and Galway. Irish and English. See a free sample before you pay.', 'Suíomhanna le háirithint dhíreach do B&Banna, tithe aíochta agus gnólachtaí áitiúla i gConamara agus i nGaillimh. Gaeilge agus Béarla. Feic sampla saor in aisce sula n-íocann tú.')}">
-<meta property="og:title" content="${esc(s.studioName)}">
+<meta property="og:title" content="${esc(s.studioName)} · ${x('Websites that take bookings', 'Suíomhanna a ghlacann le háirithintí')}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${esc(s.studioName)}">
+${s.siteUrl ? `<meta property="og:url" content="${esc(s.siteUrl)}${lang === 'ga' ? 'ga/' : ''}">
+<meta property="og:image" content="${esc(s.siteUrl)}assets/img/share.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">` : ''}
+<link rel="apple-touch-icon" href="${rel}assets/icon-180.png">
 <meta property="og:description" content="${x('Stop paying commission on guests who already know your name. Free sample first.', 'Ná híoc coimisiún ar aíonna a bhfuil d’ainm acu cheana. Sampla saor in aisce ar dtús.')}">
 <meta name="theme-color" content="#1f4e6b">
 <link rel="alternate" hreflang="${other}" href="${langHref}">

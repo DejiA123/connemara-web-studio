@@ -48,8 +48,8 @@ for (const f of files) {
   const base = site.demo ? `demos/${site.slug}/` : `sites/${site.slug}/`;
   const depth = base.split('/').filter(Boolean).length;
   const rel = '../'.repeat(depth);
-  write(base + 'index.html', renderClient(site, 'en', { rel, studio }));
-  if ((site.languages || []).includes('ga')) write(base + 'ga/index.html', renderClient(site, 'ga', { rel: rel + '../', studio }));
+  write(base + 'index.html', renderClient(site, 'en', { rel, studio, path: base }));
+  if ((site.languages || []).includes('ga')) write(base + 'ga/index.html', renderClient(site, 'ga', { rel: rel + '../', studio, path: base + 'ga/' }));
   write(base + 'privacy.html', renderClientPrivacy(site, { rel }));
   built.push({ f, url: base });
   if (site.demo) demos.push({ path: base, name: site.name, theme: site.theme || 'atlantic', bilingual: (site.languages || []).includes('ga'), image: site.photos?.[0]?.src, kind: site.demoKind?.en || site.type, kindGa: site.demoKind?.ga || site.type, blurb: { en: T(site.demoBlurb, 'en'), ga: T(site.demoBlurb, 'ga') } });

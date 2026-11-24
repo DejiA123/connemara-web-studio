@@ -202,6 +202,9 @@ export function renderClient(site, lang, ctx) {
 <meta name="description" content="${esc(desc)}">
 ${isSample || site.noindex ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <meta property="og:title" content="${esc(title)}">
+<meta property="og:type" content="website">
+${studio.siteUrl && ctx.path ? `<meta property="og:url" content="${esc(studio.siteUrl)}${esc(ctx.path)}">` : ''}
+${studio.siteUrl && heroImg && !/^(https?:)?\/\//.test(heroImg) ? `<meta property="og:image" content="${esc(studio.siteUrl)}${esc(heroImg)}"><meta name="twitter:card" content="summary_large_image">` : ''}
 <meta property="og:description" content="${esc(desc)}">
 <meta name="theme-color" content="${th.accent}">
 ${bilingual ? `<link rel="alternate" hreflang="${other}" href="${langHref}">` : ''}
