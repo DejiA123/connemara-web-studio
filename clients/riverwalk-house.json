@@ -1,0 +1,237 @@
+{
+  "_status": "PUBLISHED sample for Riverwalk House (interested 24 Nov 2026). Facts from public listings: confirm room types, prices and the 9.6 score with the owner. Swap in their own photos once they say yes.",
+  "sample": true,
+  "draft": false,
+  "slug": "riverwalk-house",
+  "type": "bnb",
+  "theme": "atlantic",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Riverwalk House",
+  "tagline": {
+    "en": "A Fáilte Ireland 4-star B&B by the river, a three-minute walk from Oughterard, the gateway to Connemara.",
+    "ga": "B&B 4 réalta Fáilte Ireland cois abhann, siúlóid trí nóiméad ó Uachtar Ard, geata Chonamara."
+  },
+  "area": "Oughterard, Co. Galway",
+  "address": "Riverside, Carrowmanagh, Oughterard, Co. Galway",
+  "mapQuery": "Riverwalk House B&B, Oughterard, Co. Galway",
+  "phone": "091 552 788",
+  "whatsapp": "",
+  "email": "",
+  "rating": {
+    "score": "9.6",
+    "count": 212,
+    "source": "Booking.com"
+  },
+  "about": {
+    "en": [
+      "Riverwalk House is a Fáilte Ireland 4-star B&B in a quiet spot by the river, just a three-minute walk from the village of Oughterard.",
+      "Each of our three en-suite rooms is individually decorated, with tea and coffee, TV, hairdryer and toiletries. Mornings start with a full Irish or continental breakfast.",
+      "We’re a perfect base for anglers on Lough Corrib, walkers heading into Connemara, and anyone exploring Galway and the west."
+    ],
+    "ga": [
+      "Is B&B 4 réalta Fáilte Ireland é Riverwalk House, in áit chiúin cois abhann, siúlóid trí nóiméad ó shráidbhaile Uachtar Ard.",
+      "Tá gach ceann dár dtrí sheomra en suite maisithe ar a bhealach féin, le tae agus caife, teilifís, triomadóir gruaige agus earraí folctha. Tosaíonn an mhaidin le bricfeasta Éireannach iomlán nó bricfeasta ilchríochach.",
+      "Is bunáit iontach muid d’iascairí ar Loch Coirib, do shiúlóirí ag dul isteach i gConamara, agus do dhuine ar bith atá ag taiscéaladh na Gaillimhe agus an iarthair."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "star",
+      "en": "Fáilte Ireland 4-star",
+      "ga": "4 réalta Fáilte Ireland"
+    },
+    {
+      "icon": "walk",
+      "en": "3-minute walk to Oughterard village",
+      "ga": "Siúlóid 3 nóiméad go hUachtar Ard"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Full Irish or continental breakfast",
+      "ga": "Bricfeasta Éireannach nó ilchríochach"
+    },
+    {
+      "icon": "fish",
+      "en": "Close to Lough Corrib for anglers",
+      "ga": "Gar do Loch Coirib d’iascairí"
+    },
+    {
+      "icon": "bed",
+      "en": "3 en-suite rooms, individually decorated",
+      "ga": "3 sheomra en suite, gach ceann difriúil"
+    },
+    {
+      "icon": "parking",
+      "en": "Free parking and Wi-Fi",
+      "ga": "Páirceáil agus Wi-Fi saor in aisce"
+    }
+  ],
+  "stats": [
+    {
+      "n": "4★",
+      "en": "Fáilte Ireland approved",
+      "ga": "ceadaithe ag Fáilte Ireland"
+    },
+    {
+      "n": "9.6",
+      "en": "guest score on Booking.com",
+      "ga": "scór aíonna ar Booking.com"
+    },
+    {
+      "n": "3 min",
+      "en": "walk to Oughterard village",
+      "ga": "siúlóid go hUachtar Ard"
+    },
+    {
+      "n": "30 min",
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "En suite, with tea and coffee, TV, hairdryer and toiletries.",
+        "ga": "En suite, le tae agus caife, teilifís, triomadóir gruaige agus earraí folctha."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": ""
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, en suite. Ideal for walking and fishing trips.",
+        "ga": "Dhá leaba shingile, en suite. Iontach do thurais siúil agus iascaireachta."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": ""
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Space for the family, en suite, with garden views.",
+        "ga": "Spás don teaghlach, en suite, le radharc ar an ngairdín."
+      },
+      "price": "",
+      "sleeps": 3,
+      "photo": ""
+    }
+  ],
+  "_check_rooms": "Room types are a guess (3 en-suite rooms is confirmed). Confirm with the owner and add prices.",
+  "reviews": [],
+  "photos": [
+    {
+      "src": "assets/img/corrib-islands.jpg",
+      "alt": {
+        "en": "Lough Corrib and its islands",
+        "ga": "Loch Coirib agus a oileáin"
+      }
+    },
+    {
+      "src": "assets/img/oughterard-bridge.jpg",
+      "alt": {
+        "en": "The bridge over the river in Oughterard",
+        "ga": "An droichead thar an abhainn in Uachtar Ard"
+      }
+    },
+    {
+      "src": "assets/img/aughnanure.jpg",
+      "alt": {
+        "en": "Aughnanure Castle, near Oughterard",
+        "ga": "Caisleán Achadh na nIúr, in aice Uachtar Ard"
+      }
+    },
+    {
+      "src": "assets/img/oughterard-pier.jpg",
+      "alt": {
+        "en": "Boats at Oughterard quay on Lough Corrib",
+        "ga": "Báid ag cé Uachtar Ard ar Loch Coirib"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Connemara mountains",
+        "ga": "Sléibhte Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Evening light on a Connemara lake",
+        "ga": "Solas tráthnóna ar loch i gConamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Around Oughterard",
+    "ga": "Timpeall Uachtar Ard"
+  },
+  "bookingPhoto": "assets/img/oughterard-pier.jpg",
+  "booking": {
+    "mode": "request",
+    "directDiscount": "",
+    "depositLink": "",
+    "policies": [
+      {
+        "en": "Check-in from 4pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 4in, imeacht faoi 11rn."
+      },
+      {
+        "en": "A deposit secures your room.",
+        "ga": "Cinntíonn éarlais do sheomra."
+      },
+      {
+        "en": "Sorry, we can’t take pets.",
+        "ga": "Ár leithscéal, ní féidir linn peataí a ghlacadh."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is breakfast included?",
+        "ga": "An bhfuil bricfeasta san áireamh?"
+      },
+      "a": {
+        "en": "Yes: a full Irish or a continental breakfast, every morning.",
+        "ga": "Tá: bricfeasta Éireannach iomlán nó bricfeasta ilchríochach, gach maidin."
+      }
+    },
+    {
+      "q": {
+        "en": "How far is the village?",
+        "ga": "Cé chomh fada is atá an sráidbhaile?"
+      },
+      "a": {
+        "en": "About a three-minute walk to the shops, pubs and restaurants of Oughterard.",
+        "ga": "Thart ar shiúlóid trí nóiméad go siopaí, tithe tábhairne agus bialanna Uachtar Ard."
+      }
+    },
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth a gcuirfinn in áirithe go díreach?"
+      },
+      "a": {
+        "en": "You get our best price, and you deal with us directly from the start.",
+        "ga": "Gheobhaidh tú an praghas is fearr, agus déileálann tú linn go díreach ón tús."
+      }
+    }
+  ]
+}

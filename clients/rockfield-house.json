@@ -1,7 +1,7 @@
 {
   "_help": "Copied by new-sample.mjs. Anything starting with TODO is left blank on the site until you fill it in. Keys starting with _ are notes and are ignored.",
   "sample": true,
-  "draft": false,
+  "draft": true,
   "type": "bnb",
   "theme": "heather",
   "_themes": "atlantic | heather | bog | stone | turf",
@@ -174,7 +174,7 @@
   "faq": [],
   "slug": "rockfield-house",
   "_check": "Get Found (€210) prospect. Confirm distance to Galway. Verify the stats strip with the owner (drive times are approximate). Swap in their own photos.",
-  "_status": "PUBLISHED as a sample (banner shown, hidden from Google, form sends nothing). Fill prices and swap in owner photos once they agree.",
+  "_status": "UNPUBLISHED: owner says no longer in business (24 Nov 2026).",
   "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
   "galleryTitle": {
     "en": "Your Connemara base",

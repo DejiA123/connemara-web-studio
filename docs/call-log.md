@@ -1,0 +1,24 @@
+# Call log
+
+## Tuesday 24 November 2026 (Day 1 + Day 2)
+
+| Business | Result | Next step |
+|---|---|---|
+| Teach na Mara | No answer | Ring again (Wed/Thu, other time slot) |
+| Ardmor Country House | No answer | Ring again (Wed/Thu, other time slot) |
+| Radharc Árainn | **CB**: asked to be called back | **Ring Wednesday 25 Nov** |
+| Briseadh na Carraige | **VM**: voicemail left | Ring again Thursday 26 Nov |
+| Rockfield House | No longer in business | Closed. Sample taken offline |
+| Villa De Porres | Will call back if husband agrees | Wait. Gentle follow-up call next week |
+| Freeport House | Landline not working | Find another number, or drop |
+| **Riverwalk House** | **Y: interested, wants a free sample within 2 days** | **Sample ready: send link, book visit** |
+| Carrown Tober House | Already has a web developer | N |
+| Mountain View Guesthouse | Not interested | N (never contact again) |
+| Crossriver B&B | Already has a web developer | N |
+| Dormer House (Day 3) | Number not working | Find another number, or drop |
+| Claí Bán (Day 3) | No answer | Ring again |
+| Rooms @ An Móinéar (Day 3) | No answer | Ring again |
+
+Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lodge): not done yet.
+
+**Riverwalk House sample:** https://bookdirectconnemara.vercel.app/sites/riverwalk-house/
