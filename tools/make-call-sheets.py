@@ -44,6 +44,7 @@ STYLE = """<style>
   .offer{display:inline-block;font-size:7.3pt;font-weight:700;border-radius:3px;padding:0 4px;margin-left:3px;background:#17506b;color:#fff;vertical-align:1px}
   .offer.f{background:#2e8b57}.offer.s{background:#7a5a9c}
   .chk{font-size:7.3pt;font-weight:700;color:#9a3a28}
+  .smp{display:inline-block;font-size:7pt;font-weight:800;border-radius:3px;padding:0 4px;margin-left:3px;vertical-align:1px}.smp.ok{background:#e6f4ea;color:#1f6b3e;border:1px solid #2e8b57}.smp.no{background:#fff3e0;color:#8a4b00;border:1px solid #e0a040}
   .obj td:first-child{width:33%;font-weight:700}
   .money{display:flex;gap:5px;text-align:center;font-weight:800;font-size:10pt}
   .money div{flex:1;border:1.5px solid #17506b;border-radius:5px;padding:2px;background:#fff}
@@ -54,7 +55,7 @@ STYLE = """<style>
   @media screen{body{background:#e9edef;padding:16px}.page{background:#fff;padding:10mm;box-shadow:0 8px 30px rgba(0,0,0,.12)}}
 </style>"""
 
-OFFER = {'570': ('€570 Get Booked', ''), '210': ('€210 Get Found', 'f'), 'sup': ('€90/mo support', 's')}
+OFFER = {'570': ('€570 Get Booked', ''), '210': ('€210 Get Found', 'f'), 'sup': ('€90/mo Growth', 's')}
 
 
 def head(title):
@@ -62,13 +63,16 @@ def head(title):
 <header><h1>{title} <span>· Book Direct Connemara</span></h1><div class="me"><b>{ME}</b> · {PHONE}<br>{SITE}</div></header>"""
 
 
-def calls(title, rows, first_col='Business · number · what to say'):
+def calls(title, rows, first_col='Business · number · what to say', show_sample=False):
     out = [f'<div class="box"><h2>{title}</h2><table class="calls"><tr><th></th><th>{first_col}</th><th class="res">Result</th></tr>']
     for r in rows:
         name, num, hook, offer = r[:4]
         extra = r[4] if len(r) > 4 else ''
         label, cls = OFFER[offer]
-        out.append(f'<tr><td><span class="tick"></span></td><td><b>{name}</b> <span class="num">{num}</span><span class="offer {cls}">{label}</span>'
+        st = ''
+        if show_sample:
+            st = '<span class="smp ok">✓ SAMPLE READY</span>' if 'Sample' in extra else '<span class="smp no">NO SAMPLE: ask "Could I make you one?"</span>'
+        out.append(f'<tr><td><span class="tick"></span></td><td><b>{name}</b> <span class="num">{num}</span><span class="offer {cls}">{label}</span>{st}'
                    f'<div class="hook">{hook}</div>{extra}</td><td class="res"></td></tr>')
     out.append('</table></div>')
     return ''.join(out)
@@ -87,14 +91,14 @@ OFFER_BOX = """<div class="box blue"><h2>The offer (when they like the sample)</
 <li>Or <b>3 payments of €190</b>. Launch price for the first 3 clients, until <b>20 December</b>.</li>
 <li><b>"Too much up front?"</b> Offer: <b>nothing up front, €39 a month</b> (12 months minimum, support included). After 15 payments the website is theirs. Push the €570 first: deposits are your December money.</li>
 <li>Online by <b>1 March</b>, or they get the deposit back.</li>
-<li>No booking from the website by 30 June 2027? Their <b>monthly support is free</b> until there is.</li>
+<li>No direct booking from the website by 30 June 2027? They <b>pay nothing for monthly support</b> until there is.</li>
 <li>Small place that only needs Google + one page: <b>Get Found, €210</b>, ready in a week.</li>
-<li>Payment: bank transfer is fine. Send the invoice from <code>tools/invoice.html</code>.</li></ul></div>"""
+<li>Payment: bank transfer is fine. <b>Ask Claude for the invoice.</b></li></ul></div>"""
 
 REMIND = """<div class="box gold" style="display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:8.6pt"><span><b>1</b> Hello → <b>2</b> their line + 15% → <b>3</b> "Can I send you a free sample?" → <b>4</b> book a day and time</span><span><b style="color:#1f6b3e">YES:</b> send link, message Claude · <b style="color:#9a3a28">NO:</b> thank them, next</span></div>"""
 
 VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h2><table class="calls"><tr><th></th><th>Business · where · what to say at the door</th><th class="res">Result</th></tr>
-<tr><td><span class="tick"></span></td><td><b>Lig do Scíth</b> · Carraroe South<span class="offer">€570 Get Booked</span><div class="hook"><b>Speak Irish.</b> "Dia duit! Hundreds of great reviews but no website of your own. I made you this sample." Or 3 × €190.</div></td><td class="res"></td></tr>
+<tr><td><span class="tick"></span></td><td><b>Lig do Scíth</b> · Carraroe South<span class="offer">€570 Get Booked</span><div class="hook"><b>Start with "Dia duit!" and bring the Irish sample.</b> "Hundreds of great reviews but no website of your own. I made you this sample." Or 3 × €190.</div></td><td class="res"></td></tr>
 <tr><td><span class="tick"></span></td><td><b>Seaview Lodge</b> · Inverin<span class="offer">€570 Get Booked</span><div class="hook">"Cyclists love you on Hostelworld. Let groups book beds directly."</div></td><td class="res"></td></tr>
 <tr><td><span class="tick"></span></td><td><b>Teach an tSailín</b> · Inverin<span class="offer f">€210 Get Found</span><div class="hook"><span class="chk">Check it still takes guests.</span> "You're on Google Maps with no photos or reviews. I'll fix that in a week."</div></td><td class="res"></td></tr>
 <tr><td><span class="tick"></span></td><td><b>Hollybanks</b> · Moycullen<span class="offer f">€210 Get Found</span><div class="hook">"Guests rave about your Connemara tips. A page with directions and your best tips."</div></td><td class="res"></td></tr>
@@ -103,8 +107,8 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 """
 
 # ---------------------------------------------------------------- Sheet 1 (how to call)
-s1 = head('Sheet 1: How to call').replace('</head>', '<style>body{font-size:8.7pt}.obj td{padding:2.2px 3px}.box{margin-bottom:5px}</style></head>') + f"""
-<div class="goal">Your only goal on the phone: <b>get a YES to the free sample</b> and book a 5-minute look. Don't sell on the phone.</div>
+s1 = head('Sheet 1 (front): On the phone').replace('</head>', '<style>body{font-size:9.2pt}.obj td{padding:3px 3px}.box{margin-bottom:7px}</style></head>') + f"""
+<div class="goal">Your only goal on the phone: <b>get a YES to the free sample</b> and book a 5-minute look. Don't sell on the phone.<br><span style="font-size:8pt;opacity:.9">Target: <b>€1,065 by 20 December</b> (3 deposits + 1 Get Found). About 1 in 8 owners says yes, so keep dialling.</span></div>
 <div class="cols"><div>
 <div class="box gold"><h2>Before you dial</h2><ul>
 <li><b>Only ring numbers starting 091, 095 or 099.</b> Never cold-call a mobile (08…): visit instead.</li>
@@ -112,19 +116,19 @@ s1 = head('Sheet 1: How to call').replace('</head>', '<style>body{font-size:8.7p
 <li>Only send a link or email <b>after they say yes</b> to it.</li></ul></div>
 
 <div class="box"><h2>Say this, in this order</h2>
-<div class="step"><span class="n">1</span><p><span class="t">Hello</span><br><span class="say">"Hi, is that [business]? My name is Ayodeji. I'm a web developer based locally. Have you got two minutes?"</span><br>Gaeltacht: start with <span class="say">"Dia duit"</span> and offer Irish.</p></div>
+<div class="step"><span class="n">1</span><p><span class="t">Hello</span><br><span class="say">"Hi, is that [business]? My name is Ayodeji. I'm a web developer based locally. Have you got two minutes?"</span><br>Gaeltacht: start with <span class="say">"Dia duit!"</span> and mention the website comes in Irish and English.</p></div>
 <div class="step"><span class="n">2</span><p><span class="t">Why you're calling</span><br>Read their line from Sheet 2 or 3, then:<br><span class="say">"Booking.com takes about 15% of every booking. You're allowed to offer a better price on your own website now."</span></p></div>
-<div class="step"><span class="n">3</span><p><span class="t">The ask</span><br><span class="say">"I've made you a free sample website. No cost, no catch. Can I send you the link on WhatsApp, and call in for five minutes to show you?"</span></p></div>
+<div class="step"><span class="n">3</span><p><span class="t">The ask</span><br><b style="color:#1f6b3e">✓ Sample ready:</b> <span class="say">"I've already made you a free sample website. No cost, no catch. Can I send you the link on WhatsApp, and call in for five minutes to show you?"</span><br><b style="color:#8a4b00">No sample yet:</b> <span class="say">"Could I make you a free sample website? No cost, no catch. I'll have it ready in two days and call in for five minutes to show you."</span></p></div>
 <div class="step"><span class="n">4</span><p><span class="t">Book a time</span><br><span class="say">"What day suits you, and what time?"</span> Write it down before you hang up.</p></div>
 <div class="yn">
-<div class="yes"><b class="h">IF YES</b><ol><li>Send the sample link on WhatsApp (or email)</li><li>Write <b>Y</b> + the day</li><li>Message Claude (box below)</li></ol></div>
+<div class="yes"><b class="h">IF YES</b><ol><li>Send the sample link on WhatsApp (or email)</li><li>Write <b>Y</b> + the day</li><li>Message Claude (see the back)</li></ol></div>
 <div class="no"><b class="h">IF NO</b><ol><li><span class="say">"No problem at all, thanks for your time."</span></li><li>Write <b>N</b></li><li>Next call. Don't take it personally</li></ol></div>
 </div></div>
 
 
 
 <div class="box"><h2>Voicemail (only on 091/095/099 numbers)</h2>
-<p style="margin:0" class="say">"Hi, this is Ayodeji, a local web developer. I've made a free sample website for [business], with direct booking. I'll try you again on [day], or ring me on {PHONE}. Thanks!"</p></div>
+<p style="margin:0" class="say">"Hi, this is Ayodeji, a local web developer. I make websites for B&Bs where guests book you directly, and I'd love to show you a free sample. I'll try you again on [day], or ring me on {PHONE}. Thanks!"</p></div>
 </div>
 
 <div>
@@ -137,34 +141,59 @@ s1 = head('Sheet 1: How to call').replace('</head>', '<style>body{font-size:8.7p
 <tr><td>"We have a website."</td><td><span class="say">"Great. Can guests book and pay a deposit on it? That's the part I add."</span></td></tr>
 <tr><td>"Sounds like hassle."</td><td><span class="say">"None for you. I set it all up and look after it."</span></td></tr>
 <tr><td>"Ring me in the new year."</td><td><span class="say">"Sure, what date in January?"</span> Write <b>J</b> + date.</td></tr>
-<tr><td>"How do I know it'll work?"</td><td><span class="say">"If it brings no booking by 30 June, your monthly support is free until it does."</span></td></tr>
+<tr><td>"How do I know it'll work?"</td><td><span class="say">"If it brings you no direct booking by 30 June, you pay nothing for monthly support until it does."</span></td></tr>
+<tr><td>"Why €570? What do I get?"</td><td><span class="say">"I build the whole thing for you: rooms, photos, prices, in Irish and English, with online booking and deposits, and your Google listing sorted. You own it."</span></td></tr>
+<tr><td>"Who are you? Is this legit?"</td><td><span class="say">"I'm local, my website is bookdirectconnemara.vercel.app, and you see everything before you pay a cent."</span></td></tr>
 </table></div>
-{OFFER_BOX}
-<div class="box blue"><h2>After a YES: send Claude one message</h2>
-<p style="margin:0" class="say">"[Business] said yes. Booking.com link: … Room prices: … OK to use their photos: yes/no. Visit on [day]."</p>
-<p style="margin:2px 0 0">Claude updates their sample before your visit.</p></div>
-{CODES}
-<div class="money"><div>€1,065 by 20 Dec<small>3 × €285 deposits + 1 × €210</small></div><div>≈ 30 calls<small>about 1 in 8 says yes</small></div></div>
+
 </div></div>
 <footer>Be friendly, be brief, take "no" well. Every "ring me in January" is money in the new year.</footer>
+</div></body></html>"""
+
+
+# ---------------------------------------------------------------- Sheet 1 back (at the visit)
+s1b = head('Sheet 1 (back): At the visit').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.step{margin-bottom:9px}</style></head>') + f"""
+<div class="goal">At the visit your job is simple: <b>let them see their own website</b>, then ask for the yes.</div>
+<div class="cols"><div>
+<div class="box blue"><h2>At the visit (5 minutes)</h2>
+<div class="step"><span class="n">1</span><p>Hand them your phone with <b>their sample</b> open. Let them scroll.</p></div>
+<div class="step"><span class="n">2</span><p>Open <b>bookdirectconnemara.vercel.app</b>, scroll to the calculator, and let them type <b>their own</b> price and nights.</p></div>
+<div class="step"><span class="n">3</span><p>Give the offer (on the right): <b>€570</b>, or 3 × €190, or €39 a month.</p></div>
+<div class="step"><span class="n">4</span><p>Ask: <span class="say">"Will I put you down as one of my first three?"</span> Then stop talking.</p></div></div>
+
+<div class="box gold"><h2>If they say yes at the table</h2><ul>
+<li>Say: <span class="say">"Great. I'll send you the invoice for the €285 deposit today."</span></li>
+<li>Message Claude: <span class="say">"[Business] said yes, €570" (or €39 a month)</span>. You'll get the invoice wording and the contract.</li>
+<li>Bank transfer is fine for the deposit.</li>
+<li>Tell Claude, so the "places left" number on your website goes down by one.</li></ul></div>
+<div class="box"><h2>If they say "let me think about it"</h2><ul>
+<li><span class="say">"Of course. The launch price is for my first three, until 20 December. Shall I give you a ring on [day]?"</span></li>
+<li>Write <b>CB</b> + the day on your list. Leave the sample online so they can show it to family.</li></ul></div>
+</div><div>
+{OFFER_BOX}
+<div class="box blue"><h2>After a YES on the phone: message Claude</h2>
+<p style="margin:0" class="say">"[Business] said yes. Booking.com link: … Room prices: … OK to use their photos: yes/no. Visit on [day]."</p>
+<p style="margin:2px 0 0">Claude updates their sample before your visit.</p></div>
+</div></div>
+<footer>Be warm, be patient, and let the sample do the selling.</footer>
 </div></body></html>"""
 
 # ---------------------------------------------------------------- Sheet 2 (Days 1-2 + visits)
 s2 = head('Sheet 2: Days 1–2') + f"""
 {REMIND}
 <div class="cols"><div>
-{calls('Day 1: Spiddal · Bearna · Moycullen', [
+{calls('Day 1: Spiddal · Bearna · Moycullen', show_sample=True, rows=[
  ('Teach na Mara', '091 553 047', '"Your villa has glowing reviews on VRBO and fivestar.ie. At about €4,000 a week, one booking direct pays for the website."', '570', '<div class="url">Sample: …/sites/teach-na-mara</div>'),
- ('Ardmor Country House', '091 553 145', '<b>Speak Irish, be warm.</b> "Guests who click your website on Discover Ireland land on a farm-holidays listing, not your own site."', '570', '<div class="url">Sample (Irish): …/sites/ardmor-country-house/ga</div>'),
+ ('Ardmor Country House', '091 553 145', '<b>Start with "Dia duit", be warm. Send the Irish sample.</b> "Guests who click your website on Discover Ireland land on a farm-holidays listing, not your own site."', '570', '<div class="url">Sample (Irish): …/sites/ardmor-country-house/ga</div>'),
  ('Radharc Árainn (Aran View)', '091 553 632', '"You have over 800 reviews on the booking sites. That\'s a lot of commission paid."', '570', '<div class="url">Sample: …/sites/radharc-arainn-bnb</div>'),
- ('Briseadh na Carraige', '091 553 212', '"You\'re rated 4.9 on Google but only 16 guests have reviewed you there. I can get you more reviews and direct bookings."', '570', '<div class="url">Sample: …/sites/briseadh-na-carraige-bnb</div>'),
+ ('Briseadh na Carraige', '091 553 212', '"You\'re rated 4.9 on Google but only 16 guests have reviewed you there. I can add direct booking, plus a card asking guests for a Google review."', '570', '<div class="url">Sample: …/sites/briseadh-na-carraige-bnb</div>'),
  ('Rockfield House', '091 555 586', '"A guest called your farmhouse a fairy house. The booking sites can\'t tell that story." A page about the farm + your Google Maps listing.', '210', '<div class="url">Sample: …/sites/rockfield-house</div>'),
  ('Villa De Porres', '091 592 239', '<span class="chk">Look at villadeporresbandb.com first.</span> If guests can\'t book on it: "Your dog-friendly B&B is rare. I can add booking to your website."', '570'),
  ('Freeport House', '091 592 199', '<span class="chk">Look at freeport-house.com first.</span> "Guests love your sea views, but your website doesn\'t show them off on a phone."', '570'),
 ])}
 <p class="url" style="margin:-3px 0 6px">Every sample link starts with <b>{SITE}</b>. Add <b>/ga</b> for Irish.</p>
 </div><div>
-{calls('Day 2: Oughterard', [
+{calls('Day 2: Oughterard', show_sample=True, rows=[
  ('Riverwalk House', '091 552 788', '"You\'re Fáilte Ireland 4-star but have no website of your own. Anglers and walkers Google your name."', '570'),
  ('Carrown Tober House', '091 552 166', '"4.8 on Google from 168 reviews, but no website of your own."', '570'),
  ('Mountain View Guesthouse', '091 550 306', '"Guests rate you 9.8 on Expedia, but you have no website of your own."', '570'),
@@ -192,7 +221,7 @@ s3 = head('Sheet 3: Days 3–6') + f"""
 ])}
 {calls('Day 4: Roundstone · Carna', [
  ('Wits End', '095 35813', '"Rated 5.0 on Google with views over Roundstone Bay, but no website of your own."', '570'),
- ('Sonas B&B', '095 32277', '"You\'re in the heart of the Carna Gaeltacht but only on Airbnb." Offer Irish.', '570'),
+ ('Sonas B&B', '095 32277', '"You\'re in the heart of the Carna Gaeltacht but only on Airbnb." Mention the Irish and English website.', '570'),
  ('Sea-Side B&B', '095 32030', '<span class="chk">Check it\'s still open.</span> "A page for your sea views + your Google Maps listing."', '210'),
  ('Island View House', '095 35701', '<span class="chk">Look first.</span> "Guests love your scones and the bay views."', '570'),
  ('Seagrove House', '095 35810', '<span class="chk">Look first.</span> "Guests love your views of the Twelve Bens."', '570'),
@@ -220,6 +249,7 @@ s3 = head('Sheet 3: Days 3–6') + f"""
 </div></body></html>"""
 
 open(os.path.join(ROOT, 'docs/call-cheat-sheet.html'), 'w').write(s1)
+open(os.path.join(ROOT, 'docs/call-cheat-sheet-1b.html'), 'w').write(s1b)
 open(os.path.join(ROOT, 'docs/call-cheat-sheet-2.html'), 'w').write(s2)
 open(os.path.join(ROOT, 'docs/call-cheat-sheet-3.html'), 'w').write(s3)
 print('wrote both sheets')

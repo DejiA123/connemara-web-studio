@@ -63,7 +63,7 @@ export function renderStudio(studio, lang, ctx) {
     [x('How do guests pay?', 'Conas a íocann aíonna?'),
       x('By card, through Stripe (a secure payment service), straight into your bank account. You decide the deposit and cancellation rules. Stripe is free to join, and I set it up with you.', 'Le cárta, trí Stripe (seirbhís íocaíochta shlán), díreach isteach i do chuntas bainc. Socraíonn tusa an éarlais agus na rialacha cealaithe. Tá sé saor clárú le Stripe, agus socraím é in éineacht leat.')],
     [x('Can we do it all in Irish?', 'An féidir linn é a dhéanamh ar fad i nGaeilge?'),
-      x('Yes. Every website is in Irish and English at no extra cost, and we can talk in Irish too.', 'Is féidir. Bíonn gach suíomh i nGaeilge agus i mBéarla gan aon chostas breise, agus is féidir linn labhairt as Gaeilge freisin.')],
+      x('Yes. Every website is in Irish and English at no extra cost.', 'Is féidir. Bíonn gach suíomh i nGaeilge agus i mBéarla gan aon chostas breise.')],
     [x('Does it follow data protection rules (GDPR)?', 'An gcloíonn sé le rialacha cosanta sonraí (GDPR)?'),
       x('Yes. Every website has a privacy notice, doesn’t track visitors, and only asks for what’s needed for a booking.', 'Cloíonn. Bíonn fógra príobháideachais ar gach suíomh, ní rianaítear cuairteoirí, agus ní iarrtar ach a bhfuil ag teastáil le haghaidh áirithinte.')],
   ];
@@ -211,7 +211,7 @@ ${s.siteUrl ? `<meta property="og:url" content="${esc(s.siteUrl)}${lang === 'ga'
     <div class="rv">${icon('euro', 30)}<h3>${x('See it before paying anything', 'Feic é sula n-íocann tú faic')}</h3><p>${x('Your sample is free. If you don’t love it, you owe nothing.', 'Tá do shampla saor in aisce. Mura dtaitníonn sé leat, níl faic le híoc.')}</p></div>
     <div class="rv">${icon('shield', 30)}<h3>${x('Booking guarantee', 'Ráthaíocht áirithinte')}</h3><p>${x('If your website hasn’t brought you at least one direct booking by 30 June 2027, you pay nothing for monthly support until it does.', 'Mura bhfuil áirithint dhíreach amháin ar a laghad faighte agat ó do shuíomh faoi 30 Meitheamh 2027, ní íocann tú faic ar thacaíocht mhíosúil go dtí go bhfaighidh.')}</p></div>
     <div class="rv">${icon('calendar', 30)}<h3>${x('Live before Easter', 'Beo roimh an gCáisc')}</h3><p>${x('Sign up by 20 December and your website will be online by 1 March 2027, or I’ll refund your deposit.', 'Cláraigh roimh 20 Nollaig agus beidh do shuíomh ar líne faoi 1 Márta 2027, nó gheobhaidh tú d’éarlais ar ais.')}</p></div>
-    <div class="rv">${icon('irish', 30)}<h3>${x('Irish and English', 'Gaeilge agus Béarla')}</h3><p>${x('Every website comes in Irish and English at no extra cost. Is féidir linn labhairt as Gaeilge.', 'Bíonn gach suíomh dátheangach gan aon chostas breise.')}</p></div>
+    <div class="rv">${icon('irish', 30)}<h3>${x('Irish and English', 'Gaeilge agus Béarla')}</h3><p>${x('Every website comes in Irish and English at no extra cost.', 'Bíonn gach suíomh dátheangach gan aon chostas breise.')}</p></div>
   </div>
 </div></section>
 
