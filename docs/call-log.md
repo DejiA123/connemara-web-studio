@@ -40,3 +40,4 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 | Business | Result | Next step |
 |---|---|---|
 | Radharc Árainn | Saw sample on WhatsApp: "will leave it for the moment" | Polite reply; sample stays online; one check-in late January |
+| Riverwalk House | Uses another (free) booking service, not Booking.com. Not interested for now | Sample taken offline. Polite thank-you |

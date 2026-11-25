@@ -76,7 +76,7 @@ STATUS = {
   'Rockfield House': ('done', '24 Nov: no longer in business'),
   'Villa De Porres': ('wait', '24 Nov: will ring back if her husband agrees'),
   'Freeport House': ('done', '24 Nov: number not working'),
-  'Riverwalk House': ('hot', '24 Nov: INTERESTED. Sample sent, book the visit'),
+  'Riverwalk House': ('done', '26 Nov: uses another booking service. Not for now'),
   'Carrown Tober House': ('done', '24 Nov: already has a web developer'),
   'Mountain View Guesthouse': ('done', '24 Nov: not interested. Never contact again'),
   'Crossriver B&B': ('done', '24 Nov: already has a web developer'),
@@ -137,15 +137,12 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 
 # ---------------------------------------------------------------- Follow-ups (front page)
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
-<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 18 calls · <b>1 hot lead</b> (Riverwalk) · 2 waiting.</div>
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 18 calls · 2 samples seen · 2 waiting.</div>
 <div class="cols"><div>
-<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House · 091 552 788</h2>
-<p style="margin:0 0 4px">Hosts: <b>Ann and Patrick</b> (check names). Fáilte Ireland 4★, 9.6 on Booking.com. <span class="url">…/sites/riverwalk-house</span></p>
-<div class="step"><span class="n">1</span><p><span class="t">Send the link</span><br><span class="say">"Hi Ann, it's Ayodeji from Book Direct Connemara. As promised, here's the free sample I made for Riverwalk House: [link]. Could I give you a quick 5-minute call tomorrow to walk you through it? What time suits?"</span></p></div>
-<div class="step"><span class="n">2</span><p><span class="t">On the call: let them look</span><br><span class="say">"Have you got it open? Scroll down slowly."</span> Point out: their names, the <b>9.6 rating</b>, the <b>guest quotes</b>, the booking form, the Irish version. <span class="say">"The room photos are placeholders. I'll put your own rooms in."</span></p></div>
-<div class="step"><span class="n">3</span><p><span class="t">Their own numbers</span><br><span class="say">"Open bookdirectconnemara.vercel.app and put your room price and your Booking.com nights into the calculator."</span> Let them read the saving.</p></div>
-<div class="step"><span class="n">4</span><p><span class="t">The offer, then stop talking</span><br><span class="say">"It's €570 instead of €950 for my first three. €285 to start, the rest when it's online. Or 3 × €190, or €39 a month with nothing up front. Will I put you down as one of my first three?"</span></p></div>
-<p style="margin:2px 0"><b style="color:#1f6b3e">YES:</b> <span class="say">"Great, I'll send you the invoice today."</span> Ask: rooms, prices, OK to use Booking.com photos. Then message Claude.<br><b style="color:#8a4b00">"Let me think":</b> <span class="say">"Of course. Shall I ring you on [day]?"</span> Write it down.</p></div>
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. New this week: ask first</h2>
+<p style="margin:0 0 4px">Before offering a sample, ask: <span class="say">"Do most of your guests book through Booking.com, or another way?"</span></p>
+<ul><li><b>Booking.com / Airbnb:</b> the 15% saving (Sheet 1).</li>
+<li><b>Another service, or by phone:</b> skip the 15%. Say: <span class="say">"Your own website lets guests find you on Google and pay a deposit by card, in Irish and English. No cash-only hassle, fewer no-shows."</span></li></ul></div>
 
 <div class="box"><h2>2. Waiting</h2>
 <table class="fl"><tr><td><span class="tick"></span></td><td><b>Villa De Porres</b> · 091 592 239</td></tr>
@@ -185,7 +182,7 @@ s1 = head('Sheet 1 (front): On the phone').replace('</head>', '<style>body{font-
 
 <div class="box"><h2>Say this, in this order</h2>
 <div class="step"><span class="n">1</span><p><span class="t">Hello</span><br><span class="say">"Hi, is that [business]? My name is Ayodeji. I'm a web developer based locally. Have you got two minutes?"</span><br>Gaeltacht: start with <span class="say">"Dia duit!"</span> and mention the website comes in Irish and English.</p></div>
-<div class="step"><span class="n">2</span><p><span class="t">Why you're calling</span><br>Read their line from Sheet 2 or 3, then:<br><span class="say">"Booking.com takes about 15% of every booking. You're allowed to offer a better price on your own website now."</span></p></div>
+<div class="step"><span class="n">2</span><p><span class="t">Why you're calling</span><br>Read their line from Sheet 2 or 3, then ask: <span class="say">"Do most of your guests book through Booking.com?"</span><br><b>Yes:</b> <span class="say">"Booking.com takes about 15% of every booking. You're allowed to offer a better price on your own website now."</span><br><b>No:</b> <span class="say">"Your own website lets guests find you on Google and pay a deposit by card. No cash-only hassle, fewer no-shows."</span></p></div>
 <div class="step"><span class="n">3</span><p><span class="t">The ask</span><br><b style="color:#1f6b3e">✓ Sample ready:</b> <span class="say">"I've already made you a free sample website. No cost, no catch. Can I send you the link on WhatsApp, and call in for five minutes to show you?"</span><br><b style="color:#8a4b00">No sample yet:</b> <span class="say">"Could I make you a free sample website? No cost, no catch. I'll have it ready in two days and call in for five minutes to show you."</span></p></div>
 <div class="step"><span class="n">4</span><p><span class="t">Book a time</span><br><span class="say">"What day suits you, and what time?"</span> Write it down before you hang up.</p></div>
 <div class="yn">

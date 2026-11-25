@@ -1,7 +1,7 @@
 {
-  "_status": "PUBLISHED sample for Riverwalk House (interested 24 Nov 2026). Hosts Ann and Patrick (from guest reviews: confirm). Room photos are EXAMPLE photos, labelled; swap for theirs once they agree. Confirm room types, prices and rating.",
+  "_status": "UNPUBLISHED 26 Nov 2026: owner uses another (free) booking service; not interested for now.",
   "sample": true,
-  "draft": false,
+  "draft": true,
   "slug": "riverwalk-house",
   "type": "bnb",
   "theme": "atlantic",
