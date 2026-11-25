@@ -20,24 +20,18 @@ export function renderStudio(studio, lang, ctx) {
   const packages = [
     {
       key: 'found', name: 'Get Found', normal: '€350', founding: '€210', time: x('Ready in 1 week', 'Réidh i gceann seachtaine'),
-      who: x('Cafés, pubs, tradespeople and small B&Bs that need to show up on Google.', 'Caiféanna, tithe tábhairne, ceardaithe agus B&Banna beaga ar gá dóibh a bheith le feiceáil ar Google.'),
+      who: x('Smaller B&Bs that want to be easy to find on Google, with guests ringing or WhatsApping you directly.', 'B&Banna níos lú ar mian leo a bheith éasca le haimsiú ar Google, le haíonna ag glaoch nó ag cur WhatsApp chugat go díreach.'),
       items: x(['Your Google Maps listing set up or fixed', 'A one-page website in Irish and English', 'Buttons to call or WhatsApp you, a map and photos', 'Looks great on phones'],
         ['Do liostáil ar Google Maps socraithe nó deisithe', 'Suíomh gréasáin aon leathanaigh i nGaeilge agus i mBéarla', 'Cnaipí le glaoch nó WhatsApp a chur chugat, léarscáil agus grianghraif', 'Breá le feiceáil ar ghutháin']),
       payLink: st.getFoundDeposit, payLabel: x('Pay €210', 'Íoc €210'),
     },
     {
       key: 'booked', featured: true, name: 'Get Booked', normal: '€950', founding: '€570', time: x('Ready in 2–3 weeks', 'Réidh i gceann 2–3 seachtaine'),
-      who: x('B&Bs, guesthouses, holiday homes and activity providers.', 'B&Banna, tithe aíochta, tithe saoire agus soláthraithe gníomhaíochtaí.'),
+      who: x('B&Bs, guesthouses and holiday homes that want guests to book and pay online.', 'B&Banna, tithe aíochta agus tithe saoire ar mian leo go gcuirfeadh aíonna in áirithe agus go n-íocfaidís ar líne.'),
       items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Optional: link to your Booking.com and Airbnb calendars so you’re never double-booked (booking tool about €15–30 a month)', 'Your Google Maps listing set up or fixed', 'Booking guarantee (see below)'],
         ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Roghnach: nasc le d’fhéilirí Booking.com agus Airbnb ionas nach mbeidh áirithint dhúbailte agat choíche (uirlis áirithinte thart ar €15–30 sa mhí)', 'Do liostáil ar Google Maps socraithe nó deisithe', 'Ráthaíocht áirithinte (féach thíos)']),
       payLink: st.getBookedDeposit, payLabel: x('Pay €285 deposit', 'Íoc éarlais €285'),
       plan: x('Or 3 payments of €190.<br><b>Or nothing up front: €39 a month</b> (minimum 12 months, monthly support included). After 15 payments the website is yours.', 'Nó 3 íocaíocht de €190.<br><b>Nó faic roimh ré: €39 sa mhí</b> (12 mhí ar a laghad, tacaíocht mhíosúil san áireamh). Tar éis 15 íocaíocht is leatsa an suíomh.'), planLink: st.getBookedPlan,
-    },
-    {
-      key: 'sell', name: 'Sell Online', normal: '€1,200', founding: '€720', from: x('from', 'ó'), time: x('Ready in 3–4 weeks', 'Réidh i gceann 3–4 seachtaine'),
-      who: x('Craft and food producers, shops and takeaways.', 'Lucht ceirde agus táirgeoirí bia, siopaí agus bia beir leat.'),
-      items: x(['An online shop, or orders in advance', 'Customers pay by card', 'Delivery or collection, your choice', 'Irish and English'],
-        ['Siopa ar líne, nó orduithe roimh ré', 'Íocann custaiméirí le cárta', 'Seachadadh nó bailiú, de réir do rogha', 'Gaeilge agus Béarla']),
     },
   ];
 
@@ -73,8 +67,8 @@ export function renderStudio(studio, lang, ctx) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(s.studioName)} · ${x('Booking websites for Connemara businesses', 'Suíomhanna áirithinte do ghnólachtaí Chonamara')}</title>
-<meta name="description" content="${x('Websites with direct booking for B&Bs, guesthouses and local businesses in Connemara and Galway. Irish and English. See a free sample before you pay.', 'Suíomhanna le háirithint dhíreach do B&Banna, tithe aíochta agus gnólachtaí áitiúla i gConamara agus i nGaillimh. Gaeilge agus Béarla. Feic sampla saor in aisce sula n-íocann tú.')}">
+<title>${esc(s.studioName)} · ${x('Booking websites for Connemara B&Bs', 'Suíomhanna áirithinte do B&Banna Chonamara')}</title>
+<meta name="description" content="${x('Websites with direct booking for B&Bs, guesthouses and holiday homes in Connemara and Galway. Irish and English. See a free sample before you pay.', 'Suíomhanna le háirithint dhíreach do B&Banna, tithe aíochta agus tithe saoire i gConamara agus i nGaillimh. Gaeilge agus Béarla. Feic sampla saor in aisce sula n-íocann tú.')}">
 <meta property="og:title" content="${esc(s.studioName)} · ${x('Websites that take bookings', 'Suíomhanna a ghlacann le háirithintí')}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${esc(s.studioName)}">
@@ -105,7 +99,7 @@ ${s.siteUrl ? `<meta property="og:url" content="${esc(s.siteUrl)}${lang === 'ga'
   <div class="hero-bg"><img src="${rel}assets/img/roundstone-golden.jpg" alt="${x('Roundstone harbour in Connemara at sunset', 'Cuan Chloch na Rón i gConamara ag luí na gréine')}" fetchpriority="high"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">${x('Websites for B&Bs and local businesses · Connemara & Galway', 'Suíomhanna do B&Banna agus do ghnólachtaí áitiúla · Conamara & Gaillimh')}</p>
+      <p class="eyebrow">${x('Booking websites for B&Bs · Connemara & Galway', 'Suíomhanna áirithinte do B&Banna · Conamara & Gaillimh')}</p>
       <h1>${x('Your guests already love you. <em>Let them book you direct.</em>', 'Is breá le d’aíonna thú. <em>Faigh a n-áirithintí go díreach.</em>')}</h1>
       <p class="lead">${x('Stop paying 15% commission on guests who already know your name. I’ll build your new website as a <b>free sample first</b>, and you only pay if you love it.', 'Ná híoc 15% coimisiúin ar aíonna a bhfuil d’ainm acu cheana. Tógfaidh mé do shuíomh nua mar <b>shampla saor in aisce ar dtús</b>, agus ní íocann tú ach má thaitníonn sé leat.')}</p>
       <div class="ctas"><a class="btn btn-lg btn-gold" href="#contact">${x('Get my free sample', 'Sampla saor in aisce')} →</a>${tel && !tel.startsWith('TODO') ? `<a class="btn btn-lg btn-glass" href="tel:${esc(tel)}">${icon('phone', 18)} ${esc(s.phone)}</a>` : ''}</div>
@@ -217,7 +211,7 @@ ${s.siteUrl ? `<meta property="og:url" content="${esc(s.siteUrl)}${lang === 'ga'
 
 ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   <h2 class="center">${x('See what you’d get', 'Feic cad a gheobhfá')}</h2>
-  <p class="center muted">${x('Example websites for made-up businesses. Open them on your phone: everything works, including the booking form.', 'Suíomhanna samplacha do ghnólachtaí samhailteacha. Oscail ar do ghuthán iad: oibríonn gach rud, an fhoirm áirithinte san áireamh.')}</p>
+  <p class="center muted">${x('An example website for a made-up B&B. Open it on your phone: everything works, including the booking form.', 'Suíomh samplach do B&B samhailteach. Oscail ar do ghuthán é: oibríonn gach rud, an fhoirm áirithinte san áireamh.')}</p>
   <div class="demos">${demos.map((d, i) => `<a class="demo rv" href="${rel}${esc(d.path)}${lang === 'ga' && d.bilingual ? 'ga/' : ''}">
     <div class="demo-art">${d.image ? `<img src="${rel}${esc(d.image)}" alt="" loading="lazy">` : landscape(d.theme, i)}</div>
     <div class="demo-body"><span class="kind">${esc(lang === 'ga' ? d.kindGa : d.kind)}</span><h3>${esc(d.name)}</h3><p>${esc(d.blurb[lang] || d.blurb.en)}</p><span class="go">${x('Open example', 'Oscail an sampla')} →</span></div>
@@ -237,7 +231,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   <div class="about-art"><img src="${rel}assets/img/boardwalk.jpg" alt="${x('Boardwalk on Diamond Hill, Connemara National Park', 'Cosán adhmaid ar an gCnoc Diamant, Páirc Náisiúnta Chonamara')}" loading="lazy"></div>
   <div>
     <h2>${s.ownerName ? `${x('Hi, I’m', 'Dia duit, is mise')} ${esc(s.ownerName)}` : x('About me', 'Fúm féin')}</h2>
-    <p>${x(`I’m a web developer based in ${esc(s.baseArea)}. I build websites that do one job: bring local businesses more direct bookings and customers, with less money going to the big booking sites.`, `Is forbróir gréasáin mé atá lonnaithe i ${esc(s.baseAreaGa || s.baseArea)}. Tógaim suíomhanna a dhéanann jab amháin: níos mó áirithintí díreacha agus custaiméirí a thabhairt do ghnólachtaí áitiúla, le níos lú airgid ag dul chuig na suíomhanna móra áirithinte.`)}</p>
+    <p>${x(`I’m a web developer based in ${esc(s.baseArea)}. I build websites that do one job: bring B&Bs more direct bookings, with less money going to the big booking sites.`, `Is forbróir gréasáin mé atá lonnaithe i ${esc(s.baseAreaGa || s.baseArea)}. Tógaim suíomhanna a dhéanann jab amháin: níos mó áirithintí díreacha a thabhairt do B&Banna, le níos lú airgid ag dul chuig na suíomhanna móra áirithinte.`)}</p>
     <p>${x('I’m local, so I can call in, sit at your kitchen table and show you everything on your phone. And when something needs changing, you ring me, not a helpdesk.', 'Táim áitiúil, mar sin is féidir liom teacht ar cuairt, suí ag bord do chistine agus gach rud a thaispeáint duit ar do ghuthán. Agus nuair is gá rud a athrú, glaonn tú ormsa, ní ar dheasc cabhrach.')}</p>
   </div>
 </div></section>
@@ -263,7 +257,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
       <label>${x('Business name', 'Ainm an ghnó')}<input name="${x('Business', 'Gnó')}" required></label></div>
       <div class="row2"><label>${x('Phone', 'Fón')}<input name="${x('Phone', 'Fón')}" type="tel" autocomplete="tel"></label>
       <label>${x('Email', 'Ríomhphost')}<input name="${x('Email', 'Ríomhphost')}" type="email" autocomplete="email"></label></div>
-      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>${x('Get Booked: €570 once', 'Get Booked: €570 uair amháin')}</option><option>${x('Get Booked: €39 a month', 'Get Booked: €39 sa mhí')}</option><option>Get Found: €210</option><option>${x('Sell Online: from €720', 'Sell Online: ó €720')}</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
+      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>${x('Get Booked: €570 once', 'Get Booked: €570 uair amháin')}</option><option>${x('Get Booked: €39 a month', 'Get Booked: €39 sa mhí')}</option><option>Get Found: €210</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
       <label>${x('Anything else? (website, Booking.com link…)', 'Aon rud eile? (suíomh, nasc Booking.com…)')}<textarea name="${x('Message', 'Teachtaireacht')}" rows="3"></textarea></label>
       <label class="chk"><input type="checkbox" required> <span>${x('I agree that my details are used only to reply to me.', 'Aontaím nach n-úsáidfear mo chuid sonraí ach le freagra a thabhairt orm.')}</span></label>
       <button class="btn btn-lg btn-block" type="submit">${x('Send', 'Seol')}</button>

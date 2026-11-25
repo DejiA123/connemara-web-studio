@@ -160,5 +160,7 @@
       "ga": "ar mheastachán"
     }
   ],
-  "bookingPhoto": "assets/img/twelve-bens.jpg"
+  "bookingPhoto": "assets/img/twelve-bens.jpg",
+  "draft": true,
+  "_status": "Hidden: site is B&B-only now (25 Nov 2026)."
 }

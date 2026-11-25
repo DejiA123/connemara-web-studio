@@ -292,5 +292,7 @@
   "contactIntro": {
     "en": "Tell us the day, the time and how many of you, and we’ll confirm by phone or WhatsApp.",
     "ga": "Inis dúinn an lá, an t-am agus cé mhéad agaibh atá ann, agus deimhneoimid ar an bhfón nó ar WhatsApp é."
-  }
+  },
+  "draft": true,
+  "_status": "Hidden: site is B&B-only now (25 Nov 2026)."
 }
