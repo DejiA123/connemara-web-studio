@@ -69,8 +69,8 @@ def head(title):
 
 STATUS = {
   # name: (kind, text)   kind: done | again | wait | hot | cb
-  'Teach na Mara': ('again', '24 Nov: no answer. Ring again'),
-  'Ardmor Country House': ('again', '24 Nov: no answer. Ring again'),
+  'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
+  'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
   'Radharc Árainn (Aran View)': ('hot', '25 Nov: ACCEPTED a sample. Visit to arrange'),
   'Briseadh na Carraige': ('again', '24 Nov: voicemail left. Ring again Thu 26 Nov'),
   'Rockfield House': ('done', '24 Nov: no longer in business'),
@@ -81,8 +81,8 @@ STATUS = {
   'Mountain View Guesthouse': ('done', '24 Nov: not interested. Never contact again'),
   'Crossriver B&B': ('done', '24 Nov: already has a web developer'),
   'Dormer House': ('done', '24 Nov: number not working'),
-  'Claí Bán': ('again', '24 Nov: no answer. Ring again'),
-  'Rooms @ An Móinéar': ('again', '24 Nov: no answer. Ring again'),
+  'Claí Bán': ('again', '24 + 25 Nov: no answer. One last try'),
+  'Rooms @ An Móinéar': ('again', '24 + 25 Nov: no answer. One last try'),
 }
 
 def calls(title, rows, first_col='Business · number · what to say', show_sample=False):
@@ -137,7 +137,7 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 
 # ---------------------------------------------------------------- Follow-ups (front page)
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
-<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 14 calls · <b>2 hot leads</b>.</div>
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 18 calls · <b>2 hot leads</b>.</div>
 <div class="cols"><div>
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House · 091 552 788</h2>
 <p style="margin:0 0 4px">Hosts: <b>Ann and Patrick</b> (check names). Fáilte Ireland 4★, 9.6 on Booking.com. <span class="url">…/sites/riverwalk-house</span></p>
@@ -161,11 +161,11 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="box blue"><h2>4. Ring again (try a different time)</h2>
 <p style="margin:0 0 4px">Rang in the morning? Try <b>2–4pm</b> this time, or the other way round. Say: <span class="say">"Hi, it's Ayodeji, a local web developer. I tried you on Tuesday…"</span> then Sheet 1.</p>
 <table class="fl">
-<tr><td><span class="tick"></span></td><td><b>Teach na Mara</b> <span class="smp ok">✓ SAMPLE READY</span></td><td class="n2">091 553 047</td></tr>
-<tr><td><span class="tick"></span></td><td><b>Ardmor Country House</b> <span class="smp ok">✓ SAMPLE READY</span> (Irish)</td><td class="n2">091 553 145</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Teach na Mara</b> <span class="smp ok">✓ SAMPLE READY</span><br><small>No answer 24 Nov · voicemail 25 Nov. One more try Fri: "I left you a message on Wednesday…"</small></td><td class="n2">091 553 047</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Ardmor Country House</b> <span class="smp ok">✓ SAMPLE READY</span> (Irish)<br><small>No answer twice. Last try in the afternoon, or call in when you're in Spiddal.</small></td><td class="n2">091 553 145</td></tr>
 <tr><td><span class="tick"></span></td><td><b>Briseadh na Carraige</b> <span class="smp ok">✓ SAMPLE READY</span><br><small>Voicemail left. Ring <b>Thu 26 Nov</b>: "I left you a message on Tuesday…"</small></td><td class="n2">091 553 212</td></tr>
-<tr><td><span class="tick"></span></td><td><b>Claí Bán</b> (Inis Mór)</td><td class="n2">099 61111</td></tr>
-<tr><td><span class="tick"></span></td><td><b>Rooms @ An Móinéar</b> (Inis Oírr)</td><td class="n2">099 75960</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Claí Bán</b> (Inis Mór)<br><small>No answer twice. Last try.</small></td><td class="n2">099 61111</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Rooms @ An Móinéar</b> (Inis Oírr)<br><small>No answer twice. Last try.</small></td><td class="n2">099 75960</td></tr>
 </table><p style="margin:4px 0 0" class="hook">Three tries with no answer? Mark N and move on.</p></div>
 
 <div class="box"><h2>5. New calls next</h2><ul>

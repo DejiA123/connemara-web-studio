@@ -24,3 +24,13 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 **Riverwalk House sample:** https://bookdirectconnemara.vercel.app/sites/riverwalk-house/
 
 **Radharc Árainn sample (upgraded 25 Nov):** https://bookdirectconnemara.vercel.app/sites/radharc-arainn-bnb/
+
+## Wednesday 25 November 2026
+
+| Business | Result | Next step |
+|---|---|---|
+| Teach na Mara | **VM**: no answer, voicemail left | One more try Friday |
+| Ardmor Country House | No answer (2nd time) | Last try, or call in |
+| Claí Bán | No answer (2nd time) | Last try |
+| Rooms @ An Móinéar | No answer (2nd time) | Last try |
+| Radharc Árainn | Sample link to be sent to Geraldine on WhatsApp | Book the visit |
