@@ -71,7 +71,7 @@ STATUS = {
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer. Ring again'),
   'Ardmor Country House': ('again', '24 Nov: no answer. Ring again'),
-  'Radharc Árainn (Aran View)': ('cb', '24 Nov: asked for a call back. RING WED 25 NOV'),
+  'Radharc Árainn (Aran View)': ('hot', '25 Nov: ACCEPTED a sample. Visit to arrange'),
   'Briseadh na Carraige': ('again', '24 Nov: voicemail left. Ring again Thu 26 Nov'),
   'Rockfield House': ('done', '24 Nov: no longer in business'),
   'Villa De Porres': ('wait', '24 Nov: will ring back if her husband agrees'),
@@ -137,7 +137,7 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 
 # ---------------------------------------------------------------- Follow-ups (front page)
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
-<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 14 calls · <b>1 hot lead</b> · 1 call-back.</div>
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 14 calls · <b>2 hot leads</b>.</div>
 <div class="cols"><div>
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House · 091 552 788</h2>
 <p style="margin:0 0 4px">Hosts: <b>Ann and Patrick</b> (check names). Fáilte Ireland 4★, 9.6 on Booking.com. <span class="url">…/sites/riverwalk-house</span></p>
@@ -147,9 +147,12 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="step"><span class="n">4</span><p><span class="t">The offer, then stop talking</span><br><span class="say">"It's €570 instead of €950 for my first three. €285 to start, the rest when it's online. Or 3 × €190, or €39 a month with nothing up front. Will I put you down as one of my first three?"</span></p></div>
 <p style="margin:2px 0"><b style="color:#1f6b3e">YES:</b> <span class="say">"Great, I'll send you the invoice today."</span> Ask: rooms, prices, OK to use Booking.com photos. Then message Claude.<br><b style="color:#8a4b00">"Let me think":</b> <span class="say">"Of course. Shall I ring you on [day]?"</span> Write it down.</p></div>
 
-<div class="box" style="border:2px solid #e0a040;background:#fffaf0"><h2 style="color:#8a4b00">2. Call back: Wednesday 25 Nov</h2>
-<table class="fl"><tr><td><span class="tick"></span></td><td><b>Radharc Árainn (Aran View)</b></td><td class="n2">091 553 632</td></tr>
-<tr><td></td><td colspan="2">They asked you to ring back. <b>✓ Sample ready.</b> Open with: <span class="say">"Hi, it's Ayodeji, you asked me to ring back today about the free sample website."</span></td></tr></table></div>
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">2. Hot lead: Radharc Árainn (Aran View)</h2>
+<p style="margin:0 0 4px">Host: <b>Geraldine</b> (check name). Accepted a sample on 25 Nov. Personal number: ____________ &nbsp;Visit: ____________</p>
+<p style="margin:0 0 4px"><b>Sample ready:</b> <span class="url">…/sites/radharc-arainn-bnb</span></p>
+<ul><li><b>Your best point:</b> guests complain online that it's <b>cash only</b>. Say: <span class="say">"With this, guests pay a deposit by card when they book. No more cash-only complaints, and fewer no-shows."</span></li>
+<li>Same 4 steps as Riverwalk: let her scroll the sample → calculator with her numbers → the offer → <span class="say">"Will I put you down as one of my first three?"</span></li>
+<li>Ask: <b>which rooms</b>, <b>prices</b>, OK to use her <b>Booking.com photos</b>, and her <b>favourite 2–3 guest reviews</b>.</li></ul></div>
 
 <div class="box"><h2>3. Waiting</h2>
 <table class="fl"><tr><td><span class="tick"></span></td><td><b>Villa De Porres</b> · 091 592 239</td></tr>
@@ -173,7 +176,7 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="box" style="background:#f4f5f6"><h2 style="color:#5a6870">Done: don't call again</h2>
 <p style="margin:0;color:#5a6870">Rockfield House (closed) · Freeport House and Dormer House (numbers not working) · Carrown Tober and Crossriver (already have a web developer) · Mountain View (not interested)</p></div>
 </div></div>
-<footer>One hot lead after one day is a good start. Keep going.</footer>
+<footer>Two hot leads in two days. Keep going.</footer>
 </div></body></html>"""
 
 # ---------------------------------------------------------------- Sheet 1 (how to call)

@@ -6,7 +6,7 @@
 |---|---|---|
 | Teach na Mara | No answer | Ring again (Wed/Thu, other time slot) |
 | Ardmor Country House | No answer | Ring again (Wed/Thu, other time slot) |
-| Radharc Árainn | **CB**: asked to be called back | **Ring Wednesday 25 Nov** |
+| Radharc Árainn | **CB**: asked to be called back. **25 Nov: ACCEPTED a sample**, gave a personal number, visit OK | **Visit to arrange** |
 | Briseadh na Carraige | **VM**: voicemail left | Ring again Thursday 26 Nov |
 | Rockfield House | No longer in business | Closed. Sample taken offline |
 | Villa De Porres | Will call back if husband agrees | Wait. Gentle follow-up call next week |
@@ -22,3 +22,5 @@
 Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lodge): not done yet.
 
 **Riverwalk House sample:** https://bookdirectconnemara.vercel.app/sites/riverwalk-house/
+
+**Radharc Árainn sample (upgraded 25 Nov):** https://bookdirectconnemara.vercel.app/sites/radharc-arainn-bnb/

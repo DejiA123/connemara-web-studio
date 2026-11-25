@@ -11,17 +11,21 @@
   ],
   "name": "Radharc Árainn B&B",
   "tagline": {
-    "en": "Views across Galway Bay to the Aran Islands, and over 800 happy guest reviews.",
-    "ga": "Radharc trasna Chuan na Gaillimhe go hOileáin Árann, agus breis is 800 léirmheas ó aíonna sásta."
+    "en": "Geraldine’s B&B in An Spidéal, with views across Galway Bay to the Aran Islands and the beach a short walk away.",
+    "ga": "B&B Geraldine sa Spidéal, le radharc trasna Chuan na Gaillimhe go hOileáin Árann agus an trá siúlóid ghearr uait."
   },
-  "area": "Spiddal, Co. Galway",
-  "address": "",
-  "mapQuery": "Radharc Árainn B&B, Spiddal, Co. Galway",
+  "area": "An Spidéal, Co. Galway",
+  "address": "An Spidéal, Co. Galway",
+  "mapQuery": "Aran View Radharc Arainn B&B, Spiddal, Co. Galway",
   "phone": "091 553 632",
   "whatsapp": "",
   "_whatsapp": "Mobile in international format, e.g. 353861234567. Only add with the owner's OK.",
   "email": "",
-  "rating": null,
+  "rating": {
+    "score": "8.4",
+    "count": "800+",
+    "source": "KAYAK"
+  },
   "_rating_example": {
     "score": "4.9",
     "count": 120,
@@ -29,34 +33,46 @@
   },
   "about": {
     "en": [
-      "Welcome! We look forward to helping you make the most of your stay in Connemara, from the best walks and beaches to where to find music tonight.",
-      "Book direct with us for our best price."
+      "Geraldine welcomes you to Radharc Árainn, which means “Aran View”: a family home in An Spidéal looking out across Galway Bay to the Aran Islands.",
+      "Mornings start with a full Irish breakfast, and Geraldine is always happy to help with dinner suggestions and local tips.",
+      "You’re a short walk from the beach, close to the Aran Islands ferry, and about 25 minutes from Galway city. Book direct here and pay your deposit securely by card."
     ],
     "ga": [
-      "Fáilte romhat! Táimid ag tnúth le cabhrú leat an leas is fearr a bhaint as do chuairt ar Chonamara, ó na siúlóidí agus na tránna is fearr go dtí an áit le ceol a chloisteáil anocht.",
-      "Cuir in áirithe linn go díreach chun an praghas is fearr a fháil."
+      "Cuireann Geraldine fáilte romhat go Radharc Árainn: teach teaghlaigh sa Spidéal a bhfuil radharc aige trasna Chuan na Gaillimhe go hOileáin Árann.",
+      "Tosaíonn an mhaidin le bricfeasta Éireannach iomlán, agus bíonn Geraldine i gcónaí sásta cabhrú le moltaí don dinnéar agus le heolas áitiúil.",
+      "Tá tú siúlóid ghearr ón trá, gar don bhád farantóireachta go hÁrainn, agus thart ar 25 nóiméad ó chathair na Gaillimhe. Cuir in áirithe go díreach anseo agus íoc d’éarlais go slán le cárta."
     ]
   },
   "highlights": [
     {
       "icon": "sea",
-      "en": "Views to the Aran Islands",
-      "ga": "Radharc ar Oileáin Árann"
+      "en": "Views across Galway Bay to the Aran Islands",
+      "ga": "Radharc trasna Chuan na Gaillimhe go hÁrainn"
     },
     {
-      "icon": "star",
-      "en": "800+ guest reviews",
-      "ga": "Breis is 800 léirmheas"
+      "icon": "walk",
+      "en": "Short walk to the beach",
+      "ga": "Siúlóid ghearr go dtí an trá"
     },
     {
       "icon": "breakfast",
-      "en": "Breakfast included",
-      "ga": "Bricfeasta san áireamh"
+      "en": "Full Irish breakfast",
+      "ga": "Bricfeasta Éireannach iomlán"
     },
     {
-      "icon": "calendar",
-      "en": "Synced with Booking.com, no double bookings",
-      "ga": "Sioncronaithe le Booking.com"
+      "icon": "ferry",
+      "en": "Close to the Aran Islands ferry",
+      "ga": "Gar don bhád go hÁrainn"
+    },
+    {
+      "icon": "shield",
+      "en": "Pay your deposit securely by card",
+      "ga": "Íoc d’éarlais go slán le cárta"
+    },
+    {
+      "icon": "irish",
+      "en": "In the Gaeltacht",
+      "ga": "Sa Ghaeltacht"
     }
   ],
   "_icons": "sea breakfast walk wifi parking dog fish golf ferry irish family bed leaf coffee bolt tool shield",
@@ -67,12 +83,16 @@
         "ga": "Seomra Dúbailte"
       },
       "desc": {
-        "en": "Comfortable ensuite double room.",
-        "ga": "Seomra dúbailte compordach en suite."
+        "en": "Comfortable double room, en suite.",
+        "ga": "Seomra dúbailte compordach, en suite."
       },
-      "price": "TODO €",
+      "price": "",
       "sleeps": 2,
-      "photo": ""
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
     },
     {
       "name": {
@@ -80,12 +100,16 @@
         "ga": "Seomra Cúpla"
       },
       "desc": {
-        "en": "Two single beds, ensuite.",
+        "en": "Two single beds, en suite.",
         "ga": "Dhá leaba shingile, en suite."
       },
-      "price": "TODO €",
+      "price": "",
       "sleeps": 2,
-      "photo": ""
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
     },
     {
       "name": {
@@ -93,12 +117,16 @@
         "ga": "Seomra Teaghlaigh"
       },
       "desc": {
-        "en": "Room for the whole family, ensuite.",
+        "en": "Room for the whole family, en suite.",
         "ga": "Spás don teaghlach ar fad, en suite."
       },
-      "price": "TODO €",
+      "price": "",
       "sleeps": 4,
-      "photo": ""
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
     }
   ],
   "reviews": [],
@@ -116,8 +144,8 @@
     {
       "src": "assets/img/beach.jpg",
       "alt": {
-        "en": "Looking out to the islands",
-        "ga": "Ag féachaint amach ar na hoileáin"
+        "en": "Looking out over Galway Bay",
+        "ga": "Ag féachaint amach thar Chuan na Gaillimhe"
       }
     },
     {
@@ -161,24 +189,53 @@
   ],
   "booking": {
     "mode": "request",
-    "_mode": "request = form to WhatsApp/email · embed = booking engine iframe (set embedUrl) for full calendar sync",
-    "embedUrl": "",
     "directDiscount": "",
     "depositLink": "",
     "policies": [
       {
-        "en": "Check-in from 3pm, check-out by 11am.",
-        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+        "en": "Pay your deposit securely online by card. The balance can be paid on arrival.",
+        "ga": "Íoc d’éarlais go slán ar líne le cárta. Is féidir an t-iarmhéid a íoc ar theacht duit."
       },
       {
-        "en": "A deposit secures your room.",
-        "ga": "Cinntíonn éarlais do sheomra."
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
       }
     ]
   },
-  "faq": [],
+  "faq": [
+    {
+      "q": {
+        "en": "Can I pay by card?",
+        "ga": "An féidir liom íoc le cárta?"
+      },
+      "a": {
+        "en": "Yes. Pay your deposit securely online by card when you book.",
+        "ga": "Is féidir. Íoc d’éarlais go slán ar líne le cárta nuair a chuireann tú in áirithe."
+      }
+    },
+    {
+      "q": {
+        "en": "Is breakfast included?",
+        "ga": "An bhfuil bricfeasta san áireamh?"
+      },
+      "a": {
+        "en": "Yes, a full Irish breakfast every morning.",
+        "ga": "Tá, bricfeasta Éireannach iomlán gach maidin."
+      }
+    },
+    {
+      "q": {
+        "en": "How do I get to the Aran Islands?",
+        "ga": "Conas a rachaidh mé go hOileáin Árann?"
+      },
+      "a": {
+        "en": "The ferry leaves from Rossaveal, a short drive west. Ask Geraldine for tips on the best day trip.",
+        "ga": "Fágann an bád ó Ros an Mhíl, achar gearr siar. Fiafraigh de Geraldine faoin turas lae is fearr."
+      }
+    }
+  ],
   "slug": "radharc-arainn-bnb",
-  "_status": "PUBLISHED as a sample (banner shown, hidden from Google, form sends nothing). Fill prices and swap in owner photos once they agree.",
+  "_status": "PUBLISHED sample. Radharc Árainn ACCEPTED a sample (25 Nov 2026), visit to be arranged. Host Geraldine (from reviews: confirm). Room photos are labelled EXAMPLES. Confirm rooms, prices, and pick 2–3 favourite reviews with her.",
   "_photos_note": "Placeholder landscape. Replace with the owner's own photos (with permission) before showing.",
   "stats": [
     {
@@ -192,20 +249,21 @@
       "ga": "radharc trasna an chuain"
     },
     {
-      "n": "25 min",
-      "en": "to Galway city",
-      "ga": "go cathair na Gaillimhe"
+      "n": "Beach",
+      "en": "a short walk away",
+      "ga": "siúlóid ghearr uait"
     },
     {
       "n": "25 min",
-      "en": "to the Aran Islands ferry",
-      "ga": "go bád farantóireachta Árann"
+      "en": "to Galway city",
+      "ga": "go cathair na Gaillimhe"
     }
   ],
   "galleryTitle": {
     "en": "Explore Connemara",
     "ga": "Taiscéal Conamara"
   },
-  "bookingPhoto": "assets/img/harbour-bens.jpg",
-  "_check": "Verify the stats strip with the owner (drive times are approximate). Swap in their own photos."
+  "bookingPhoto": "assets/img/spiddal-shore.jpg",
+  "_check_rooms": "Room types are a guess. Confirm with Geraldine and add prices.",
+  "heroPosition": "center 60%"
 }
