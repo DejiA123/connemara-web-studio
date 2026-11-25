@@ -252,3 +252,4 @@ details[open] summary::before{content:"–"}
 .foot-r small{opacity:.8}
 @media(max-width:420px){.brand{font-size:1.02rem;white-space:normal;line-height:1.15}.topin{gap:10px}}
 @media(max-width:600px){.gallery .grid img:first-child:nth-last-child(2n+1){grid-column:span 2;aspect-ratio:16/9}}
+.ph-note{position:absolute;left:12px;top:12px;background:rgba(10,20,28,.72);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:3px 9px;border-radius:99px;backdrop-filter:blur(4px)}

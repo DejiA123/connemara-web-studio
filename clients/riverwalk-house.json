@@ -1,5 +1,5 @@
 {
-  "_status": "PUBLISHED sample for Riverwalk House (interested 24 Nov 2026). Facts from public listings: confirm room types, prices and the 9.6 score with the owner. Swap in their own photos once they say yes.",
+  "_status": "PUBLISHED sample for Riverwalk House (interested 24 Nov 2026). Hosts Ann and Patrick (from guest reviews: confirm). Room photos are EXAMPLE photos, labelled; swap for theirs once they agree. Confirm room types, prices and rating.",
   "sample": true,
   "draft": false,
   "slug": "riverwalk-house",
@@ -11,8 +11,8 @@
   ],
   "name": "Riverwalk House",
   "tagline": {
-    "en": "A Fáilte Ireland 4-star B&B by the river, a three-minute walk from Oughterard, the gateway to Connemara.",
-    "ga": "B&B 4 réalta Fáilte Ireland cois abhann, siúlóid trí nóiméad ó Uachtar Ard, geata Chonamara."
+    "en": "Ann and Patrick’s Fáilte Ireland 4-star B&B by the river, a short riverside walk from the village of Oughterard.",
+    "ga": "B&B 4 réalta Fáilte Ireland Ann agus Patrick cois abhann, siúlóid ghearr cois abhann ó shráidbhaile Uachtar Ard."
   },
   "area": "Oughterard, Co. Galway",
   "address": "Riverside, Carrowmanagh, Oughterard, Co. Galway",
@@ -22,19 +22,19 @@
   "email": "",
   "rating": {
     "score": "9.6",
-    "count": 212,
+    "count": "190+",
     "source": "Booking.com"
   },
   "about": {
     "en": [
-      "Riverwalk House is a Fáilte Ireland 4-star B&B in a quiet spot by the river, just a three-minute walk from the village of Oughterard.",
-      "Each of our three en-suite rooms is individually decorated, with tea and coffee, TV, hairdryer and toiletries. Mornings start with a full Irish or continental breakfast.",
-      "We’re a perfect base for anglers on Lough Corrib, walkers heading into Connemara, and anyone exploring Galway and the west."
+      "Ann and Patrick welcome you to Riverwalk House, a Fáilte Ireland 4-star B&B in a quiet spot by the river. A short riverside walk brings you into the village of Oughterard, with its shops, pubs and restaurants.",
+      "Each of our three en-suite rooms is individually decorated, with tea and coffee, TV, hairdryer and toiletries. Guests tell us breakfast is the highlight: a full Irish cooked to order, or something lighter, with fresh fruit every morning.",
+      "We love helping you plan your days, from fishing on Lough Corrib and walks into Connemara to the best places for dinner and the most beautiful drives in the west."
     ],
     "ga": [
-      "Is B&B 4 réalta Fáilte Ireland é Riverwalk House, in áit chiúin cois abhann, siúlóid trí nóiméad ó shráidbhaile Uachtar Ard.",
-      "Tá gach ceann dár dtrí sheomra en suite maisithe ar a bhealach féin, le tae agus caife, teilifís, triomadóir gruaige agus earraí folctha. Tosaíonn an mhaidin le bricfeasta Éireannach iomlán nó bricfeasta ilchríochach.",
-      "Is bunáit iontach muid d’iascairí ar Loch Coirib, do shiúlóirí ag dul isteach i gConamara, agus do dhuine ar bith atá ag taiscéaladh na Gaillimhe agus an iarthair."
+      "Cuireann Ann agus Patrick fáilte romhat go Riverwalk House, B&B 4 réalta Fáilte Ireland in áit chiúin cois abhann. Tugann siúlóid ghearr cois abhann isteach go sráidbhaile Uachtar Ard thú, lena shiopaí, a thithe tábhairne agus a bhialanna.",
+      "Tá gach ceann dár dtrí sheomra en suite maisithe ar a bhealach féin, le tae agus caife, teilifís, triomadóir gruaige agus earraí folctha. Deir aíonna linn gurb é an bricfeasta buaicphointe an lae: bricfeasta Éireannach iomlán réitithe duit féin, nó rud éigin níos éadroime, le torthaí úra gach maidin.",
+      "Is breá linn cabhrú leat do laethanta a phleanáil, ó iascaireacht ar Loch Coirib agus siúlóidí i gConamara go dtí na háiteanna is fearr don dinnéar agus na tiomántáin is áille san iarthar."
     ]
   },
   "highlights": [
@@ -45,13 +45,13 @@
     },
     {
       "icon": "walk",
-      "en": "3-minute walk to Oughterard village",
-      "ga": "Siúlóid 3 nóiméad go hUachtar Ard"
+      "en": "Riverside walk into Oughterard village",
+      "ga": "Siúlóid cois abhann go hUachtar Ard"
     },
     {
       "icon": "breakfast",
-      "en": "Full Irish or continental breakfast",
-      "ga": "Bricfeasta Éireannach nó ilchríochach"
+      "en": "Breakfast cooked to order, with fresh fruit",
+      "ga": "Bricfeasta réitithe duit féin, le torthaí úra"
     },
     {
       "icon": "fish",
@@ -82,8 +82,8 @@
     },
     {
       "n": "3 min",
-      "en": "walk to Oughterard village",
-      "ga": "siúlóid go hUachtar Ard"
+      "en": "riverside walk to the village",
+      "ga": "siúlóid cois abhann go dtí an sráidbhaile"
     },
     {
       "n": "30 min",
@@ -103,7 +103,11 @@
       },
       "price": "",
       "sleeps": 2,
-      "photo": ""
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
     },
     {
       "name": {
@@ -116,7 +120,11 @@
       },
       "price": "",
       "sleeps": 2,
-      "photo": ""
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
     },
     {
       "name": {
@@ -129,14 +137,43 @@
       },
       "price": "",
       "sleeps": 3,
-      "photo": ""
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
     }
   ],
   "_check_rooms": "Room types are a guess (3 en-suite rooms is confirmed). Confirm with the owner and add prices.",
-  "reviews": [],
+  "reviews": [
+    {
+      "text": {
+        "en": "Breakfast was amazing and kept us content till the late afternoon.",
+        "ga": "Bhí an bricfeasta iontach agus choinnigh sé sásta sinn go dtí déanach san iarnóin."
+      },
+      "author": "Guest review",
+      "source": ""
+    },
+    {
+      "text": {
+        "en": "Welcoming, warm and friendly.",
+        "ga": "Fáilteach, croíúil agus cairdiúil."
+      },
+      "author": "Guest review",
+      "source": ""
+    },
+    {
+      "text": {
+        "en": "Very clean room, really good shower.",
+        "ga": "Seomra an-ghlan, cithfholcadh an-mhaith."
+      },
+      "author": "Guest review",
+      "source": ""
+    }
+  ],
   "photos": [
     {
-      "src": "assets/img/corrib-islands.jpg",
+      "src": "assets/img/corrib-islands-warm.jpg",
       "alt": {
         "en": "Lough Corrib and its islands",
         "ga": "Loch Coirib agus a oileáin"
@@ -219,8 +256,8 @@
         "ga": "Cé chomh fada is atá an sráidbhaile?"
       },
       "a": {
-        "en": "About a three-minute walk to the shops, pubs and restaurants of Oughterard.",
-        "ga": "Thart ar shiúlóid trí nóiméad go siopaí, tithe tábhairne agus bialanna Uachtar Ard."
+        "en": "About three minutes on foot, along the river, to the shops, pubs and restaurants of Oughterard.",
+        "ga": "Thart ar thrí nóiméad de shiúl na gcos, cois abhann, go siopaí, tithe tábhairne agus bialanna Uachtar Ard."
       }
     },
     {
@@ -233,5 +270,7 @@
         "ga": "Gheobhaidh tú an praghas is fearr, agus déileálann tú linn go díreach ón tús."
       }
     }
-  ]
+  ],
+  "heroPosition": "center 72%",
+  "_reviews_source": "Quotes from public guest reviews found via search (Booking.com/Tripadvisor/momondo); show the owner and replace with their favourites."
 }

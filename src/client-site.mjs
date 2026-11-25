@@ -53,7 +53,7 @@ export function renderClient(site, lang, ctx) {
     S.push(`<section id="rooms" class="sec rooms"><div class="wrap"><h2>${L.rooms}</h2><div class="cards">${site.rooms
       .map((r, i) => `<article class="card rv${r.photo ? '' : ' card-text'}">
         ${r.photo ? '' : `<div class="card-ic">${icon('bed', 26)}${r.price ? `<span class="ptag ptag-in"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>`}
-        <div class="card-img"${r.photo ? '' : ' hidden'}>${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
+        <div class="card-img"${r.photo ? '' : ' hidden'}>${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${r.photo && r.photoNote ? `<span class="ph-note">${esc(T(r.photoNote, lang))}</span>` : ''}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
         <div class="card-body"><h3>${esc(T(r.name, lang))}</h3>
         <p>${esc(T(r.desc, lang))}</p>
         <p class="meta">${r.sleeps ? `<span>${icon('bed', 18)} ${L.sleeps(r.sleeps)}</span>` : ''}${r.price ? `<span class="price">${L.from} <b>${esc(r.price)}</b> ${r.unit ? esc(T(r.unit, lang)) : L.perNight}</span>` : ''}</p>
@@ -225,7 +225,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
 </div></header>
 
 <section class="hero">
-  <div class="hero-media">${heroImg ? `<img src="${esc(img(heroImg))}" alt="${esc(T(site.photos[0].alt, lang))}">` : landscape(theme, 0, { label: site.area || '' })}</div>
+  <div class="hero-media">${heroImg ? `<img src="${esc(img(heroImg))}" alt="${esc(T(site.photos[0].alt, lang))}"${site.heroPosition ? ` style="object-position:${esc(site.heroPosition)}"` : ''}>` : landscape(theme, 0, { label: site.area || '' })}</div>
   <div class="hero-txt wrap">
     <div class="chips">${rating}${site.openingSpec ? `<span class="chip open-now" data-open='${esc(JSON.stringify(site.openingSpec))}' data-lang="${lang}" hidden></span>` : ''}</div>
     <h1>${esc(site.name)}</h1>
