@@ -27,7 +27,7 @@
   "phone": "095 21263",
   "whatsapp": "",
   "email": "",
-  "_contact": "Ask Mary for her mobile (for WhatsApp booking requests) and an email address.",
+  "_contact": "Bookings come by phone to Mary's landline 095 21263 (booking.mode = call). Confirm with Mary that she has an answering machine. If she later wants written requests too, add her mobile as whatsapp or an email, and set mode back to request.",
   "rating": {
     "score": "4.85",
     "count": "1,207",
@@ -65,9 +65,9 @@
       "ga": "Gan táillí áirithinte"
     },
     {
-      "icon": "chat",
-      "en": "Mary replies to you personally",
-      "ga": "Freagraíonn Mary tú go pearsanta"
+      "icon": "phone",
+      "en": "Book by phone, straight to Mary",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach le Mary"
     },
     {
       "icon": "star",
@@ -351,8 +351,8 @@
   ],
   "_check_rooms": "Room names follow Mary's Airbnb numbering. Ask Mary for her direct prices per room (and whether Room 2 is let).",
   "roomsNote": {
-    "en": "Prices change with the season. Send your dates below and Mary will reply with her best direct price, with no booking fees.",
-    "ga": "Athraíonn na praghsanna de réir an tséasúir. Seol do dhátaí thíos agus cuirfidh Mary a praghas díreach is fearr chugat, gan táillí áirithinte."
+    "en": "Prices change with the season. Ring Mary on 095 21263 for her best direct price, with no booking fees.",
+    "ga": "Athraíonn na praghsanna de réir an tséasúir. Glaoigh ar Mary ar 095 21263 chun a praghas díreach is fearr a fháil, gan táillí áirithinte."
   },
   "reviews": [
     {
@@ -692,7 +692,7 @@
     }
   ],
   "booking": {
-    "mode": "request",
+    "mode": "call",
     "directDiscount": "",
     "depositLink": "",
     "policies": [
@@ -701,8 +701,8 @@
         "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
       },
       {
-        "en": "Mary confirms every booking personally, usually within a few hours.",
-        "ga": "Deimhníonn Mary gach áirithint go pearsanta, de ghnáth laistigh de chúpla uair an chloig."
+        "en": "Mary confirms your booking with you on the phone.",
+        "ga": "Deimhníonn Mary d’áirithint leat ar an bhfón."
       },
       {
         "en": "Cot or travel cot available on request.",
@@ -767,8 +767,8 @@
         "ga": "Conas a oibríonn áirithint dhíreach?"
       },
       "a": {
-        "en": "Pick your dates and room in the form above and send it. Mary checks her calendar and replies personally to confirm your room and price. There are no booking fees.",
-        "ga": "Roghnaigh do dhátaí agus do sheomra san fhoirm thuas agus seol í. Seiceálann Mary a féilire agus freagraíonn sí tú go pearsanta chun do sheomra agus do phraghas a dheimhniú. Níl aon táillí áirithinte ann."
+        "en": "Choose your dates and room in the booking section, then tap “Call Mary to book”. Your phone rings Mary’s landline (095 21263, or +353 95 21263 from abroad) and shows you what to tell her. She confirms your room and price on the call. There are no booking fees.",
+        "ga": "Roghnaigh do dhátaí agus do sheomra sa chuid áirithinte, ansin tapáil “Glaoigh ar Mary chun áirithint a dhéanamh”. Glaonn do ghuthán ar líne thalún Mary (095 21263, nó +353 95 21263 ón iasacht) agus taispeántar duit cad ba cheart a rá léi. Deimhníonn sí do sheomra agus do phraghas ar an nglao. Níl aon táillí áirithinte ann."
       }
     }
   ],
@@ -781,7 +781,8 @@
     }
   ],
   "bookingIntro": {
-    "en": "Send your dates and Mary will check her calendar and reply personally, usually within a few hours, to confirm your room and her best direct price.",
-    "ga": "Seol do dhátaí agus seiceálfaidh Mary a féilire agus freagróidh sí tú go pearsanta, de ghnáth laistigh de chúpla uair an chloig, chun do sheomra agus a praghas díreach is fearr a dheimhniú."
-  }
+    "en": "Pick your dates and room, then tap the button to ring Mary on her landline. She’ll confirm your room and her best direct price there and then, with no booking fees.",
+    "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra agus a praghas díreach is fearr láithreach, gan táillí áirithinte."
+  },
+  "host": "Mary"
 }

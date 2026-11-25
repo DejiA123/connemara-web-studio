@@ -10,6 +10,9 @@ const STYLE_FONTS = {
   farmhouse: 'family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700',
 };
 const has = (a) => Array.isArray(a) && a.length > 0;
+// Irish numbers like "095 21263" become "+3539521263" so the link also works from a foreign mobile
+const telHref = (p) => { const d = String(p || '').replace(/[^\d+]/g, ''); return d.startsWith('+') ? d : d.startsWith('00') ? '+' + d.slice(2) : d.startsWith('0') ? '+353' + d.slice(1) : d; };
+const intlPhone = (p) => { const t = String(p || '').trim(); return t.startsWith('0') && !t.startsWith('00') ? '+353 ' + t.slice(1) : t; };
 const digits = (s) => String(s || '').replace(/[^\d]/g, '');
 
 function priceNumber(p) {
@@ -119,7 +122,27 @@ export function renderClient(site, lang, ctx) {
   const mode = booking.mode || (type === 'bnb' ? 'request' : 'request');
   nav.push(['book', type === 'bnb' ? L.bookDirect : type === 'trades' ? L.quote : L.contact]);
   let formInner = '';
-  if (type === 'bnb' && mode === 'embed' && booking.embedUrl) {
+  if (type === 'bnb' && mode === 'call' && phone) {
+    // "call" mode: the guest picks dates/room, then the site rings the owner's phone (works with a landline) and shows what to say
+    const who = site.host || (lang === 'ga' ? 'linn' : 'us');
+    const roomOpts = has(site.rooms) ? `<label>${L.room}<select name="${L.room}" data-price-select><option value="" data-price="0">${L.anyRoom}</option>${site.rooms
+      .map((r) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-price="${priceNumber(r.price)}">${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
+    formInner = `<form class="req req-call" data-form data-call="${esc(telHref(phone))}" data-sample="${isSample ? 1 : 0}" data-lang="${lang}">
+      <div class="row3"><label>${L.arrive}<input type="date" name="${L.arrive}" required data-arrive></label>
+      <label>${L.depart}<input type="date" name="${L.depart}" required data-depart></label>
+      <label>${L.guests}<select name="${L.guests}">${[1, 2, 3, 4, 5, 6].map((n) => `<option${n === 2 ? ' selected' : ''}>${n}</option>`).join('')}</select></label></div>
+      ${roomOpts}<p class="estimate" data-estimate aria-live="polite"></p>
+      <button class="btn btn-lg btn-call" type="submit">${icon('phone', 20)} ${lang === 'ga' ? `Glaoigh ar ${esc(who)} chun áirithint a dhéanamh` : `Call ${esc(who)} to book`}</button>
+      <p class="call-num">${lang === 'ga' ? 'nó glaoigh go díreach' : 'or ring directly'}: <a href="tel:${esc(telHref(phone))}"><b>${esc(phone)}</b></a> <small>(${lang === 'ga' ? 'ón iasacht' : 'from abroad'}: ${esc(intlPhone(phone))})</small></p>
+      <div class="call-card" data-call-card hidden>
+        <p class="cc-h">${icon('phone', 18)} ${lang === 'ga' ? `Ag glaoch ar ${esc(who)}… Inis di:` : `Calling ${esc(who)}… Just tell her:`}</p>
+        <ul data-call-lines></ul>
+        <a class="btn btn-lg" href="tel:${esc(telHref(phone))}">${icon('phone', 20)} ${esc(phone)}</a>
+        <p class="small">${lang === 'ga' ? `Mura bhfreagraíonn ${esc(who)} láithreach, fág teachtaireacht le d’ainm, d’uimhir agus do dhátaí, nó bain triail eile as ar ball.` : `If ${esc(who)} can’t answer straight away, leave a message with your name, number and dates, or try again a little later.`}</p>
+        ${isSample ? `<p class="small cc-sample">${lang === 'ga' ? 'Suíomh samplach: ar an suíomh beo, glaonn an cnaipe seo ar an uimhir thuas.' : 'Sample site: on the live site this button rings the number above.'}</p>` : ''}
+      </div>
+    </form>`;
+  } else if (type === 'bnb' && mode === 'embed' && booking.embedUrl) {
     formInner = `<iframe class="engine" src="${esc(booking.embedUrl)}" title="${L.bookingTitle}" loading="lazy"></iframe>`;
   } else {
     const roomOpts = has(site.rooms) ? `<label>${L.room}<select name="${L.room}" data-price-select><option value="" data-price="0">${L.anyRoom}</option>${site.rooms
@@ -155,7 +178,7 @@ export function renderClient(site, lang, ctx) {
       ${type === 'bnb' ? `<p>${site.bookingIntro ? esc(T(site.bookingIntro, lang)) : L.bookingIntro}</p>` : site.contactIntro ? `<p>${esc(T(site.contactIntro, lang))}</p>` : ''}
       ${booking.directDiscount ? `<p class="save">${icon('euro', 20)} ${L.saveVs(esc(booking.directDiscount))}</p>` : type === 'bnb' ? `<p class="save">${icon('euro', 20)} ${L.bestPrice}</p>` : ''}
       <ul class="contact-list">
-        ${phone ? `<li><a href="tel:${esc(phone.replace(/\s/g, ''))}">${icon('phone', 20)} ${esc(phone)}</a></li>` : ''}
+        ${phone ? `<li><a href="tel:${esc(telHref(phone))}">${icon('phone', 20)} ${esc(phone)}</a></li>` : ''}
         ${wa ? `<li><a href="https://wa.me/${wa}" target="_blank" rel="noopener">${icon('chat', 20)} ${L.whatsapp}</a></li>` : ''}
         ${site.email ? `<li><a href="mailto:${esc(site.email)}">${icon('mail', 20)} ${esc(site.email)}</a></li>` : ''}
       </ul>${deposit}${policies}
@@ -244,7 +267,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
     <h1>${esc(site.name)}</h1>
     <p class="tag">${esc(T(site.tagline, lang))}</p>
     ${site.area ? `<p class="where">${icon('pin', 18)} ${esc(site.area)}</p>` : ''}
-    <div class="ctas"><a class="btn btn-lg" href="#book">${esc(primaryCta)}</a>${phone ? `<a class="btn btn-lg btn-ghost" href="tel:${esc(phone.replace(/\s/g, ''))}">${icon('phone', 18)} ${L.call}</a>` : ''}</div>
+    <div class="ctas"><a class="btn btn-lg" href="#book">${esc(primaryCta)}</a>${phone ? `<a class="btn btn-lg btn-ghost" href="tel:${esc(telHref(phone))}">${icon('phone', 18)} ${L.call}</a>` : ''}</div>
     ${type === 'bnb' ? `<p class="badge">${icon('check', 16)} ${booking.directDiscount ? L.saveVs(esc(booking.directDiscount)) : L.bestPrice}</p>` : ''}
   </div>
 </section>
@@ -253,12 +276,12 @@ ${perks}${stats}
 <main>${S.join('\n')}</main>
 
 <footer class="foot"><div class="wrap footin">
-  <div><b>${esc(site.name)}</b>${site.address ? `<br>${esc(site.address)}` : ''}${phone ? `<br><a href="tel:${esc(phone.replace(/\s/g, ''))}">${esc(phone)}</a>` : ''}${site.email ? `<br><a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ''}</div>
+  <div><b>${esc(site.name)}</b>${site.address ? `<br>${esc(site.address)}` : ''}${phone ? `<br><a href="tel:${esc(telHref(phone))}">${esc(phone)}</a>` : ''}${site.email ? `<br><a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ''}</div>
   <div class="foot-r">${site.registered ? `<small>${esc(site.registered)}</small><br>` : ''}<a href="${lang === 'en' ? '' : '../'}privacy.html">${L.privacy}</a>${site.photos?.some((ph) => String(ph.src).startsWith('assets/img/')) ? ` · <a href="${esc(studio.siteUrl || rel)}credits.html">${lang === 'ga' ? 'Creidiúintí grianghraf' : 'Photo credits'}</a>` : ''}<br><small>${L.madeBy} <a href="${esc(studio.siteUrl || '#')}">${esc(studio.studioName)}</a></small></div>
 </div></footer>
 
 <nav class="mbar" aria-label="Quick actions">
-  ${phone ? `<a href="tel:${esc(phone.replace(/\s/g, ''))}">${icon('phone', 20)}<span>${L.call}</span></a>` : ''}
+  ${phone ? `<a href="tel:${esc(telHref(phone))}">${icon('phone', 20)}<span>${L.call}</span></a>` : ''}
   ${wa ? `<a href="https://wa.me/${wa}" target="_blank" rel="noopener">${icon('chat', 20)}<span>WhatsApp</span></a>` : ''}
   ${site.mapQuery ? `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapQuery)}" target="_blank" rel="noopener">${icon('pin', 20)}<span>${L.directions}</span></a>` : ''}
   <a class="mbar-main" href="#book">${icon(type === 'bnb' ? 'calendar' : 'mail', 20)}<span>${esc(type === 'bnb' ? L.bookNow : primaryCta)}</span></a>

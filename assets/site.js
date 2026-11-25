@@ -55,6 +55,27 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (depart && arrive && nights() <= 0) { depart.focus(); return; }
+      if (form.dataset.call) {
+        // call mode: show the guest what to say, then ring the owner's phone
+        var fmtD = function (v) {
+          var d = new Date(v + 'T12:00:00');
+          if (lang !== 'ga') return d.toLocaleDateString('en-IE', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+          var days = ['Domhnach', 'Luan', 'Máirt', 'Céadaoin', 'Déardaoin', 'Aoine', 'Satharn'];
+          var months = ['Eanáir', 'Feabhra', 'Márta', 'Aibreán', 'Bealtaine', 'Meitheamh', 'Iúil', 'Lúnasa', 'Meán Fómhair', 'Deireadh Fómhair', 'Samhain', 'Nollaig'];
+          return days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+        };
+        var nn = nights(), g = form.querySelector('select:not([data-price-select])'), room = roomSel && roomSel.value;
+        var say = lang === 'ga'
+          ? ['Teacht: ' + fmtD(arrive.value), 'Imeacht: ' + fmtD(depart.value) + ' (' + nn + ' oíche)', 'Aíonna: ' + (g ? g.value : ''), 'Seomra: ' + (room || 'ar bith')]
+          : ['Arriving ' + fmtD(arrive.value), 'Leaving ' + fmtD(depart.value) + ' (' + nn + ' night' + (nn === 1 ? '' : 's') + ')', (g ? g.value : '') + (g && g.value === '1' ? ' guest' : ' guests'), room ? room : 'Any room'];
+        var ul = form.querySelector('[data-call-lines]'), card = form.querySelector('[data-call-card]');
+        ul.innerHTML = '';
+        say.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+        card.hidden = false;
+        card.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        if (form.dataset.sample !== '1') setTimeout(function () { location.href = 'tel:' + form.dataset.call; }, 700);
+        return;
+      }
       var lines = [];
       var data = {};
       Array.prototype.forEach.call(form.elements, function (el) {
