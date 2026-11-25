@@ -140,12 +140,13 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
 <div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 14 calls · <b>1 hot lead</b> · 1 call-back.</div>
 <div class="cols"><div>
-<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House</h2>
-<table class="fl"><tr><td class="n2">091 552 788</td><td>Interested on 24 Nov. <b>Sample is ready:</b><br><span class="url">bookdirectconnemara.vercel.app/sites/riverwalk-house</span></td></tr></table>
-<ul><li>Send the link the way they agreed (WhatsApp or email) with a friendly line.</li>
-<li><b>Book the visit:</b> <span class="say">"Would [day] at [time] suit for five minutes?"</span></li>
-<li>At the visit, ask: <b>which rooms</b> (double/twin/family), <b>prices per night</b>, and <b>"Can I use your Booking.com photos?"</b> Then follow Sheet 1 (back).</li>
-<li>Message Claude straight after. The sample gets their rooms, prices and photos within the hour.</li></ul></div>
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House · 091 552 788</h2>
+<p style="margin:0 0 4px">Hosts: <b>Ann and Patrick</b> (check names). Fáilte Ireland 4★, 9.6 on Booking.com. <span class="url">…/sites/riverwalk-house</span></p>
+<div class="step"><span class="n">1</span><p><span class="t">Send the link</span><br><span class="say">"Hi Ann, it's Ayodeji from Book Direct Connemara. As promised, here's the free sample I made for Riverwalk House: [link]. Could I give you a quick 5-minute call tomorrow to walk you through it? What time suits?"</span></p></div>
+<div class="step"><span class="n">2</span><p><span class="t">On the call: let them look</span><br><span class="say">"Have you got it open? Scroll down slowly."</span> Point out: their names, the <b>9.6 rating</b>, the <b>guest quotes</b>, the booking form, the Irish version. <span class="say">"The room photos are placeholders. I'll put your own rooms in."</span></p></div>
+<div class="step"><span class="n">3</span><p><span class="t">Their own numbers</span><br><span class="say">"Open bookdirectconnemara.vercel.app and put your room price and your Booking.com nights into the calculator."</span> Let them read the saving.</p></div>
+<div class="step"><span class="n">4</span><p><span class="t">The offer, then stop talking</span><br><span class="say">"It's €570 instead of €950 for my first three. €285 to start, the rest when it's online. Or 3 × €190, or €39 a month with nothing up front. Will I put you down as one of my first three?"</span></p></div>
+<p style="margin:2px 0"><b style="color:#1f6b3e">YES:</b> <span class="say">"Great, I'll send you the invoice today."</span> Ask: rooms, prices, OK to use Booking.com photos. Then message Claude.<br><b style="color:#8a4b00">"Let me think":</b> <span class="say">"Of course. Shall I ring you on [day]?"</span> Write it down.</p></div>
 
 <div class="box" style="border:2px solid #e0a040;background:#fffaf0"><h2 style="color:#8a4b00">2. Call back: Wednesday 25 Nov</h2>
 <table class="fl"><tr><td><span class="tick"></span></td><td><b>Radharc Árainn (Aran View)</b></td><td class="n2">091 553 632</td></tr>
