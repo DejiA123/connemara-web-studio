@@ -253,3 +253,10 @@ details[open] summary::before{content:"–"}
 @media(max-width:420px){.brand{font-size:1.02rem;white-space:normal;line-height:1.15}.topin{gap:10px}}
 @media(max-width:600px){.gallery .grid img:first-child:nth-last-child(2n+1){grid-column:span 2;aspect-ratio:16/9}}
 .ph-note{position:absolute;left:12px;top:12px;background:rgba(10,20,28,.72);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:3px 9px;border-radius:99px;backdrop-filter:blur(4px)}
+
+/* iPhone Safari: date boxes must match the other boxes */
+.req input[type=date]{-webkit-appearance:none;appearance:none;display:block;width:100%;min-width:0;max-width:100%;height:46px;line-height:46px;padding:0 12px;text-align:left;background:#fff}
+.req input[type=date]::-webkit-date-and-time-value{text-align:left;margin:0}
+.req input[type=date]::-webkit-calendar-picker-indicator{opacity:.6}
+.req label,.row2>*,.row3>*{min-width:0}
+.book-form{overflow:hidden}
