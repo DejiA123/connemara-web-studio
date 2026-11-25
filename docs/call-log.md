@@ -45,3 +45,4 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 | Radharc Árainn | Geraldine back in touch: visit offered Wed 8pm / Thu 5pm / next Tue | Confirm the visit |
 | Clifden Farmhouse B&B | Mary: has a website, uses Airbnb (15%). Worry: "is it complicated?" Told her I do everything | Send reassurance message + book video call; check her website |
 | Clifden Farmhouse B&B | Correction: no website of her own, only Airbnb + Booking.com | Ideal fit: own website saves commission on both |
+| Radharc Árainn | Geraldine: "will arrange a time next week" | Wait; nudge Tue 1 Dec if no date |

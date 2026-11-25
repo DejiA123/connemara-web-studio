@@ -72,7 +72,7 @@ STATUS = {
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
   'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
-  'Radharc Árainn (Aran View)': ('hot', 'Back in touch! Visit offered: Wed 8pm / Thu 5pm / next Tue'),
+  'Radharc Árainn (Aran View)': ('hot', 'Will arrange a visit next week (week of 30 Nov)'),
   'Briseadh na Carraige': ('again', '24 Nov: voicemail left. Ring again Thu 26 Nov'),
   'Rockfield House': ('done', '24 Nov: no longer in business'),
   'Villa De Porres': ('wait', '24 Nov: will ring back if her husband agrees'),
@@ -141,7 +141,7 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 19+ calls · <b>2 hot leads</b> · 1 waiting.</div>
 <div class="cols"><div>
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">Hot lead: Radharc Árainn (Geraldine)</h2>
-<p style="margin:0 0 4px">She got back in touch. Visit offered: tonight 8pm / Thu 5pm / next Tue. Agreed: ____________ <span class="url">…/sites/radharc-arainn-bnb</span></p>
+<p style="margin:0 0 4px">She'll arrange a time <b>next week</b>. No date by <b>Tue 1 Dec</b>? One friendly nudge. Agreed: ____________ <span class="url">…/sites/radharc-arainn-bnb</span></p>
 <ul><li><b>Lead with card payments:</b> <span class="say">"Guests pay a deposit by card when they book. No more cash-only complaints, and fewer no-shows."</span></li>
 <li>Her sample → calculator with her numbers → the offer (or <b>€39 a month</b> if price worries her) → <span class="say">"Will I put you down as one of my first three?"</span></li></ul></div>
 
