@@ -43,3 +43,4 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 | Riverwalk House | Uses another (free) booking service, not Booking.com. Not interested for now | Sample taken offline. Polite thank-you |
 | Clifden Farmhouse B&B | **Y: wants a sample** (26 Nov) | Sample ready: https://bookdirectconnemara.vercel.app/sites/clifden-farmhouse/ |
 | Radharc Árainn | Geraldine back in touch: visit offered Wed 8pm / Thu 5pm / next Tue | Confirm the visit |
+| Clifden Farmhouse B&B | Mary: has a website, uses Airbnb (15%). Worry: "is it complicated?" Told her I do everything | Send reassurance message + book video call; check her website |

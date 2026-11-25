@@ -68,7 +68,7 @@ def head(title):
 
 
 STATUS = {
-  'Clifden Farmhouse B&B': ('hot', '26 Nov: WANTS A SAMPLE. Sample ready, send link'),
+  'Clifden Farmhouse B&B': ('hot', '26 Nov: wants sample. Has a website; Airbnb takes 15%'),
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
   'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
@@ -150,7 +150,8 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <ul><li><b>Send the link</b> the way she agreed, and offer a <b>WhatsApp video call</b> (Clifden is far): <span class="say">"Would a quick 10-minute video call suit? I'm free [day] at [time] or [day] at [time]."</span></li>
 <li>Ask early: <span class="say">"Do most guests book through Booking.com?"</span> Yes → the 15% saving. No → card deposits + Google.</li>
 <li>Then: she scrolls her sample → calculator with her numbers → the offer → <span class="say">"Will I put you down as one of my first three?"</span></li>
-<li>Ask: rooms, prices, which are en suite, OK to use her Booking.com photos, favourite reviews.</li></ul></div>
+<li><b>She uses Airbnb (15%) and has a website.</b> Her worry: "Is it complicated?" Answer: <span class="say">"Not at all. I do everything. You send prices and a few photos, look at it, and we set up card payments in 10 minutes."</span> Offer to add booking to her site or replace it.</li>
+<li>Ask: rooms, prices, which are en suite, OK to use her Airbnb photos, favourite reviews.</li></ul></div>
 
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. New this week: ask first</h2>
 <p style="margin:0 0 4px">Before offering a sample, ask: <span class="say">"Do most of your guests book through Booking.com, or another way?"</span></p>
@@ -216,7 +217,7 @@ s1 = head('Sheet 1 (front): On the phone').replace('</head>', '<style>body{font-
 <tr><td>"Can't pay that up front."</td><td><span class="say">"No problem: nothing up front, €39 a month. About 3 direct nights a month covers it."</span></td></tr>
 <tr><td>"We're happy with Booking.com."</td><td><span class="say">"Keep it! This just saves the 15% on guests who already know you."</span></td></tr>
 <tr><td>"We have a website."</td><td><span class="say">"Great. Can guests book and pay a deposit on it? That's the part I add."</span></td></tr>
-<tr><td>"Sounds like hassle."</td><td><span class="say">"None for you. I set it all up and look after it."</span></td></tr>
+<tr><td>"Sounds like hassle." / "Is it complicated?"</td><td><span class="say">"None for you. I do everything. You just send prices and a few photos."</span></td></tr>
 <tr><td>"Ring me in the new year."</td><td><span class="say">"Sure, what date in January?"</span> Write <b>J</b> + date.</td></tr>
 <tr><td>"How do I know it'll work?"</td><td><span class="say">"If it brings you no direct booking by 30 June, you pay nothing for monthly support until it does."</span></td></tr>
 <tr><td>"Why €570? What do I get?"</td><td><span class="say">"I build the whole thing for you: rooms, photos, prices, in Irish and English, with online booking and deposits, and your Google listing sorted. You own it."</span></td></tr>
