@@ -68,10 +68,11 @@ def head(title):
 
 
 STATUS = {
+  'Clifden Farmhouse B&B': ('hot', '26 Nov: WANTS A SAMPLE. Sample ready, send link'),
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
   'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
-  'Radharc Árainn (Aran View)': ('wait', '26 Nov: will leave it for now. Check in late January'),
+  'Radharc Árainn (Aran View)': ('hot', 'Back in touch! Visit offered: Wed 8pm / Thu 5pm / next Tue'),
   'Briseadh na Carraige': ('again', '24 Nov: voicemail left. Ring again Thu 26 Nov'),
   'Rockfield House': ('done', '24 Nov: no longer in business'),
   'Villa De Porres': ('wait', '24 Nov: will ring back if her husband agrees'),
@@ -137,8 +138,20 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 
 # ---------------------------------------------------------------- Follow-ups (front page)
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
-<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 18 calls · 2 samples seen · 2 waiting.</div>
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 19+ calls · <b>2 hot leads</b> · 1 waiting.</div>
 <div class="cols"><div>
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">Hot lead: Radharc Árainn (Geraldine)</h2>
+<p style="margin:0 0 4px">She got back in touch. Visit offered: tonight 8pm / Thu 5pm / next Tue. Agreed: ____________ <span class="url">…/sites/radharc-arainn-bnb</span></p>
+<ul><li><b>Lead with card payments:</b> <span class="say">"Guests pay a deposit by card when they book. No more cash-only complaints, and fewer no-shows."</span></li>
+<li>Her sample → calculator with her numbers → the offer (or <b>€39 a month</b> if price worries her) → <span class="say">"Will I put you down as one of my first three?"</span></li></ul></div>
+
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">Hot lead: Clifden Farmhouse B&B · 095 21263</h2>
+<p style="margin:0 0 4px">Host: <b>Mary</b> (check name). 4.8 on Google, 4.7 on Tripadvisor. <b>Sample ready:</b> <span class="url">…/sites/clifden-farmhouse</span></p>
+<ul><li><b>Send the link</b> the way she agreed, and offer a <b>WhatsApp video call</b> (Clifden is far): <span class="say">"Would a quick 10-minute video call suit? I'm free [day] at [time] or [day] at [time]."</span></li>
+<li>Ask early: <span class="say">"Do most guests book through Booking.com?"</span> Yes → the 15% saving. No → card deposits + Google.</li>
+<li>Then: she scrolls her sample → calculator with her numbers → the offer → <span class="say">"Will I put you down as one of my first three?"</span></li>
+<li>Ask: rooms, prices, which are en suite, OK to use her Booking.com photos, favourite reviews.</li></ul></div>
+
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. New this week: ask first</h2>
 <p style="margin:0 0 4px">Before offering a sample, ask: <span class="say">"Do most of your guests book through Booking.com, or another way?"</span></p>
 <ul><li><b>Booking.com / Airbnb:</b> the 15% saving (Sheet 1).</li>
@@ -147,8 +160,7 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="box"><h2>2. Waiting</h2>
 <table class="fl"><tr><td><span class="tick"></span></td><td><b>Villa De Porres</b> · 091 592 239</td></tr>
 <tr><td></td><td>Will ring back if her husband agrees. No word by <b>Tue 1 Dec</b>? One friendly call, then leave it.</td></tr>
-<tr><td><span class="tick"></span></td><td><b>Radharc Árainn</b> (Geraldine)</td></tr>
-<tr><td></td><td>Saw the sample, "leave it for the moment". Sample stays online. <b>One WhatsApp in late January:</b> <span class="say">"Happy new year! Would you like your booking website live before Easter? The sample is still there for you."</span></td></tr></table></div>
+</table></div>
 </div><div>
 <div class="box blue"><h2>3. Ring again (try a different time)</h2>
 <p style="margin:0 0 4px">Rang in the morning? Try <b>2–4pm</b> this time, or the other way round. Say: <span class="say">"Hi, it's Ayodeji, a local web developer. I tried you on Tuesday…"</span> then Sheet 1.</p>
@@ -270,7 +282,7 @@ s2 = head('Sheet 2: Days 1–2') + f"""
 </div></body></html>"""
 
 # ---------------------------------------------------------------- Sheet 3
-s3 = head('Sheet 3: Days 3–6') + f"""
+s3 = head('Sheet 3: Days 3–6').replace('</head>', '<style>body{font-size:8.1pt}.box{margin-bottom:5px}td,th{padding:1.8px 3px}</style></head>') + f"""
 {REMIND}
 <div class="goal">Same steps as Sheet 1. <b>Two differences:</b> these places have no sample yet, so ask <b>"Could I make you a free sample?"</b> And for far-away places, show the sample on a <b>WhatsApp video call</b>.</div>
 <div class="cols"><div>

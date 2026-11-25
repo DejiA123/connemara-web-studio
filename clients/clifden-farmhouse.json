@@ -1,0 +1,272 @@
+{
+  "_status": "PUBLISHED sample. Clifden Farmhouse B&B wants a sample (26 Nov 2026). Host Mary (from reviews: confirm). Room photos are labelled EXAMPLES. Confirm rooms, prices, Booking.com use, and favourite reviews.",
+  "sample": true,
+  "draft": false,
+  "slug": "clifden-farmhouse",
+  "type": "bnb",
+  "theme": "bog",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Clifden Farmhouse B&B",
+  "tagline": {
+    "en": "Mary’s warm, old-fashioned Irish welcome, with views over Clifden and the town centre just a short walk away.",
+    "ga": "Fáilte chroíúil Éireannach Mary, le radharc thar an gClochán agus lár an bhaile siúlóid ghearr uait."
+  },
+  "area": "Clifden, Co. Galway",
+  "address": "Clifden, Co. Galway",
+  "mapQuery": "Clifden Farmhouse B&B, Clifden, Co. Galway",
+  "phone": "095 21263",
+  "whatsapp": "",
+  "email": "",
+  "rating": {
+    "score": "4.8",
+    "count": 42,
+    "source": "Google"
+  },
+  "heroPosition": "center 55%",
+  "about": {
+    "en": [
+      "Mary welcomes you to Clifden Farmhouse, a family B&B looking out over Clifden, the capital of Connemara.",
+      "Guests tell us they love the hot, hearty breakfast, the clean and spacious rooms, and plenty of parking. Mary is always happy to share her tips for the best walks, drives and places to eat.",
+      "The town’s shops, pubs and restaurants are a short walk away, and the Sky Road, Connemara National Park and Kylemore Abbey are all close by."
+    ],
+    "ga": [
+      "Cuireann Mary fáilte romhat go Clifden Farmhouse, B&B teaghlaigh a bhfuil radharc aige thar an gClochán, príomhbhaile Chonamara.",
+      "Deir aíonna linn gur breá leo an bricfeasta te, flaithiúil, na seomraí glana fairsinge, agus neart páirceála. Bíonn Mary i gcónaí sásta a cuid moltaí a roinnt faoi na siúlóidí, na tiomántáin agus na háiteanna is fearr le hithe.",
+      "Tá siopaí, tithe tábhairne agus bialanna an bhaile siúlóid ghearr uait, agus tá Bóthar na Spéire, Páirc Náisiúnta Chonamara agus Mainistir na Coille Móire ar fad in aice láimhe."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "walk",
+      "en": "Short walk to Clifden town",
+      "ga": "Siúlóid ghearr go lár an Chlocháin"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Hot, hearty breakfast",
+      "ga": "Bricfeasta te, flaithiúil"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 4.8 on Google",
+      "ga": "Rátáil 4.8 ar Google"
+    },
+    {
+      "icon": "bed",
+      "en": "Clean, spacious rooms",
+      "ga": "Seomraí glana, fairsinge"
+    },
+    {
+      "icon": "parking",
+      "en": "Plenty of free parking",
+      "ga": "Neart páirceála saor in aisce"
+    },
+    {
+      "icon": "sea",
+      "en": "Views over Clifden",
+      "ga": "Radharc thar an gClochán"
+    }
+  ],
+  "stats": [
+    {
+      "n": "4.8★",
+      "en": "on Google",
+      "ga": "ar Google"
+    },
+    {
+      "n": "4.7★",
+      "en": "on Tripadvisor",
+      "ga": "ar Tripadvisor"
+    },
+    {
+      "n": "Short walk",
+      "en": "to Clifden town",
+      "ga": "go lár an bhaile"
+    },
+    {
+      "n": "Sky Road",
+      "en": "on your doorstep",
+      "ga": "ag do dhoras"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "Comfortable and spacious.",
+        "ga": "Compordach agus fairsing."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "_check_rooms": "Room types are a guess. Confirm with Mary and add prices; check which rooms are en suite.",
+  "reviews": [
+    {
+      "text": {
+        "en": "Good old fashioned Irish hospitality",
+        "ga": "Fáilte Éireannach den seandéanamh"
+      },
+      "author": "Guest review",
+      "source": "Tripadvisor"
+    },
+    {
+      "text": {
+        "en": "B&B as it should be",
+        "ga": "B&B mar ba chóir a bheith"
+      },
+      "author": "Guest review",
+      "source": "Tripadvisor"
+    },
+    {
+      "text": {
+        "en": "Great place to stay in Clifden",
+        "ga": "Áit iontach le fanacht sa Chlochán"
+      },
+      "author": "Guest review",
+      "source": "Tripadvisor"
+    }
+  ],
+  "_reviews_source": "These are real Tripadvisor review titles. Ask Mary for her favourite full reviews.",
+  "photos": [
+    {
+      "src": "assets/img/clifden-town.jpg",
+      "alt": {
+        "en": "Clifden from across the water",
+        "ga": "An Clochán ón taobh eile den uisce"
+      }
+    },
+    {
+      "src": "assets/img/clifden-market-st.jpg",
+      "alt": {
+        "en": "Market Street, Clifden",
+        "ga": "Sráid an Mhargaidh, an Clochán"
+      }
+    },
+    {
+      "src": "assets/img/clifden-bay.jpg",
+      "alt": {
+        "en": "Clifden Bay",
+        "ga": "Cuan an Chlocháin"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "A Connemara lake",
+        "ga": "Loch i gConamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Around Clifden",
+    "ga": "Timpeall an Chlocháin"
+  },
+  "bookingPhoto": "assets/img/clifden-bay.jpg",
+  "booking": {
+    "mode": "request",
+    "directDiscount": "",
+    "depositLink": "",
+    "policies": [
+      {
+        "en": "Pay your deposit securely online by card.",
+        "ga": "Íoc d’éarlais go slán ar líne le cárta."
+      },
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "How far is the town?",
+        "ga": "Cé chomh fada is atá an baile?"
+      },
+      "a": {
+        "en": "A short walk to the shops, pubs and restaurants of Clifden.",
+        "ga": "Siúlóid ghearr go siopaí, tithe tábhairne agus bialanna an Chlocháin."
+      }
+    },
+    {
+      "q": {
+        "en": "Is breakfast included?",
+        "ga": "An bhfuil bricfeasta san áireamh?"
+      },
+      "a": {
+        "en": "Yes, a hot breakfast every morning.",
+        "ga": "Tá, bricfeasta te gach maidin."
+      }
+    },
+    {
+      "q": {
+        "en": "Is there parking?",
+        "ga": "An bhfuil páirceáil ann?"
+      },
+      "a": {
+        "en": "Yes, plenty of free parking.",
+        "ga": "Tá, neart páirceála saor in aisce."
+      }
+    }
+  ]
+}
