@@ -71,7 +71,7 @@ STATUS = {
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
   'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
-  'Radharc Árainn (Aran View)': ('hot', '25 Nov: ACCEPTED a sample. Book a WhatsApp video call'),
+  'Radharc Árainn (Aran View)': ('wait', '26 Nov: will leave it for now. Check in late January'),
   'Briseadh na Carraige': ('again', '24 Nov: voicemail left. Ring again Thu 26 Nov'),
   'Rockfield House': ('done', '24 Nov: no longer in business'),
   'Villa De Porres': ('wait', '24 Nov: will ring back if her husband agrees'),
@@ -137,7 +137,7 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 
 # ---------------------------------------------------------------- Follow-ups (front page)
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
-<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 18 calls · <b>2 hot leads</b>.</div>
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 18 calls · <b>1 hot lead</b> (Riverwalk) · 2 waiting.</div>
 <div class="cols"><div>
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. Hot lead: Riverwalk House · 091 552 788</h2>
 <p style="margin:0 0 4px">Hosts: <b>Ann and Patrick</b> (check names). Fáilte Ireland 4★, 9.6 on Booking.com. <span class="url">…/sites/riverwalk-house</span></p>
@@ -147,18 +147,13 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="step"><span class="n">4</span><p><span class="t">The offer, then stop talking</span><br><span class="say">"It's €570 instead of €950 for my first three. €285 to start, the rest when it's online. Or 3 × €190, or €39 a month with nothing up front. Will I put you down as one of my first three?"</span></p></div>
 <p style="margin:2px 0"><b style="color:#1f6b3e">YES:</b> <span class="say">"Great, I'll send you the invoice today."</span> Ask: rooms, prices, OK to use Booking.com photos. Then message Claude.<br><b style="color:#8a4b00">"Let me think":</b> <span class="say">"Of course. Shall I ring you on [day]?"</span> Write it down.</p></div>
 
-<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">2. Hot lead: Radharc Árainn (Aran View)</h2>
-<p style="margin:0 0 4px">Host: <b>Geraldine</b> (check name). Accepted a sample on 25 Nov. Personal number: ____________ &nbsp;<b>Video call:</b> ____________</p>
-<p style="margin:0 0 4px"><b>Sample ready:</b> <span class="url">…/sites/radharc-arainn-bnb</span></p>
-<ul><li><b>Your best point:</b> guests complain online that it's <b>cash only</b>. Say: <span class="say">"With this, guests pay a deposit by card when they book. No more cash-only complaints, and fewer no-shows."</span></li>
-<li><b>WhatsApp video call</b>, phone on its side, quiet room. Same 4 steps as Riverwalk: let her scroll the sample → calculator with her numbers → the offer → <span class="say">"Will I put you down as one of my first three?"</span></li>
-<li>Ask: <b>which rooms</b>, <b>prices</b>, OK to use her <b>Booking.com photos</b>, and her <b>favourite 2–3 guest reviews</b>.</li></ul></div>
-
-<div class="box"><h2>3. Waiting</h2>
+<div class="box"><h2>2. Waiting</h2>
 <table class="fl"><tr><td><span class="tick"></span></td><td><b>Villa De Porres</b> · 091 592 239</td></tr>
-<tr><td></td><td>Will ring back if her husband agrees. No word by <b>Tue 1 Dec</b>? One friendly call, then leave it.</td></tr></table></div>
+<tr><td></td><td>Will ring back if her husband agrees. No word by <b>Tue 1 Dec</b>? One friendly call, then leave it.</td></tr>
+<tr><td><span class="tick"></span></td><td><b>Radharc Árainn</b> (Geraldine)</td></tr>
+<tr><td></td><td>Saw the sample, "leave it for the moment". Sample stays online. <b>One WhatsApp in late January:</b> <span class="say">"Happy new year! Would you like your booking website live before Easter? The sample is still there for you."</span></td></tr></table></div>
 </div><div>
-<div class="box blue"><h2>4. Ring again (try a different time)</h2>
+<div class="box blue"><h2>3. Ring again (try a different time)</h2>
 <p style="margin:0 0 4px">Rang in the morning? Try <b>2–4pm</b> this time, or the other way round. Say: <span class="say">"Hi, it's Ayodeji, a local web developer. I tried you on Tuesday…"</span> then Sheet 1.</p>
 <table class="fl">
 <tr><td><span class="tick"></span></td><td><b>Teach na Mara</b> <span class="smp ok">✓ SAMPLE READY</span><br><small>No answer 24 Nov · voicemail 25 Nov. One more try Fri: "I left you a message on Wednesday…"</small></td><td class="n2">091 553 047</td></tr>
@@ -168,7 +163,7 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <tr><td><span class="tick"></span></td><td><b>Rooms @ An Móinéar</b> (Inis Oírr)<br><small>No answer twice. Last try.</small></td><td class="n2">099 75960</td></tr>
 </table><p style="margin:4px 0 0" class="hook">Three tries with no answer? Mark N and move on.</p></div>
 
-<div class="box"><h2>5. New calls next</h2><ul>
+<div class="box"><h2>4. New calls next</h2><ul>
 <li><b>Sheet 3, Day 3:</b> Tigh Ruairí (099 75002). The others there are done or on this page.</li>
 <li><b>Sheet 3, Day 4:</b> Roundstone and Carna (6 calls), then Day 5 and Day 6.</li>
 <li><b>Visits</b> (Sheet 2, bottom right): 5 places with mobile numbers. Go when you're out that way. Ask Claude for their sample the day before.</li></ul></div>
@@ -176,7 +171,7 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <div class="box" style="background:#f4f5f6"><h2 style="color:#5a6870">Done: don't call again</h2>
 <p style="margin:0;color:#5a6870">Rockfield House (closed) · Freeport House and Dormer House (numbers not working) · Carrown Tober and Crossriver (already have a web developer) · Mountain View (not interested)</p></div>
 </div></div>
-<footer>Two hot leads in two days. Keep going.</footer>
+<footer>Every "not now" is a January lead. Keep going.</footer>
 </div></body></html>"""
 
 # ---------------------------------------------------------------- Sheet 1 (how to call)

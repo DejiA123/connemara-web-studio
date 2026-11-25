@@ -34,3 +34,9 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 | Claí Bán | No answer (2nd time) | Last try |
 | Rooms @ An Móinéar | No answer (2nd time) | Last try |
 | Radharc Árainn | Sample link to be sent to Geraldine on WhatsApp | Book the visit |
+
+## Thursday 26 November 2026
+
+| Business | Result | Next step |
+|---|---|---|
+| Radharc Árainn | Saw sample on WhatsApp: "will leave it for the moment" | Polite reply; sample stays online; one check-in late January |
