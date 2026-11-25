@@ -19,19 +19,19 @@ export function renderStudio(studio, lang, ctx) {
 
   const packages = [
     {
-      key: 'found', name: 'Get Found', normal: '€350', founding: '€210', time: x('Ready in 1 week', 'Réidh i gceann seachtaine'),
-      who: x('Smaller B&Bs that want to be easy to find on Google, with guests ringing or WhatsApping you directly.', 'B&Banna níos lú ar mian leo a bheith éasca le haimsiú ar Google, le haíonna ag glaoch nó ag cur WhatsApp chugat go díreach.'),
-      items: x(['Your Google Maps listing set up or fixed', 'A one-page website in Irish and English', 'Buttons to call or WhatsApp you, a map and photos', 'Looks great on phones'],
-        ['Do liostáil ar Google Maps socraithe nó deisithe', 'Suíomh gréasáin aon leathanaigh i nGaeilge agus i mBéarla', 'Cnaipí le glaoch nó WhatsApp a chur chugat, léarscáil agus grianghraif', 'Breá le feiceáil ar ghutháin']),
-      payLink: st.getFoundDeposit, payLabel: x('Pay €210', 'Íoc €210'),
-    },
-    {
-      key: 'booked', featured: true, name: 'Get Booked', normal: '€950', founding: '€570', time: x('Ready in 2–3 weeks', 'Réidh i gceann 2–3 seachtaine'),
-      who: x('B&Bs, guesthouses and holiday homes that want guests to book and pay online.', 'B&Banna, tithe aíochta agus tithe saoire ar mian leo go gcuirfeadh aíonna in áirithe agus go n-íocfaidís ar líne.'),
+      key: 'once', featured: true, name: x('Pay once', 'Íoc uair amháin'), normal: '€950', founding: '€570', time: x('Ready in 2–3 weeks', 'Réidh i gceann 2–3 seachtaine'),
+      who: x('Your own booking website for your B&B, guesthouse or holiday home. Pay once and it’s yours.', 'Do shuíomh áirithinte féin do do B&B, teach aíochta nó teach saoire. Íoc uair amháin agus is leatsa é.'),
       items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Optional: link to your Booking.com and Airbnb calendars so you’re never double-booked (booking tool about €15–30 a month)', 'Your Google Maps listing set up or fixed', 'Booking guarantee (see below)'],
         ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Roghnach: nasc le d’fhéilirí Booking.com agus Airbnb ionas nach mbeidh áirithint dhúbailte agat choíche (uirlis áirithinte thart ar €15–30 sa mhí)', 'Do liostáil ar Google Maps socraithe nó deisithe', 'Ráthaíocht áirithinte (féach thíos)']),
       payLink: st.getBookedDeposit, payLabel: x('Pay €285 deposit', 'Íoc éarlais €285'),
-      plan: x('Or 3 payments of €190.<br><b>Or nothing up front: €39 a month</b> (minimum 12 months, monthly support included). After 15 payments the website is yours.', 'Nó 3 íocaíocht de €190.<br><b>Nó faic roimh ré: €39 sa mhí</b> (12 mhí ar a laghad, tacaíocht mhíosúil san áireamh). Tar éis 15 íocaíocht is leatsa an suíomh.'), planLink: st.getBookedPlan,
+      plan: x('€285 to start, €285 when it’s online. Or 3 payments of €190.', '€285 chun tosú, €285 nuair a bhíonn sé ar líne. Nó 3 íocaíocht de €190.'),
+    },
+    {
+      key: 'monthly', name: x('Pay monthly', 'Íoc go míosúil'), flat: '€39', per: x('/month', '/mí'), time: x('Ready in 2–3 weeks', 'Réidh i gceann 2–3 seachtaine'),
+      who: x('The same website, with nothing to pay up front. Monthly support is included.', 'An suíomh céanna, gan faic le híoc roimh ré. Tá tacaíocht mhíosúil san áireamh.'),
+      items: x(['Up to 5 pages in Irish and English', 'Guests book on your website and pay a deposit by card', 'Optional: link to your Booking.com and Airbnb calendars so you’re never double-booked (booking tool about €15–30 a month)', 'Your Google Maps listing set up or fixed', 'Booking guarantee (see below)'],
+        ['Suas le 5 leathanach i nGaeilge agus i mBéarla', 'Cuireann aíonna in áirithe ar do shuíomh agus íocann siad éarlais le cárta', 'Roghnach: nasc le d’fhéilirí Booking.com agus Airbnb ionas nach mbeidh áirithint dhúbailte agat choíche (uirlis áirithinte thart ar €15–30 sa mhí)', 'Do liostáil ar Google Maps socraithe nó deisithe', 'Ráthaíocht áirithinte (féach thíos)']),
+      plan: x('Nothing up front. Minimum 12 months. After 15 payments the website is yours.', 'Faic roimh ré. 12 mhí ar a laghad. Tar éis 15 íocaíocht is leatsa an suíomh.'),
     },
   ];
 
@@ -172,17 +172,17 @@ ${s.siteUrl ? `<meta property="og:url" content="${esc(s.siteUrl)}${lang === 'ga'
 </div></section>
 
 <section class="sec alt" id="prices"><div class="wrap">
-  <h2 class="center">${x('Simple, fixed prices', 'Praghsanna simplí, socraithe')}</h2>
+  <h2 class="center">${x('One website, two ways to pay', 'Suíomh amháin, dhá bhealach le híoc')}</h2>
   <p class="center muted">${left > 0 ? x(`Special launch prices for my first 3 clients who sign up by ${esc(deadline)}. ${left} ${left === 1 ? 'place' : 'places'} left.`, `Praghsanna speisialta seolta do mo chéad 3 chliant a chláraíonn roimh ${esc(deadline)}. ${left} áit fágtha.`) : x('Half to start, half at launch.', 'Leath chun tosú, leath ag an seoladh.')}</p>
   <div class="pkgs">
   ${packages.map((p) => `<article class="rv pkg${p.featured ? ' featured' : ''}">
-    ${p.featured ? `<span class="ribbon">${x('Most popular for B&Bs', 'Is mó éileamh i measc B&Banna')}</span>` : ''}
+    ${p.featured ? `<span class="ribbon">${x('Launch price: first 3 B&Bs', 'Praghas seolta: an chéad 3 B&B')}</span>` : ''}
     <h3>${p.name}</h3><p class="who">${p.who}</p>
-    <p class="cost">${p.from ? `<small>${p.from}</small> ` : ''}${left > 0 ? `<s>${p.normal}</s> <b>${p.founding}</b>` : `<b>${p.normal}</b>`}</p>
+    <p class="cost">${p.flat ? `<b>${p.flat}</b><small class="per">${p.per}</small>` : left > 0 ? `<s>${p.normal}</s> <b>${p.founding}</b>` : `<b>${p.normal}</b>`}</p>
     <p class="time">${icon('clock', 16)} ${p.time}</p>
     <ul>${p.items.map((i) => `<li>${icon('check', 18)} ${i}</li>`).join('')}</ul>
     ${p.plan ? `<p class="muted small">${p.plan}</p>` : ''}
-    <a class="btn btn-block" href="#contact" data-pkg="${p.name}">${x('Free sample first', 'Sampla saor in aisce')}</a>
+    <a class="btn btn-block" href="#contact" data-pkg="${p.key}">${x('Free sample first', 'Sampla saor in aisce')}</a>
     ${pay(p.payLink, p.payLabel)}${pay(p.planLink, x('Pay in 3 instalments', 'Íoc i 3 thráthchuid'))}
   </article>`).join('')}
   </div>
@@ -257,7 +257,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
       <label>${x('Business name', 'Ainm an ghnó')}<input name="${x('Business', 'Gnó')}" required></label></div>
       <div class="row2"><label>${x('Phone', 'Fón')}<input name="${x('Phone', 'Fón')}" type="tel" autocomplete="tel"></label>
       <label>${x('Email', 'Ríomhphost')}<input name="${x('Email', 'Ríomhphost')}" type="email" autocomplete="email"></label></div>
-      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option>${x('Get Booked: €570 once', 'Get Booked: €570 uair amháin')}</option><option>${x('Get Booked: €39 a month', 'Get Booked: €39 sa mhí')}</option><option>Get Found: €210</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
+      <label>${x('What would you like?', 'Cad ba mhaith leat?')}<select name="${x('Interested in', 'Spéis i')}"><option data-k="once">${x('Pay once: €570', 'Íoc uair amháin: €570')}</option><option data-k="monthly">${x('Pay monthly: €39 a month', 'Íoc go míosúil: €39 sa mhí')}</option><option>${x('Not sure yet', 'Níl mé cinnte fós')}</option></select></label>
       <label>${x('Anything else? (website, Booking.com link…)', 'Aon rud eile? (suíomh, nasc Booking.com…)')}<textarea name="${x('Message', 'Teachtaireacht')}" rows="3"></textarea></label>
       <label class="chk"><input type="checkbox" required> <span>${x('I agree that my details are used only to reply to me.', 'Aontaím nach n-úsáidfear mo chuid sonraí ach le freagra a thabhairt orm.')}</span></label>
       <button class="btn btn-lg btn-block" type="submit">${x('Send', 'Seol')}</button>
@@ -277,7 +277,7 @@ ${demos.length ? `<section class="sec alt" id="examples"><div class="wrap">
   <a class="mbar-main" href="#contact">${icon('star', 20)}<span>${x('Free sample', 'Sampla')}</span></a>
 </nav>
 <script src="${rel}assets/site.js" defer></script>
-<script>document.querySelectorAll('[data-pkg]').forEach(function(a){a.addEventListener('click',function(){var s=document.querySelector('#contact select');if(!s)return;for(var i=0;i<s.options.length;i++){if(s.options[i].text.indexOf(a.dataset.pkg)===0)s.selectedIndex=i}})})</script>
+<script>document.querySelectorAll('[data-pkg]').forEach(function(a){a.addEventListener('click',function(){var s=document.querySelector('#contact select');if(!s)return;for(var i=0;i<s.options.length;i++){if(s.options[i].dataset.k===a.dataset.pkg)s.selectedIndex=i}})})</script>
 </body>
 </html>`;
 }

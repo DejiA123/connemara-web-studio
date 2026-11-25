@@ -125,7 +125,7 @@
         ? (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>. Ina dhiaidh sin, is airgead breise duit é, gach bliain.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + (months === 1 ? ' month' : ' months') + '</b>. After that, the savings are extra money for you, every year.')
         : months <= 24
         ? (ga ? 'Chlúdódh do choigilt costas an tsuímh (€570) i thart ar <b>' + months + ' mí</b>.' : 'Your savings would cover the cost of the website (€570) in about <b>' + months + ' months</b>.')
-        : (ga ? 'Thógfadh sé thart ar <b>' + months + ' mí</b> an suíomh €570 a chlúdach. Do B&B níos ciúine, b’fhéidir gurb fhearr an rogha <b>Get Found €210</b>.' : 'It would take about <b>' + months + ' months</b> to cover the €570 website. For a quieter B&B, the <b>€210 Get Found</b> option probably makes more sense.');
+        : (ga ? 'Thógfadh sé thart ar <b>' + months + ' mí</b> an suíomh €570 a chlúdach. Is fiú fós é, ach tógfaidh sé tamall é a íoc as.' : 'It would take about <b>' + months + ' months</b> to cover the €570 website. It still pays off, just more slowly for a quieter B&B.');
     };
     calc.addEventListener('input', run);
     run();

@@ -9,7 +9,7 @@ Commit and push: the site rebuilds itself in about a minute.
 ## 2. Stripe (20 min): so clients can pay deposits
 1. Sign up at stripe.com as an individual / sole trader, add your bank account.
 2. Payment Links → New → "Get Booked: founding deposit" €285. Copy the link.
-3. Make two more: "Get Found" €210, and a €190 one for the 3-payment plan.
+3. Make one more: €190, for the 3-payment plan.
 4. Paste them into `studio.json` → `stripe`. Push.
 
 ## 3. Revenue (20 min): before your first invoice

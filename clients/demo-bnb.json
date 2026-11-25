@@ -2,8 +2,8 @@
   "demo": true,
   "slug": "cnoc-na-gaoithe",
   "demoKind": {
-    "en": "B&B · Get Booked",
-    "ga": "B&B · Get Booked"
+    "en": "B&B · example",
+    "ga": "B&B · sampla"
   },
   "demoBlurb": {
     "en": "Guests pick their dates and room, see the price, and send a booking request. In Irish and English.",

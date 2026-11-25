@@ -302,3 +302,6 @@ details[open] summary::before{content:"–";background:var(--gold2);color:var(--
 .req .chk input{width:20px;height:20px;margin-top:1px;accent-color:var(--sea);flex:none}
 
 .mbar a span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+
+.cost .per{font-family:Inter,sans-serif;font-size:1rem;color:var(--muted);margin-left:4px}
+@media(min-width:900px){.pkgs{max-width:820px;margin-left:auto;margin-right:auto}}

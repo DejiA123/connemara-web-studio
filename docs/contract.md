@@ -5,7 +5,7 @@
 **Date:** [DATE]
 
 ## 1. What I will build
-Package: **[Get Found / Get Booked / Sell Online]**
+Package: **Booking website: [pay once €570 / pay monthly €39]**
 
 - [ ] [e.g. Up to 5 pages in Irish and English: Home, Rooms, Book, Find us, Privacy]
 - [ ] [e.g. Direct booking with card deposit via Stripe, paid to your own Stripe account]
