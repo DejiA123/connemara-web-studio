@@ -17,7 +17,8 @@ const warnings = [];
 const readJSON = (f) => {
   try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { console.error(`\n✖ ${path.relative(ROOT, f)} is not valid JSON:\n  ${e.message}\n`); process.exit(1); }
 };
-const write = (rel, html) => { const f = path.join(DIST, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, html); };
+const VER = Date.now().toString(36);
+const write = (rel, html) => { if (rel.endsWith('.html')) html = html.replace(/assets\/(site|studio)\.(css|js)(?=["'])/g, (m) => m + '?v=' + VER); const f = path.join(DIST, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, html); };
 
 // any value still starting with "TODO" is treated as empty, and reported
 function clean(obj, where) {
