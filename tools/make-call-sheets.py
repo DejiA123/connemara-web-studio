@@ -68,7 +68,7 @@ def head(title):
 
 
 STATUS = {
-  'Clifden Farmhouse B&B': ('hot', '26 Nov: wants sample. Has a website; Airbnb takes 15%'),
+  'Clifden Farmhouse B&B': ('hot', '26 Nov: wants sample. Only on Airbnb + Booking.com'),
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
   'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
@@ -150,7 +150,7 @@ s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{fon
 <ul><li><b>Send the link</b> the way she agreed, and offer a <b>WhatsApp video call</b> (Clifden is far): <span class="say">"Would a quick 10-minute video call suit? I'm free [day] at [time] or [day] at [time]."</span></li>
 <li>Ask early: <span class="say">"Do most guests book through Booking.com?"</span> Yes → the 15% saving. No → card deposits + Google.</li>
 <li>Then: she scrolls her sample → calculator with her numbers → the offer → <span class="say">"Will I put you down as one of my first three?"</span></li>
-<li><b>She uses Airbnb (15%) and has a website.</b> Her worry: "Is it complicated?" Answer: <span class="say">"Not at all. I do everything. You send prices and a few photos, look at it, and we set up card payments in 10 minutes."</span> Offer to add booking to her site or replace it.</li>
+<li><b>No website of her own: only Airbnb + Booking.com</b>, paying commission on both. Her worry: "Is it complicated?" Answer: <span class="say">"Not at all. I do everything. You send prices and a few photos, look at it, and we set up card payments in 10 minutes."</span></li>
 <li>Ask: rooms, prices, which are en suite, OK to use her Airbnb photos, favourite reviews.</li></ul></div>
 
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. New this week: ask first</h2>
