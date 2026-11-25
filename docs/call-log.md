@@ -46,3 +46,4 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 | Clifden Farmhouse B&B | Mary: has a website, uses Airbnb (15%). Worry: "is it complicated?" Told her I do everything | Send reassurance message + book video call; check her website |
 | Clifden Farmhouse B&B | Correction: no website of her own, only Airbnb + Booking.com | Ideal fit: own website saves commission on both |
 | Radharc Árainn | Geraldine: "will arrange a time next week" | Wait; nudge Tue 1 Dec if no date |
+| Clifden Farmhouse B&B | Sample rebuilt (25 Nov): Mary’s own 50 photos from her 3 Airbnb rooms, real reviews (4.85★, 1,207), own farmhouse design | Show Mary on the video call; ask for her mobile (WhatsApp), email and direct prices |

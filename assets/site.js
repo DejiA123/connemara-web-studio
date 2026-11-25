@@ -160,6 +160,52 @@
   var top = document.querySelector('.top');
   if (top) { var onS = function () { top.classList.toggle('scrolled', window.scrollY > 10); }; addEventListener('scroll', onS, { passive: true }); onS(); }
 
+  // ---- photo viewer: tap a photo to see it full size; swipe / arrows to move through its set ----
+  var lbImgs = document.querySelectorAll('img[data-lb]');
+  if (lbImgs.length) {
+    var ga = document.documentElement.lang === 'ga';
+    var box = document.createElement('div');
+    box.className = 'lbox'; box.hidden = true; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
+    box.innerHTML = '<button type="button" class="lb-x" aria-label="' + (ga ? 'Dún' : 'Close') + '">×</button>' +
+      '<button type="button" class="lb-p" aria-label="' + (ga ? 'Roimhe seo' : 'Previous') + '">‹</button>' +
+      '<figure><img alt=""><figcaption></figcaption></figure>' +
+      '<button type="button" class="lb-n" aria-label="' + (ga ? 'Ar aghaidh' : 'Next') + '">›</button>';
+    document.body.appendChild(box);
+    var bImg = box.querySelector('img'), bCap = box.querySelector('figcaption'), set = [], at = 0, lastFocus = null;
+    var show = function (i) {
+      at = (i + set.length) % set.length;
+      var el = set[at];
+      bImg.src = el.getAttribute('data-full') || el.src; bImg.alt = el.alt;
+      bCap.textContent = (el.alt ? el.alt + '  ·  ' : '') + (at + 1) + ' / ' + set.length;
+      var nx = set[(at + 1) % set.length]; if (nx) { var pre = new Image(); pre.src = nx.getAttribute('data-full') || nx.src; }
+    };
+    var open = function (group, i) {
+      set = Array.prototype.slice.call(document.querySelectorAll('img[data-lb="' + group + '"]'));
+      if (!set.length) return;
+      lastFocus = document.activeElement; box.hidden = false; document.documentElement.classList.add('lb-on');
+      box.classList.toggle('single', set.length < 2); show(i || 0); box.querySelector('.lb-x').focus();
+    };
+    var close = function () { box.hidden = true; document.documentElement.classList.remove('lb-on'); bImg.removeAttribute('src'); if (lastFocus) lastFocus.focus(); };
+    lbImgs.forEach(function (el) {
+      el.tabIndex = 0; el.setAttribute('role', 'button');
+      var go = function () { var g = el.getAttribute('data-lb'); var all = document.querySelectorAll('img[data-lb="' + g + '"]'); open(g, Array.prototype.indexOf.call(all, el)); };
+      el.addEventListener('click', go);
+      el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+    document.querySelectorAll('[data-lb-open]').forEach(function (b) { b.addEventListener('click', function () { open(b.getAttribute('data-lb-open'), 0); }); });
+    box.querySelector('.lb-x').addEventListener('click', close);
+    box.querySelector('.lb-p').addEventListener('click', function () { show(at - 1); });
+    box.querySelector('.lb-n').addEventListener('click', function () { show(at + 1); });
+    box.addEventListener('click', function (e) { if (e.target === box || e.target.tagName === 'FIGURE') close(); });
+    document.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(at - 1); else if (e.key === 'ArrowRight') show(at + 1);
+    });
+    var sx = null;
+    box.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) { if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1)); sx = null; });
+  }
+
   // ---- remember language choice ----
   document.querySelectorAll('a.lang').forEach(function (a) {
     a.addEventListener('click', function () { try { localStorage.setItem('lang', a.getAttribute('hreflang')); } catch (e) {} });

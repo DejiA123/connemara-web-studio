@@ -1,63 +1,132 @@
 {
-  "_status": "PUBLISHED sample. Clifden Farmhouse B&B wants a sample (26 Nov 2026). Host Mary (from reviews: confirm). Room photos are labelled EXAMPLES. Confirm rooms, prices, Booking.com use, and favourite reviews.",
+  "_status": "SAMPLE, rebuilt 25 Nov 2026 with Mary's own photos (50, from her 3 Airbnb listings) and her own listing text. To go live: add Mary's mobile as \"whatsapp\" (353...) and/or \"email\", confirm prices, then remove \"sample\".",
+  "_source": "Airbnb rooms 50556618 (Room 1), 50433490 (Room 3), 51126523 (Family Room 4); host Mary, Superhost, 4.85 from 1,207 reviews. Address from Google. Booking.com page could not be opened (blocks automated visits).",
   "sample": true,
   "draft": false,
   "slug": "clifden-farmhouse",
   "type": "bnb",
   "theme": "bog",
+  "style": "farmhouse",
+  "thumbs": true,
   "languages": [
     "en",
     "ga"
   ],
   "name": "Clifden Farmhouse B&B",
   "tagline": {
-    "en": "Mary’s warm, old-fashioned Irish welcome, with views over Clifden and the town centre just a short walk away.",
-    "ga": "Fáilte chroíúil Éireannach Mary, le radharc thar an gClochán agus lár an bhaile siúlóid ghearr uait."
+    "en": "Mary’s family farmhouse, with views of the Twelve Bens and Clifden town just a 7-minute walk away.",
+    "ga": "Teach feirme teaghlaigh Mary, le radharc ar na Beanna Beola agus baile an Chlocháin siúlóid seacht nóiméad uait."
   },
-  "area": "Clifden, Co. Galway",
-  "address": "Clifden, Co. Galway",
-  "mapQuery": "Clifden Farmhouse B&B, Clifden, Co. Galway",
+  "area": "Clifden, Connemara, Co. Galway",
+  "address": "Hospital Road, Tullyvoheen, Clifden, Co. Galway",
+  "mapQuery": "Clifden Farmhouse, Hospital Rd, Tullyvoheen, Clifden, Co. Galway",
+  "directionsNote": {
+    "en": "On Hospital Road, a 7-minute walk from Clifden town centre. The buses from Galway and Westport stop in the town.",
+    "ga": "Ar Bhóthar an Ospidéil, siúlóid seacht nóiméad ó lár an Chlocháin. Stopann na busanna ó Ghaillimh agus ó Chathair na Mart sa bhaile."
+  },
   "phone": "095 21263",
   "whatsapp": "",
   "email": "",
+  "_contact": "Ask Mary for her mobile (for WhatsApp booking requests) and an email address.",
   "rating": {
-    "score": "4.8",
-    "count": 42,
-    "source": "Google"
+    "score": "4.85",
+    "count": "1,207",
+    "source": "Airbnb"
   },
-  "heroPosition": "center 55%",
+  "seo": {
+    "description": {
+      "en": "Clifden Farmhouse B&B: en-suite rooms, a guest lounge with an open fire and views of the Twelve Bens, a 7-minute walk from Clifden town. Book direct with Mary.",
+      "ga": "Clifden Farmhouse B&B: seomraí en-suite, seomra suí le tine oscailte agus radharc ar na Beanna Beola, siúlóid seacht nóiméad ón gClochán. Cuir in áirithe go díreach le Mary."
+    }
+  },
   "about": {
     "en": [
-      "Mary welcomes you to Clifden Farmhouse, a family B&B looking out over Clifden, the capital of Connemara.",
-      "Guests tell us they love the hot, hearty breakfast, the clean and spacious rooms, and plenty of parking. Mary is always happy to share her tips for the best walks, drives and places to eat.",
-      "The town’s shops, pubs and restaurants are a short walk away, and the Sky Road, Connemara National Park and Kylemore Abbey are all close by."
+      "Clifden Farmhouse sits in the peaceful Connemara countryside with unbeatable views of the Twelve Bens, yet it’s only a 7-minute walk to the centre of Clifden, with its restaurants, pubs and music.",
+      "Mary has been welcoming guests into her home for over 20 years. Every bedroom has its own private en-suite, and guests share a cosy lounge with an open fire, Wi-Fi, TV, fridge, microwave and dishware, so you’re welcome to bring back a takeaway.",
+      "In the morning, help yourself to cereals, yoghurts and toast in the guest lounge. Mary is always on hand for anything you need, from milk or an iron to her tips on the best beaches, walks and drives.",
+      "There’s plenty of free parking at the house, and spacious gardens with outdoor seating for a sunny evening."
     ],
     "ga": [
-      "Cuireann Mary fáilte romhat go Clifden Farmhouse, B&B teaghlaigh a bhfuil radharc aige thar an gClochán, príomhbhaile Chonamara.",
-      "Deir aíonna linn gur breá leo an bricfeasta te, flaithiúil, na seomraí glana fairsinge, agus neart páirceála. Bíonn Mary i gcónaí sásta a cuid moltaí a roinnt faoi na siúlóidí, na tiomántáin agus na háiteanna is fearr le hithe.",
-      "Tá siopaí, tithe tábhairne agus bialanna an bhaile siúlóid ghearr uait, agus tá Bóthar na Spéire, Páirc Náisiúnta Chonamara agus Mainistir na Coille Móire ar fad in aice láimhe."
+      "Tá Clifden Farmhouse suite i dtuath shíochánta Chonamara le radharc den scoth ar na Beanna Beola, ach níl sé ach siúlóid seacht nóiméad ó lár an Chlocháin, lena bhialanna, a thithe tábhairne agus a cheol.",
+      "Tá Mary ag cur fáilte roimh aíonna chuig a teach le breis is 20 bliain. Tá seomra folctha príobháideach en-suite ag gach seomra leapa, agus tá seomra suí compordach ag na haíonna le tine oscailte, Wi-Fi, teilifís, cuisneoir, micreathonnán agus soithí, mar sin tá fáilte romhat béile beir leat a thabhairt ar ais.",
+      "Ar maidin, tá gránaigh, iógart agus tósta ar fáil duit sa seomra suí. Bíonn Mary i gcónaí ar fáil chun cabhrú leat, cibé bainne nó iarann atá uait, nó a cuid moltaí faoi na tránna, na siúlóidí agus na tiomántáin is fearr.",
+      "Tá neart páirceála saor in aisce ag an teach, agus gairdíní fairsinge le suíocháin lasmuigh do thráthnóna gréine."
     ]
   },
-  "highlights": [
+  "perks": [
     {
-      "icon": "walk",
-      "en": "Short walk to Clifden town",
-      "ga": "Siúlóid ghearr go lár an Chlocháin"
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
     },
     {
-      "icon": "breakfast",
-      "en": "Hot, hearty breakfast",
-      "ga": "Bricfeasta te, flaithiúil"
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "chat",
+      "en": "Mary replies to you personally",
+      "ga": "Freagraíonn Mary tú go pearsanta"
     },
     {
       "icon": "star",
-      "en": "Rated 4.8 on Google",
-      "ga": "Rátáil 4.8 ar Google"
+      "en": "Airbnb Superhost",
+      "ga": "Sárósta Airbnb"
+    }
+  ],
+  "stats": [
+    {
+      "n": "4.85★",
+      "en": "from 1,207 guest reviews",
+      "ga": "ó 1,207 léirmheas"
+    },
+    {
+      "n": "20+",
+      "en": "years welcoming guests",
+      "ga": "bliain ag fáiltiú roimh aíonna"
+    },
+    {
+      "n": "7 min",
+      "en": "walk to Clifden town",
+      "ga": "siúlóid go lár an bhaile"
+    },
+    {
+      "n": "3",
+      "en": "en-suite bedrooms",
+      "ga": "seomra leapa en-suite"
+    }
+  ],
+  "highlights": [
+    {
+      "icon": "walk",
+      "en": "A 7-minute walk to Clifden town",
+      "ga": "Siúlóid 7 nóiméad go baile an Chlocháin"
+    },
+    {
+      "icon": "leaf",
+      "en": "Views of the Twelve Bens from the garden",
+      "ga": "Radharc ar na Beanna Beola ón ngairdín"
     },
     {
       "icon": "bed",
-      "en": "Clean, spacious rooms",
-      "ga": "Seomraí glana, fairsinge"
+      "en": "Every room has a private en-suite",
+      "ga": "Seomra folctha en-suite ag gach seomra"
+    },
+    {
+      "icon": "coffee",
+      "en": "Guest lounge with open fire, fridge and microwave",
+      "ga": "Seomra suí le tine oscailte, cuisneoir agus micreathonnán"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Help-yourself breakfast: cereals, yoghurt, toast",
+      "ga": "Bricfeasta: gránaigh, iógart agus tósta"
+    },
+    {
+      "icon": "wifi",
+      "en": "Free Wi-Fi and a TV in every room",
+      "ga": "Wi-Fi saor in aisce agus teilifís i ngach seomra"
     },
     {
       "icon": "parking",
@@ -65,187 +134,591 @@
       "ga": "Neart páirceála saor in aisce"
     },
     {
-      "icon": "sea",
-      "en": "Views over Clifden",
-      "ga": "Radharc thar an gClochán"
-    }
-  ],
-  "stats": [
-    {
-      "n": "4.8★",
-      "en": "on Google",
-      "ga": "ar Google"
-    },
-    {
-      "n": "4.7★",
-      "en": "on Tripadvisor",
-      "ga": "ar Tripadvisor"
-    },
-    {
-      "n": "Short walk",
-      "en": "to Clifden town",
-      "ga": "go lár an bhaile"
-    },
-    {
-      "n": "Sky Road",
-      "en": "on your doorstep",
-      "ga": "ag do dhoras"
+      "icon": "family",
+      "en": "Cot or travel cot on request",
+      "ga": "Cliabhán nó cliabhán taistil ar iarratas"
     }
   ],
   "rooms": [
     {
       "name": {
-        "en": "Double Room",
-        "ga": "Seomra Dúbailte"
+        "en": "King Room · Room 1",
+        "ga": "Seomra Rí · Seomra 1"
       },
       "desc": {
-        "en": "Comfortable and spacious.",
-        "ga": "Compordach agus fairsing."
+        "en": "A bright, sunny room with a king-size bed, a writing desk and a window onto the garden.",
+        "ga": "Seomra geal grianmhar le leaba mhéid rí, deasc scríbhneoireachta agus fuinneog amach ar an ngairdín."
       },
+      "features": [
+        {
+          "en": "Private en-suite with shower",
+          "ga": "Seomra folctha en-suite le cith"
+        },
+        {
+          "en": "TV, Wi-Fi and a desk",
+          "ga": "Teilifís, Wi-Fi agus deasc"
+        },
+        {
+          "en": "Tea and coffee tray",
+          "ga": "Trádaire tae agus caife"
+        },
+        {
+          "en": "Rated 4.84 by 464 guests",
+          "ga": "Rátáil 4.84 ó 464 aoi"
+        }
+      ],
       "price": "",
       "sleeps": 2,
-      "photo": "assets/img/room-double.jpg",
-      "photoNote": {
-        "en": "Example photo",
-        "ga": "Grianghraf samplach"
-      }
+      "photos": [
+        {
+          "src": "photos/clifden-farmhouse/room1-bed.jpg",
+          "alt": {
+            "en": "King Room (Room 1)",
+            "ga": "Seomra Rí (Seomra 1)"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room1-desk.jpg",
+          "alt": {
+            "en": "Desk, TV and luggage rack",
+            "ga": "Deasc, teilifís agus raca bagáiste"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room1-window.jpg",
+          "alt": {
+            "en": "Garden window",
+            "ga": "Fuinneog ar an ngairdín"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room1-tea-tray.jpg",
+          "alt": {
+            "en": "Tea and coffee tray",
+            "ga": "Trádaire tae agus caife"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room1-shower.jpg",
+          "alt": {
+            "en": "En-suite shower",
+            "ga": "Cith en-suite"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room1-ensuite-sink.jpg",
+          "alt": {
+            "en": "En-suite",
+            "ga": "Seomra folctha en-suite"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room1-ensuite-wc.jpg",
+          "alt": {
+            "en": "En-suite",
+            "ga": "Seomra folctha en-suite"
+          }
+        }
+      ]
     },
     {
       "name": {
-        "en": "Twin Room",
-        "ga": "Seomra Cúpla"
+        "en": "King Room · Room 3",
+        "ga": "Seomra Rí · Seomra 3"
       },
       "desc": {
-        "en": "Two single beds, ideal for friends or walkers.",
-        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+        "en": "A calm, restful room with a king-size bed, a wardrobe and a view of the garden.",
+        "ga": "Seomra suaimhneach le leaba mhéid rí, vardrús agus radharc ar an ngairdín."
       },
+      "features": [
+        {
+          "en": "Private en-suite",
+          "ga": "Seomra folctha en-suite príobháideach"
+        },
+        {
+          "en": "TV and Wi-Fi",
+          "ga": "Teilifís agus Wi-Fi"
+        },
+        {
+          "en": "Tea and coffee tray",
+          "ga": "Trádaire tae agus caife"
+        },
+        {
+          "en": "Rated 4.83 by 443 guests",
+          "ga": "Rátáil 4.83 ó 443 aoi"
+        }
+      ],
       "price": "",
       "sleeps": 2,
-      "photo": "assets/img/room-twin.jpg",
-      "photoNote": {
-        "en": "Example photo",
-        "ga": "Grianghraf samplach"
-      }
+      "photos": [
+        {
+          "src": "photos/clifden-farmhouse/room3-bed-window.jpg",
+          "alt": {
+            "en": "King Room (Room 3)",
+            "ga": "Seomra Rí (Seomra 3)"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room3-bed.jpg",
+          "alt": {
+            "en": "King-size bed",
+            "ga": "Leaba mhéid rí"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room3-tea-tray.jpg",
+          "alt": {
+            "en": "Tea and coffee tray",
+            "ga": "Trádaire tae agus caife"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/room3-ensuite.jpg",
+          "alt": {
+            "en": "En-suite",
+            "ga": "Seomra folctha en-suite"
+          }
+        }
+      ]
     },
     {
       "name": {
-        "en": "Family Room",
-        "ga": "Seomra Teaghlaigh"
+        "en": "Family Room · Room 4",
+        "ga": "Seomra Teaghlaigh · Seomra 4"
       },
       "desc": {
-        "en": "Room for the whole family.",
-        "ga": "Spás don teaghlach ar fad."
+        "en": "Room for the whole family, with a double bed and two single beds, and windows on two sides.",
+        "ga": "Spás don teaghlach ar fad, le leaba dhúbailte agus dhá leaba shingile, agus fuinneoga ar dhá thaobh."
       },
+      "features": [
+        {
+          "en": "Private en-suite with shower",
+          "ga": "Seomra folctha en-suite le cith"
+        },
+        {
+          "en": "TV and Wi-Fi",
+          "ga": "Teilifís agus Wi-Fi"
+        },
+        {
+          "en": "Cot or travel cot on request",
+          "ga": "Cliabhán nó cliabhán taistil ar iarratas"
+        },
+        {
+          "en": "Rated 4.87 by 300 guests",
+          "ga": "Rátáil 4.87 ó 300 aoi"
+        }
+      ],
       "price": "",
       "sleeps": 4,
-      "photo": "assets/img/room-family.jpg",
-      "photoNote": {
-        "en": "Example photo",
-        "ga": "Grianghraf samplach"
-      }
+      "photos": [
+        {
+          "src": "photos/clifden-farmhouse/family-room.jpg",
+          "alt": {
+            "en": "Family Room (Room 4)",
+            "ga": "Seomra Teaghlaigh (Seomra 4)"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/family-beds.jpg",
+          "alt": {
+            "en": "A double bed and two singles",
+            "ga": "Leaba dhúbailte agus dhá leaba shingile"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/family-shower.jpg",
+          "alt": {
+            "en": "En-suite shower",
+            "ga": "Cith en-suite"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/family-ensuite.jpg",
+          "alt": {
+            "en": "En-suite",
+            "ga": "Seomra folctha en-suite"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/family-ensuite-sink.jpg",
+          "alt": {
+            "en": "En-suite",
+            "ga": "Seomra folctha en-suite"
+          }
+        }
+      ]
     }
   ],
-  "_check_rooms": "Room types are a guess. Confirm with Mary and add prices; check which rooms are en suite.",
+  "_check_rooms": "Room names follow Mary's Airbnb numbering. Ask Mary for her direct prices per room (and whether Room 2 is let).",
+  "roomsNote": {
+    "en": "Prices change with the season. Send your dates below and Mary will reply with her best direct price, with no booking fees.",
+    "ga": "Athraíonn na praghsanna de réir an tséasúir. Seol do dhátaí thíos agus cuirfidh Mary a praghas díreach is fearr chugat, gan táillí áirithinte."
+  },
   "reviews": [
     {
       "text": {
-        "en": "Good old fashioned Irish hospitality",
-        "ga": "Fáilte Éireannach den seandéanamh"
+        "en": "My stay at Mary’s was wonderful, what a lovely lady. Her hospitality was unreal, she drove me to meet friends & packed me up after dinner.",
+        "ga": "Bhí mo chuairt ar Mary iontach, bean chomh deas. Bhí a cuid flaithiúlachta dochreidte: thiomáin sí mé chun bualadh le cairde agus bhailigh sí mé tar éis an dinnéir."
       },
-      "author": "Guest review",
-      "source": "Tripadvisor"
+      "author": "Carmel",
+      "source": "Airbnb · Oct 2026"
     },
     {
       "text": {
-        "en": "B&B as it should be",
-        "ga": "B&B mar ba chóir a bheith"
+        "en": "Mary is a very warm and helpful host who created a cheerful atmosphere for her guests to interact. The room was comfortable and the breakfast was very much appreciated!",
+        "ga": "Is óstach an-chroíúil agus cabhrach í Mary a chruthaigh atmaisféar gealgháireach dá haíonna. Bhí an seomra compordach agus bhí an-mheas againn ar an mbricfeasta!"
       },
-      "author": "Guest review",
-      "source": "Tripadvisor"
+      "author": "ZhiXin",
+      "source": "Airbnb · Oct 2026"
     },
     {
       "text": {
-        "en": "Great place to stay in Clifden",
-        "ga": "Áit iontach le fanacht sa Chlochán"
+        "en": "Mary is a very friendly hostess who welcomed us and immediately offered an umbrella when we wanted to walk to the village in the rain.",
+        "ga": "Is banóstach an-chairdiúil í Mary a chuir fáilte romhainn agus a thairg scáth fearthainne dúinn láithreach nuair a theastaigh uainn siúl go dtí an baile sa bháisteach."
       },
-      "author": "Guest review",
-      "source": "Tripadvisor"
+      "author": "Demi",
+      "source": "Airbnb · Oct 2026"
+    },
+    {
+      "text": {
+        "en": "Mary is a lovely host and the room was spotless and comfortable. We enjoyed the generous self serve breakfast as it gave us flexibility to start our day according to our plans.",
+        "ga": "Is óstach álainn í Mary agus bhí an seomra gan smál agus compordach. Bhain muid taitneamh as an mbricfeasta flaithiúil féinfhreastail, mar thug sé solúbthacht dúinn ár lá a thosú de réir ár bpleananna."
+      },
+      "author": "Melanie",
+      "source": "Airbnb · Sep 2026"
     }
   ],
-  "_reviews_source": "These are real Tripadvisor review titles. Ask Mary for her favourite full reviews.",
   "photos": [
     {
-      "src": "assets/img/clifden-town.jpg",
+      "src": "photos/clifden-farmhouse/house-front-sunny.jpg",
       "alt": {
-        "en": "Clifden from across the water",
-        "ga": "An Clochán ón taobh eile den uisce"
+        "en": "Clifden Farmhouse on a sunny day, with the Twelve Bens behind",
+        "ga": "Clifden Farmhouse lá gréine, na Beanna Beola taobh thiar de"
       }
     },
     {
-      "src": "assets/img/clifden-market-st.jpg",
+      "src": "photos/clifden-farmhouse/garden-flowers.jpg",
       "alt": {
-        "en": "Market Street, Clifden",
-        "ga": "Sráid an Mhargaidh, an Clochán"
-      }
-    },
-    {
-      "src": "assets/img/clifden-bay.jpg",
-      "alt": {
-        "en": "Clifden Bay",
-        "ga": "Cuan an Chlocháin"
-      }
-    },
-    {
-      "src": "assets/img/harbour-bens.jpg",
-      "alt": {
-        "en": "The Twelve Bens",
-        "ga": "Na Beanna Beola"
-      }
-    },
-    {
-      "src": "assets/img/boardwalk.jpg",
-      "alt": {
-        "en": "Connemara National Park",
-        "ga": "Páirc Náisiúnta Chonamara"
-      }
-    },
-    {
-      "src": "assets/img/lake-light.jpg",
-      "alt": {
-        "en": "A Connemara lake",
-        "ga": "Loch i gConamara"
+        "en": "Flowers on the picnic table in the back garden",
+        "ga": "Bláthanna ar an mbord picnice sa ghairdín cúil"
       }
     }
   ],
-  "galleryTitle": {
-    "en": "Around Clifden",
-    "ga": "Timpeall an Chlocháin"
-  },
-  "bookingPhoto": "assets/img/clifden-bay.jpg",
+  "heroPosition": "center 60%",
+  "bookingPhoto": "photos/clifden-farmhouse/garden-twelve-bens.jpg",
+  "galleries": [
+    {
+      "title": {
+        "en": "The house & garden",
+        "ga": "An teach agus an gairdín"
+      },
+      "intro": {
+        "en": "A traditional Connemara farmhouse with big gardens, picnic tables and mountain views. Tap any photo to see it full size.",
+        "ga": "Teach feirme traidisiúnta i gConamara le gairdíní móra, boird phicnice agus radharc ar na sléibhte. Tapáil grianghraf ar bith chun é a fheiceáil go hiomlán."
+      },
+      "photos": [
+        {
+          "src": "photos/clifden-farmhouse/house-front-sunny.jpg",
+          "alt": {
+            "en": "The front of the house",
+            "ga": "Aghaidh an tí"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/garden-twelve-bens.jpg",
+          "alt": {
+            "en": "The Twelve Bens from the garden",
+            "ga": "Na Beanna Beola ón ngairdín"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/house-side.jpg",
+          "alt": {
+            "en": "Plenty of free parking",
+            "ga": "Neart páirceála saor in aisce"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/garden-picnic-table.jpg",
+          "alt": {
+            "en": "The back garden",
+            "ga": "An gairdín cúil"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/house-evening.jpg",
+          "alt": {
+            "en": "The house in the evening light",
+            "ga": "An teach i solas an tráthnóna"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/garden-evening-glass.jpg",
+          "alt": {
+            "en": "An evening in the garden",
+            "ga": "Tráthnóna sa ghairdín"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/house-and-drive.jpg",
+          "alt": {
+            "en": "The house and parking",
+            "ga": "An teach agus an pháirceáil"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/garden-view-hills.jpg",
+          "alt": {
+            "en": "The view from the garden",
+            "ga": "An radharc ón ngairdín"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/garden-flowers.jpg",
+          "alt": {
+            "en": "Summer flowers",
+            "ga": "Bláthanna an tsamhraidh"
+          }
+        }
+      ],
+      "feature": true
+    },
+    {
+      "title": {
+        "en": "The guest lounge",
+        "ga": "Seomra suí na n-aíonna"
+      },
+      "intro": {
+        "en": "Shared by guests: an open fire, Wi-Fi and TV, a fridge and microwave, and tables by the window for breakfast.",
+        "ga": "Do na haíonna ar fad: tine oscailte, Wi-Fi agus teilifís, cuisneoir agus micreathonnán, agus boird cois fuinneoige don bhricfeasta."
+      },
+      "photos": [
+        {
+          "src": "photos/clifden-farmhouse/lounge-bay-window.jpg",
+          "alt": {
+            "en": "The lounge bay window",
+            "ga": "Fuinneog bhá an tseomra suí"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/lounge-open-fire.jpg",
+          "alt": {
+            "en": "The open fire",
+            "ga": "An tine oscailte"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/lounge-table-view.jpg",
+          "alt": {
+            "en": "Breakfast with a view",
+            "ga": "Bricfeasta le radharc"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/lounge-1.jpg",
+          "alt": {
+            "en": "The guest lounge",
+            "ga": "Seomra suí na n-aíonna"
+          },
+          "wide": true
+        },
+        {
+          "src": "photos/clifden-farmhouse/lounge-armchairs.jpg",
+          "alt": {
+            "en": "A seat by the window",
+            "ga": "Suíochán cois fuinneoige"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/lounge-fireplace-wall.jpg",
+          "alt": {
+            "en": "Armchairs by the fire",
+            "ga": "Cathaoireacha uilleach cois tine"
+          },
+          "wide": true
+        },
+        {
+          "src": "photos/clifden-farmhouse/lounge-2.jpg",
+          "alt": {
+            "en": "The lounge",
+            "ga": "An seomra suí"
+          }
+        }
+      ],
+      "feature": true
+    },
+    {
+      "title": {
+        "en": "Mary’s favourite places nearby",
+        "ga": "Na háiteanna is fearr le Mary in aice láimhe"
+      },
+      "intro": {
+        "en": "Mary took these herself. Ask her for directions; she knows every beach and walk.",
+        "ga": "Ghlac Mary féin na grianghraif seo. Iarr treoracha uirthi; tá aithne aici ar gach trá agus siúlóid."
+      },
+      "captions": true,
+      "photos": [
+        {
+          "src": "photos/clifden-farmhouse/dogs-bay.jpg",
+          "alt": {
+            "en": "Dog’s Bay, Roundstone: Mary’s personal favourite",
+            "ga": "Cuan na Madraí, Cloch na Rón: an ceann is fearr le Mary"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/dogs-bay-sunrise.jpg",
+          "alt": {
+            "en": "Sunrise at Dog’s Bay, often voted one of Ireland’s best beaches",
+            "ga": "Éirí na gréine ag Cuan na Madraí, ceann de na tránna is fearr in Éirinn"
+          },
+          "wide": true
+        },
+        {
+          "src": "photos/clifden-farmhouse/coral-strand.jpg",
+          "alt": {
+            "en": "Coral Strand, 15 minutes away: a local favourite for an early swim",
+            "ga": "An Trá Choiréalach, 15 nóiméad uait: áit snámha mhaidine do mhuintir na háite"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/coral-strand-rainbow.jpg",
+          "alt": {
+            "en": "A rainbow over Coral Strand",
+            "ga": "Bogha báistí os cionn na Trá Coiréalaí"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/clifden-beach.jpg",
+          "alt": {
+            "en": "Clifden Beach, a 12-minute drive",
+            "ga": "Trá an Chlocháin, 12 nóiméad sa charr"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/clifden-beach-boats.jpg",
+          "alt": {
+            "en": "Clifden Beach: boat trips in peak season",
+            "ga": "Trá an Chlocháin: turais báid sa séasúr"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/clifden-beach-pier.jpg",
+          "alt": {
+            "en": "Clifden Beach, looking out to sea",
+            "ga": "Trá an Chlocháin, ag féachaint amach chun farraige"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/kylemore-abbey.jpg",
+          "alt": {
+            "en": "Kylemore Abbey, a must-see, 25 minutes away",
+            "ga": "Mainistir na Coille Móire, 25 nóiméad uait"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/kylemore-views.jpg",
+          "alt": {
+            "en": "Views from Kylemore Abbey",
+            "ga": "Radharcanna ó Mhainistir na Coille Móire"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/diamond-hill.jpg",
+          "alt": {
+            "en": "Diamond Hill, Connemara National Park, 20 minutes away",
+            "ga": "Binn Ghuaire, Páirc Náisiúnta Chonamara, 20 nóiméad uait"
+          },
+          "wide": true
+        },
+        {
+          "src": "photos/clifden-farmhouse/diamond-hill-view.jpg",
+          "alt": {
+            "en": "The view from Diamond Hill",
+            "ga": "An radharc ó Bhinn Ghuaire"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/bunowen-sunset.jpg",
+          "alt": {
+            "en": "Sunset at Bunowen Beach, Ballyconneely, 25 minutes away",
+            "ga": "Luí na gréine ag Trá Bhun Abhann, Baile Conaola, 25 nóiméad uait"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/bunowen-panorama.jpg",
+          "alt": {
+            "en": "Bunowen Beach, Ballyconneely",
+            "ga": "Trá Bhun Abhann, Baile Conaola"
+          },
+          "wide": true
+        },
+        {
+          "src": "photos/clifden-farmhouse/aerfort-beach.jpg",
+          "alt": {
+            "en": "Heather and sea at Aerfort Beach",
+            "ga": "Fraoch agus farraige ag Trá Aerfort"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/killary-fjord.jpg",
+          "alt": {
+            "en": "Lunch with a view over Killary Fjord, 30 minutes away",
+            "ga": "Lón le radharc thar an gCaoláire Rua, 30 nóiméad uait"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/harbour-boats.jpg",
+          "alt": {
+            "en": "A still morning on a Connemara harbour",
+            "ga": "Maidin chiúin ar chuan i gConamara"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/beach-sky.jpg",
+          "alt": {
+            "en": "One of the many quiet beaches nearby",
+            "ga": "Ceann de na tránna ciúine in aice láimhe"
+          }
+        },
+        {
+          "src": "photos/clifden-farmhouse/waves-rocks.jpg",
+          "alt": {
+            "en": "Clear Atlantic water on the Connemara coast",
+            "ga": "Uisce glan an Atlantaigh ar chósta Chonamara"
+          }
+        }
+      ],
+      "feature": true
+    }
+  ],
   "booking": {
     "mode": "request",
     "directDiscount": "",
     "depositLink": "",
     "policies": [
       {
-        "en": "Pay your deposit securely online by card.",
-        "ga": "Íoc d’éarlais go slán ar líne le cárta."
-      },
-      {
         "en": "Check-in from 3pm, check-out by 11am.",
         "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Mary confirms every booking personally, usually within a few hours.",
+        "ga": "Deimhníonn Mary gach áirithint go pearsanta, de ghnáth laistigh de chúpla uair an chloig."
+      },
+      {
+        "en": "Cot or travel cot available on request.",
+        "ga": "Cliabhán nó cliabhán taistil ar fáil ar iarratas."
       }
     ]
   },
   "faq": [
     {
       "q": {
-        "en": "How far is the town?",
-        "ga": "Cé chomh fada is atá an baile?"
+        "en": "How far is Clifden town?",
+        "ga": "Cé chomh fada is atá baile an Chlocháin?"
       },
       "a": {
-        "en": "A short walk to the shops, pubs and restaurants of Clifden.",
-        "ga": "Siúlóid ghearr go siopaí, tithe tábhairne agus bialanna an Chlocháin."
+        "en": "A 7-minute walk to the town centre, with its restaurants, pubs and shops. The buses from Galway and Westport stop in the town.",
+        "ga": "Siúlóid seacht nóiméad go lár an bhaile, lena bhialanna, a thithe tábhairne agus a shiopaí. Stopann na busanna ó Ghaillimh agus ó Chathair na Mart sa bhaile."
       }
     },
     {
@@ -254,8 +727,18 @@
         "ga": "An bhfuil bricfeasta san áireamh?"
       },
       "a": {
-        "en": "Yes, a hot breakfast every morning.",
-        "ga": "Tá, bricfeasta te gach maidin."
+        "en": "Cereals, yoghurts and toast are available on request in the guest lounge, so you can have breakfast whenever suits your plans.",
+        "ga": "Tá gránaigh, iógart agus tósta ar fáil ar iarratas sa seomra suí, ionas gur féidir leat bricfeasta a bheith agat cibé am a oireann duit."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I bring my own food?",
+        "ga": "An féidir liom mo bhia féin a thabhairt liom?"
+      },
+      "a": {
+        "en": "Yes. The guest lounge has a fridge, microwave and dishware, so you’re welcome to bring back a takeaway.",
+        "ga": "Is féidir. Tá cuisneoir, micreathonnán agus soithí sa seomra suí, mar sin tá fáilte romhat béile beir leat a thabhairt ar ais."
       }
     },
     {
@@ -264,9 +747,41 @@
         "ga": "An bhfuil páirceáil ann?"
       },
       "a": {
-        "en": "Yes, plenty of free parking.",
-        "ga": "Tá, neart páirceála saor in aisce."
+        "en": "Yes, plenty of free parking at the house.",
+        "ga": "Tá, neart páirceála saor in aisce ag an teach."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you have a cot for a baby?",
+        "ga": "An bhfuil cliabhán agaibh do leanbh?"
+      },
+      "a": {
+        "en": "Yes, a cot or travel cot is available. Just mention it in your booking request.",
+        "ga": "Tá, tá cliabhán nó cliabhán taistil ar fáil. Luaigh é i d’iarratas áirithinte."
+      }
+    },
+    {
+      "q": {
+        "en": "How does booking direct work?",
+        "ga": "Conas a oibríonn áirithint dhíreach?"
+      },
+      "a": {
+        "en": "Pick your dates and room in the form above and send it. Mary checks her calendar and replies personally to confirm your room and price. There are no booking fees.",
+        "ga": "Roghnaigh do dhátaí agus do sheomra san fhoirm thuas agus seol í. Seiceálann Mary a féilire agus freagraíonn sí tú go pearsanta chun do sheomra agus do phraghas a dheimhniú. Níl aon táillí áirithinte ann."
       }
     }
-  ]
+  ],
+  "heroExtras": [
+    {
+      "src": "photos/clifden-farmhouse/lounge-open-fire.jpg"
+    },
+    {
+      "src": "photos/clifden-farmhouse/garden-evening-glass.jpg"
+    }
+  ],
+  "bookingIntro": {
+    "en": "Send your dates and Mary will check her calendar and reply personally, usually within a few hours, to confirm your room and her best direct price.",
+    "ga": "Seol do dhátaí agus seiceálfaidh Mary a féilire agus freagróidh sí tú go pearsanta, de ghnáth laistigh de chúpla uair an chloig, chun do sheomra agus a praghas díreach is fearr a dheimhniú."
+  }
 }

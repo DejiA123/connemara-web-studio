@@ -4,6 +4,11 @@ import { landscape, icon, THEMES } from './art.mjs';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
 export const T = (v, lang) => (v && typeof v === 'object' && !Array.isArray(v) ? (v[lang] ?? v.en ?? '') : (v ?? ''));
+// "style" in a client file gives that site its own fonts and layout (see the s-<style> blocks at the end of assets/site.css)
+const STYLE_FONTS = {
+  default: 'family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600',
+  farmhouse: 'family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700',
+};
 const has = (a) => Array.isArray(a) && a.length > 0;
 const digits = (s) => String(s || '').replace(/[^\d]/g, '');
 
@@ -20,6 +25,9 @@ export function renderClient(site, lang, ctx) {
   const th = THEMES[theme];
   const rel = ctx.rel; // path back to dist root
   const img = (src) => (/^(https?:)?\/\//.test(src) || src.startsWith('data:') ? src : rel + src);
+  // "thumbs": true → a smaller copy of each photo lives in a thumbs/ folder next to it (used in grids; full size opens in the viewer)
+  const thumb = (src) => (site.thumbs && !/^(https?:)?\/\//.test(src) && !src.startsWith('data:') ? src.replace(/([^/]+)$/, 'thumbs/$1') : src);
+  const lbImg = (p, group, extra = '') => `<img src="${esc(img(thumb(p.src)))}" data-full="${esc(img(p.src))}" data-lb="${esc(group)}" alt="${esc(T(p.alt, lang))}" loading="lazy"${extra}>`;
   const isSample = !!(site.sample || site.demo);
   const type = site.type || 'bnb';
   const phone = site.phone || '';
@@ -51,14 +59,14 @@ export function renderClient(site, lang, ctx) {
   if (has(site.rooms)) {
     nav.push(['rooms', L.rooms]);
     S.push(`<section id="rooms" class="sec rooms"><div class="wrap"><h2>${L.rooms}</h2><div class="cards">${site.rooms
-      .map((r, i) => `<article class="card rv${r.photo ? '' : ' card-text'}">
+      .map((r, i) => { r = { ...r, photo: r.photo || r.photos?.[0]?.src }; const g = `room${i}`; const more = (r.photos || []).length; return `<article class="card rv${r.photo ? '' : ' card-text'}">
         ${r.photo ? '' : `<div class="card-ic">${icon('bed', 26)}${r.price ? `<span class="ptag ptag-in"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>`}
-        <div class="card-img"${r.photo ? '' : ' hidden'}>${r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${r.photo && r.photoNote ? `<span class="ph-note">${esc(T(r.photoNote, lang))}</span>` : ''}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
+        <div class="card-img"${r.photo ? '' : ' hidden'}>${more ? lbImg(r.photos[0], g) : r.photo ? `<img src="${esc(img(r.photo))}" alt="${esc(T(r.name, lang))}" loading="lazy">` : landscape(theme, i + 2)}${more > 1 ? `<button type="button" class="ph-count" data-lb-open="${g}">${lang === 'ga' ? `${more} grianghraf` : `${more} photos`}</button><div class="lb-more" hidden>${r.photos.slice(1).map((p) => lbImg(p, g)).join('')}</div>` : ''}${r.photo && r.photoNote ? `<span class="ph-note">${esc(T(r.photoNote, lang))}</span>` : ''}${r.price ? `<span class="ptag"><small>${L.from}</small> ${esc(r.price)}<small>/${r.unit ? esc(T(r.unit, lang)).replace(/^(per|sa|san) /, '') : (lang === 'ga' ? 'oíche' : 'night')}</small></span>` : ''}</div>
         <div class="card-body"><h3>${esc(T(r.name, lang))}</h3>
-        <p>${esc(T(r.desc, lang))}</p>
+        <p>${esc(T(r.desc, lang))}</p>${has(r.features) ? `<ul class="feat">${r.features.map((f) => `<li>${icon('check', 15)} ${esc(T(f, lang))}</li>`).join('')}</ul>` : ''}
         <p class="meta">${r.sleeps ? `<span>${icon('bed', 18)} ${L.sleeps(r.sleeps)}</span>` : ''}${r.price ? `<span class="price">${L.from} <b>${esc(r.price)}</b> ${r.unit ? esc(T(r.unit, lang)) : L.perNight}</span>` : ''}</p>
         <a class="btn btn-sm" href="#book" data-room="${esc(T(r.name, 'en'))}">${L.bookNow}</a></div>
-      </article>`).join('')}</div></div></section>`);
+      </article>`; }).join('')}</div>${site.roomsNote ? `<p class="note">${esc(T(site.roomsNote, lang))}</p>` : ''}</div></section>`);
   }
 
   // menu (café)
@@ -88,8 +96,12 @@ export function renderClient(site, lang, ctx) {
       <div class="quotes${site.rating && Number(site.rating.score) >= (Number(site.rating.score) > 5 ? 9 : 4.5) ? ' five' : ''}">${site.reviews.map((r) => `<blockquote class="rv"><p>“${esc(T(r.text, lang))}”</p><footer>${esc(r.author || '')}${r.source ? ` · ${esc(r.source)}` : ''}</footer></blockquote>`).join('')}</div></div></div></section>`);
   }
 
-  // gallery
-  if (has(site.photos) && site.photos.length > 2) {
+  // galleries: several titled photo sets (e.g. "The house", "Around Clifden"); tap a photo to open it full size
+  if (has(site.galleries)) {
+    nav.push(['photos', L.gallery]);
+    S.push(site.galleries.map((g, gi) => `<section${gi === 0 ? ' id="photos"' : ''} class="sec gallery gallery-set${g.feature ? ' g-feature' : ''}"><div class="wrap"><h2>${esc(T(g.title, lang))}</h2>${g.intro ? `<p class="g-intro">${esc(T(g.intro, lang))}</p>` : ''}<div class="grid">${g.photos
+      .map((p, pi) => `<figure${g.feature && pi === 0 ? ' class="big"' : p.wide ? ' class="wide"' : ''}>${lbImg(p, `g${gi}`)}${g.captions ? `<figcaption>${esc(T(p.alt, lang))}</figcaption>` : ''}</figure>`).join('')}</div></div></section>`).join('\n'));
+  } else if (has(site.photos) && site.photos.length > 2) {
     S.push(`<section class="sec gallery"><div class="wrap"><h2>${site.galleryTitle ? esc(T(site.galleryTitle, lang)) : L.gallery}</h2><div class="grid">${site.photos.slice(2)
       .map((p) => `<img src="${esc(img(p.src))}" alt="${esc(T(p.alt, lang))}" loading="lazy">`).join('')}</div></div></section>`);
   }
@@ -140,7 +152,7 @@ export function renderClient(site, lang, ctx) {
   const bookBg = site.bookingPhoto || site.photos?.[3]?.src || site.photos?.[0]?.src;
   S.push(`<section id="book" class="sec book${bookBg ? ' book-photo' : ''}"${bookBg ? ` style="background-image:url('${esc(img(bookBg))}')"` : ''}><div class="wrap two">
     <div class="book-intro"><h2>${type === 'bnb' ? L.bookingTitle : type === 'trades' ? L.quote : (site.ctaLabel ? esc(T(site.ctaLabel, lang)) : L.contact)}</h2>
-      ${type === 'bnb' ? `<p>${L.bookingIntro}</p>` : site.contactIntro ? `<p>${esc(T(site.contactIntro, lang))}</p>` : ''}
+      ${type === 'bnb' ? `<p>${site.bookingIntro ? esc(T(site.bookingIntro, lang)) : L.bookingIntro}</p>` : site.contactIntro ? `<p>${esc(T(site.contactIntro, lang))}</p>` : ''}
       ${booking.directDiscount ? `<p class="save">${icon('euro', 20)} ${L.saveVs(esc(booking.directDiscount))}</p>` : type === 'bnb' ? `<p class="save">${icon('euro', 20)} ${L.bestPrice}</p>` : ''}
       <ul class="contact-list">
         ${phone ? `<li><a href="tel:${esc(phone.replace(/\s/g, ''))}">${icon('phone', 20)} ${esc(phone)}</a></li>` : ''}
@@ -210,13 +222,13 @@ ${studio.siteUrl && heroImg && !/^(https?:)?\/\//.test(heroImg) ? `<meta propert
 ${bilingual ? `<link rel="alternate" hreflang="${other}" href="${langHref}">` : ''}
 <link rel="icon" href="data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='${th.accent}'/><text x='16' y='22' font-size='17' font-family='Georgia' text-anchor='middle' fill='#fff'>${esc((site.name || '?')[0])}</text></svg>`)}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?${STYLE_FONTS[site.style] || STYLE_FONTS.default}&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${rel}assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 <style>:root{--accent:${th.accent};--accent-ink:${th.accentInk};--paper:${th.paper};--sea:${th.sea};--soft:${th.sky1};--soft2:${th.sky2}}</style>
 ${isSample ? '' : `<script type="application/ld+json">${JSON.stringify(ld)}</script>`}
 </head>
-<body class="t-${type}">
+<body class="t-${type}${site.style ? ` s-${esc(site.style)}` : ''}">
 ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.studioName) : L.sampleBanner(site.name, studio.studioName))}</div>` : ''}
 <header class="top"><div class="wrap topin">
   <a class="brand" href="#">${esc(site.name)}</a>
@@ -226,6 +238,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
 
 <section class="hero">
   <div class="hero-media">${heroImg ? `<img src="${esc(img(heroImg))}" alt="${esc(T(site.photos[0].alt, lang))}"${site.heroPosition ? ` style="object-position:${esc(site.heroPosition)}"` : ''}>` : landscape(theme, 0, { label: site.area || '' })}</div>
+  ${has(site.heroExtras) ? `<div class="hero-extra" aria-hidden="true">${site.heroExtras.map((p) => `<img src="${esc(img(thumb(p.src)))}" alt="" loading="lazy">`).join('')}</div>` : ''}
   <div class="hero-txt wrap">
     <div class="chips">${rating}${site.openingSpec ? `<span class="chip open-now" data-open='${esc(JSON.stringify(site.openingSpec))}' data-lang="${lang}" hidden></span>` : ''}</div>
     <h1>${esc(site.name)}</h1>
