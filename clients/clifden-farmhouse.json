@@ -65,9 +65,9 @@
       "ga": "Gan táillí áirithinte"
     },
     {
-      "icon": "phone",
-      "en": "Book by phone, straight to Mary",
-      "ga": "Cuir in áirithe ar an bhfón, go díreach le Mary"
+      "icon": "calendar",
+      "en": "Live availability, instant booking",
+      "ga": "Infhaighteacht bheo, áirithint láithreach"
     },
     {
       "icon": "star",
@@ -135,8 +135,8 @@
     },
     {
       "icon": "euro",
-      "en": "Pay securely by card online, or cash",
-      "ga": "Íoc go slán le cárta ar líne, nó airgead tirim"
+      "en": "See free nights and book instantly by card",
+      "ga": "Féach oícheanta saora agus cuir in áirithe le cárta"
     }
   ],
   "rooms": [
@@ -232,7 +232,8 @@
       "unit": {
         "en": "per night",
         "ga": "san oíche"
-      }
+      },
+      "id": "room1"
     },
     {
       "name": {
@@ -305,7 +306,8 @@
       "unit": {
         "en": "per night",
         "ga": "san oíche"
-      }
+      },
+      "id": "room3"
     },
     {
       "name": {
@@ -385,13 +387,14 @@
       "unit": {
         "en": "per night",
         "ga": "san oíche"
-      }
+      },
+      "id": "room4"
     }
   ],
   "_check_rooms": "Prices are Mary's own Airbnb nightly prices (checked 26 Nov 2026 for Mar/May/Jul/Aug/Sep 2027 dates; Dec and Jan closed). Room names follow her Airbnb numbering.",
   "roomsNote": {
-    "en": "Prices are for the room, per night. Book direct with Mary: no booking fees, and you can pay securely by card on this website.",
-    "ga": "Is don seomra, in aghaidh na hoíche, atá na praghsanna. Cuir in áirithe go díreach le Mary: gan táillí áirithinte, agus is féidir leat íoc go slán le cárta ar an suíomh seo."
+    "en": "Prices are for the room, per night. See which nights are free and book instantly in the booking section below, with no booking fees.",
+    "ga": "Is don seomra, in aghaidh na hoíche, atá na praghsanna. Féach cé na hoícheanta atá saor agus cuir in áirithe láithreach sa chuid áirithinte thíos, gan táillí áirithinte."
   },
   "reviews": [
     {
@@ -740,19 +743,20 @@
         "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
       },
       {
-        "en": "Mary confirms your booking with you on the phone.",
-        "ga": "Deimhníonn Mary d’áirithint leat ar an bhfón."
+        "en": "You get a receipt by email straight away, and Mary is told about your booking.",
+        "ga": "Faigheann tú admháil ar ríomhphost láithreach, agus cuirtear Mary ar an eolas faoi d’áirithint."
       },
       {
-        "en": "No booking fees. Once Mary has confirmed your dates, pay securely by card on this website, or in cash when you arrive.",
-        "ga": "Gan táillí áirithinte. Nuair a bheidh do dhátaí deimhnithe ag Mary, íoc go slán le cárta ar an suíomh seo, nó le hairgead tirim nuair a shroicheann tú."
+        "en": "No booking fees. Pay securely by card on this website when you book (Visa, Mastercard, Apple Pay, Google Pay).",
+        "ga": "Gan táillí áirithinte. Íoc go slán le cárta ar an suíomh seo nuair a chuireann tú in áirithe (Visa, Mastercard, Apple Pay, Google Pay)."
       },
       {
         "en": "Cot or travel cot available on request.",
         "ga": "Cliabhán nó cliabhán taistil ar fáil ar iarratas."
       }
     ],
-    "cardPayments": true
+    "cardPayments": true,
+    "liveAvailability": true
   },
   "faq": [
     {
@@ -811,8 +815,8 @@
         "ga": "Conas a oibríonn áirithint dhíreach?"
       },
       "a": {
-        "en": "Choose your dates and room in the booking section, then tap “Call Mary to book”. Your phone rings Mary’s landline (095 21263, or +353 95 21263 from abroad) and shows you what to tell her. Once she confirms, you can pay by card on the website. There are no booking fees.",
-        "ga": "Roghnaigh do dhátaí agus do sheomra sa chuid áirithinte, ansin tapáil “Glaoigh ar Mary chun áirithint a dhéanamh”. Glaonn do ghuthán ar líne thalún Mary (095 21263, nó +353 95 21263 ón iasacht) agus taispeántar duit cad ba cheart a rá léi. Nuair a dheimhníonn sí, is féidir leat íoc le cárta ar an suíomh. Níl aon táillí áirithinte ann."
+        "en": "Choose your room and dates on the calendar in the booking section. Booked nights are crossed out, and the calendar updates by itself from Airbnb, Booking.com and this website. Then tap “Pay securely by card” and you’re booked, with a receipt by email. There are no booking fees. If you have a question, ring Mary on 095 21263 (+353 95 21263 from abroad).",
+        "ga": "Roghnaigh do sheomra agus do dhátaí ar an bhféilire sa chuid áirithinte. Tá na hoícheanta atá curtha in áirithe trasnaithe amach, agus nuashonraíonn an féilire é féin ó Airbnb, Booking.com agus ón suíomh seo. Ansin tapáil “Íoc go slán le cárta” agus tá tú curtha in áirithe, le admháil ar ríomhphost. Níl aon táillí áirithinte ann. Má tá ceist agat, glaoigh ar Mary ar 095 21263 (+353 95 21263 ón iasacht)."
       }
     },
     {
@@ -821,8 +825,8 @@
         "ga": "Conas a íocaim?"
       },
       "a": {
-        "en": "Ring Mary to check your dates. Once she has confirmed them, pay securely by card right here on the website (Visa, Mastercard, Apple Pay or Google Pay), or pay in cash when you arrive. There are no booking fees.",
-        "ga": "Glaoigh ar Mary chun do dhátaí a sheiceáil. Nuair a bheidh siad deimhnithe aici, íoc go slán le cárta anseo ar an suíomh (Visa, Mastercard, Apple Pay nó Google Pay), nó íoc le hairgead tirim nuair a shroicheann tú. Níl aon táillí áirithinte ann."
+        "en": "By card on this website when you book: Visa, Mastercard, Apple Pay or Google Pay. Payment is secure, by Stripe, and goes straight to Mary. There are no booking fees.",
+        "ga": "Le cárta ar an suíomh seo nuair a chuireann tú in áirithe: Visa, Mastercard, Apple Pay nó Google Pay. Tá an íocaíocht slán, trí Stripe, agus téann sí díreach chuig Mary. Níl aon táillí áirithinte ann."
       }
     }
   ],
@@ -835,9 +839,213 @@
     }
   ],
   "bookingIntro": {
-    "en": "Pick your dates and room, then ring Mary to check they’re free. Once she says yes, pay securely by card right here, just like on Airbnb, but with no booking fees.",
-    "ga": "Roghnaigh do dhátaí agus do sheomra, ansin glaoigh ar Mary chun a sheiceáil go bhfuil siad saor. Nuair a deir sí go bhfuil, íoc go slán le cárta anseo, díreach mar a dhéanfá ar Airbnb, ach gan táillí áirithinte."
+    "en": "Choose your room and dates on the calendar. Nights that are already booked are crossed out, so you know straight away it’s free. Then pay securely by card to book, just like on Airbnb, but with no booking fees. Questions? Ring Mary.",
+    "ga": "Roghnaigh do sheomra agus do dhátaí ar an bhféilire. Tá na hoícheanta atá curtha in áirithe cheana trasnaithe amach, mar sin tá a fhios agat láithreach go bhfuil sé saor. Ansin íoc go slán le cárta chun áirithint a dhéanamh, díreach mar a dhéanfá ar Airbnb, ach gan táillí áirithinte. Ceisteanna? Glaoigh ar Mary."
   },
   "host": "Mary",
-  "_payment": "Card payments: guests pay online via Stripe Checkout (api/checkout.js) after Mary confirms by phone. Needs Mary's own Stripe account + Vercel env var STRIPE_KEY_CLIFDEN_FARMHOUSE (see docs/card-payments-setup.md). Until then the sample shows a demo note."
+  "_payment": "Card payments: guests pay online via Stripe Checkout (api/checkout.js) after Mary confirms by phone. Needs Mary's own Stripe account + Vercel env var STRIPE_KEY_CLIFDEN_FARMHOUSE (see docs/card-payments-setup.md). Until then the sample shows a demo note.",
+  "availabilitySnapshot": {
+    "date": "2026-11-26",
+    "rooms": {
+      "room1": [
+        [
+          "2026-11-26",
+          "2027-03-01"
+        ],
+        [
+          "2027-04-20",
+          "2027-04-23"
+        ],
+        [
+          "2027-04-24",
+          "2027-04-25"
+        ],
+        [
+          "2027-04-27",
+          "2027-04-28"
+        ],
+        [
+          "2027-04-29",
+          "2027-05-03"
+        ],
+        [
+          "2027-05-04",
+          "2027-05-05"
+        ],
+        [
+          "2027-05-07",
+          "2027-05-17"
+        ],
+        [
+          "2027-05-22",
+          "2027-05-25"
+        ],
+        [
+          "2027-05-26",
+          "2027-05-27"
+        ],
+        [
+          "2027-05-28",
+          "2027-05-30"
+        ],
+        [
+          "2027-06-16",
+          "2027-06-17"
+        ],
+        [
+          "2027-06-18",
+          "2027-06-21"
+        ],
+        [
+          "2027-06-22",
+          "2027-06-23"
+        ],
+        [
+          "2027-06-26",
+          "2027-06-27"
+        ],
+        [
+          "2027-07-08",
+          "2027-07-09"
+        ],
+        [
+          "2027-08-23",
+          "2027-11-01"
+        ]
+      ],
+      "room3": [
+        [
+          "2026-11-26",
+          "2027-03-01"
+        ],
+        [
+          "2027-03-10",
+          "2027-03-11"
+        ],
+        [
+          "2027-04-08",
+          "2027-04-10"
+        ],
+        [
+          "2027-04-17",
+          "2027-04-18"
+        ],
+        [
+          "2027-04-22",
+          "2027-04-26"
+        ],
+        [
+          "2027-05-01",
+          "2027-05-03"
+        ],
+        [
+          "2027-05-04",
+          "2027-05-07"
+        ],
+        [
+          "2027-05-08",
+          "2027-05-09"
+        ],
+        [
+          "2027-05-11",
+          "2027-05-13"
+        ],
+        [
+          "2027-05-15",
+          "2027-05-17"
+        ],
+        [
+          "2027-05-18",
+          "2027-05-26"
+        ],
+        [
+          "2027-05-28",
+          "2027-05-30"
+        ],
+        [
+          "2027-06-13",
+          "2027-06-20"
+        ],
+        [
+          "2027-06-26",
+          "2027-06-27"
+        ],
+        [
+          "2027-06-29",
+          "2027-06-30"
+        ],
+        [
+          "2027-07-10",
+          "2027-07-13"
+        ],
+        [
+          "2027-07-24",
+          "2027-07-31"
+        ],
+        [
+          "2027-08-01",
+          "2027-08-03"
+        ],
+        [
+          "2027-08-07",
+          "2027-08-09"
+        ],
+        [
+          "2027-08-11",
+          "2027-08-17"
+        ],
+        [
+          "2027-09-20",
+          "2027-09-21"
+        ],
+        [
+          "2027-10-02",
+          "2027-10-03"
+        ],
+        [
+          "2027-10-20",
+          "2027-10-22"
+        ]
+      ],
+      "room4": [
+        [
+          "2026-11-26",
+          "2027-03-01"
+        ],
+        [
+          "2027-04-24",
+          "2027-04-26"
+        ],
+        [
+          "2027-05-18",
+          "2027-05-19"
+        ],
+        [
+          "2027-05-29",
+          "2027-05-30"
+        ],
+        [
+          "2027-06-11",
+          "2027-06-13"
+        ],
+        [
+          "2027-07-06",
+          "2027-07-07"
+        ],
+        [
+          "2027-08-08",
+          "2027-08-09"
+        ],
+        [
+          "2027-08-16",
+          "2027-08-18"
+        ],
+        [
+          "2027-09-11",
+          "2027-09-12"
+        ]
+      ]
+    }
+  },
+  "_availability": "Live calendar: set Vercel env CAL_CLIFDEN_FARMHOUSE (Airbnb + Booking.com iCal export links per room) — see docs/card-payments-setup.md. availabilitySnapshot = Mary's real Airbnb calendar on 26 Nov 2026, used ONLY on the sample."
 }

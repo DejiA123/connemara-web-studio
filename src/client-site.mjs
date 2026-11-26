@@ -126,12 +126,19 @@ export function renderClient(site, lang, ctx) {
     // "call" mode: the guest picks dates/room, then the site rings the owner's phone (works with a landline) and shows what to say
     const who = site.host || (lang === 'ga' ? 'linn' : 'us');
     const roomOpts = has(site.rooms) ? `<label>${L.room}<select name="${L.room}" data-price-select><option value="" data-price="0">${L.anyRoom}</option>${site.rooms
-      .map((r) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-price="${priceNumber(r.price)}"${r.priceHigh && has(r.highMonths) ? ` data-price-high="${priceNumber(r.priceHigh)}" data-high="${r.highMonths.join(',')}"` : ''}>${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
-    formInner = `<form class="req req-call" data-form data-call="${esc(telHref(phone))}" data-sample="${isSample ? 1 : 0}" data-lang="${lang}">
-      <div class="row3"><label>${L.arrive}<input type="date" name="${L.arrive}" required data-arrive></label>
-      <label>${L.depart}<input type="date" name="${L.depart}" required data-depart></label>
-      <label>${L.guests}<select name="${L.guests}">${[1, 2, 3, 4, 5, 6].map((n) => `<option${n === 2 ? ' selected' : ''}>${n}</option>`).join('')}</select></label></div>
-      ${roomOpts}<p class="estimate" data-estimate aria-live="polite"></p>
+      .map((r, ri) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-id="${esc(r.id || `room${ri + 1}`)}" data-price="${priceNumber(r.price)}"${r.priceHigh && has(r.highMonths) ? ` data-price-high="${priceNumber(r.priceHigh)}" data-high="${r.highMonths.join(',')}"` : ''}>${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
+    const snap = isSample && booking.liveAvailability && site.availabilitySnapshot ? JSON.stringify(site.availabilitySnapshot) : '';
+    formInner = `<form class="req req-call" data-form data-call="${esc(telHref(phone))}" data-sample="${isSample ? 1 : 0}" data-lang="${lang}" data-slug="${esc(site.slug)}"${booking.liveAvailability ? ' data-live-avail' : ''}${snap ? ` data-snapshot='${esc(snap)}'` : ''}>
+      <div class="row2 row-rg">${roomOpts}<label>${L.guests}<select name="${L.guests}" data-guests>${[1, 2, 3, 4, 5, 6].map((n) => `<option${n === 2 ? ' selected' : ''}>${n}</option>`).join('')}</select></label></div>
+      <div class="row2 row-dates"><label>${L.arrive}<input type="date" name="${L.arrive}" data-arrive></label>
+      <label>${L.depart}<input type="date" name="${L.depart}" data-depart></label></div>
+      ${booking.liveAvailability ? `<div class="cal-wrap" data-cal-wrap hidden>
+        <div class="cal-top"><button type="button" class="cal-nav" data-cal-prev aria-label="${lang === 'ga' ? 'Mí roimhe' : 'Previous month'}">‹</button><p class="cal-pick" data-cal-pick aria-live="polite"></p><button type="button" class="cal-nav" data-cal-next aria-label="${lang === 'ga' ? 'An chéad mhí eile' : 'Next month'}">›</button></div>
+        <div class="cal-months" data-cal></div>
+        <p class="cal-legend"><span><i class="lg-free"></i>${lang === 'ga' ? 'Saor' : 'Free'}</span><span><i class="lg-booked"></i>${lang === 'ga' ? 'Curtha in áirithe' : 'Booked'}</span><span><i class="lg-stay"></i>${lang === 'ga' ? 'Do chuairt' : 'Your stay'}</span></p>
+        <p class="cal-status" data-cal-status></p>
+      </div>` : ''}
+      <p class="estimate" data-estimate aria-live="polite"></p>
       <button class="btn btn-lg btn-call" type="submit">${icon('phone', 20)} ${lang === 'ga' ? `Glaoigh ar ${esc(who)} chun áirithint a dhéanamh` : `Call ${esc(who)} to book`}</button>
       <p class="call-num">${lang === 'ga' ? 'nó glaoigh go díreach' : 'or ring directly'}: <a href="tel:${esc(telHref(phone))}"><b>${esc(phone)}</b></a> <small>(${lang === 'ga' ? 'ón iasacht' : 'from abroad'}: ${esc(intlPhone(phone))})</small></p>
       <div class="call-card" data-call-card hidden>
@@ -142,7 +149,7 @@ export function renderClient(site, lang, ctx) {
         ${isSample ? `<p class="small cc-sample">${lang === 'ga' ? 'Suíomh samplach: ar an suíomh beo, glaonn an cnaipe seo ar an uimhir thuas.' : 'Sample site: on the live site this button rings the number above.'}</p>` : ''}
       </div>
       ${booking.cardPayments ? `<div class="pay-box" data-pay hidden>
-        <p class="pb-h">${lang === 'ga' ? `${esc(who)} tar éis do dhátaí a dheimhniú?` : `${esc(who)} has confirmed your dates?`}</p>
+        <p class="pb-h" data-pb-h data-live-text="${lang === 'ga' ? '✓ Tá do dhátaí saor! Cuir in áirithe anois:' : '✓ Your dates are free! Book now:'}">${lang === 'ga' ? `${esc(who)} tar éis do dhátaí a dheimhniú?` : `${esc(who)} has confirmed your dates?`}</p>
         <button type="button" class="btn btn-lg btn-pay" data-pay-btn data-slug="${esc(site.slug)}">${icon('shield', 20)} <span>${lang === 'ga' ? 'Íoc' : 'Pay'} <b data-pay-amt></b> ${lang === 'ga' ? 'go slán le cárta' : 'securely by card'}</span></button>
         <p class="pb-cards"><span>Visa</span> · <span>Mastercard</span> · <span>Apple Pay</span> · <span>Google Pay</span></p>
         <p class="small">${lang === 'ga' ? `Íocaíocht shlán trí Stripe. Téann an t-airgead díreach chuig ${esc(who)}, gan táillí áirithinte.` : `Secure payment by Stripe. The money goes straight to ${esc(who)}, with no booking fees.`}</p>

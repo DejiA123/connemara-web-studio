@@ -1,4 +1,42 @@
-# Card payments on a client's website (Stripe)
+# Card payments + live availability on a client's website
+
+Two parts, both one-time:
+- **Live availability calendar:** guests see which nights are free and book instantly. Section A.
+- **Card payments (Stripe):** guests pay on the website and the money goes to the owner. Section B (below).
+
+## A. Live availability calendar (about 15 minutes, you do it)
+
+The calendar on the website reads the owner's **Airbnb** and **Booking.com** calendars, plus bookings paid on the website.
+Website bookings are sent back to Airbnb and Booking.com, so **nobody can book the same night twice**.
+When a guest checks out, their nights are in the past, so the room shows free again automatically.
+
+**1. Get each room's calendar link from Airbnb** (you need to be logged in to the owner's Airbnb, so do it with them):
+Airbnb → Menu → **Calendar** → pick the listing → **Availability** → **Connect calendars** (or "Sync calendars") → **Export calendar** → copy the link (`https://www.airbnb.com/calendar/ical/50556618.ics?s=…`).
+Do this for each listing (Room 1, Room 3, Family Room).
+
+**2. Same on Booking.com** (if the owner uses it): Extranet → **Rates & Availability** → **Sync calendars** → **Export calendar** → copy the link for each room.
+
+**3. In Vercel** → Settings → Environment Variables, add `CAL_CLIFDEN_FARMHOUSE` with (one line):
+```
+{"room1":["<Airbnb link Room 1>","<Booking.com link Room 1>"],"room3":["<Airbnb link Room 3>"],"room4":["<Airbnb link Family Room>"]}
+```
+(`room1`, `room3`, `room4` are the `"id"`s in `clients/clifden-farmhouse.json`.) Keep these links private: anyone with them can see the calendar.
+
+**4. Send website bookings back to Airbnb / Booking.com.** In the same "Connect calendars" screen choose **Import calendar** and paste:
+- Room 1: `https://bookdirectconnemara.vercel.app/api/calendar?slug=clifden-farmhouse&room=room1`
+- Room 3: `…&room=room3`  ·  Family Room: `…&room=room4`
+
+Name it "Website". Airbnb and Booking.com re-read it every few hours. Our website reads their calendars every 2 minutes,
+and re-checks just before taking a payment, so a guest can never pay for a night that's already taken.
+
+**Good to know:**
+- If a calendar link ever stops working, the website stops taking instant bookings and asks guests to ring Mary first. It never shows a booked night as free.
+- Phone bookings: the owner blocks the dates on Airbnb as they do today, and the website picks that up by itself.
+- The small gap: Airbnb only re-reads the website calendar every few hours. A rare double booking is possible if someone books the same room on Airbnb within that time. To close the gap fully, use a channel manager such as Beds24 (about €15/month).
+
+---
+
+# B. Card payments (Stripe)
 
 Guests pay by card on the B&B's own website (Visa, Mastercard, Apple Pay, Google Pay), as on Airbnb.
 The money goes **straight into the owner's bank account**. No card machine needed.
@@ -31,7 +69,7 @@ Steps, on your laptop with them beside you:
 ## What you do (about 10 minutes)
 
 1. **In their Stripe account:** Developers → API keys → **Create restricted key**.
-   Name it `website`. Set **Checkout Sessions: Write** and leave everything else at None. Copy the key (`rk_live_…`).
+   Name it `website`. Set **Checkout Sessions: Write** (this includes Read, which the calendar needs to see website bookings) and leave everything else at None. Copy the key (`rk_live_…`).
 2. **In Vercel** (vercel.com → the `bookdirectconnemara` project → Settings → Environment Variables), add:
    - Name: `STRIPE_KEY_CLIFDEN_FARMHOUSE` (for another client: `STRIPE_KEY_` + their slug in capitals, `-` → `_`)
    - Value: the `rk_live_…` key. Environment: Production.
@@ -55,5 +93,5 @@ To try it with no real money first, use a **test** restricted key (`rk_test_…`
 ## To add card payments for another client
 
 1. In `api/checkout.js`, add a line to `SITES`, e.g. `'teach-na-mara': require('../clients/teach-na-mara.json'),`
-2. In their JSON: `"booking": { "mode": "call", "cardPayments": true }`, and rooms need a `"price"` (optional `"priceHigh"` + `"highMonths": [7, 8]`).
+2. In their JSON: `"booking": { "mode": "call", "cardPayments": true, "liveAvailability": true }`, each room an `"id"`, and rooms need a `"price"` (optional `"priceHigh"` + `"highMonths": [7, 8]`).
 3. Follow the steps above with their Stripe account.

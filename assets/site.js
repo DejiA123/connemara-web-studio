@@ -41,6 +41,7 @@
           body: JSON.stringify({ slug: payBtn.dataset.slug, room: roomSel.selectedOptions[0].dataset.key, arrive: arrive.value, depart: depart.value, guests: g ? g.value : 2, lang: lang }),
         }).then(function (r) { return r.json(); }).then(function (j) {
           if (j.url) { location.href = j.url; return; }
+          if (j.taken && form.refreshAvailability) form.refreshAvailability();
           throw new Error(j.error || '');
         }).catch(function (e) {
           payBtn.disabled = false;
@@ -71,6 +72,141 @@
       else est.textContent = n + ' night' + (n === 1 ? '' : 's') + (total ? ' · approx. ' + total : '');
     }
 
+    // ---- live availability calendar (Airbnb-style): booked nights greyed out, pick arrival then departure ----
+    var calWrap = form.querySelector('[data-cal-wrap]');
+    var cal = null; // { rooms: {id: Set of booked nights}, max: 'YYYY-MM-DD', mode: 'live'|'sample', date }
+    var selA = null, selD = null, view = null;
+    var ga = lang === 'ga';
+    var MON = ga ? ['Eanáir', 'Feabhra', 'Márta', 'Aibreán', 'Bealtaine', 'Meitheamh', 'Iúil', 'Lúnasa', 'Meán Fómhair', 'Deireadh Fómhair', 'Samhain', 'Nollaig'] : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var WD = ga ? ['Lu', 'Má', 'Cé', 'Dé', 'Ao', 'Sa', 'Do'] : ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+    var DAYS = ga ? ['Domh', 'Luan', 'Máirt', 'Céad', 'Déar', 'Aoine', 'Sath'] : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var addD = function (s, n) { var d = new Date(s + 'T12:00:00'); d.setDate(d.getDate() + n); return iso(d); };
+    var nice = function (s) { var d = new Date(s + 'T12:00:00'); return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MON[d.getMonth()].slice(0, ga ? 20 : 3); };
+    var todayS = iso(today);
+    var roomIds = roomSel ? Array.prototype.slice.call(roomSel.options).filter(function (o) { return o.dataset.id; }).map(function (o) { return o.dataset.id; }) : [];
+    var curId = function () { return roomSel && roomSel.selectedOptions[0].dataset.id || ''; };
+    // a night is booked for "any room" only if every room is booked
+    var booked = function (d, id) {
+      if (!cal) return false;
+      if (d < todayS || d > cal.max) return true;
+      if (id) return cal.rooms[id] ? cal.rooms[id].has(d) : false;
+      return roomIds.every(function (r) { return cal.rooms[r] && cal.rooms[r].has(d); });
+    };
+    var freeRange = function (a, d, id) { for (var x = a; x < d; x = addD(x, 1)) if (booked(x, id)) return false; return true; };
+    var firstFree = function (id) { for (var x = todayS; x <= cal.max; x = addD(x, 1)) if (!booked(x, id)) return x; return null; };
+
+    function setDates() {
+      arrive.value = selA || ''; depart.value = selD || '';
+      update();
+      var pick = form.querySelector('[data-cal-pick]');
+      if (!selA) pick.textContent = ga ? 'Roghnaigh do dháta teachta' : 'Choose your arrival date';
+      else if (!selD) pick.innerHTML = (ga ? 'Teacht ' : 'Arriving ') + '<b>' + nice(selA) + '</b>. ' + (ga ? 'Anois roghnaigh do dháta imeachta' : 'Now choose your departure date');
+      else { var n = nights(); pick.innerHTML = '<b>' + nice(selA) + ' → ' + nice(selD) + '</b> · ' + n + (ga ? ' oíche' : n === 1 ? ' night' : ' nights'); }
+      showFreeRooms();
+    }
+    function showFreeRooms() {
+      var box = form.querySelector('[data-free-rooms]');
+      if (!box) { box = document.createElement('div'); box.className = 'free-rooms'; box.setAttribute('data-free-rooms', ''); est.parentNode.insertBefore(box, est.nextSibling); }
+      box.innerHTML = '';
+      if (!cal || !selA || !selD || curId()) { box.hidden = true; return; }
+      var opts = Array.prototype.slice.call(roomSel.options).filter(function (o) { return o.dataset.id && freeRange(selA, selD, o.dataset.id); });
+      box.hidden = false;
+      if (!opts.length) { box.innerHTML = '<p>' + (ga ? 'Níl aon seomra saor do na dátaí sin.' : 'No room is free for all of those nights.') + '</p>'; return; }
+      box.innerHTML = '<p>' + (ga ? 'Saor do do dhátaí, roghnaigh seomra:' : 'Free for your dates. Choose a room:') + '</p>';
+      opts.forEach(function (o) {
+        var b2 = document.createElement('button'); b2.type = 'button'; b2.className = 'fr-btn'; b2.textContent = o.textContent;
+        b2.addEventListener('click', function () { roomSel.value = o.value; roomSel.dispatchEvent(new Event('change')); });
+        box.appendChild(b2);
+      });
+    }
+    function render() {
+      var host = form.querySelector('[data-cal]');
+      var count = calWrap.clientWidth >= 560 ? 2 : 1;
+      var id = curId(), html = '';
+      for (var m = 0; m < count; m++) {
+        var first = new Date(view.getFullYear(), view.getMonth() + m, 1, 12);
+        html += '<div class="cal-m"><p class="cal-mt">' + MON[first.getMonth()] + ' ' + first.getFullYear() + '</p><div class="cal-g">';
+        WD.forEach(function (w) { html += '<span class="cal-wd">' + w + '</span>'; });
+        for (var k = 0; k < (first.getDay() + 6) % 7; k++) html += '<span></span>';
+        for (var dd = new Date(first); dd.getMonth() === first.getMonth(); dd.setDate(dd.getDate() + 1)) {
+          var s = iso(dd), cls = 'cal-d', dis = false;
+          var isB = booked(s, id);
+          if (s < todayS || s > cal.max) { cls += ' past'; dis = true; }
+          else if (selA && !selD && s > selA) { if (!freeRange(selA, s, id)) { cls += ' na'; dis = true; } else if (isB) cls += ' co'; }
+          else if (isB && s !== selD) { cls += ' bk'; dis = true; }
+          if (s === selA) cls += ' sa'; if (s === selD) cls += ' sd';
+          if (selA && selD && s > selA && s < selD) cls += ' in';
+          if (s === todayS) cls += ' td';
+          html += '<button type="button" class="' + cls + '" data-d="' + s + '"' + (dis ? ' disabled' : '') + '>' + dd.getDate() + '</button>';
+        }
+        html += '</div></div>';
+      }
+      host.innerHTML = html;
+      var vNow = new Date(today.getFullYear(), today.getMonth(), 1, 12);
+      form.querySelector('[data-cal-prev]').disabled = view <= vNow;
+      var last = new Date(cal.max + 'T12:00:00');
+      form.querySelector('[data-cal-next]').disabled = new Date(view.getFullYear(), view.getMonth() + count, 1, 12) > last;
+    }
+    function pickDay(s) {
+      var id = curId();
+      if (selA && !selD && s > selA && freeRange(selA, s, id)) selD = s;
+      else if (!booked(s, id)) { selA = s; selD = null; }
+      setDates(); render();
+    }
+    function startCal(data, mode) {
+      cal = { rooms: {}, max: data.max || addD(todayS, 365), mode: mode, date: data.date };
+      Object.keys(data.rooms || {}).forEach(function (id) {
+        var set = new Set();
+        data.rooms[id].forEach(function (r) { for (var x = r[0]; x < r[1]; x = addD(x, 1)) set.add(x); });
+        cal.rooms[id] = set;
+      });
+      calWrap.hidden = false;
+      form.classList.add('has-cal');
+      var h = form.querySelector('[data-pb-h]'); if (h) h.textContent = h.dataset.liveText;
+      var ff = firstFree(curId()) || todayS;
+      view = new Date(ff.slice(0, 4), Number(ff.slice(5, 7)) - 1, 1, 12);
+      form.querySelector('[data-cal-status]').innerHTML = mode === 'live'
+        ? (ga ? '✓ Infhaighteacht bheo: nuashonraítear go huathoibríoch é ó Airbnb, Booking.com agus ón suíomh seo.' : '✓ Live availability: updated automatically from Airbnb, Booking.com and this website.')
+        : (ga ? '<b>Suíomh samplach:</b> féilire fíor Airbnb Mary ar ' + nice(data.date) + '. Ar an suíomh beo, nuashonraíonn sé é féin ó Airbnb, Booking.com agus ón suíomh seo.' : '<b>Sample site:</b> Mary’s real Airbnb calendar on ' + nice(data.date) + ' ' + data.date.slice(0, 4) + '. On the live site it updates by itself from Airbnb, Booking.com and this website.');
+      // "Next available" on each room card
+      Array.prototype.slice.call(roomSel.options).forEach(function (o) {
+        if (!o.dataset.id) return;
+        var btn = document.querySelector('.card .btn[data-room="' + o.dataset.key.replace(/"/g, '\\"') + '"]');
+        if (!btn) return;
+        var old = btn.parentNode.querySelector('.avail-chip'); if (old) old.remove();
+        var f = firstFree(o.dataset.id);
+        var chip = document.createElement('p'); chip.className = 'avail-chip' + (f === todayS ? ' now' : '');
+        chip.textContent = f ? (f === todayS ? (ga ? 'Saor anocht' : 'Free tonight') : (ga ? 'An chéad oíche shaor: ' : 'Next available: ') + nice(f) + (f.slice(0, 4) !== todayS.slice(0, 4) ? ' ' + f.slice(0, 4) : '')) : (ga ? 'Lán' : 'Fully booked');
+        btn.parentNode.insertBefore(chip, btn);
+      });
+      setDates(); render();
+    }
+    if (calWrap) {
+      form.querySelector('[data-cal]').addEventListener('click', function (e) { var t = e.target.closest('[data-d]'); if (t && !t.disabled) pickDay(t.dataset.d); });
+      form.querySelector('[data-cal-prev]').addEventListener('click', function () { view = new Date(view.getFullYear(), view.getMonth() - 1, 1, 12); render(); });
+      form.querySelector('[data-cal-next]').addEventListener('click', function () { view = new Date(view.getFullYear(), view.getMonth() + 1, 1, 12); render(); });
+      roomSel.addEventListener('change', function () {
+        if (!cal) return;
+        if (selA && (booked(selA, curId()) || (selD && !freeRange(selA, selD, curId())))) { selA = selD = null; }
+        if (!selA) { var ff = firstFree(curId()); if (ff) view = new Date(ff.slice(0, 4), Number(ff.slice(5, 7)) - 1, 1, 12); }
+        setDates(); render();
+      });
+      addEventListener('resize', function () { if (cal) render(); });
+      if (form.dataset.snapshot) {
+        try { var sn = JSON.parse(form.dataset.snapshot); startCal({ rooms: sn.rooms, date: sn.date, max: sn.max || addD(sn.date, 338) }, 'sample'); } catch (e) {}
+      } else {
+        fetch('/api/availability?slug=' + encodeURIComponent(form.dataset.slug)).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+          if (j && j.live) startCal({ rooms: j.rooms, date: j.updated.slice(0, 10) }, 'live');
+        }).catch(function () {});
+      }
+    }
+    form.refreshAvailability = function () {
+      if (!calWrap || form.dataset.snapshot) return;
+      fetch('/api/availability?slug=' + encodeURIComponent(form.dataset.slug), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+        if (j && j.live) { selA = selD = null; startCal({ rooms: j.rooms, date: j.updated.slice(0, 10) }, 'live'); }
+      }).catch(function () {});
+    };
+
     // "Book now" buttons on room cards preselect that room
     document.querySelectorAll('[data-room]').forEach(function (a) {
       a.addEventListener('click', function () {
@@ -78,13 +214,22 @@
         for (var i = 0; i < roomSel.options.length; i++) {
           if (roomSel.options[i].dataset.key === a.dataset.room) roomSel.selectedIndex = i;
         }
-        update();
+        roomSel.dispatchEvent(new Event('change'));
       });
     });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (depart && arrive && nights() <= 0) { depart.focus(); return; }
+      var noDates = depart && arrive && nights() <= 0;
+      if (noDates && !(form.dataset.call && form.classList.contains('has-cal'))) { depart.focus(); return; }
+      if (form.dataset.call && noDates) {
+        // calendar mode, no dates picked: just ring (e.g. with a question)
+        var cc = form.querySelector('[data-call-card]'), ul0 = form.querySelector('[data-call-lines]');
+        ul0.innerHTML = '<li>' + (lang === 'ga' ? 'Cuir do cheist' : 'Ask your question') + '</li>';
+        cc.hidden = false; cc.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        if (form.dataset.sample !== '1') setTimeout(function () { location.href = 'tel:' + form.dataset.call; }, 500);
+        return;
+      }
       if (form.dataset.call) {
         // call mode: show the guest what to say, then ring the owner's phone
         var fmtD = function (v) {
