@@ -47,3 +47,11 @@ Visits (Lig do Scíth, Seaview Lodge, Teach an tSailín, Hollybanks, Portarra Lo
 | Clifden Farmhouse B&B | Correction: no website of her own, only Airbnb + Booking.com | Ideal fit: own website saves commission on both |
 | Radharc Árainn | Geraldine: "will arrange a time next week" | Wait; nudge Tue 1 Dec if no date |
 | Clifden Farmhouse B&B | Sample rebuilt (25 Nov): Mary’s own 50 photos from her 3 Airbnb rooms, real reviews (4.85★, 1,207), own farmhouse design | Show Mary on the video call; ask for her mobile (WhatsApp), email and direct prices |
+| Clifden Farmhouse B&B | 26 Nov: rang Mary; got her mobile; sample sent on WhatsApp | Follow up in 1–2 days; then the 8 questions + close |
+| Ben View House | 26 Nov: call back next week | Ring week of 30 Nov |
+| Kingstown House | 26 Nov: not interested | Sample taken offline. Don't call again |
+| Hillside Lodge / Mallmore / Ardmore House | 26 Nov: no answer | Try again |
+| All the Twos Lodge | 26 Nov: wants an email for the manager | Get address; send email |
+| Letterfrack Lodge | 26 Nov: spoke to staff, call back for the management | Ring Fri 27 Nov, morning |
+| Park Lodge Hotel | 26 Nov: no response | Try again |
+| Tigh Ruairí | 26 Nov: no answer, voicemail left | Try once more |

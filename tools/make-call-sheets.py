@@ -68,7 +68,16 @@ def head(title):
 
 
 STATUS = {
-  'Clifden Farmhouse B&B': ('hot', '26 Nov: wants sample. Only on Airbnb + Booking.com'),
+  'Tigh Ruairí': ('again', '26 Nov: no answer, voicemail left'),
+  'Park Lodge Hotel': ('again', '26 Nov: no response. Try again'),
+  'Letterfrack Lodge': ('cb', 'Call back Fri 27 Nov, morning: ask for the MANAGEMENT'),
+  'All the Twos Lodge': ('hot', '26 Nov: wants an email for the manager. Send it'),
+  'Ardmore House (Clifden)': ('again', '26 Nov: no answer. Try again'),
+  'Mallmore Country House': ('again', '26 Nov: no answer. Try again'),
+  'Hillside Lodge': ('again', '26 Nov: no answer. Try again'),
+  'Kingstown House': ('done', '26 Nov: not interested. Sample taken offline'),
+  'Ben View House': ('cb', '26 Nov: call back next week (Mon 30 Nov – Fri 4 Dec)'),
+  'Clifden Farmhouse B&B': ('hot', '26 Nov: rang Mary, got her mobile, sample sent on WhatsApp. Follow up'),
   # name: (kind, text)   kind: done | again | wait | hot | cb
   'Teach na Mara': ('again', '24 Nov: no answer · 25 Nov: voicemail left. One more try'),
   'Ardmor Country House': ('again', '24 + 25 Nov: no answer. Last try, or visit'),
@@ -139,20 +148,23 @@ VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h
 
 # ---------------------------------------------------------------- Follow-ups (front page)
 s0 = head('Follow-ups: week of 24 November').replace('</head>', '<style>body{font-size:9.6pt}.box{margin-bottom:9px}.fl td{padding:5px 4px}.fl td.n2{white-space:nowrap;font-weight:700}</style></head>') + f"""
-<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 19+ calls · <b>2 hot leads</b> · 1 waiting.</div>
+<div class="goal"><b>Start here.</b> Do these in order, then carry on with the new calls on Sheet 3. &nbsp;So far: 30+ calls · <b>3 hot leads</b> · 3 call-backs.</div>
 <div class="cols"><div>
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">Hot lead: Radharc Árainn (Geraldine)</h2>
 <p style="margin:0 0 4px">She'll arrange a time <b>next week</b>. No date by <b>Tue 1 Dec</b>? One friendly nudge. Agreed: ____________ <span class="url">…/sites/radharc-arainn-bnb</span></p>
 <ul><li><b>Lead with card payments:</b> <span class="say">"Guests pay a deposit by card when they book. No more cash-only complaints, and fewer no-shows."</span></li>
 <li>Her sample → calculator with her numbers → the offer (or <b>€39 a month</b> if price worries her) → <span class="say">"Will I put you down as one of my first three?"</span></li></ul></div>
 
-<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">Hot lead: Clifden Farmhouse B&B · 095 21263</h2>
-<p style="margin:0 0 4px">Host: <b>Mary</b> (check name). 4.8 on Google, 4.7 on Tripadvisor. <b>Sample ready:</b> <span class="url">…/sites/clifden-farmhouse</span></p>
-<ul><li><b>Send the link</b> the way she agreed, and offer a <b>WhatsApp video call</b> (Clifden is far): <span class="say">"Would a quick 10-minute video call suit? I'm free [day] at [time] or [day] at [time]."</span></li>
-<li>Ask early: <span class="say">"Do most guests book through Booking.com?"</span> Yes → the 15% saving. No → card deposits + Google.</li>
-<li>Then: she scrolls her sample → calculator with her numbers → the offer → <span class="say">"Will I put you down as one of my first three?"</span></li>
-<li><b>No website of her own: only Airbnb + Booking.com</b>, paying commission on both. Her worry: "Is it complicated?" Answer: <span class="say">"Not at all. I do everything. You send prices and a few photos, look at it, and we set up card payments in 10 minutes."</span></li>
-<li>Ask: rooms, prices, which are en suite, OK to use her Airbnb photos, favourite reviews.</li></ul></div>
+<div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">Hot lead: Clifden Farmhouse B&B (Mary) · landline 095 21263 · mobile: WhatsApp</h2>
+<p style="margin:0 0 4px"><b>26 Nov:</b> rang Mary, got her <b>mobile</b>, sent her sample on <b>WhatsApp</b>. <span class="url">…/sites/clifden-farmhouse</span> · one-page call sheet: <b>mary-call-sheet.pdf</b></p>
+<ul><li><b>Follow up in 1–2 days</b> (WhatsApp): ask what she thought, then ring to talk it through.</li>
+<li>On the call: her answers to the 8 questions (prices, season, Room 2, OK to use her photos, email, answering machine).</li>
+<li>Close: <span class="say">"Will I put you down as one of my first three? I'll switch it all on for you. You won't have to do a thing."</span></li>
+<li>If yes: card payments = send her the <b>2-minute setup link</b> on WhatsApp (needs her mobile ✓).</li></ul></div>
+<div class="box" style="border:2px solid #c98a1a;background:#fffaf0"><h2 style="color:#8a5a00">Callbacks and emails</h2><ul>
+<li><b>Letterfrack Lodge · 095 41222 · Fri 27 Nov, morning.</b> Ask for the <b>manager / owner</b>: <span class="say">"I rang yesterday and was asked to call back to speak with the management."</span> Sample: <span class="url">…/sites/letterfrack-lodge</span></li>
+<li><b>All the Twos Lodge · 095 22222.</b> Wants an <b>email for the manager</b>: get the email address, send the email Claude wrote.</li>
+<li><b>Ben View House · 095 21256.</b> Call back <b>next week</b>. Sample: <span class="url">…/sites/ben-view-clifden</span></li></ul></div>
 
 <div class="box" style="border:2px solid #2e8b57;background:#f3faf5"><h2 style="color:#1f6b3e">1. New this week: ask first</h2>
 <p style="margin:0 0 4px">Before offering a sample, ask: <span class="say">"Do most of your guests book through Booking.com, or another way?"</span></p>
@@ -308,7 +320,7 @@ s3 = head('Sheet 3: Days 3–6').replace('</head>', '<style>body{font-size:8.1pt
 ])}
 </div><div>
 {calls('Day 5: Clifden · Letterfrack', show_sample=True, rows=[
- ('Clifden Farmhouse B&B', '095 21263', '"Guests love your welcome and the short walk into Clifden, but I couldn\'t find a website for you."', '210'),
+ ('Clifden Farmhouse B&B', '095 21263', '"Guests love your welcome and the short walk into Clifden, but I couldn\'t find a website for you."', '210', '<div class="url">Sample: …/sites/clifden-farmhouse</div>'),
  ('Ben View House', '095 21256', '<span class="chk">Look first.</span> "Your family has run Ben View since 1926."', '570', '<div class="url">Sample: …/sites/ben-view-clifden</div>'),
  ('Kingstown House', '095 21470', '<span class="chk">Look first.</span> "Guests rave about your breakfasts."', '570', '<div class="url">Sample: …/sites/kingstown-clifden</div>'),
  ('Hillside Lodge', '095 21463', '<span class="chk">Look at hillside-lodge.com first.</span> Offer review replies + Google posts.', 'sup'),
