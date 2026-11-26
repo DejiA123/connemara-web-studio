@@ -705,6 +705,10 @@
         "ga": "Deimhníonn Mary d’áirithint leat ar an bhfón."
       },
       {
+        "en": "No booking fees and nothing to pay online: Mary arranges payment with you when you book.",
+        "ga": "Gan táillí áirithinte agus gan aon rud le híoc ar líne: socraíonn Mary an íocaíocht leat nuair a chuireann tú in áirithe."
+      },
+      {
         "en": "Cot or travel cot available on request.",
         "ga": "Cliabhán nó cliabhán taistil ar fáil ar iarratas."
       }
@@ -784,5 +788,6 @@
     "en": "Pick your dates and room, then tap the button to ring Mary on her landline. She’ll confirm your room and her best direct price there and then, with no booking fees.",
     "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra agus a praghas díreach is fearr láithreach, gan táillí áirithinte."
   },
-  "host": "Mary"
+  "host": "Mary",
+  "_payment": "No online payment, so Mary has nothing to set up. Optional later: Stripe payment link in booking.depositLink (needs Mary's own Stripe account)."
 }
