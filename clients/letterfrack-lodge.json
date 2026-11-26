@@ -1,0 +1,233 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Listed as 'Connemara National Park Lodge / Hostel': confirm it's run as a B&B/lodge now, room types (any dorms?), breakfast (one listing says breakfast is extra) and prices. Reviews are dated (2019).",
+  "sample": true,
+  "draft": false,
+  "slug": "letterfrack-lodge",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Letterfrack Lodge",
+  "theme": "bog",
+  "colors": {
+    "accent": "#3d6b4f",
+    "warm": "#d98c3f",
+    "paper": "#f6f7f2",
+    "soft": "#e4ebe0"
+  },
+  "tagline": {
+    "en": "Twelve en-suite rooms a 12-minute walk from Connemara National Park: the perfect base for Diamond Hill, Kylemore and Renvyle.",
+    "ga": "Dhá sheomra dhéag en-suite, 12 nóiméad siúil ó Pháirc Náisiúnta Chonamara: an bonn foirfe do Bhinn Ghuaire, don Choill Mhór agus do Rinn Mhaoile."
+  },
+  "area": "Letterfrack, Connemara",
+  "address": "Letterfrack, Co. Galway",
+  "mapQuery": "Letterfrack Lodge, Letterfrack, Co. Galway",
+  "phone": "095 41222",
+  "rating": {
+    "score": "8.6",
+    "count": "92",
+    "source": "Expedia"
+  },
+  "about": {
+    "en": [
+      "Letterfrack Lodge has twelve en-suite rooms, a 12-minute walk from the entrance to Connemara National Park and the climb up Diamond Hill.",
+      "Kylemore Abbey and Renvyle beach are a short drive away. It’s a relaxed, good-value base for walkers, cyclists and families, with free parking, and dogs are welcome."
+    ],
+    "ga": [
+      "Tá dhá sheomra dhéag en-suite ag Letterfrack Lodge, 12 nóiméad siúil ó bhealach isteach Pháirc Náisiúnta Chonamara agus ón dreapadh suas Binn Ghuaire.",
+      "Tá Mainistir na Coille Móire agus trá Rinn Mhaoile gearrthuras uait. Is bonn suaimhneach ar luach maith é do shiúlóirí, do rothaithe agus do theaghlaigh, le páirceáil saor in aisce, agus tá fáilte roimh mhadraí."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "walk",
+      "en": "12 minutes’ walk to the National Park",
+      "ga": "12 nóiméad siúil go dtí an Pháirc Náisiúnta"
+    },
+    {
+      "icon": "bed",
+      "en": "12 en-suite rooms",
+      "ga": "12 sheomra en-suite"
+    },
+    {
+      "icon": "dog",
+      "en": "Dogs welcome",
+      "ga": "Fáilte roimh mhadraí"
+    },
+    {
+      "icon": "parking",
+      "en": "Free parking",
+      "ga": "Páirceáil saor in aisce"
+    },
+    {
+      "icon": "leaf",
+      "en": "Diamond Hill on the doorstep",
+      "ga": "Binn Ghuaire ag an doras"
+    },
+    {
+      "icon": "family",
+      "en": "Great for groups and families",
+      "ga": "Iontach do ghrúpaí agus do theaghlaigh"
+    }
+  ],
+  "stats": [
+    {
+      "n": "12",
+      "en": "en-suite rooms",
+      "ga": "seomra en-suite"
+    },
+    {
+      "n": "12 min",
+      "en": "walk to the National Park",
+      "ga": "siúlóid go dtí an Pháirc"
+    },
+    {
+      "n": "8.6",
+      "en": "from 92 reviews",
+      "ga": "ó 92 léirmheas"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable en-suite double.",
+        "ga": "Seomra dúbailte compordach en-suite."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, en-suite: ideal for walkers.",
+        "ga": "Dhá leaba shingile, en-suite: iontach do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family / Group Room",
+        "ga": "Seomra Teaghlaigh / Grúpa"
+      },
+      "desc": {
+        "en": "Room for families and small groups, en-suite.",
+        "ga": "Spás do theaghlaigh agus do ghrúpaí beaga, en-suite."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Lough Inagh",
+        "ga": "Loch Eidhneach"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/clifden-bay.jpg",
+      "alt": {
+        "en": "The Connemara coast",
+        "ga": "Cósta Chonamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Walks on your doorstep",
+    "ga": "Siúlóidí ag do dhoras"
+  },
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

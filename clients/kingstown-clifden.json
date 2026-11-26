@@ -1,0 +1,219 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Public reviews are thin; look at Booking.com/Tripadvisor before the call. Confirm rooms, prices, host name.",
+  "sample": true,
+  "draft": false,
+  "slug": "kingstown-clifden",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Kingstown House",
+  "theme": "atlantic",
+  "style": "village",
+  "colors": {
+    "accent": "#1565c0",
+    "warm": "#ffca28",
+    "paper": "#f7fbff",
+    "soft": "#e3f0ff"
+  },
+  "tagline": {
+    "en": "A long-established family B&B in the middle of Clifden town, with a warm welcome and the best local tips.",
+    "ga": "B&B teaghlaigh le fada an lá i lár bhaile an Chlocháin, le fáilte chroíúil agus na moltaí áitiúla is fearr."
+  },
+  "area": "Clifden, Connemara",
+  "address": "Clifden, Co. Galway",
+  "mapQuery": "Kingstown House, Clifden, Co. Galway",
+  "phone": "095 21470",
+  "rating": {
+    "score": "4.5",
+    "count": "222",
+    "source": "guest reviews"
+  },
+  "about": {
+    "en": [
+      "Kingstown House is a long-established, family-run B&B right in Clifden town centre, approved by Fáilte Ireland.",
+      "Guests love the welcome and the local tips: where to eat, which beach to try and when to drive the Sky Road. Everything in Clifden is a short stroll from the door."
+    ],
+    "ga": [
+      "Is B&B é Kingstown House atá á reáchtáil ag teaghlach le fada an lá, díreach i lár bhaile an Chlocháin, faofa ag Fáilte Ireland.",
+      "Is breá le haíonna an fháilte agus na moltaí áitiúla: cá háit le hithe, cén trá le triail agus cathain le Bóthar na Spéire a thiomáint. Tá gach rud sa Chlochán siúlóid ghearr ón doras."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "walk",
+      "en": "In Clifden town centre",
+      "ga": "I lár bhaile an Chlocháin"
+    },
+    {
+      "icon": "family",
+      "en": "Family-run for years",
+      "ga": "Á reáchtáil ag teaghlach le blianta"
+    },
+    {
+      "icon": "chat",
+      "en": "Great local tips",
+      "ga": "Moltaí áitiúla den scoth"
+    },
+    {
+      "icon": "shield",
+      "en": "Approved by Fáilte Ireland",
+      "ga": "Faofa ag Fáilte Ireland"
+    }
+  ],
+  "stats": [
+    {
+      "n": "4.5★",
+      "en": "from 222 reviews",
+      "ga": "ó 222 léirmheas"
+    },
+    {
+      "n": "Centre",
+      "en": "of Clifden town",
+      "ga": "bhaile an Chlocháin"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/clifden-market-st.jpg",
+      "alt": {
+        "en": "Market Street, Clifden",
+        "ga": "Sráid an Mhargaidh, an Clochán"
+      }
+    },
+    {
+      "src": "assets/img/clifden-town.jpg",
+      "alt": {
+        "en": "Clifden",
+        "ga": "An Clochán"
+      }
+    },
+    {
+      "src": "assets/img/clifden-bay.jpg",
+      "alt": {
+        "en": "Clifden Bay",
+        "ga": "Cuan an Chlocháin"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Clifden on your doorstep",
+    "ga": "An Clochán ag do dhoras"
+  },
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

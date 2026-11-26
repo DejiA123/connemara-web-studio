@@ -1,0 +1,236 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Room mix is a guess (4 en-suite sea-view rooms is confirmed). Confirm room types, prices, host name.",
+  "sample": true,
+  "draft": false,
+  "slug": "atlantic-wave-carna",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Atlantic Wave House",
+  "theme": "atlantic",
+  "style": "coastal",
+  "colors": {
+    "accent": "#0e7c86",
+    "warm": "#f4a261",
+    "paper": "#f5fbfb",
+    "soft": "#dff1f1"
+  },
+  "tagline": {
+    "en": "Four sea-view rooms on Mweenish Island, a breakfast room looking out over the Atlantic, and the beach a five-minute walk away.",
+    "ga": "Ceithre sheomra le radharc ar an bhfarraige ar Oileán Mhuighinse, seomra bricfeasta ag féachaint amach ar an Atlantach, agus an trá cúig nóiméad siúil uait."
+  },
+  "area": "Mweenish Island, Carna",
+  "address": "Mweenish Island, Carna, Co. Galway",
+  "mapQuery": "Atlantic Wave House B&B, Mweenish, Carna, Co. Galway",
+  "phone": "095 32269",
+  "rating": {
+    "score": "9.7",
+    "count": "155",
+    "source": "booking sites"
+  },
+  "about": {
+    "en": [
+      "Atlantic Wave House is on Mweenish Island, joined to the mainland by road near Carna. All four bedrooms have their own bathroom and look out to sea.",
+      "Breakfast is served in a room overlooking the Atlantic, Mweenish Bay and the islands offshore: fruit, cereals and yoghurt, and a traditional Irish breakfast. Guests also have a private lounge with TV.",
+      "The beach is about a five-minute walk away."
+    ],
+    "ga": [
+      "Tá Atlantic Wave House ar Oileán Mhuighinse, atá ceangailte leis an mórthír ar bhóthar in aice le Carna. Tá a sheomra folctha féin ag gach ceann de na ceithre sheomra leapa agus féachann siad amach ar an bhfarraige.",
+      "Cuirtear an bricfeasta ar fáil i seomra ag féachaint amach ar an Atlantach, ar Chuan Mhuighinse agus ar na hoileáin: torthaí, gránaigh agus iógart, agus bricfeasta traidisiúnta Éireannach. Tá seomra suí príobháideach le teilifís ag na haíonna freisin.",
+      "Tá an trá thart ar chúig nóiméad siúil uait."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "sea",
+      "en": "Every room has a sea view",
+      "ga": "Radharc ar an bhfarraige ó gach seomra"
+    },
+    {
+      "icon": "bed",
+      "en": "All four rooms en-suite",
+      "ga": "Gach seomra en-suite"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Full Irish breakfast with an Atlantic view",
+      "ga": "Bricfeasta Éireannach le radharc ar an Atlantach"
+    },
+    {
+      "icon": "walk",
+      "en": "Beach a 5-minute walk",
+      "ga": "An trá 5 nóiméad siúil"
+    },
+    {
+      "icon": "coffee",
+      "en": "Private guest lounge",
+      "ga": "Seomra suí príobháideach"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 9.7 by guests",
+      "ga": "Rátáil 9.7 ó aíonna"
+    }
+  ],
+  "stats": [
+    {
+      "n": "9.7",
+      "en": "from 155 reviews",
+      "ga": "ó 155 léirmheas"
+    },
+    {
+      "n": "4",
+      "en": "sea-view rooms",
+      "ga": "seomra le radharc farraige"
+    },
+    {
+      "n": "5 min",
+      "en": "walk to the beach",
+      "ga": "siúlóid go dtí an trá"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Sea View Double",
+        "ga": "Seomra Dúbailte le Radharc Farraige"
+      },
+      "desc": {
+        "en": "A double room with its own bathroom and a view of the sea.",
+        "ga": "Seomra dúbailte lena sheomra folctha féin agus radharc ar an bhfarraige."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Sea View Twin",
+        "ga": "Seomra Cúpla le Radharc Farraige"
+      },
+      "desc": {
+        "en": "Two single beds, en-suite, looking out to sea.",
+        "ga": "Dhá leaba shingile, en-suite, ag féachaint amach ar an bhfarraige."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Space for the family, en-suite, with a sea view.",
+        "ga": "Spás don teaghlach, en-suite, le radharc farraige."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 4pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 4in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "photos": [
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/breakfast.jpg",
+      "alt": {
+        "en": "Breakfast",
+        "ga": "Bricfeasta"
+      }
+    },
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "The Connemara coast",
+        "ga": "Cósta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Connemara lakes",
+        "ga": "Lochanna Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Sea and islands",
+    "ga": "Farraige agus oileáin"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

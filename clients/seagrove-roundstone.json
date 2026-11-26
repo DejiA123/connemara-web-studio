@@ -1,0 +1,213 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Little is public: about 80 Tripadvisor reviews (score not seen). Look at Tripadvisor before the call; confirm rooms, prices, host name. Rating left out on purpose.",
+  "sample": true,
+  "draft": false,
+  "slug": "seagrove-roundstone",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Seagrove House",
+  "theme": "heather",
+  "style": "modern",
+  "colors": {
+    "accent": "#5b4b8a",
+    "warm": "#f2c14e",
+    "paper": "#ffffff"
+  },
+  "tagline": {
+    "en": "A family-friendly B&B just minutes from Roundstone village, with views of the Twelve Bens.",
+    "ga": "B&B atá oiriúnach do theaghlaigh cúpla nóiméad ó shráidbhaile Chloch na Rón, le radharc ar na Beanna Beola."
+  },
+  "area": "Roundstone, Connemara",
+  "address": "Roundstone, Co. Galway",
+  "mapQuery": "Seagrove House B&B, Roundstone, Co. Galway",
+  "phone": "095 35810",
+  "about": {
+    "en": [
+      "Seagrove House is a family-friendly B&B a few minutes from Roundstone village, looking out to the Twelve Bens mountains.",
+      "It’s a peaceful base for beaches, hill walks and drives through Connemara, with the village harbour, cafés and pubs close by."
+    ],
+    "ga": [
+      "Is B&B é Seagrove House atá oiriúnach do theaghlaigh, cúpla nóiméad ó shráidbhaile Chloch na Rón, ag féachaint amach ar na Beanna Beola.",
+      "Is áit shuaimhneach í le haghaidh tránna, siúlóidí sléibhe agus tiomáint trí Chonamara, agus tá cuan, caiféanna agus tithe tábhairne an tsráidbhaile in aice láimhe."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "leaf",
+      "en": "Views of the Twelve Bens",
+      "ga": "Radharc ar na Beanna Beola"
+    },
+    {
+      "icon": "family",
+      "en": "Family-friendly",
+      "ga": "Oiriúnach do theaghlaigh"
+    },
+    {
+      "icon": "walk",
+      "en": "Minutes from Roundstone village",
+      "ga": "Cúpla nóiméad ó Chloch na Rón"
+    },
+    {
+      "icon": "parking",
+      "en": "Easy parking",
+      "ga": "Páirceáil éasca"
+    }
+  ],
+  "stats": [
+    {
+      "n": "12 Bens",
+      "en": "on the skyline",
+      "ga": "ar an spéirlíne"
+    },
+    {
+      "n": "Minutes",
+      "en": "from Roundstone village",
+      "ga": "ó Chloch na Rón"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Roundstone harbour",
+        "ga": "Cuan Chloch na Rón"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Lough Inagh in the Twelve Bens",
+        "ga": "Loch Eidhneach sna Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "Roundstone village",
+        "ga": "Sráidbhaile Chloch na Rón"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Your Connemara",
+    "ga": "Do Chonamara"
+  },
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

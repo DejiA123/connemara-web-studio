@@ -1,0 +1,227 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "AA/RAC diamond ratings and Tripadvisor awards are old (to 2018): left out. Confirm rooms, prices, family name.",
+  "sample": true,
+  "draft": false,
+  "slug": "ben-view-clifden",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Ben View House",
+  "theme": "stone",
+  "style": "heritage",
+  "since": "1926",
+  "colors": {
+    "accent": "#6b2d2d",
+    "warm": "#b08d57",
+    "paper": "#faf6ef",
+    "soft": "#efe6d6"
+  },
+  "tagline": {
+    "en": "A guesthouse full of character on Bridge Street, in the heart of Clifden, run by the same family since 1926.",
+    "ga": "Teach aíochta lán de charachtar ar Shráid an Droichid, i gcroílár an Chlocháin, á reáchtáil ag an teaghlach céanna ó 1926."
+  },
+  "area": "Clifden, Connemara",
+  "address": "Bridge Street, Clifden, Co. Galway",
+  "mapQuery": "Ben View House, Bridge Street, Clifden, Co. Galway",
+  "phone": "095 21256",
+  "rating": {
+    "score": "9.3",
+    "count": "899",
+    "source": "booking sites"
+  },
+  "about": {
+    "en": [
+      "Ben View House has welcomed guests to Clifden for nearly a century. The same family has run it since 1926, and it still has all the character you’d hope for.",
+      "We’re on Bridge Street, so the shops, restaurants and music pubs of Clifden are on the doorstep, with the Sky Road, Connemara National Park and Kylemore Abbey a short drive away.",
+      "Ben View has been recommended by the Frommer’s and Le Petit Futé guides."
+    ],
+    "ga": [
+      "Tá Ben View House ag cur fáilte roimh aíonna go dtí an Clochán le beagnach céad bliain. Tá sé á reáchtáil ag an teaghlach céanna ó 1926, agus tá an carachtar ar fad ann fós a mbeifeá ag súil leis.",
+      "Táimid ar Shráid an Droichid, mar sin tá siopaí, bialanna agus tithe tábhairne ceoil an Chlocháin ag an doras, agus Bóthar na Spéire, Páirc Náisiúnta Chonamara agus Mainistir na Coille Móire gearrthuras uait.",
+      "Mhol treoirleabhair Frommer’s agus Le Petit Futé Ben View."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "family",
+      "en": "Same family since 1926",
+      "ga": "An teaghlach céanna ó 1926"
+    },
+    {
+      "icon": "walk",
+      "en": "In the centre of Clifden",
+      "ga": "I lár an Chlocháin"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 9.3 from 899 reviews",
+      "ga": "Rátáil 9.3 ó 899 léirmheas"
+    },
+    {
+      "icon": "irish",
+      "en": "Recommended by Frommer’s",
+      "ga": "Molta ag Frommer’s"
+    }
+  ],
+  "stats": [
+    {
+      "n": "1926",
+      "en": "same family since",
+      "ga": "an teaghlach céanna ó"
+    },
+    {
+      "n": "9.3",
+      "en": "from 899 reviews",
+      "ga": "ó 899 léirmheas"
+    },
+    {
+      "n": "Bridge St",
+      "en": "in the heart of Clifden",
+      "ga": "i gcroílár an Chlocháin"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/clifden-town.jpg",
+      "alt": {
+        "en": "Clifden",
+        "ga": "An Clochán"
+      }
+    },
+    {
+      "src": "assets/img/clifden-market-st.jpg",
+      "alt": {
+        "en": "Market Street, Clifden",
+        "ga": "Sráid an Mhargaidh, an Clochán"
+      }
+    },
+    {
+      "src": "assets/img/clifden-bay.jpg",
+      "alt": {
+        "en": "Clifden Bay",
+        "ga": "Cuan an Chlocháin"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Clifden and around",
+    "ga": "An Clochán agus an ceantar"
+  },
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

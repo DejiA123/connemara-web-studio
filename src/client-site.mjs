@@ -8,7 +8,14 @@ export const T = (v, lang) => (v && typeof v === 'object' && !Array.isArray(v) ?
 const STYLE_FONTS = {
   default: 'family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600',
   farmhouse: 'family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700',
+  village: 'family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;600;700',
+  coastal: 'family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@400;700',
+  heritage: 'family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700',
+  modern: 'family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600',
 };
+// per-site colours: "colors": { "accent": "#…", "paper": "#…", "warm": "#…", "soft": "#…", "ink": "#…" }
+const colorVars = (c) => (c ? Object.entries({ accent: '--accent', paper: '--paper', warm: '--warm', soft: '--soft', ink: '--ink', accentInk: '--accent-ink' })
+  .filter(([k]) => /^#[0-9a-f]{3,8}$/i.test(c[k] || '')).map(([k, v]) => `${v}:${c[k]}`).join(';') : '');
 const has = (a) => Array.isArray(a) && a.length > 0;
 // Irish numbers like "095 21263" become "+3539521263" so the link also works from a foreign mobile
 const telHref = (p) => { const d = String(p || '').replace(/[^\d+]/g, ''); return d.startsWith('+') ? d : d.startsWith('00') ? '+' + d.slice(2) : d.startsWith('0') ? '+353' + d.slice(1) : d; };
@@ -290,7 +297,7 @@ ${bilingual ? (canonRoot ? `<link rel="alternate" hreflang="en" href="${esc(cano
 <style>:root{--accent:${th.accent};--accent-ink:${th.accentInk};--paper:${th.paper};--sea:${th.sea};--soft:${th.sky1};--soft2:${th.sky2}}</style>
 ${isSample ? '' : `<script type="application/ld+json">${JSON.stringify(ld)}</script>`}
 </head>
-<body class="t-${type}${site.style ? ` s-${esc(site.style)}` : ''}">
+<body class="t-${type}${site.style ? ` s-${esc(site.style)}` : ''}"${colorVars(site.colors) ? ` style="${colorVars(site.colors)}"` : ''}>
 ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.studioName) : L.sampleBanner(site.name, studio.studioName))}</div>` : ''}
 <header class="top"><div class="wrap topin">
   <a class="brand" href="#">${esc(site.name)}</a>
@@ -302,7 +309,7 @@ ${isSample ? `<div class="sample-bar">${esc(site.demo ? L.demoBanner(studio.stud
   <div class="hero-media">${heroImg ? `<img src="${esc(img(heroImg))}" alt="${esc(T(site.photos[0].alt, lang))}"${site.heroPosition ? ` style="object-position:${esc(site.heroPosition)}"` : ''}>` : landscape(theme, 0, { label: site.area || '' })}</div>
   ${has(site.heroExtras) ? `<div class="hero-extra" aria-hidden="true">${site.heroExtras.map((p) => `<img src="${esc(img(thumb(p.src)))}" alt="" loading="lazy">`).join('')}</div>` : ''}
   <div class="hero-txt wrap">
-    <div class="chips">${rating}${site.openingSpec ? `<span class="chip open-now" data-open='${esc(JSON.stringify(site.openingSpec))}' data-lang="${lang}" hidden></span>` : ''}</div>
+    <div class="chips">${site.since ? `<span class="chip chip-since">${lang === 'ga' ? 'Ó' : 'Since'} ${esc(site.since)}</span>` : ''}${rating}${site.openingSpec ? `<span class="chip open-now" data-open='${esc(JSON.stringify(site.openingSpec))}' data-lang="${lang}" hidden></span>` : ''}</div>
     <h1>${esc(site.name)}</h1>
     <p class="tag">${esc(T(site.tagline, lang))}</p>
     ${site.area ? `<p class="where">${icon('pin', 18)} ${esc(site.area)}</p>` : ''}

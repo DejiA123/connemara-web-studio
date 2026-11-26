@@ -1,0 +1,224 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Two host names appear in reviews (Maurice, Denis): confirm before naming anyone. Confirm rooms and prices.",
+  "sample": true,
+  "draft": false,
+  "slug": "island-view-roundstone",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Island View House",
+  "theme": "atlantic",
+  "style": "coastal",
+  "colors": {
+    "accent": "#1d4e74",
+    "warm": "#e0a458",
+    "paper": "#f7fafc",
+    "soft": "#e6f0f7"
+  },
+  "tagline": {
+    "en": "In the heart of Roundstone, with views across the bay from the front of the house, and tea and scones when you arrive.",
+    "ga": "I gcroílár Chloch na Rón, le radharc trasna an chuain ó thosach an tí, agus tae agus scónaí nuair a shroicheann tú."
+  },
+  "area": "Roundstone, Connemara",
+  "address": "Main Street, Roundstone, Co. Galway",
+  "mapQuery": "Island View House, Roundstone, Co. Galway",
+  "phone": "095 35701",
+  "rating": {
+    "score": "5.0",
+    "count": "313",
+    "source": "Tripadvisor"
+  },
+  "about": {
+    "en": [
+      "Island View House sits right in the heart of Roundstone village, with lovely views over the bay and islands from the front rooms.",
+      "Guests tell us they love the warm welcome, the tea and scones on arrival, and the chats about where to go next. The harbour, pubs and restaurants are on the doorstep."
+    ],
+    "ga": [
+      "Tá Island View House i gcroílár shráidbhaile Chloch na Rón, le radharc álainn ar an gcuan agus ar na hoileáin ó na seomraí tosaigh.",
+      "Deir aíonna linn gur breá leo an fháilte chroíúil, an tae agus na scónaí ar theacht dóibh, agus na comhráite faoi cá rachaidh siad ina dhiaidh sin. Tá an cuan, na tithe tábhairne agus na bialanna ag an doras."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "sea",
+      "en": "Bay and island views",
+      "ga": "Radharc ar an gcuan agus ar na hoileáin"
+    },
+    {
+      "icon": "coffee",
+      "en": "Tea and scones when you arrive",
+      "ga": "Tae agus scónaí ar theacht duit"
+    },
+    {
+      "icon": "walk",
+      "en": "In the heart of the village",
+      "ga": "I gcroílár an tsráidbhaile"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 5.0 on Tripadvisor",
+      "ga": "Rátáil 5.0 ar Tripadvisor"
+    }
+  ],
+  "stats": [
+    {
+      "n": "5.0★",
+      "en": "on Tripadvisor",
+      "ga": "ar Tripadvisor"
+    },
+    {
+      "n": "313",
+      "en": "guest reviews",
+      "ga": "léirmheas ó aíonna"
+    },
+    {
+      "n": "Village",
+      "en": "centre, by the harbour",
+      "ga": "lár, cois cuain"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Roundstone harbour with the Twelve Bens",
+        "ga": "Cuan Chloch na Rón agus na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "Roundstone by the water",
+        "ga": "Cloch na Rón cois uisce"
+      }
+    },
+    {
+      "src": "assets/img/roundstone-golden.jpg",
+      "alt": {
+        "en": "Roundstone at golden hour",
+        "ga": "Cloch na Rón um thráthnóna"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Lough Inagh",
+        "ga": "Loch Eidhneach"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Roundstone and around",
+    "ga": "Cloch na Rón agus an ceantar"
+  },
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

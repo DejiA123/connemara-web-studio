@@ -1,0 +1,239 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Not the same as 'Ardmor Country House' in Spiddal (separate sample). Confirm it's still a working farm, rooms, prices, host name.",
+  "sample": true,
+  "draft": false,
+  "slug": "ardmore-house-clifden",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Ardmore House",
+  "theme": "bog",
+  "style": "modern",
+  "colors": {
+    "accent": "#2e5d34",
+    "warm": "#e9c46a",
+    "paper": "#ffffff"
+  },
+  "tagline": {
+    "en": "A farmhouse at the edge of the Atlantic on the Sky Road, with its own path down to private cliffs.",
+    "ga": "Teach feirme ar imeall an Atlantaigh ar Bhóthar na Spéire, lena chosán féin síos go haillte príobháideacha."
+  },
+  "area": "Sky Road, Clifden",
+  "address": "Sky Road, Clifden, Co. Galway",
+  "mapQuery": "Ardmore House, Sky Road, Clifden, Co. Galway",
+  "phone": "095 21221",
+  "rating": {
+    "score": "9.8",
+    "count": "103",
+    "source": "booking sites"
+  },
+  "about": {
+    "en": [
+      "Ardmore House is a farmhouse on the Sky Road loop, 5km from Clifden town, where the land runs down to the Atlantic.",
+      "We’ve made a walkway for our guests down to the lower coastal path and our own private cliffs: a secluded, scenic walk that guests call the highlight of their stay.",
+      "Come back to a king-size bed, a good breakfast and a friendly welcome."
+    ],
+    "ga": [
+      "Is teach feirme é Ardmore House ar lúb Bhóthar na Spéire, 5km ó bhaile an Chlocháin, áit a síneann an talamh síos go dtí an tAtlantach.",
+      "Rinneamar cosán dár n-aíonna síos go dtí an cosán cósta íochtarach agus ár n-aillte príobháideacha féin: siúlóid uaigneach álainn a deir aíonna is buaicphointe a gcuairte.",
+      "Fill ar leaba mhéid rí, bricfeasta maith agus fáilte chairdiúil."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "walk",
+      "en": "Private cliff walk for guests",
+      "ga": "Siúlóid aille phríobháideach d’aíonna"
+    },
+    {
+      "icon": "sea",
+      "en": "On the Sky Road, by the Atlantic",
+      "ga": "Ar Bhóthar na Spéire, cois Atlantaigh"
+    },
+    {
+      "icon": "leaf",
+      "en": "A working Connemara farm",
+      "ga": "Feirm i gConamara"
+    },
+    {
+      "icon": "bed",
+      "en": "King-size beds",
+      "ga": "Leapacha méid rí"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 9.8 by guests",
+      "ga": "Rátáil 9.8 ó aíonna"
+    },
+    {
+      "icon": "parking",
+      "en": "5km from Clifden town",
+      "ga": "5km ó bhaile an Chlocháin"
+    }
+  ],
+  "stats": [
+    {
+      "n": "9.8",
+      "en": "from 103 reviews",
+      "ga": "ó 103 léirmheas"
+    },
+    {
+      "n": "Sky Road",
+      "en": "5km from Clifden",
+      "ga": "5km ón gClochán"
+    },
+    {
+      "n": "Private",
+      "en": "cliff walk for guests",
+      "ga": "siúlóid aille d’aíonna"
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Sorry, no pets.",
+        "ga": "Ár leithscéal, níl peataí ceadaithe."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "photos": [
+    {
+      "src": "assets/img/clifden-bay.jpg",
+      "alt": {
+        "en": "The Atlantic coast near Clifden",
+        "ga": "Cósta an Atlantaigh in aice leis an gClochán"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/clifden-town.jpg",
+      "alt": {
+        "en": "Clifden town",
+        "ga": "Baile an Chlocháin"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Connemara lakes",
+        "ga": "Lochanna Chonamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "The Sky Road",
+    "ga": "Bóthar na Spéire"
+  },
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

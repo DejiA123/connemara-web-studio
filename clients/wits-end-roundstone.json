@@ -1,0 +1,234 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Confirm room types, prices and the host's name; pick 2-3 favourite reviews with them.",
+  "sample": true,
+  "draft": false,
+  "slug": "wits-end-roundstone",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Wits End B&B",
+  "theme": "heather",
+  "style": "village",
+  "colors": {
+    "accent": "#c2185b",
+    "warm": "#ffb74d",
+    "paper": "#fff8fb",
+    "soft": "#fde4ef"
+  },
+  "tagline": {
+    "en": "The bright pink house on Roundstone’s Main Street: a family welcome, flower pots at the door and the sea across the road.",
+    "ga": "An teach bándearg ar Phríomhshráid Chloch na Rón: fáilte teaghlaigh, potaí bláthanna ag an doras agus an fharraige trasna an bhóthair."
+  },
+  "area": "Roundstone, Connemara",
+  "address": "Main Street, Roundstone, Co. Galway",
+  "mapQuery": "Wits End B&B, Main Street, Roundstone, Co. Galway",
+  "phone": "095 35813",
+  "rating": {
+    "score": "4.9",
+    "count": "234",
+    "source": "guest reviews"
+  },
+  "about": {
+    "en": [
+      "Wits End is a family-run B&B right on Main Street in Roundstone, one of the prettiest fishing villages on the Wild Atlantic Way. You can’t miss us: we’re the bright pink house with the flower pots.",
+      "Step out the door to the harbour, the cafés and the pubs. Gurteen and Dog’s Bay beaches, Errisbeg mountain and the rest of Connemara are all close by."
+    ],
+    "ga": [
+      "Is B&B teaghlaigh é Wits End díreach ar Phríomhshráid Chloch na Rón, ceann de na sráidbhailte iascaireachta is áille ar Shlí an Atlantaigh Fhiáin. Ní féidir linn a chailleadh: is muid an teach bándearg leis na potaí bláthanna.",
+      "Siúil amach an doras go dtí an cuan, na caiféanna agus na tithe tábhairne. Tá tránna an Ghoirtín agus Chuan na Madraí, Cnoc Iorrais Beag agus an chuid eile de Chonamara in aice láimhe."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "sea",
+      "en": "Sea views, right in the village",
+      "ga": "Radharc ar an bhfarraige, i lár an tsráidbhaile"
+    },
+    {
+      "icon": "walk",
+      "en": "Steps from the harbour, cafés and pubs",
+      "ga": "Cúpla coiscéim ón gcuan, ó na caiféanna agus ó na tithe tábhairne"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 4.9 by guests",
+      "ga": "Rátáil 4.9 ó aíonna"
+    },
+    {
+      "icon": "family",
+      "en": "Family-run, warm welcome",
+      "ga": "Á reáchtáil ag teaghlach, fáilte chroíúil"
+    }
+  ],
+  "stats": [
+    {
+      "n": "4.9★",
+      "en": "from 234 reviews",
+      "ga": "ó 234 léirmheas"
+    },
+    {
+      "n": "Main St",
+      "en": "in Roundstone village",
+      "ga": "i sráidbhaile Chloch na Rón"
+    },
+    {
+      "n": "Pink",
+      "en": "you can’t miss us",
+      "ga": "ní féidir linn a chailleadh"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "Roundstone village by the water",
+        "ga": "Cloch na Rón cois uisce"
+      }
+    },
+    {
+      "src": "assets/img/harbour-bens.jpg",
+      "alt": {
+        "en": "Roundstone harbour",
+        "ga": "Cuan Chloch na Rón"
+      }
+    },
+    {
+      "src": "assets/img/roundstone-golden.jpg",
+      "alt": {
+        "en": "Roundstone in the evening light",
+        "ga": "Cloch na Rón i solas an tráthnóna"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Around Roundstone",
+    "ga": "Timpeall Chloch na Rón"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Where are you?",
+        "ga": "Cá bhfuil sibh?"
+      },
+      "a": {
+        "en": "On Main Street in Roundstone village: the bright pink house.",
+        "ga": "Ar an bPríomhshráid i sráidbhaile Chloch na Rón: an teach bándearg."
+      }
+    },
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}

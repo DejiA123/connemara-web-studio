@@ -84,6 +84,7 @@ STATUS = {
   'Dormer House': ('done', '24 Nov: number not working'),
   'Claí Bán': ('again', '24 + 25 Nov: no answer. One last try'),
   'Rooms @ An Móinéar': ('again', '24 + 25 Nov: no answer. One last try'),
+  'Sea-Side B&B': ('wait', 'Not found online anywhere: may be closed. Ring to check before offering a sample'),
 }
 
 def calls(title, rows, first_col='Business · number · what to say', show_sample=False):
@@ -297,24 +298,24 @@ s3 = head('Sheet 3: Days 3–6').replace('</head>', '<style>body{font-size:8.1pt
  ('Rooms @ An Móinéar', '099 75960', '<span class="chk">Look first.</span> "Guests rate you 5.0 and rave about breakfast."', '570'),
  ('Tigh Ruairí', '099 75002', '<span class="chk">Look at tighruairi.com first.</span> "I can reply to your reviews and post on your Google listing every week."', 'sup'),
 ])}
-{calls('Day 4: Roundstone · Carna', [
- ('Wits End', '095 35813', '"Rated 5.0 on Google with views over Roundstone Bay, but no website of your own."', '570'),
- ('Sonas B&B', '095 32277', '"You\'re in the heart of the Carna Gaeltacht but only on Airbnb." Mention the Irish and English website.', '570'),
+{calls('Day 4: Roundstone · Carna', show_sample=True, rows=[
+ ('Wits End', '095 35813', '"Rated 5.0 on Google with views over Roundstone Bay, but no website of your own."', '570', '<div class="url">Sample: …/sites/wits-end-roundstone</div>'),
+ ('Sonas B&B', '095 32277', '"You\'re in the heart of the Carna Gaeltacht but only on Airbnb." Mention the Irish and English website.', '570', '<div class="url">Sample: …/sites/sonas-carna</div>'),
  ('Sea-Side B&B', '095 32030', '<span class="chk">Check it\'s still open.</span> "Guests love your sea views. Let them book you directly."', '210'),
- ('Island View House', '095 35701', '<span class="chk">Look first.</span> "Guests love your scones and the bay views."', '570'),
- ('Seagrove House', '095 35810', '<span class="chk">Look first.</span> "Guests love your views of the Twelve Bens."', '570'),
- ('Atlantic Wave House', '095 32269', '<span class="chk">Look first.</span> "Guests love your sea views and the beach."', '570'),
+ ('Island View House', '095 35701', '<span class="chk">Look first.</span> "Guests love your scones and the bay views."', '570', '<div class="url">Sample: …/sites/island-view-roundstone</div>'),
+ ('Seagrove House', '095 35810', '<span class="chk">Look first.</span> "Guests love your views of the Twelve Bens."', '570', '<div class="url">Sample: …/sites/seagrove-roundstone</div>'),
+ ('Atlantic Wave House', '095 32269', '<span class="chk">Look first.</span> "Guests love your sea views and the beach."', '570', '<div class="url">Sample: …/sites/atlantic-wave-carna</div>'),
 ])}
 </div><div>
-{calls('Day 5: Clifden · Letterfrack', [
+{calls('Day 5: Clifden · Letterfrack', show_sample=True, rows=[
  ('Clifden Farmhouse B&B', '095 21263', '"Guests love your welcome and the short walk into Clifden, but I couldn\'t find a website for you."', '210'),
- ('Ben View House', '095 21256', '<span class="chk">Look first.</span> "Your family has run Ben View since 1926."', '570'),
- ('Kingstown House', '095 21470', '<span class="chk">Look first.</span> "Guests rave about your breakfasts."', '570'),
+ ('Ben View House', '095 21256', '<span class="chk">Look first.</span> "Your family has run Ben View since 1926."', '570', '<div class="url">Sample: …/sites/ben-view-clifden</div>'),
+ ('Kingstown House', '095 21470', '<span class="chk">Look first.</span> "Guests rave about your breakfasts."', '570', '<div class="url">Sample: …/sites/kingstown-clifden</div>'),
  ('Hillside Lodge', '095 21463', '<span class="chk">Look at hillside-lodge.com first.</span> Offer review replies + Google posts.', 'sup'),
  ('Mallmore Country House', '095 21460', '<span class="chk">Look first.</span> Offer review replies + Google posts.', 'sup'),
- ('Ardmore House (Clifden)', '095 21221', '<span class="chk">Look first.</span> "Guests rate you 9.8 for the cliff walk and views."', '570'),
+ ('Ardmore House (Clifden)', '095 21221', '<span class="chk">Look first.</span> "Guests rate you 9.8 for the cliff walk and views."', '570', '<div class="url">Sample: …/sites/ardmore-house-clifden</div>'),
  ('All the Twos Lodge', '095 22222', '"Over 1,000 reviews on the booking sites. I can reply to them and post on your Google listing."', 'sup'),
- ('Letterfrack Lodge', '095 41222', '<span class="chk">Look first.</span> "Hikers for Diamond Hill book you on Booking.com and Hostelworld. Let them book you directly."', '570'),
+ ('Letterfrack Lodge', '095 41222', '<span class="chk">Look first.</span> "Hikers for Diamond Hill book you on Booking.com and Hostelworld. Let them book you directly."', '570', '<div class="url">Sample: …/sites/letterfrack-lodge</div>'),
 ])}
 {calls('Day 6: Hotels (Spiddal)', [
  ('Park Lodge Hotel', '091 553 159', '"Parents visiting Coláiste Lurgan stay in your chalets. A booking page just for them, ready for summer."', '570'),

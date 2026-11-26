@@ -1,0 +1,247 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Airbnb listing says one room has no private bathroom: confirm which rooms are en-suite before showing room text. Confirm prices.",
+  "sample": true,
+  "draft": false,
+  "slug": "sonas-carna",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Sonas B&B",
+  "theme": "bog",
+  "style": "heritage",
+  "host": "Ann",
+  "colors": {
+    "accent": "#1f5e4a",
+    "warm": "#b8892d",
+    "paper": "#f8f5ec",
+    "soft": "#ece5d3"
+  },
+  "tagline": {
+    "en": "A family welcome in the heart of the Carna Gaeltacht, with views out to Mynish Island and the Aran Islands.",
+    "ga": "Fáilte teaghlaigh i gcroílár Ghaeltacht Charna, le radharc amach ar Oileán Mhuighinse agus ar Oileáin Árann."
+  },
+  "area": "Carna, Conamara",
+  "address": "Carna, Co. Galway",
+  "mapQuery": "Sonas B&B, Carna, Co. Galway",
+  "phone": "095 32277",
+  "rating": {
+    "score": "4.92",
+    "count": "75",
+    "source": "Airbnb"
+  },
+  "about": {
+    "en": [
+      "Sonas is a family-run B&B in Carna village, in the heart of the Connemara Gaeltacht, where Irish is spoken every day. Ann puts the emphasis on friendliness and your comfort.",
+      "From the house there are panoramic views of Mynish Island and the Aran Islands in the distance. Unspoilt sandy beaches, Irish music in the local bars and fresh seafood are all within walking distance.",
+      "Sonas is approved by Fáilte Ireland."
+    ],
+    "ga": [
+      "Is B&B teaghlaigh é Sonas i sráidbhaile Charna, i gcroílár Ghaeltacht Chonamara, áit a labhraítear Gaeilge gach lá. Cuireann Ann béim ar an gcairdiúlacht agus ar do chompord.",
+      "Ón teach tá radharc leathan ar Oileán Mhuighinse agus ar Oileáin Árann i bhfad uait. Tá tránna gainimh, ceol Gaelach sna tithe tábhairne áitiúla agus bia mara úr ar fad siúlóid uait.",
+      "Tá Sonas faofa ag Fáilte Ireland."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "irish",
+      "en": "In the heart of the Gaeltacht",
+      "ga": "I gcroílár na Gaeltachta"
+    },
+    {
+      "icon": "sea",
+      "en": "Views to Mynish and the Aran Islands",
+      "ga": "Radharc ar Mhuighinis agus ar Oileáin Árann"
+    },
+    {
+      "icon": "walk",
+      "en": "Walk to sandy beaches",
+      "ga": "Siúlóid go tránna gainimh"
+    },
+    {
+      "icon": "fish",
+      "en": "Music pubs and seafood nearby",
+      "ga": "Ceol agus bia mara in aice láimhe"
+    },
+    {
+      "icon": "star",
+      "en": "Airbnb Superhost, 4.92★",
+      "ga": "Sárósta Airbnb, 4.92★"
+    },
+    {
+      "icon": "shield",
+      "en": "Approved by Fáilte Ireland",
+      "ga": "Faofa ag Fáilte Ireland"
+    }
+  ],
+  "stats": [
+    {
+      "n": "4.92★",
+      "en": "on Airbnb",
+      "ga": "ar Airbnb"
+    },
+    {
+      "n": "Gaeltacht",
+      "en": "Irish spoken here",
+      "ga": "Labhraítear Gaeilge anseo"
+    },
+    {
+      "n": "Beaches",
+      "en": "within walking distance",
+      "ga": "siúlóid uait"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A sandy Connemara beach",
+        "ga": "Trá ghainimh i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "Connemara lakes and mountains",
+        "ga": "Lochanna agus sléibhte Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "The Twelve Bens",
+        "ga": "Na Beanna Beola"
+      }
+    },
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "A Connemara village by the sea",
+        "ga": "Sráidbhaile cois farraige i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/boardwalk.jpg",
+      "alt": {
+        "en": "Connemara National Park",
+        "ga": "Páirc Náisiúnta Chonamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Conamara",
+    "ga": "Conamara"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do you speak Irish?",
+        "ga": "An labhraíonn sibh Gaeilge?"
+      },
+      "a": {
+        "en": "Yes. Carna is in the heart of the Gaeltacht, and you’re welcome to practise your cúpla focal.",
+        "ga": "Labhraímid. Tá Carna i gcroílár na Gaeltachta, agus tá fáilte romhat do chúpla focal a chleachtadh."
+      }
+    },
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ]
+}
