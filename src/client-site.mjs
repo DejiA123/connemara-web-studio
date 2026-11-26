@@ -141,6 +141,15 @@ export function renderClient(site, lang, ctx) {
         <p class="small">${lang === 'ga' ? `Mura bhfreagraíonn ${esc(who)} láithreach, fág teachtaireacht le d’ainm, d’uimhir agus do dhátaí, nó bain triail eile as ar ball.` : `If ${esc(who)} can’t answer straight away, leave a message with your name, number and dates, or try again a little later.`}</p>
         ${isSample ? `<p class="small cc-sample">${lang === 'ga' ? 'Suíomh samplach: ar an suíomh beo, glaonn an cnaipe seo ar an uimhir thuas.' : 'Sample site: on the live site this button rings the number above.'}</p>` : ''}
       </div>
+      ${booking.cardPayments ? `<div class="pay-box" data-pay hidden>
+        <p class="pb-h">${lang === 'ga' ? `${esc(who)} tar éis do dhátaí a dheimhniú?` : `${esc(who)} has confirmed your dates?`}</p>
+        <button type="button" class="btn btn-lg btn-pay" data-pay-btn data-slug="${esc(site.slug)}">${icon('shield', 20)} <span>${lang === 'ga' ? 'Íoc' : 'Pay'} <b data-pay-amt></b> ${lang === 'ga' ? 'go slán le cárta' : 'securely by card'}</span></button>
+        <p class="pb-cards"><span>Visa</span> · <span>Mastercard</span> · <span>Apple Pay</span> · <span>Google Pay</span></p>
+        <p class="small">${lang === 'ga' ? `Íocaíocht shlán trí Stripe. Téann an t-airgead díreach chuig ${esc(who)}, gan táillí áirithinte.` : `Secure payment by Stripe. The money goes straight to ${esc(who)}, with no booking fees.`}</p>
+        <p class="small pb-err" data-pay-err hidden></p>
+        ${isSample ? `<div class="pb-demo" data-pay-demo hidden><b>${lang === 'ga' ? 'Suíomh samplach' : 'Sample site'}</b> · ${lang === 'ga' ? `Ar an suíomh beo, osclaíonn an cnaipe seo leathanach íocaíochta slán le cárta. Téann an t-airgead díreach isteach i gcuntas bainc ${esc(who)}.` : `On the live site this button opens a secure card payment page. The money goes straight into ${esc(who)}’s bank account.`}</div>` : ''}
+      </div>
+      <div class="paid-ok" data-paid hidden>${icon('check', 22)} <div><b>${lang === 'ga' ? 'Go raibh maith agat! Fuarthas d’íocaíocht.' : 'Thank you! Your payment has been received.'}</b><br>${lang === 'ga' ? `Tá admháil ar a bealach chuig do ríomhphost. Feicfidh ${esc(who)} thú go luath!` : `A receipt is on its way to your email. ${esc(who)} looks forward to welcoming you!`}</div></div>` : ''}
     </form>`;
   } else if (type === 'bnb' && mode === 'embed' && booking.embedUrl) {
     formInner = `<iframe class="engine" src="${esc(booking.embedUrl)}" title="${L.bookingTitle}" loading="lazy"></iframe>`;

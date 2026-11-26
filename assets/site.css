@@ -385,3 +385,20 @@ html.lb-on{overflow:hidden}
 .call-card .btn{width:100%;margin-bottom:10px}
 .call-card .small{color:var(--muted);font-size:.86rem}
 .cc-sample{font-style:italic}
+/* card payment box (call mode) */
+.pay-box{margin-top:18px;padding:18px;border-radius:var(--radius);background:color-mix(in srgb,var(--warm) 9%,#fff);border:1px solid color-mix(in srgb,var(--warm) 35%,#fff);text-align:center}
+.pay-box[hidden],.paid-ok[hidden],.pb-demo[hidden],.pb-err[hidden]{display:none}
+.pb-h{font-weight:700;margin:0 0 10px;color:var(--ink)}
+.btn-pay{width:100%;background:var(--warm);border-color:var(--warm);color:#fff}
+.btn-pay b{font-size:1.1em}
+.btn-pay[disabled]{opacity:.6;cursor:wait}
+.pb-cards{margin:10px 0 4px;font-size:.85rem;font-weight:600;letter-spacing:.03em;color:var(--muted)}
+.pay-box .small{margin:4px 0 0;color:var(--muted);font-size:.84rem}
+.pb-err{color:#a33!important;font-weight:600}
+.pb-demo{margin-top:12px;padding:10px 12px;border-radius:6px;background:#fff;border:1px dashed var(--warm);font-size:.86rem;text-align:left}
+.paid-ok{display:flex;gap:12px;align-items:flex-start;margin-top:16px;padding:16px;border-radius:var(--radius);background:#e8f5ec;color:#1d5a32}
+.paid-ok .ic{flex:none;margin-top:2px}
+.s-farmhouse .btn-pay{background:var(--warm);border-color:var(--warm)}
+.pay-box,.pb-demo,.paid-ok div{color:var(--ink)}
+.pb-demo{color:var(--ink)!important}
+.pb-cards span{white-space:nowrap}

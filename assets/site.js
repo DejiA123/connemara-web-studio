@@ -27,6 +27,31 @@
       if (roomSel) roomSel.addEventListener('change', update);
     }
 
+    // ---- card payment (call mode): after the owner confirms by phone, the guest pays on a secure Stripe page ----
+    var pay = form.querySelector('[data-pay]'), payAmt = form.querySelector('[data-pay-amt]'), payBtn = form.querySelector('[data-pay-btn]');
+    if (payBtn) {
+      var payErr = form.querySelector('[data-pay-err]');
+      payBtn.addEventListener('click', function () {
+        if (!arrive.value || !depart.value || nights() <= 0) { arrive.focus(); return; }
+        if (form.dataset.sample === '1') { var demo = form.querySelector('[data-pay-demo]'); if (demo) { demo.hidden = false; demo.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } return; }
+        var g = form.querySelector('select:not([data-price-select])');
+        payBtn.disabled = true; payErr.hidden = true;
+        fetch('/api/checkout', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ slug: payBtn.dataset.slug, room: roomSel.selectedOptions[0].dataset.key, arrive: arrive.value, depart: depart.value, guests: g ? g.value : 2, lang: lang }),
+        }).then(function (r) { return r.json(); }).then(function (j) {
+          if (j.url) { location.href = j.url; return; }
+          throw new Error(j.error || '');
+        }).catch(function (e) {
+          payBtn.disabled = false;
+          payErr.textContent = (e && e.message) || (lang === 'ga' ? 'Níorbh fhéidir an leathanach íocaíochta a oscailt. Glaoigh chun áirithint a dhéanamh, le do thoil.' : 'The payment page could not be opened. Please ring to book.');
+          payErr.hidden = false;
+        });
+      });
+    }
+    var paidOk = form.querySelector('[data-paid]');
+    if (paidOk && /[?&]paid=1/.test(location.search)) { paidOk.hidden = false; setTimeout(function () { paidOk.scrollIntoView({ block: 'center' }); }, 300); }
+
     function nights() {
       if (!arrive || !arrive.value || !depart || !depart.value) return 0;
       return Math.round((new Date(depart.value) - new Date(arrive.value)) / 864e5);
@@ -41,6 +66,7 @@
       var sum = 0, d = new Date(arrive.value + 'T12:00:00');
       for (var k = 0; k < n; k++) { sum += ph && hi.indexOf(d.getMonth() + 1) > -1 ? ph : p; d.setDate(d.getDate() + 1); }
       var total = p ? '€' + sum.toLocaleString('en-IE') : '';
+      if (pay) { pay.hidden = !(p && sum > 0); if (payAmt) payAmt.textContent = total; }
       if (lang === 'ga') est.textContent = n + ' oíche' + (total ? ' · thart ar ' + total : '');
       else est.textContent = n + ' night' + (n === 1 ? '' : 's') + (total ? ' · approx. ' + total : '');
     }

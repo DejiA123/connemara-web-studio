@@ -135,8 +135,8 @@
     },
     {
       "icon": "euro",
-      "en": "Pay on arrival: cash or card",
-      "ga": "Íoc ar theacht: airgead tirim nó cárta"
+      "en": "Pay securely by card online, or cash",
+      "ga": "Íoc go slán le cárta ar líne, nó airgead tirim"
     }
   ],
   "rooms": [
@@ -390,8 +390,8 @@
   ],
   "_check_rooms": "Prices are Mary's own Airbnb nightly prices (checked 26 Nov 2026 for Mar/May/Jul/Aug/Sep 2027 dates; Dec and Jan closed). Room names follow her Airbnb numbering.",
   "roomsNote": {
-    "en": "Prices are for the room, per night. Book direct with Mary by phone: no booking fees, and you pay when you arrive, by cash or card.",
-    "ga": "Is don seomra, in aghaidh na hoíche, atá na praghsanna. Cuir in áirithe go díreach le Mary ar an bhfón: gan táillí áirithinte, agus íocann tú nuair a shroicheann tú, le hairgead tirim nó le cárta."
+    "en": "Prices are for the room, per night. Book direct with Mary: no booking fees, and you can pay securely by card on this website.",
+    "ga": "Is don seomra, in aghaidh na hoíche, atá na praghsanna. Cuir in áirithe go díreach le Mary: gan táillí áirithinte, agus is féidir leat íoc go slán le cárta ar an suíomh seo."
   },
   "reviews": [
     {
@@ -744,14 +744,15 @@
         "ga": "Deimhníonn Mary d’áirithint leat ar an bhfón."
       },
       {
-        "en": "No booking fees. You pay Mary directly when you arrive, by cash or card.",
-        "ga": "Gan táillí áirithinte. Íocann tú Mary go díreach nuair a shroicheann tú, le hairgead tirim nó le cárta."
+        "en": "No booking fees. Once Mary has confirmed your dates, pay securely by card on this website, or in cash when you arrive.",
+        "ga": "Gan táillí áirithinte. Nuair a bheidh do dhátaí deimhnithe ag Mary, íoc go slán le cárta ar an suíomh seo, nó le hairgead tirim nuair a shroicheann tú."
       },
       {
         "en": "Cot or travel cot available on request.",
         "ga": "Cliabhán nó cliabhán taistil ar fáil ar iarratas."
       }
-    ]
+    ],
+    "cardPayments": true
   },
   "faq": [
     {
@@ -810,8 +811,8 @@
         "ga": "Conas a oibríonn áirithint dhíreach?"
       },
       "a": {
-        "en": "Choose your dates and room in the booking section, then tap “Call Mary to book”. Your phone rings Mary’s landline (095 21263, or +353 95 21263 from abroad) and shows you what to tell her. She confirms your room and price on the call. There are no booking fees.",
-        "ga": "Roghnaigh do dhátaí agus do sheomra sa chuid áirithinte, ansin tapáil “Glaoigh ar Mary chun áirithint a dhéanamh”. Glaonn do ghuthán ar líne thalún Mary (095 21263, nó +353 95 21263 ón iasacht) agus taispeántar duit cad ba cheart a rá léi. Deimhníonn sí do sheomra agus do phraghas ar an nglao. Níl aon táillí áirithinte ann."
+        "en": "Choose your dates and room in the booking section, then tap “Call Mary to book”. Your phone rings Mary’s landline (095 21263, or +353 95 21263 from abroad) and shows you what to tell her. Once she confirms, you can pay by card on the website. There are no booking fees.",
+        "ga": "Roghnaigh do dhátaí agus do sheomra sa chuid áirithinte, ansin tapáil “Glaoigh ar Mary chun áirithint a dhéanamh”. Glaonn do ghuthán ar líne thalún Mary (095 21263, nó +353 95 21263 ón iasacht) agus taispeántar duit cad ba cheart a rá léi. Nuair a dheimhníonn sí, is féidir leat íoc le cárta ar an suíomh. Níl aon táillí áirithinte ann."
       }
     },
     {
@@ -820,8 +821,8 @@
         "ga": "Conas a íocaim?"
       },
       "a": {
-        "en": "You pay Mary directly when you arrive at the farmhouse, by cash or card. There’s nothing to pay online and no booking fees.",
-        "ga": "Íocann tú Mary go díreach nuair a shroicheann tú an teach feirme, le hairgead tirim nó le cárta. Níl aon rud le híoc ar líne agus níl aon táillí áirithinte."
+        "en": "Ring Mary to check your dates. Once she has confirmed them, pay securely by card right here on the website (Visa, Mastercard, Apple Pay or Google Pay), or pay in cash when you arrive. There are no booking fees.",
+        "ga": "Glaoigh ar Mary chun do dhátaí a sheiceáil. Nuair a bheidh siad deimhnithe aici, íoc go slán le cárta anseo ar an suíomh (Visa, Mastercard, Apple Pay nó Google Pay), nó íoc le hairgead tirim nuair a shroicheann tú. Níl aon táillí áirithinte ann."
       }
     }
   ],
@@ -834,9 +835,9 @@
     }
   ],
   "bookingIntro": {
-    "en": "Pick your dates and room, then tap the button to ring Mary on her landline. She’ll confirm your room there and then, with no booking fees, and you pay when you arrive.",
-    "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra láithreach, gan táillí áirithinte, agus íocann tú nuair a shroicheann tú."
+    "en": "Pick your dates and room, then ring Mary to check they’re free. Once she says yes, pay securely by card right here, just like on Airbnb, but with no booking fees.",
+    "ga": "Roghnaigh do dhátaí agus do sheomra, ansin glaoigh ar Mary chun a sheiceáil go bhfuil siad saor. Nuair a deir sí go bhfuil, íoc go slán le cárta anseo, díreach mar a dhéanfá ar Airbnb, ach gan táillí áirithinte."
   },
   "host": "Mary",
-  "_payment": "Guests pay Mary directly on arrival, cash or card. Confirm with Mary that she has a card machine (e.g. SumUp). No online payment, nothing for Mary to set up."
+  "_payment": "Card payments: guests pay online via Stripe Checkout (api/checkout.js) after Mary confirms by phone. Needs Mary's own Stripe account + Vercel env var STRIPE_KEY_CLIFDEN_FARMHOUSE (see docs/card-payments-setup.md). Until then the sample shows a demo note."
 }
