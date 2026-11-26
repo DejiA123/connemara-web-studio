@@ -134,9 +134,9 @@
       "ga": "Neart páirceála saor in aisce"
     },
     {
-      "icon": "family",
-      "en": "Cot or travel cot on request",
-      "ga": "Cliabhán nó cliabhán taistil ar iarratas"
+      "icon": "euro",
+      "en": "Pay on arrival: cash or card",
+      "ga": "Íoc ar theacht: airgead tirim nó cárta"
     }
   ],
   "rooms": [
@@ -705,8 +705,8 @@
         "ga": "Deimhníonn Mary d’áirithint leat ar an bhfón."
       },
       {
-        "en": "No booking fees. You pay Mary directly when you arrive, and cash is welcome.",
-        "ga": "Gan táillí áirithinte. Íocann tú Mary go díreach nuair a shroicheann tú, agus glactar le hairgead tirim."
+        "en": "No booking fees. You pay Mary directly when you arrive, by cash or card.",
+        "ga": "Gan táillí áirithinte. Íocann tú Mary go díreach nuair a shroicheann tú, le hairgead tirim nó le cárta."
       },
       {
         "en": "Cot or travel cot available on request.",
@@ -781,8 +781,8 @@
         "ga": "Conas a íocaim?"
       },
       "a": {
-        "en": "You pay Mary directly when you arrive at the farmhouse, and cash is welcome. There’s nothing to pay online and no booking fees.",
-        "ga": "Íocann tú Mary go díreach nuair a shroicheann tú an teach feirme, agus glactar le hairgead tirim. Níl aon rud le híoc ar líne agus níl aon táillí áirithinte."
+        "en": "You pay Mary directly when you arrive at the farmhouse, by cash or card. There’s nothing to pay online and no booking fees.",
+        "ga": "Íocann tú Mary go díreach nuair a shroicheann tú an teach feirme, le hairgead tirim nó le cárta. Níl aon rud le híoc ar líne agus níl aon táillí áirithinte."
       }
     }
   ],
@@ -799,5 +799,5 @@
     "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra agus a praghas díreach is fearr láithreach, gan táillí áirithinte."
   },
   "host": "Mary",
-  "_payment": "Guests pay Mary directly on arrival; cash welcome (confirm with Mary on the call: cash only, or does she also take card / bank transfer?). No online payment, so nothing for Mary to set up."
+  "_payment": "Guests pay Mary directly on arrival, cash or card. Confirm with Mary that she has a card machine (e.g. SumUp). No online payment, nothing for Mary to set up."
 }
