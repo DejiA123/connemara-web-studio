@@ -52,7 +52,7 @@ for (const f of files) {
   write(base + 'index.html', renderClient(site, 'en', { rel, studio, path: base }));
   if ((site.languages || []).includes('ga')) write(base + 'ga/index.html', renderClient(site, 'ga', { rel: rel + '../', studio, path: base + 'ga/' }));
   write(base + 'privacy.html', renderClientPrivacy(site, { rel }));
-  built.push({ f, url: base });
+  built.push({ f, url: base, live: !site.demo && !site.sample && !site.noindex, bilingual: (site.languages || []).includes('ga'), domain: site.domain || '' });
   if (site.demo) demos.push({ path: base, name: site.name, theme: site.theme || 'atlantic', bilingual: (site.languages || []).includes('ga'), image: site.photos?.[0]?.src, kind: site.demoKind?.en || site.type, kindGa: site.demoKind?.ga || site.type, blurb: { en: T(site.demoBlurb, 'en'), ga: T(site.demoBlurb, 'ga') } });
 }
 const order = { bnb: 0, cafe: 1, trades: 2 };
@@ -69,8 +69,13 @@ write('privacy.html', renderStudioPrivacy(studio));
 }
 write('404.html', `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found</title><link rel="stylesheet" href="${studio.siteUrl ? new URL('assets/studio.css', studio.siteUrl).pathname : '/assets/studio.css'}"><main class="sec"><div class="wrap narrow"><h1>Page not found</h1><p><a href="${studio.siteUrl || '/'}">Back to ${studio.studioName}</a></p></div></main>`);
 const site = (studio.siteUrl || '').replace(/\/?$/, '/');
-write('robots.txt', `User-agent: *\nDisallow: /sites/\nDisallow: /demos/\n${site.startsWith('http') ? `Sitemap: ${site}sitemap.xml\n` : ''}`);
-if (site.startsWith('http')) write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${site}</loc></url><url><loc>${site}ga/</loc></url></urlset>\n`);
+// Google may index live client sites; samples, drafts and demos stay hidden (they also carry a noindex tag).
+const hidden = built.filter((b) => b.url && !b.live && b.url.startsWith('sites/')).map((b) => `Disallow: /${b.url}`);
+write('robots.txt', `User-agent: *\nDisallow: /demos/\nDisallow: /api/\n${hidden.join('\n')}${hidden.length ? '\n' : ''}${site.startsWith('http') ? `Sitemap: ${site}sitemap.xml\n` : ''}`);
+if (site.startsWith('http')) {
+  const live = built.filter((b) => b.live && !b.domain).flatMap((b) => [site + b.url, ...(b.bilingual ? [site + b.url + 'ga/'] : [])]);
+  write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[site, site + 'ga/', ...live].map((u) => `<url><loc>${u}</loc></url>`).join('')}</urlset>\n`);
+}
 
 // ---- report ----
 console.log('\n✔ Built into dist/\n');

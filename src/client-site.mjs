@@ -241,6 +241,8 @@ export function renderClient(site, lang, ctx) {
 
   // ---------- page ----------
   const title = `${site.name}${site.area ? ` · ${site.area}` : ''}`;
+  // official address for Google: the client's own domain if they have one, else the studio address
+  const canonRoot = site.domain ? site.domain.replace(/\/?$/, '/') : ctx.studio.siteUrl && ctx.path ? ctx.studio.siteUrl.replace(/\/?$/, '/') + ctx.path.replace(/ga\/$/, '') : '';
   const desc = T(site.seo?.description, lang) || T(site.tagline, lang);
   const heroImg = site.photos?.[0]?.src;
   const rating = site.rating ? `<span class="chip">${icon('star', 16)} ${esc(site.rating.score)} · ${esc(site.rating.count)} ${lang === 'ga' ? 'léirmheas' : 'reviews'} (${esc(site.rating.source)})</span>` : '';
@@ -274,11 +276,12 @@ export function renderClient(site, lang, ctx) {
 ${isSample || site.noindex ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:type" content="website">
-${studio.siteUrl && ctx.path ? `<meta property="og:url" content="${esc(studio.siteUrl)}${esc(ctx.path)}">` : ''}
+${canonRoot ? `<meta property="og:url" content="${esc(lang === 'en' ? canonRoot : canonRoot + 'ga/')}">` : ''}
 ${studio.siteUrl && heroImg && !/^(https?:)?\/\//.test(heroImg) ? `<meta property="og:image" content="${esc(studio.siteUrl)}${esc(heroImg)}"><meta name="twitter:card" content="summary_large_image">` : ''}
 <meta property="og:description" content="${esc(desc)}">
 <meta name="theme-color" content="${th.accent}">
-${bilingual ? `<link rel="alternate" hreflang="${other}" href="${langHref}">` : ''}
+${canonRoot ? `<link rel="canonical" href="${esc(lang === 'en' ? canonRoot : canonRoot + 'ga/')}">` : ''}
+${bilingual ? (canonRoot ? `<link rel="alternate" hreflang="en" href="${esc(canonRoot)}"><link rel="alternate" hreflang="ga" href="${esc(canonRoot)}ga/"><link rel="alternate" hreflang="x-default" href="${esc(canonRoot)}">` : `<link rel="alternate" hreflang="${other}" href="${langHref}">`) : ''}
 <link rel="icon" href="data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='${th.accent}'/><text x='16' y='22' font-size='17' font-family='Georgia' text-anchor='middle' fill='#fff'>${esc((site.name || '?')[0])}</text></svg>`)}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?${STYLE_FONTS[site.style] || STYLE_FONTS.default}&display=swap" rel="stylesheet">
