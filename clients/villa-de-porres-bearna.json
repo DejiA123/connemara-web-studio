@@ -1,0 +1,214 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "She HAS a website (villadeporresbandb.com): pitch = add booking to it. Waiting on her husband. Rating from few reviews. Dog-friendly NOT confirmed: don't claim it.",
+  "sample": true,
+  "draft": false,
+  "slug": "villa-de-porres-bearna",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Villa de Porres B&B",
+  "theme": "atlantic",
+  "style": "coastal",
+  "colors": {
+    "accent": "#2c5d8a",
+    "warm": "#e8a33d",
+    "paper": "#f6f9fc",
+    "soft": "#e2edf6"
+  },
+  "tagline": {
+    "en": "A friendly family B&B in Bearna, close to Galway Bay, with a warm welcome and a breakfast guests remember.",
+    "ga": "B&B teaghlaigh cairdiúil i mBearna, gar do Chuan na Gaillimhe, le fáilte chroíúil agus bricfeasta a fhanann i gcuimhne na n-aíonna."
+  },
+  "area": "Bearna, Co. Galway",
+  "address": "Bearna, Co. Galway",
+  "mapQuery": "Villa de Porres B&B, Bearna, Co. Galway",
+  "phone": "091 592 239",
+  "about": {
+    "en": [
+      "Villa de Porres is a family-run B&B in Bearna, just west of Galway city and close to the shore of Galway Bay.",
+      "Guests praise the hosts and the breakfast. It’s an easy base for Galway city, Spiddal and the Connemara coast road, with Wi-Fi and parking."
+    ],
+    "ga": [
+      "Is B&B teaghlaigh é Villa de Porres i mBearna, díreach siar ó chathair na Gaillimhe agus gar do chladach Chuan na Gaillimhe.",
+      "Molann aíonna na hóstaigh agus an bricfeasta. Is bonn éasca é do chathair na Gaillimhe, don Spidéal agus do bhóthar an chósta i gConamara, le Wi-Fi agus páirceáil."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "sea",
+      "en": "Close to Galway Bay",
+      "ga": "Gar do Chuan na Gaillimhe"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Breakfast guests rave about",
+      "ga": "Bricfeasta a mholann aíonna"
+    },
+    {
+      "icon": "family",
+      "en": "Family-run, friendly hosts",
+      "ga": "Óstaigh chairdiúla, teaghlach"
+    },
+    {
+      "icon": "parking",
+      "en": "Free parking and Wi-Fi",
+      "ga": "Páirceáil agus Wi-Fi saor in aisce"
+    }
+  ],
+  "stats": [
+    {
+      "n": "Bearna",
+      "en": "by Galway Bay",
+      "ga": "cois Chuan na Gaillimhe"
+    },
+    {
+      "n": "Galway",
+      "en": "city 15 minutes away",
+      "ga": "an chathair 15 nóiméad uait"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "The Galway Bay coast",
+        "ga": "Cósta Chuan na Gaillimhe"
+      }
+    },
+    {
+      "src": "assets/img/breakfast.jpg",
+      "alt": {
+        "en": "Breakfast",
+        "ga": "Bricfeasta"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A west of Ireland beach",
+        "ga": "Trá in iarthar na hÉireann"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "Connemara mountains",
+        "ga": "Sléibhte Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "A Connemara lake",
+        "ga": "Loch i gConamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Galway Bay and Connemara",
+    "ga": "Cuan na Gaillimhe agus Conamara"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}

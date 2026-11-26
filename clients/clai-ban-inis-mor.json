@@ -1,0 +1,232 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Booking.com says no pets and no children: confirm. Confirm rooms/prices. Aran photos needed (ask for theirs).",
+  "sample": true,
+  "draft": false,
+  "slug": "clai-ban-inis-mor",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Claí Bán",
+  "theme": "stone",
+  "style": "farmhouse",
+  "colors": {
+    "accent": "#3e5c76",
+    "warm": "#c0843d",
+    "paper": "#f8f6f1",
+    "soft": "#e7e3d9"
+  },
+  "tagline": {
+    "en": "A welcoming B&B on Inis Mór, five minutes from the harbour, with views over Galway Bay to the Clare coast.",
+    "ga": "B&B fáilteach ar Inis Mór, cúig nóiméad ón gcé, le radharc thar Chuan na Gaillimhe go cósta an Chláir."
+  },
+  "area": "Inis Mór, Aran Islands",
+  "address": "Kilronan, Inis Mór, Aran Islands, Co. Galway",
+  "mapQuery": "Claí Bán B&B, Inis Mór, Aran Islands",
+  "phone": "099 61111",
+  "host": "Bartley",
+  "rating": {
+    "score": "9.2",
+    "count": "332",
+    "source": "booking sites"
+  },
+  "about": {
+    "en": [
+      "Claí Bán is a B&B on Inis Mór, about five minutes’ walk from the harbour, with views over Galway Bay and across to the Clare coast.",
+      "Bartley’s welcome is what guests remember most, along with Porter, the house dog. The en-suite rooms are lovely, and breakfast is a full Irish cooked to order, served in a breakfast room full of antiques from the island."
+    ],
+    "ga": [
+      "Is B&B é Claí Bán ar Inis Mór, thart ar chúig nóiméad siúil ón gcé, le radharc thar Chuan na Gaillimhe agus trasna go cósta an Chláir.",
+      "Is í fáilte Bartley is mó a fhanann i gcuimhne na n-aíonna, chomh maith le Porter, madra an tí. Tá na seomraí en-suite go hálainn, agus is bricfeasta Éireannach é a chócaráiltear ar ordú, i seomra bricfeasta lán le seandachtaí ón oileán."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "ferry",
+      "en": "5 minutes from the ferry",
+      "ga": "5 nóiméad ón mbád"
+    },
+    {
+      "icon": "sea",
+      "en": "Views of Galway Bay and Clare",
+      "ga": "Radharc ar Chuan na Gaillimhe agus ar an gClár"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Full Irish cooked to order",
+      "ga": "Bricfeasta Éireannach ar ordú"
+    },
+    {
+      "icon": "bed",
+      "en": "En-suite rooms",
+      "ga": "Seomraí en-suite"
+    },
+    {
+      "icon": "dog",
+      "en": "Say hello to Porter, the house dog",
+      "ga": "Abair dia duit le Porter, madra an tí"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 9.2 from 332 reviews",
+      "ga": "Rátáil 9.2 ó 332 léirmheas"
+    }
+  ],
+  "stats": [
+    {
+      "n": "9.2",
+      "en": "from 332 reviews",
+      "ga": "ó 332 léirmheas"
+    },
+    {
+      "n": "5 min",
+      "en": "from the harbour",
+      "ga": "ón gcé"
+    },
+    {
+      "n": "Inis Mór",
+      "en": "Aran Islands",
+      "ga": "Oileáin Árann"
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-out by 11am. Ask us about storing bags if you have a late ferry.",
+        "ga": "Imeacht faoi 11rn. Fiafraigh dínn faoi mhálaí a stóráil má tá bád déanach agat."
+      },
+      {
+        "en": "Sorry, no pets, and not suitable for children.",
+        "ga": "Ár leithscéal, níl peataí ceadaithe agus níl sé oiriúnach do pháistí."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "photos": [
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "An Atlantic beach",
+        "ga": "Trá ar an Atlantach"
+      }
+    },
+    {
+      "src": "assets/img/breakfast.jpg",
+      "alt": {
+        "en": "A full Irish breakfast",
+        "ga": "Bricfeasta Éireannach"
+      }
+    },
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "The west of Ireland coast",
+        "ga": "Cósta iarthar na hÉireann"
+      }
+    },
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "Galway Bay",
+        "ga": "Cuan na Gaillimhe"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Island life",
+    "ga": "Saol an oileáin"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}

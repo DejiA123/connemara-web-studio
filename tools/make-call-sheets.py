@@ -137,12 +137,12 @@ OFFER_BOX = """<div class="box blue"><h2>The offer (when they like the sample)</
 REMIND = """<div class="box gold" style="display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:8.6pt"><span><b>1</b> Hello → <b>2</b> their line + 15% → <b>3</b> "Can I send you a free sample?" → <b>4</b> book a day and time</span><span><b style="color:#1f6b3e">YES:</b> send link, message Claude · <b style="color:#9a3a28">NO:</b> thank them, next</span></div>"""
 
 VISITS = """<div class="box"><h2>Visit in person (mobile numbers: never ring)</h2><table class="calls"><tr><th></th><th>Business · where · what to say at the door</th><th class="res">Result</th></tr>
-<tr><td><span class="tick"></span></td><td><b>Lig do Scíth</b> · Carraroe South<span class="offer">€570 website</span><div class="hook"><b>Start with "Dia duit!" and bring the Irish sample.</b> "Hundreds of great reviews but no website of your own. I made you this sample." Or 3 × €190.</div></td><td class="res"></td></tr>
-<tr><td><span class="tick"></span></td><td><b>Seaview Lodge</b> · Inverin<span class="offer">€570 website</span><div class="hook">"Cyclists love you on Hostelworld. Let groups book beds directly."</div></td><td class="res"></td></tr>
+<tr><td><span class="tick"></span></td><td><b>Lig do Scíth</b> · Carraroe South<span class="offer">€570 website</span><div class="hook"><b>Start with "Dia duit!" and bring the Irish sample.</b> "Hundreds of great reviews but no website of your own. I made you this sample." Or 3 × €190.</div><div class="url">Sample: …/sites/lig-do-scith-carraroe</div></td><td class="res"></td></tr>
+<tr><td><span class="tick"></span></td><td><b>Seaview Lodge</b> · Inverin<span class="offer">€570 website</span><div class="hook">"Cyclists love you on Hostelworld. Let groups book beds directly."</div><div class="url">Sample: …/sites/seaview-lodge-inverin</div></td><td class="res"></td></tr>
 <tr><td><span class="tick"></span></td><td><b>Teach an tSailín</b> · Inverin<span class="offer">€570 website</span><div class="hook"><span class="chk">Check it still takes guests.</span> "You're on Google Maps with no photos or website. I can make you a booking website."</div></td><td class="res"></td></tr>
-<tr><td><span class="tick"></span></td><td><b>Hollybanks</b> · Moycullen<span class="offer">€570 website</span><div class="hook">"Guests rave about your Connemara tips. Let them book you directly."</div></td><td class="res"></td></tr>
-<tr><td><span class="tick"></span></td><td><b>Portarra Lodge</b> · Moycullen<span class="offer">€570 website</span><div class="hook"><span class="chk">Might be sold: check first.</span> "Anglers love your lakeside spot."</div></td><td class="res"></td></tr>
-</table><p class="hook" style="margin:3px 0 0">Ask Claude for their sample the day before, and bring it on your phone.</p></div>
+<tr><td><span class="tick"></span></td><td><b>Hollybanks</b> · Moycullen<span class="offer">€570 website</span><div class="hook">"Guests rave about your Connemara tips. Let them book you directly."</div><div class="url">Sample: …/sites/hollybanks-moycullen</div></td><td class="res"></td></tr>
+<tr><td><span class="tick"></span></td><td><b>Portarra Lodge</b> · Moycullen<span class="offer">€570 website</span><div class="hook"><span class="chk">Might be sold: check first.</span> "Anglers love your lakeside spot."</div><div class="url">Sample: …/sites/portarra-lodge-moycullen</div></td><td class="res"></td></tr>
+</table><p class="hook" style="margin:3px 0 0">Samples ready for 4 of 5 (Teach an tSailín not found online: check it still takes guests).</p></div>
 """
 
 
@@ -279,7 +279,7 @@ s2 = head('Sheet 2: Days 1–2') + f"""
  ('Radharc Árainn (Aran View)', '091 553 632', '"You have over 800 reviews on the booking sites. That\'s a lot of commission paid."', '570', '<div class="url">Sample: …/sites/radharc-arainn-bnb</div>'),
  ('Briseadh na Carraige', '091 553 212', '"You\'re rated 4.9 on Google but only 16 guests have reviewed you there. I can add direct booking, plus a card asking guests for a Google review."', '570', '<div class="url">Sample: …/sites/briseadh-na-carraige-bnb</div>'),
  ('Rockfield House', '091 555 586', '"A guest called your farmhouse a fairy house. The booking sites can\'t tell that story."', '210', '<div class="url">Sample: …/sites/rockfield-house</div>'),
- ('Villa De Porres', '091 592 239', '<span class="chk">Look at villadeporresbandb.com first.</span> If guests can\'t book on it: "Your dog-friendly B&B is rare. I can add booking to your website."', '570'),
+ ('Villa De Porres', '091 592 239', '<span class="chk">Look at villadeporresbandb.com first.</span> If guests can\'t book on it: "Your dog-friendly B&B is rare. I can add booking to your website."', '570', '<div class="url">Sample: …/sites/villa-de-porres-bearna</div>'),
  ('Freeport House', '091 592 199', '<span class="chk">Look at freeport-house.com first.</span> "Guests love your sea views, but your website doesn\'t show them off on a phone."', '570'),
 ])}
 <p class="url" style="margin:-3px 0 6px">Every sample link starts with <b>{SITE}</b>. Add <b>/ga</b> for Irish.</p>
@@ -306,7 +306,7 @@ s3 = head('Sheet 3: Days 3–6').replace('</head>', '<style>body{font-size:8.1pt
 <li>On a YES: message Claude. The sample is ready the same day.</li></ul></div>
 {calls('Day 3: Aran Islands', [
  ('Dormer House', '099 61125', '"A guest review says you don\'t have a website, so people have to ring to book. I can make one where they book and pay a deposit."', '570'),
- ('Claí Bán', '099 61111', '"The ferry company lists you among the best stays on Inis Mór, but guests can\'t book you on a website of your own."', '570'),
+ ('Claí Bán', '099 61111', '"The ferry company lists you among the best stays on Inis Mór, but guests can\'t book you on a website of your own."', '570', '<div class="url">Sample: …/sites/clai-ban-inis-mor</div>'),
  ('Rooms @ An Móinéar', '099 75960', '<span class="chk">Look first.</span> "Guests rate you 5.0 and rave about breakfast."', '570'),
  ('Tigh Ruairí', '099 75002', '<span class="chk">Look at tighruairi.com first.</span> "I can reply to your reviews and post on your Google listing every week."', 'sup'),
 ])}
@@ -330,7 +330,7 @@ s3 = head('Sheet 3: Days 3–6').replace('</head>', '<style>body{font-size:8.1pt
  ('Letterfrack Lodge', '095 41222', '<span class="chk">Look first.</span> "Hikers for Diamond Hill book you on Booking.com and Hostelworld. Let them book you directly."', '570', '<div class="url">Sample: …/sites/letterfrack-lodge</div>'),
 ])}
 {calls('Day 6: Hotels (Spiddal)', [
- ('Park Lodge Hotel', '091 553 159', '"Parents visiting Coláiste Lurgan stay in your chalets. A booking page just for them, ready for summer."', '570'),
+ ('Park Lodge Hotel', '091 553 159', '"Parents visiting Coláiste Lurgan stay in your chalets. A booking page just for them, ready for summer."', '570', '<div class="url">Sample: …/sites/park-lodge-spiddal</div>'),
  ('An Cruiscín Lán', '091 553 148', '"You already take bookings online. I can reply to your reviews and post your menus and specials on Google every week."', 'sup'),
 ])}
 <div class="box blue"><h2>Day 5 too: follow up</h2><p style="margin:0">Send this to everyone who saw a sample and agreed to messages:<br><span class="say">"Hi [name], just checking you got a chance to look at the sample. I have space for one more client at the launch price before Christmas. Shall I keep it for you?"</span></p></div>

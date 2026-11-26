@@ -1,0 +1,215 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Door-to-door visit (no phone on file). Pets: sources conflict. Confirm rooms, prices, hosts' names.",
+  "sample": true,
+  "draft": false,
+  "slug": "hollybanks-moycullen",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Hollybanks",
+  "theme": "bog",
+  "colors": {
+    "accent": "#3f6b2a",
+    "warm": "#b5121b",
+    "paper": "#f7f8f3",
+    "soft": "#e5ebdc"
+  },
+  "tagline": {
+    "en": "A quiet home up a little lane, a minute from Moycullen village: the gateway to Connemara, with tips from hosts who know it best.",
+    "ga": "Teach ciúin suas bóithrín beag, nóiméad ó shráidbhaile Mhaigh Cuilinn: geata Chonamara, le moltaí ó óstaigh a bhfuil aithne mhaith acu air."
+  },
+  "area": "Maigh Cuilinn, Co. Galway",
+  "address": "Moycullen, Co. Galway",
+  "mapQuery": "Hollybanks, Moycullen, Co. Galway",
+  "phone": "",
+  "rating": {
+    "score": "8.7",
+    "count": "223",
+    "source": "booking sites"
+  },
+  "about": {
+    "en": [
+      "Hollybanks is a peaceful home stay up a little lane, a minute’s drive from Moycullen village, between Galway city and Connemara.",
+      "Guests enjoy the garden and the shared lounge, and breakfast is available. Lough Corrib, Oughterard and the Connemara mountains are all close by, and the hosts are full of tips for exploring."
+    ],
+    "ga": [
+      "Is teach suaimhneach é Hollybanks suas bóithrín beag, nóiméad sa charr ó shráidbhaile Mhaigh Cuilinn, idir cathair na Gaillimhe agus Conamara.",
+      "Taitníonn an gairdín agus an seomra suí comhroinnte le haíonna, agus tá bricfeasta ar fáil. Tá Loch Coirib, Uachtar Ard agus sléibhte Chonamara gar duit, agus tá na hóstaigh lán le moltaí."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "leaf",
+      "en": "A quiet lane with a garden",
+      "ga": "Bóithrín ciúin le gairdín"
+    },
+    {
+      "icon": "walk",
+      "en": "1 minute from Moycullen",
+      "ga": "Nóiméad ó Mhaigh Cuilinn"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Breakfast available",
+      "ga": "Bricfeasta ar fáil"
+    },
+    {
+      "icon": "chat",
+      "en": "Great Connemara tips",
+      "ga": "Moltaí den scoth faoi Chonamara"
+    }
+  ],
+  "stats": [
+    {
+      "n": "8.7",
+      "en": "from 223 reviews",
+      "ga": "ó 223 léirmheas"
+    },
+    {
+      "n": "1 min",
+      "en": "from Moycullen village",
+      "ga": "ó Mhaigh Cuilinn"
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 4pm, check-out by 10am.",
+        "ga": "Teacht isteach ó 4in, imeacht faoi 10rn."
+      },
+      {
+        "en": "A car is best: public transport from the village is limited.",
+        "ga": "Is fearr carr: is beag iompar poiblí ón sráidbhaile."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "photos": [
+    {
+      "src": "assets/img/connemara-pony.jpg",
+      "alt": {
+        "en": "A Connemara pony grazing near Moycullen",
+        "ga": "Capaillín Conamara ag innilt in aice le Maigh Cuilinn"
+      }
+    },
+    {
+      "src": "assets/img/corrib-islands-warm.jpg",
+      "alt": {
+        "en": "Lough Corrib",
+        "ga": "Loch Coirib"
+      }
+    },
+    {
+      "src": "assets/img/aughnanure.jpg",
+      "alt": {
+        "en": "Aughnanure Castle",
+        "ga": "Caisleán Achadh na nIúr"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "A Connemara lake",
+        "ga": "Loch i gConamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Moycullen and Lough Corrib",
+    "ga": "Maigh Cuilinn agus Loch Coirib"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Door-to-door visit (no landline on file: no phone shown). Room types are a guess (hostel): confirm private/shared rooms, breakfast, prices.",
+  "sample": true,
+  "draft": false,
+  "slug": "seaview-lodge-inverin",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Seaview Lodge",
+  "theme": "atlantic",
+  "style": "village",
+  "colors": {
+    "accent": "#00838f",
+    "warm": "#ffd54f",
+    "paper": "#f4fbfb",
+    "soft": "#d9f2f2"
+  },
+  "tagline": {
+    "en": "Friendly, good-value beds by the sea in Indreabhán: handy for the Aran Islands ferry, and the beach for a swim.",
+    "ga": "Leapacha cairdiúla ar luach maith cois farraige in Indreabhán: áisiúil do bhád Árann, agus an trá le haghaidh snámh."
+  },
+  "area": "Indreabhán, Conamara",
+  "address": "Inverin, Co. Galway",
+  "mapQuery": "Seaview Lodge, Inverin, Co. Galway",
+  "phone": "",
+  "rating": {
+    "score": "9.1",
+    "count": "78",
+    "source": "Hostelworld"
+  },
+  "about": {
+    "en": [
+      "Seaview Lodge is a friendly lodge by the sea in Indreabhán, on the Connemara coast road west of Spiddal.",
+      "Guests love the hosts, who take time to chat and give good travel advice. It’s handy for the Aran Islands ferry from Ros a’ Mhíl, the beach is close by for a swim, and there’s bicycle parking for cyclists on the Wild Atlantic Way."
+    ],
+    "ga": [
+      "Is lóistín cairdiúil cois farraige é Seaview Lodge in Indreabhán, ar bhóthar an chósta i gConamara siar ón Spidéal.",
+      "Is breá le haíonna na hóstaigh, a chaitheann am ag comhrá agus a thugann comhairle mhaith taistil. Tá sé áisiúil do bhád Árann ó Ros a’ Mhíl, tá an trá in aice láimhe le haghaidh snámh, agus tá páirceáil rothar ann do rothaithe ar Shlí an Atlantaigh Fhiáin."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "ferry",
+      "en": "Handy for the Aran ferry",
+      "ga": "Áisiúil do bhád Árann"
+    },
+    {
+      "icon": "sea",
+      "en": "Beach close by",
+      "ga": "Trá in aice láimhe"
+    },
+    {
+      "icon": "chat",
+      "en": "Hosts who love to help",
+      "ga": "Óstaigh a thugann cúnamh"
+    },
+    {
+      "icon": "bolt",
+      "en": "Bicycle parking",
+      "ga": "Páirceáil rothar"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Breakfast available",
+      "ga": "Bricfeasta ar fáil"
+    },
+    {
+      "icon": "star",
+      "en": "Rated 9.1 on Hostelworld",
+      "ga": "Rátáil 9.1 ar Hostelworld"
+    }
+  ],
+  "stats": [
+    {
+      "n": "9.1",
+      "en": "on Hostelworld",
+      "ga": "ar Hostelworld"
+    },
+    {
+      "n": "9.7",
+      "en": "for the hosts",
+      "ga": "do na hóstaigh"
+    },
+    {
+      "n": "Ferry",
+      "en": "to Aran nearby",
+      "ga": "go hÁrainn in aice láimhe"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Private Room",
+        "ga": "Seomra Príobháideach"
+      },
+      "desc": {
+        "en": "A private room for two.",
+        "ga": "Seomra príobháideach do bheirt."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Shared Room",
+        "ga": "Seomra Comhroinnte"
+      },
+      "desc": {
+        "en": "Good-value beds in a shared room: ideal for cyclists and walkers.",
+        "ga": "Leapacha ar luach maith i seomra comhroinnte: iontach do rothaithe agus do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Group Booking",
+        "ga": "Áirithint Ghrúpa"
+      },
+      "desc": {
+        "en": "Book the beds you need for your group, directly with us.",
+        "ga": "Cuir in áirithe na leapacha a theastaíonn do do ghrúpa, go díreach linn."
+      },
+      "price": "",
+      "sleeps": 6,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in 3pm–9pm. Stays of up to 7 nights.",
+        "ga": "Teacht isteach 3in–9in. Fanacht suas le 7 n-oíche."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "photos": [
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "The coast near Spiddal",
+        "ga": "An cósta in aice leis an Spidéal"
+      }
+    },
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "The Connemara coast",
+        "ga": "Cósta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "Connemara mountains",
+        "ga": "Sléibhte Chonamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "The coast road",
+    "ga": "Bóthar an chósta"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}

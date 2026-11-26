@@ -1,0 +1,213 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Has its own website (parklodgehotelspiddal.ie): pitch = a booking page for cottages/college parents. Cottage sleeps 6 is a guess (one listing: 3 beds). No rating shown on purpose.",
+  "sample": true,
+  "draft": false,
+  "slug": "park-lodge-spiddal",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Park Lodge Hotel",
+  "theme": "bog",
+  "style": "modern",
+  "colors": {
+    "accent": "#8a2c3b",
+    "warm": "#f0b429",
+    "paper": "#ffffff"
+  },
+  "tagline": {
+    "en": "A family-run hotel and seven self-catering cottages on the coast road outside Spiddal: ideal for families visiting Coláiste Lurgan.",
+    "ga": "Óstán teaghlaigh agus seacht dteachín féinfhreastail ar bhóthar an chósta taobh amuigh den Spidéal: iontach do theaghlaigh ag tabhairt cuairte ar Choláiste Lurgan."
+  },
+  "area": "An Spidéal, Co. Galway",
+  "address": "Park, Spiddal, Co. Galway, H91 ETW1",
+  "mapQuery": "Park Lodge Hotel, Spiddal, Co. Galway",
+  "phone": "091 553 159",
+  "about": {
+    "en": [
+      "Park Lodge is a family-run hotel on the Galway–Connemara coast road, just outside Spiddal and about 12km from Galway city. All 23 rooms are en-suite.",
+      "In the grounds there are seven detached self-catering cottages, with a children’s play area. In July and August cottage guests can use the hotel games room.",
+      "It’s a handy, comfortable base for parents visiting students at the Irish colleges in Spiddal, including Coláiste Lurgan."
+    ],
+    "ga": [
+      "Is óstán teaghlaigh é Park Lodge ar bhóthar an chósta idir Gaillimh agus Conamara, díreach taobh amuigh den Spidéal agus thart ar 12km ó chathair na Gaillimhe. Tá gach ceann de na 23 seomra en-suite.",
+      "Sna tailte tá seacht dteachín féinfhreastail scoite, le háit súgartha do pháistí. In Iúil agus i Lúnasa is féidir le haíonna na dtithíní seomra cluichí an óstáin a úsáid.",
+      "Is bonn áisiúil compordach é do thuismitheoirí atá ag tabhairt cuairte ar dhaltaí sna coláistí Gaeilge sa Spidéal, Coláiste Lurgan ina measc."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "bed",
+      "en": "23 en-suite hotel rooms",
+      "ga": "23 seomra óstáin en-suite"
+    },
+    {
+      "icon": "family",
+      "en": "7 self-catering cottages",
+      "ga": "7 dteachín féinfhreastail"
+    },
+    {
+      "icon": "irish",
+      "en": "Near the Spiddal Irish colleges",
+      "ga": "Gar do choláistí Gaeilge an Spidéil"
+    },
+    {
+      "icon": "sea",
+      "en": "On the coast road",
+      "ga": "Ar bhóthar an chósta"
+    }
+  ],
+  "stats": [
+    {
+      "n": "23",
+      "en": "en-suite rooms",
+      "ga": "seomra en-suite"
+    },
+    {
+      "n": "7",
+      "en": "self-catering cottages",
+      "ga": "teachín féinfhreastail"
+    },
+    {
+      "n": "12km",
+      "en": "from Galway city",
+      "ga": "ó chathair na Gaillimhe"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Hotel Room",
+        "ga": "Seomra Óstáin"
+      },
+      "desc": {
+        "en": "Comfortable en-suite hotel rooms.",
+        "ga": "Seomraí óstáin compordacha en-suite."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Space for the family, en-suite.",
+        "ga": "Spás don teaghlach, en-suite."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Self-catering Cottage",
+        "ga": "Teachín Féinfhreastail"
+      },
+      "desc": {
+        "en": "A detached cottage in the hotel grounds, with a play area nearby. By the week in summer.",
+        "ga": "Teachín scoite i dtailte an óstáin, le háit súgartha in aice láimhe. In aghaidh na seachtaine sa samhradh."
+      },
+      "price": "",
+      "sleeps": 6,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/spiddal-shore.jpg",
+      "alt": {
+        "en": "Spiddal pier",
+        "ga": "Cé an Spidéil"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/twelve-bens.jpg",
+      "alt": {
+        "en": "Connemara mountains",
+        "ga": "Sléibhte Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "A Connemara lake",
+        "ga": "Loch i gConamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Spiddal and the coast",
+    "ga": "An Spidéal agus an cósta"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}

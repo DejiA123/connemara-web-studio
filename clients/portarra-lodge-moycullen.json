@@ -1,0 +1,206 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "MIGHT BE SOLD: public info is old (hosts were Michael & Máire Canney). Check first. Phone in directories: 091 555051 (not shown). Confirm everything.",
+  "sample": true,
+  "draft": false,
+  "slug": "portarra-lodge-moycullen",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Portarra Lodge",
+  "theme": "atlantic",
+  "style": "modern",
+  "colors": {
+    "accent": "#1f4e5f",
+    "warm": "#9ccc65",
+    "paper": "#ffffff"
+  },
+  "tagline": {
+    "en": "A lodge on the shores of Lough Corrib, built for anglers: five large en-suite rooms, a full Irish breakfast and the lake on your doorstep.",
+    "ga": "Lóistín ar chladach Loch Coirib, tógtha d’iascairí: cúig sheomra mhóra en-suite, bricfeasta Éireannach agus an loch ag do dhoras."
+  },
+  "area": "Maigh Cuilinn, Co. Galway",
+  "address": "Tullykyne, Moycullen, Co. Galway",
+  "mapQuery": "Portarra Lodge, Tullykyne, Moycullen, Co. Galway",
+  "phone": "",
+  "about": {
+    "en": [
+      "Portarra Lodge stands on the shores of Lough Corrib near Moycullen. It was built as guest accommodation and set up as an angling centre.",
+      "There are five large, comfortable bedrooms, all en-suite, and a full Irish breakfast before you head out on the water for brown trout, salmon or pike."
+    ],
+    "ga": [
+      "Tá Portarra Lodge ar chladach Loch Coirib in aice le Maigh Cuilinn. Tógadh é mar lóistín d’aíonna agus cuireadh in oiriúint é mar ionad iascaireachta.",
+      "Tá cúig sheomra leapa mhóra chompordacha ann, iad ar fad en-suite, agus bricfeasta Éireannach sula dtéann tú amach ar an uisce i ndiaidh breac donn, bradán nó liús."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "fish",
+      "en": "Brown trout, salmon and pike",
+      "ga": "Breac donn, bradán agus liús"
+    },
+    {
+      "icon": "sea",
+      "en": "On the shores of Lough Corrib",
+      "ga": "Ar chladach Loch Coirib"
+    },
+    {
+      "icon": "bed",
+      "en": "5 large en-suite rooms",
+      "ga": "5 sheomra mhóra en-suite"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Full Irish breakfast",
+      "ga": "Bricfeasta Éireannach"
+    }
+  ],
+  "stats": [
+    {
+      "n": "5",
+      "en": "en-suite rooms",
+      "ga": "seomra en-suite"
+    },
+    {
+      "n": "Corrib",
+      "en": "on your doorstep",
+      "ga": "ag do dhoras"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/corrib-islands.jpg",
+      "alt": {
+        "en": "Lough Corrib",
+        "ga": "Loch Coirib"
+      }
+    },
+    {
+      "src": "assets/img/oughterard-pier.jpg",
+      "alt": {
+        "en": "A quay on Lough Corrib",
+        "ga": "Cé ar Loch Coirib"
+      }
+    },
+    {
+      "src": "assets/img/corrib-islands-warm.jpg",
+      "alt": {
+        "en": "Evening on the lake",
+        "ga": "Tráthnóna ar an loch"
+      }
+    },
+    {
+      "src": "assets/img/aughnanure.jpg",
+      "alt": {
+        "en": "Aughnanure Castle",
+        "ga": "Caisleán Achadh na nIúr"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Lough Corrib",
+    "ga": "Loch Coirib"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}

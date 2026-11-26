@@ -1,0 +1,228 @@
+{
+  "_status": "QUICK SAMPLE (26 Nov 2026) for the Day 4/5 calls. Facts from public listings. Room photos are EXAMPLES; on 'yes', upgrade to Mary's standard (own photos, real rooms + prices, reviews, calendar).",
+  "_check": "Door-to-door visit (mobile only on file: no phone shown). Start with 'Dia duit!' and show the Irish version first. Confirm rooms, prices, owners' names.",
+  "sample": true,
+  "draft": false,
+  "slug": "lig-do-scith-carraroe",
+  "type": "bnb",
+  "languages": [
+    "en",
+    "ga"
+  ],
+  "name": "Lig do Scíth",
+  "theme": "stone",
+  "colors": {
+    "accent": "#8c3b2e",
+    "warm": "#d4a24c",
+    "paper": "#fbf7f0",
+    "soft": "#efe4d2"
+  },
+  "tagline": {
+    "en": "O’Domhnaill’s guesthouse in An Cheathrú Rua: bright, spacious rooms, a great breakfast and the best local tips.",
+    "ga": "Teach aíochta Uí Dhomhnaill sa Cheathrú Rua: seomraí geala fairsinge, bricfeasta den scoth agus na moltaí áitiúla is fearr."
+  },
+  "area": "An Cheathrú Rua, Conamara",
+  "address": "Carraroe South, Co. Galway",
+  "mapQuery": "Lig do Scíth guesthouse, Carraroe, Co. Galway",
+  "phone": "",
+  "rating": {
+    "score": "8.7",
+    "count": "687",
+    "source": "booking sites"
+  },
+  "about": {
+    "en": [
+      "Lig do Scíth, O’Domhnaill’s guesthouse, is in An Cheathrú Rua in the heart of the Connemara Gaeltacht. The name means “take a rest”, and that’s just what guests do.",
+      "The rooms are spacious, bright and clean, with comfortable beds and family rooms too. Breakfast gets great reviews, and the owners are full of tips for exploring the area.",
+      "There’s free parking and Wi-Fi, a terrace with a barbecue, and the famous Coral Beach is a short trip away."
+    ],
+    "ga": [
+      "Tá Lig do Scíth, teach aíochta Uí Dhomhnaill, sa Cheathrú Rua i gcroílár Ghaeltacht Chonamara. Is é sin go díreach a dhéanann aíonna: ligeann siad a scíth.",
+      "Tá na seomraí fairsing, geal agus glan, le leapacha compordacha agus seomraí teaghlaigh freisin. Faigheann an bricfeasta léirmheasanna iontacha, agus tá na húinéirí lán le moltaí faoin gceantar.",
+      "Tá páirceáil agus Wi-Fi saor in aisce, ardán le beárbaiciú, agus níl an Trá Choiréalach cháiliúil i bhfad uait."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "irish",
+      "en": "In the heart of the Gaeltacht",
+      "ga": "I gcroílár na Gaeltachta"
+    },
+    {
+      "icon": "bed",
+      "en": "Spacious, bright rooms",
+      "ga": "Seomraí fairsinge geala"
+    },
+    {
+      "icon": "breakfast",
+      "en": "Breakfast guests love",
+      "ga": "Bricfeasta a thaitníonn le haíonna"
+    },
+    {
+      "icon": "sea",
+      "en": "Near the Coral Beach",
+      "ga": "Gar don Trá Choiréalach"
+    },
+    {
+      "icon": "family",
+      "en": "Family rooms",
+      "ga": "Seomraí teaghlaigh"
+    },
+    {
+      "icon": "parking",
+      "en": "Free parking and Wi-Fi",
+      "ga": "Páirceáil agus Wi-Fi saor in aisce"
+    }
+  ],
+  "stats": [
+    {
+      "n": "8.7",
+      "en": "from 687 reviews",
+      "ga": "ó 687 léirmheas"
+    },
+    {
+      "n": "Gaeltacht",
+      "en": "Irish spoken here",
+      "ga": "Labhraítear Gaeilge anseo"
+    },
+    {
+      "n": "Coral",
+      "en": "Beach nearby",
+      "ga": "Trá in aice láimhe"
+    }
+  ],
+  "photos": [
+    {
+      "src": "assets/img/village-water.jpg",
+      "alt": {
+        "en": "The Connemara coast",
+        "ga": "Cósta Chonamara"
+      }
+    },
+    {
+      "src": "assets/img/beach.jpg",
+      "alt": {
+        "en": "A Connemara beach",
+        "ga": "Trá i gConamara"
+      }
+    },
+    {
+      "src": "assets/img/breakfast.jpg",
+      "alt": {
+        "en": "Breakfast",
+        "ga": "Bricfeasta"
+      }
+    },
+    {
+      "src": "assets/img/lake-light.jpg",
+      "alt": {
+        "en": "A Connemara lake",
+        "ga": "Loch i gConamara"
+      }
+    }
+  ],
+  "galleryTitle": {
+    "en": "Conamara",
+    "ga": "Conamara"
+  },
+  "perks": [
+    {
+      "icon": "euro",
+      "en": "Best price when you book direct",
+      "ga": "An praghas is fearr go díreach"
+    },
+    {
+      "icon": "shield",
+      "en": "No booking fees",
+      "ga": "Gan táillí áirithinte"
+    },
+    {
+      "icon": "phone",
+      "en": "Book by phone, straight to us",
+      "ga": "Cuir in áirithe ar an bhfón, go díreach linn"
+    },
+    {
+      "icon": "check",
+      "en": "Ask us anything before you book",
+      "ga": "Cuir ceist ar bith orainn roimh ré"
+    }
+  ],
+  "rooms": [
+    {
+      "name": {
+        "en": "Double Room",
+        "ga": "Seomra Dúbailte"
+      },
+      "desc": {
+        "en": "A comfortable double room with its own bathroom.",
+        "ga": "Seomra dúbailte compordach lena sheomra folctha féin."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-double.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Twin Room",
+        "ga": "Seomra Cúpla"
+      },
+      "desc": {
+        "en": "Two single beds, ideal for friends or walkers.",
+        "ga": "Dhá leaba shingile, iontach do chairde nó do shiúlóirí."
+      },
+      "price": "",
+      "sleeps": 2,
+      "photo": "assets/img/room-twin.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    },
+    {
+      "name": {
+        "en": "Family Room",
+        "ga": "Seomra Teaghlaigh"
+      },
+      "desc": {
+        "en": "Room for the whole family.",
+        "ga": "Spás don teaghlach ar fad."
+      },
+      "price": "",
+      "sleeps": 4,
+      "photo": "assets/img/room-family.jpg",
+      "photoNote": {
+        "en": "Example photo",
+        "ga": "Grianghraf samplach"
+      }
+    }
+  ],
+  "booking": {
+    "mode": "call",
+    "policies": [
+      {
+        "en": "Check-in from 3pm, check-out by 11am.",
+        "ga": "Teacht isteach ó 3in, imeacht faoi 11rn."
+      },
+      {
+        "en": "Book direct with us: no booking fees.",
+        "ga": "Cuir in áirithe go díreach linn: gan táillí áirithinte."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why book direct?",
+        "ga": "Cén fáth áirithint dhíreach?"
+      },
+      "a": {
+        "en": "You deal with us, not a booking site: no booking fees, and we can answer any question before you book.",
+        "ga": "Déileálann tú linn féin, ní le suíomh áirithinte: gan táillí áirithinte, agus is féidir linn ceist ar bith a fhreagairt sula gcuireann tú in áirithe."
+      }
+    }
+  ]
+}
