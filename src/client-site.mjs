@@ -126,7 +126,7 @@ export function renderClient(site, lang, ctx) {
     // "call" mode: the guest picks dates/room, then the site rings the owner's phone (works with a landline) and shows what to say
     const who = site.host || (lang === 'ga' ? 'linn' : 'us');
     const roomOpts = has(site.rooms) ? `<label>${L.room}<select name="${L.room}" data-price-select><option value="" data-price="0">${L.anyRoom}</option>${site.rooms
-      .map((r) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-price="${priceNumber(r.price)}">${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
+      .map((r) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-price="${priceNumber(r.price)}"${r.priceHigh && has(r.highMonths) ? ` data-price-high="${priceNumber(r.priceHigh)}" data-high="${r.highMonths.join(',')}"` : ''}>${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
     formInner = `<form class="req req-call" data-form data-call="${esc(telHref(phone))}" data-sample="${isSample ? 1 : 0}" data-lang="${lang}">
       <div class="row3"><label>${L.arrive}<input type="date" name="${L.arrive}" required data-arrive></label>
       <label>${L.depart}<input type="date" name="${L.depart}" required data-depart></label>
@@ -146,7 +146,7 @@ export function renderClient(site, lang, ctx) {
     formInner = `<iframe class="engine" src="${esc(booking.embedUrl)}" title="${L.bookingTitle}" loading="lazy"></iframe>`;
   } else {
     const roomOpts = has(site.rooms) ? `<label>${L.room}<select name="${L.room}" data-price-select><option value="" data-price="0">${L.anyRoom}</option>${site.rooms
-      .map((r) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-price="${priceNumber(r.price)}">${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
+      .map((r) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-price="${priceNumber(r.price)}"${r.priceHigh && has(r.highMonths) ? ` data-price-high="${priceNumber(r.priceHigh)}" data-high="${r.highMonths.join(',')}"` : ''}>${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
     const fields = type === 'bnb'
       ? `<div class="row3"><label>${L.arrive}<input type="date" name="${L.arrive}" required data-arrive></label>
          <label>${L.depart}<input type="date" name="${L.depart}" required data-depart></label>

@@ -151,6 +151,10 @@
       },
       "features": [
         {
+          "en": "€95 a night in July and August",
+          "ga": "€95 san oíche in Iúil agus Lúnasa"
+        },
+        {
           "en": "Private en-suite with shower",
           "ga": "Seomra folctha en-suite le cith"
         },
@@ -167,7 +171,7 @@
           "ga": "Rátáil 4.84 ó 464 aoi"
         }
       ],
-      "price": "",
+      "price": "€80",
       "sleeps": 2,
       "photos": [
         {
@@ -219,7 +223,16 @@
             "ga": "Seomra folctha en-suite"
           }
         }
-      ]
+      ],
+      "priceHigh": "€95",
+      "highMonths": [
+        7,
+        8
+      ],
+      "unit": {
+        "en": "per night",
+        "ga": "san oíche"
+      }
     },
     {
       "name": {
@@ -231,6 +244,10 @@
         "ga": "Seomra suaimhneach le leaba mhéid rí, vardrús agus radharc ar an ngairdín."
       },
       "features": [
+        {
+          "en": "€95 a night in July and August",
+          "ga": "€95 san oíche in Iúil agus Lúnasa"
+        },
         {
           "en": "Private en-suite",
           "ga": "Seomra folctha en-suite príobháideach"
@@ -248,7 +265,7 @@
           "ga": "Rátáil 4.83 ó 443 aoi"
         }
       ],
-      "price": "",
+      "price": "€82",
       "sleeps": 2,
       "photos": [
         {
@@ -279,7 +296,16 @@
             "ga": "Seomra folctha en-suite"
           }
         }
-      ]
+      ],
+      "priceHigh": "€95",
+      "highMonths": [
+        7,
+        8
+      ],
+      "unit": {
+        "en": "per night",
+        "ga": "san oíche"
+      }
     },
     {
       "name": {
@@ -291,6 +317,10 @@
         "ga": "Spás don teaghlach ar fad, le leaba dhúbailte agus dhá leaba shingile, agus fuinneoga ar dhá thaobh."
       },
       "features": [
+        {
+          "en": "€170 a night in July and August",
+          "ga": "€170 san oíche in Iúil agus Lúnasa"
+        },
         {
           "en": "Private en-suite with shower",
           "ga": "Seomra folctha en-suite le cith"
@@ -308,7 +338,7 @@
           "ga": "Rátáil 4.87 ó 300 aoi"
         }
       ],
-      "price": "",
+      "price": "€150",
       "sleeps": 4,
       "photos": [
         {
@@ -346,13 +376,22 @@
             "ga": "Seomra folctha en-suite"
           }
         }
-      ]
+      ],
+      "priceHigh": "€170",
+      "highMonths": [
+        7,
+        8
+      ],
+      "unit": {
+        "en": "per night",
+        "ga": "san oíche"
+      }
     }
   ],
-  "_check_rooms": "Room names follow Mary's Airbnb numbering. Ask Mary for her direct prices per room (and whether Room 2 is let).",
+  "_check_rooms": "Prices are Mary's own Airbnb nightly prices (checked 26 Nov 2026 for Mar/May/Jul/Aug/Sep 2027 dates; Dec and Jan closed). Room names follow her Airbnb numbering.",
   "roomsNote": {
-    "en": "Prices change with the season. Ring Mary on 095 21263 for her best direct price, with no booking fees.",
-    "ga": "Athraíonn na praghsanna de réir an tséasúir. Glaoigh ar Mary ar 095 21263 chun a praghas díreach is fearr a fháil, gan táillí áirithinte."
+    "en": "Prices are for the room, per night. Book direct with Mary by phone: no booking fees, and you pay when you arrive, by cash or card.",
+    "ga": "Is don seomra, in aghaidh na hoíche, atá na praghsanna. Cuir in áirithe go díreach le Mary ar an bhfón: gan táillí áirithinte, agus íocann tú nuair a shroicheann tú, le hairgead tirim nó le cárta."
   },
   "reviews": [
     {
@@ -795,8 +834,8 @@
     }
   ],
   "bookingIntro": {
-    "en": "Pick your dates and room, then tap the button to ring Mary on her landline. She’ll confirm your room and her best direct price there and then, with no booking fees.",
-    "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra agus a praghas díreach is fearr láithreach, gan táillí áirithinte."
+    "en": "Pick your dates and room, then tap the button to ring Mary on her landline. She’ll confirm your room there and then, with no booking fees, and you pay when you arrive.",
+    "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra láithreach, gan táillí áirithinte, agus íocann tú nuair a shroicheann tú."
   },
   "host": "Mary",
   "_payment": "Guests pay Mary directly on arrival, cash or card. Confirm with Mary that she has a card machine (e.g. SumUp). No online payment, nothing for Mary to set up."

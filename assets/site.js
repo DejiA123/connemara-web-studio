@@ -34,9 +34,13 @@
     function update() {
       if (!est) return;
       var n = nights();
-      var p = roomSel ? Number(roomSel.selectedOptions[0].dataset.price || 0) : 0;
+      var o = roomSel ? roomSel.selectedOptions[0].dataset : {};
+      var p = Number(o.price || 0), ph = Number(o.priceHigh || 0), hi = (o.high || '').split(',').map(Number);
       if (n <= 0) { est.textContent = ''; return; }
-      var total = p ? '€' + (n * p).toLocaleString('en-IE') : '';
+      // add up night by night, so summer nights use the summer price
+      var sum = 0, d = new Date(arrive.value + 'T12:00:00');
+      for (var k = 0; k < n; k++) { sum += ph && hi.indexOf(d.getMonth() + 1) > -1 ? ph : p; d.setDate(d.getDate() + 1); }
+      var total = p ? '€' + sum.toLocaleString('en-IE') : '';
       if (lang === 'ga') est.textContent = n + ' oíche' + (total ? ' · thart ar ' + total : '');
       else est.textContent = n + ' night' + (n === 1 ? '' : 's') + (total ? ' · approx. ' + total : '');
     }
