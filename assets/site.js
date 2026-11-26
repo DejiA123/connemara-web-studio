@@ -50,6 +50,14 @@
         });
       });
     }
+    form.querySelectorAll('[data-copy]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var el = b.parentNode.querySelector('[data-copy-v]');
+        var v = el.hasAttribute('data-bt-ref') ? el.textContent : el.textContent.replace(/\s+/g, ''); // IBAN copied without spaces
+        var done2 = function () { var t = b.textContent; b.textContent = lang === 'ga' ? 'Cóipeáilte ✓' : 'Copied ✓'; setTimeout(function () { b.textContent = t; }, 1500); };
+        if (navigator.clipboard) navigator.clipboard.writeText(v).then(done2, done2); else done2();
+      });
+    });
     var paidOk = form.querySelector('[data-paid]');
     if (paidOk && /[?&]paid=1/.test(location.search)) { paidOk.hidden = false; setTimeout(function () { paidOk.scrollIntoView({ block: 'center' }); }, 300); }
 
@@ -68,6 +76,14 @@
       for (var k = 0; k < n; k++) { sum += ph && hi.indexOf(d.getMonth() + 1) > -1 ? ph : p; d.setDate(d.getDate() + 1); }
       var total = p ? '€' + sum.toLocaleString('en-IE') : '';
       if (pay) { pay.hidden = !(p && sum > 0); if (payAmt) payAmt.textContent = total; }
+      var bt = form.querySelector('[data-bt]');
+      if (bt && arrive.value) {
+        // reference shows room + arrival, e.g. "CF R1 18APR", so the owner knows the booking from the bank statement
+        var a0 = new Date(arrive.value + 'T12:00:00'), rid = (o.id || '').replace(/^room/i, 'R').toUpperCase();
+        var ref = [bt.dataset.btPrefix, rid, ('0' + a0.getDate()).slice(-2) + ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][a0.getMonth()]].filter(Boolean).join(' ');
+        bt.querySelector('[data-bt-ref]').textContent = ref;
+        bt.querySelector('[data-bt-amt]').textContent = total;
+      }
       if (lang === 'ga') est.textContent = n + ' oíche' + (total ? ' · thart ar ' + total : '');
       else est.textContent = n + ' night' + (n === 1 ? '' : 's') + (total ? ' · approx. ' + total : '');
     }

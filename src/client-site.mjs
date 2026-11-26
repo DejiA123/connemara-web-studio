@@ -125,6 +125,24 @@ export function renderClient(site, lang, ctx) {
   if (type === 'bnb' && mode === 'call' && phone) {
     // "call" mode: the guest picks dates/room, then the site rings the owner's phone (works with a landline) and shows what to say
     const who = site.host || (lang === 'ga' ? 'linn' : 'us');
+    // bank transfer: a second way to pay, straight into the owner's account (no payment company)
+    const bt = booking.bankTransfer;
+    const bankTransferBox = () => {
+      if (!bt || (!bt.iban && !isSample)) return '';
+      const g = lang === 'ga';
+      const val = (v, ph) => (v ? `<span data-copy-v>${esc(v)}</span><button type="button" class="bt-copy" data-copy>${g ? 'Cóipeáil' : 'Copy'}</button>` : `<i class="bt-ph">${ph}</i>`);
+      return `<details class="bt" data-bt data-bt-prefix="${esc(bt.refPrefix || 'BK')}"${booking.cardPayments ? '' : ' open'}><summary>${booking.cardPayments ? (g ? 'Nó íoc le haistriú bainc' : 'Or pay by bank transfer') : (g ? 'Íoc le haistriú bainc' : 'Pay by bank transfer')}</summary><div class="bt-in">
+        <ol class="bt-steps"><li>${g ? `Glaoigh ar ${esc(who)} ar <a href="tel:${esc(telHref(phone))}">${esc(phone)}</a> chun do sheomra a choinneáil.` : `Ring ${esc(who)} on <a href="tel:${esc(telHref(phone))}">${esc(phone)}</a> to hold your room.`}</li>
+        <li>${g ? 'Seol' : 'Send'} <b data-bt-amt></b> ${g ? 'chuig:' : 'to:'}</li></ol>
+        <dl class="bt-dl">
+          <dt>${g ? 'Ainm an chuntais' : 'Account name'}</dt><dd>${val(bt.accountName, g ? 'Ainm chuntas Mary anseo' : 'Mary’s account name goes here')}</dd>
+          <dt>IBAN</dt><dd>${val(bt.iban, g ? 'IBAN Mary anseo' : 'Mary’s IBAN goes here')}</dd>
+          ${bt.bic || isSample ? `<dt>BIC</dt><dd>${val(bt.bic, g ? 'BIC anseo' : 'BIC goes here')}</dd>` : ''}
+          <dt>${g ? 'Tagairt' : 'Reference'}</dt><dd><span data-copy-v data-bt-ref></span><button type="button" class="bt-copy" data-copy>${g ? 'Cóipeáil' : 'Copy'}</button></dd>
+        </dl>
+        <p class="small">${g ? `Deimhníonn ${esc(who)} d’áirithint chomh luath agus a thagann an t-airgead. Úsáid an tagairt ionas go mbeidh a fhios aici gur tusa atá ann. D’fhéadfadh do bhanc táille a ghearradh ar aistrithe ó lasmuigh den limistéar euro.` : `${esc(who)} confirms your booking as soon as the money arrives. Use the reference so she knows it’s you. Your bank may charge a fee for transfers from outside the euro area.`}</p>
+      </div></details>`;
+    };
     const roomOpts = has(site.rooms) ? `<label>${L.room}<select name="${L.room}" data-price-select><option value="" data-price="0">${L.anyRoom}</option>${site.rooms
       .map((r, ri) => `<option value="${esc(T(r.name, lang))}" data-key="${esc(T(r.name, 'en'))}" data-id="${esc(r.id || `room${ri + 1}`)}" data-price="${priceNumber(r.price)}"${r.priceHigh && has(r.highMonths) ? ` data-price-high="${priceNumber(r.priceHigh)}" data-high="${r.highMonths.join(',')}"` : ''}>${esc(T(r.name, lang))}${r.price ? ` (${esc(r.price)})` : ''}</option>`).join('')}</select></label>` : '';
     const snap = isSample && booking.liveAvailability && site.availabilitySnapshot ? JSON.stringify(site.availabilitySnapshot) : '';
@@ -148,13 +166,14 @@ export function renderClient(site, lang, ctx) {
         <p class="small">${lang === 'ga' ? `Mura bhfreagraíonn ${esc(who)} láithreach, fág teachtaireacht le d’ainm, d’uimhir agus do dhátaí, nó bain triail eile as ar ball.` : `If ${esc(who)} can’t answer straight away, leave a message with your name, number and dates, or try again a little later.`}</p>
         ${isSample ? `<p class="small cc-sample">${lang === 'ga' ? 'Suíomh samplach: ar an suíomh beo, glaonn an cnaipe seo ar an uimhir thuas.' : 'Sample site: on the live site this button rings the number above.'}</p>` : ''}
       </div>
-      ${booking.cardPayments ? `<div class="pay-box" data-pay hidden>
+      ${booking.cardPayments || bt ? `<div class="pay-box" data-pay hidden>
         <p class="pb-h" data-pb-h data-live-text="${lang === 'ga' ? '✓ Tá do dhátaí saor! Cuir in áirithe anois:' : '✓ Your dates are free! Book now:'}">${lang === 'ga' ? `${esc(who)} tar éis do dhátaí a dheimhniú?` : `${esc(who)} has confirmed your dates?`}</p>
-        <button type="button" class="btn btn-lg btn-pay" data-pay-btn data-slug="${esc(site.slug)}">${icon('shield', 20)} <span>${lang === 'ga' ? 'Íoc' : 'Pay'} <b data-pay-amt></b> ${lang === 'ga' ? 'go slán le cárta' : 'securely by card'}</span></button>
+        ${booking.cardPayments ? `        <button type="button" class="btn btn-lg btn-pay" data-pay-btn data-slug="${esc(site.slug)}">${icon('shield', 20)} <span>${lang === 'ga' ? 'Íoc' : 'Pay'} <b data-pay-amt></b> ${lang === 'ga' ? 'go slán le cárta' : 'securely by card'}</span></button>
         <p class="pb-cards"><span>Visa</span> · <span>Mastercard</span> · <span>Apple Pay</span> · <span>Google Pay</span></p>
         <p class="small">${lang === 'ga' ? `Íocaíocht shlán trí Stripe. Téann an t-airgead díreach chuig ${esc(who)}, gan táillí áirithinte.` : `Secure payment by Stripe. The money goes straight to ${esc(who)}, with no booking fees.`}</p>
         <p class="small pb-err" data-pay-err hidden></p>
-        ${isSample ? `<div class="pb-demo" data-pay-demo hidden><b>${lang === 'ga' ? 'Suíomh samplach' : 'Sample site'}</b> · ${lang === 'ga' ? `Ar an suíomh beo, osclaíonn an cnaipe seo leathanach íocaíochta slán le cárta. Téann an t-airgead díreach isteach i gcuntas bainc ${esc(who)}.` : `On the live site this button opens a secure card payment page. The money goes straight into ${esc(who)}’s bank account.`}</div>` : ''}
+        ${isSample ? `<div class="pb-demo" data-pay-demo hidden><b>${lang === 'ga' ? 'Suíomh samplach' : 'Sample site'}</b> · ${lang === 'ga' ? `Ar an suíomh beo, osclaíonn an cnaipe seo leathanach íocaíochta slán le cárta. Téann an t-airgead díreach isteach i gcuntas bainc ${esc(who)}.` : `On the live site this button opens a secure card payment page. The money goes straight into ${esc(who)}’s bank account.`}</div>` : ''}` : ''}
+        ${bankTransferBox()}
       </div>
       <div class="paid-ok" data-paid hidden>${icon('check', 22)} <div><b>${lang === 'ga' ? 'Go raibh maith agat! Fuarthas d’íocaíocht.' : 'Thank you! Your payment has been received.'}</b><br>${lang === 'ga' ? `Tá admháil ar a bealach chuig do ríomhphost. Feicfidh ${esc(who)} thú go luath!` : `A receipt is on its way to your email. ${esc(who)} looks forward to welcoming you!`}</div></div>` : ''}
     </form>`;

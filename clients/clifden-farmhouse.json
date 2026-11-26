@@ -747,8 +747,8 @@
         "ga": "Faigheann tú admháil ar ríomhphost láithreach, agus cuirtear Mary ar an eolas faoi d’áirithint."
       },
       {
-        "en": "No booking fees. Pay securely by card on this website when you book (Visa, Mastercard, Apple Pay, Google Pay).",
-        "ga": "Gan táillí áirithinte. Íoc go slán le cárta ar an suíomh seo nuair a chuireann tú in áirithe (Visa, Mastercard, Apple Pay, Google Pay)."
+        "en": "No booking fees. Pay securely by card on this website when you book (Visa, Mastercard, Apple Pay, Google Pay), or by bank transfer.",
+        "ga": "Gan táillí áirithinte. Íoc go slán le cárta ar an suíomh seo nuair a chuireann tú in áirithe (Visa, Mastercard, Apple Pay, Google Pay), nó le haistriú bainc."
       },
       {
         "en": "Cot or travel cot available on request.",
@@ -756,7 +756,13 @@
       }
     ],
     "cardPayments": true,
-    "liveAvailability": true
+    "liveAvailability": true,
+    "bankTransfer": {
+      "accountName": "TODO Mary's bank account name",
+      "iban": "TODO Mary's IBAN",
+      "bic": "TODO Mary's BIC",
+      "refPrefix": "CF"
+    }
   },
   "faq": [
     {
@@ -825,8 +831,8 @@
         "ga": "Conas a íocaim?"
       },
       "a": {
-        "en": "By card on this website when you book: Visa, Mastercard, Apple Pay or Google Pay. Payment is secure, by Stripe, and goes straight to Mary. There are no booking fees.",
-        "ga": "Le cárta ar an suíomh seo nuair a chuireann tú in áirithe: Visa, Mastercard, Apple Pay nó Google Pay. Tá an íocaíocht slán, trí Stripe, agus téann sí díreach chuig Mary. Níl aon táillí áirithinte ann."
+        "en": "By card on this website when you book: Visa, Mastercard, Apple Pay or Google Pay. Payment is secure, by Stripe, and goes straight to Mary. Or pay by bank transfer: ring Mary to hold your room, then send the money to her account with the reference shown. There are no booking fees.",
+        "ga": "Le cárta ar an suíomh seo nuair a chuireann tú in áirithe: Visa, Mastercard, Apple Pay nó Google Pay. Tá an íocaíocht slán, trí Stripe, agus téann sí díreach chuig Mary. Nó íoc le haistriú bainc: glaoigh ar Mary chun do sheomra a choinneáil, ansin seol an t-airgead chuig a cuntas leis an tagairt a thaispeántar. Níl aon táillí áirithinte ann."
       }
     }
   ],
@@ -843,7 +849,7 @@
     "ga": "Roghnaigh do sheomra agus do dhátaí ar an bhféilire. Tá na hoícheanta atá curtha in áirithe cheana trasnaithe amach, mar sin tá a fhios agat láithreach go bhfuil sé saor. Ansin íoc go slán le cárta chun áirithint a dhéanamh, díreach mar a dhéanfá ar Airbnb, ach gan táillí áirithinte. Ceisteanna? Glaoigh ar Mary."
   },
   "host": "Mary",
-  "_payment": "Card payments: guests pay online via Stripe Checkout (api/checkout.js) after Mary confirms by phone. Needs Mary's own Stripe account + Vercel env var STRIPE_KEY_CLIFDEN_FARMHOUSE (see docs/card-payments-setup.md). Until then the sample shows a demo note.",
+  "_payment": "Two ways to pay, each optional: (1) card via Stripe = booking.cardPayments true + Vercel env STRIPE_KEY_CLIFDEN_FARMHOUSE; if Stripe is too much hassle for Mary, set cardPayments to false and the site works with bank transfer only. (2) bank transfer = booking.bankTransfer: fill in accountName, iban, bic (only her IBAN is needed from Mary). Guests ring Mary to hold the room, then transfer with reference e.g. 'CF R1 18APR'.",
   "availabilitySnapshot": {
     "date": "2026-11-26",
     "rooms": {

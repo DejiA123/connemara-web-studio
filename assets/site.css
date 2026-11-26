@@ -447,3 +447,20 @@ html.lb-on{overflow:hidden}
 .s-farmhouse .brand{overflow:visible}
 @media(max-width:1240px){html[lang=ga] .s-farmhouse .nav{display:none}}
 @media(max-width:1060px){.s-farmhouse .nav{display:none}}
+/* bank transfer */
+.bt{margin-top:14px;text-align:left;border-top:1px solid color-mix(in srgb,var(--warm) 30%,#fff);padding-top:12px;color:var(--ink)}
+.bt summary{cursor:pointer;font-weight:700;color:var(--accent);justify-content:center}
+.pay-box .bt:first-of-type:only-of-type{border-top:0;padding-top:0;margin-top:0}
+.bt-in{padding-top:8px}
+.bt-steps{margin:0 0 10px;padding-left:20px;line-height:1.6}
+.bt-steps a{color:var(--accent);font-weight:700}
+.bt-dl{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;margin:0 0 10px;padding:12px;background:#fff;border-radius:6px;border:1px solid var(--line);font-size:.92rem}
+.bt-dl dt{color:var(--muted)}
+.bt-dl dd{margin:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:700;word-break:break-all}
+.bt-ph{font-weight:400;color:var(--muted)}
+.bt-copy{border:1px solid var(--line);background:#fff;border-radius:99px;padding:3px 10px;font:inherit;font-size:.76rem;font-weight:600;color:var(--accent);cursor:pointer}
+.bt .small{font-size:.82rem;color:var(--muted);margin:0}
+.bt-dl{grid-template-columns:1fr;gap:2px}
+.bt-dl dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-top:8px}
+.bt-dl dt:first-child{margin-top:0}
+.bt-dl dd{word-break:normal;overflow-wrap:anywhere;justify-content:space-between;font-size:1rem}

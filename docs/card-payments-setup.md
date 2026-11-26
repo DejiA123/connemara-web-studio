@@ -95,3 +95,26 @@ To try it with no real money first, use a **test** restricted key (`rk_test_…`
 1. In `api/checkout.js`, add a line to `SITES`, e.g. `'teach-na-mara': require('../clients/teach-na-mara.json'),`
 2. In their JSON: `"booking": { "mode": "call", "cardPayments": true, "liveAvailability": true }`, each room an `"id"`, and rooms need a `"price"` (optional `"priceHigh"` + `"highMonths": [7, 8]`).
 3. Follow the steps above with their Stripe account.
+
+---
+
+# C. Bank transfer (no payment company, nothing for the owner to sign up to)
+
+Guests can also pay by bank transfer straight into the owner's account. All you need from them is their **account name, IBAN and BIC**
+(on their bank card letter, or in their banking app under "account details").
+
+In `clients/clifden-farmhouse.json`, fill in:
+```
+"bankTransfer": { "accountName": "…", "iban": "IE.. .... .... .... .... ..", "bic": "…", "refPrefix": "CF" }
+```
+The guest sees: **1. Ring Mary to hold your room. 2. Send €X to:** her details, plus a reference like **CF R1 18APR**
+(room 1, arriving 18 April), so she can tell from her bank statement which booking was paid. Each detail has a Copy button.
+
+Bank transfer can't confirm a booking by itself (the website can't see her bank account), so the guest rings first to hold the room,
+and the owner blocks the dates on Airbnb as she does for any phone booking.
+
+## If Stripe is too much hassle: run the site with bank transfer only
+
+Set `"cardPayments": false` in the client file. The card button disappears and "Pay by bank transfer" shows open in its place.
+The live calendar still works (it only needs the Airbnb / Booking.com links from section A).
+Card payments can be switched on later at any time: set `"cardPayments": true` and do section B.
