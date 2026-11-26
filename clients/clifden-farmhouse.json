@@ -705,8 +705,8 @@
         "ga": "Deimhníonn Mary d’áirithint leat ar an bhfón."
       },
       {
-        "en": "No booking fees and nothing to pay online: Mary arranges payment with you when you book.",
-        "ga": "Gan táillí áirithinte agus gan aon rud le híoc ar líne: socraíonn Mary an íocaíocht leat nuair a chuireann tú in áirithe."
+        "en": "No booking fees. You pay Mary directly when you arrive, and cash is welcome.",
+        "ga": "Gan táillí áirithinte. Íocann tú Mary go díreach nuair a shroicheann tú, agus glactar le hairgead tirim."
       },
       {
         "en": "Cot or travel cot available on request.",
@@ -774,6 +774,16 @@
         "en": "Choose your dates and room in the booking section, then tap “Call Mary to book”. Your phone rings Mary’s landline (095 21263, or +353 95 21263 from abroad) and shows you what to tell her. She confirms your room and price on the call. There are no booking fees.",
         "ga": "Roghnaigh do dhátaí agus do sheomra sa chuid áirithinte, ansin tapáil “Glaoigh ar Mary chun áirithint a dhéanamh”. Glaonn do ghuthán ar líne thalún Mary (095 21263, nó +353 95 21263 ón iasacht) agus taispeántar duit cad ba cheart a rá léi. Deimhníonn sí do sheomra agus do phraghas ar an nglao. Níl aon táillí áirithinte ann."
       }
+    },
+    {
+      "q": {
+        "en": "How do I pay?",
+        "ga": "Conas a íocaim?"
+      },
+      "a": {
+        "en": "You pay Mary directly when you arrive at the farmhouse, and cash is welcome. There’s nothing to pay online and no booking fees.",
+        "ga": "Íocann tú Mary go díreach nuair a shroicheann tú an teach feirme, agus glactar le hairgead tirim. Níl aon rud le híoc ar líne agus níl aon táillí áirithinte."
+      }
     }
   ],
   "heroExtras": [
@@ -789,5 +799,5 @@
     "ga": "Roghnaigh do dhátaí agus do sheomra, ansin tapáil an cnaipe chun glaoch ar Mary ar a líne thalún. Deimhneoidh sí do sheomra agus a praghas díreach is fearr láithreach, gan táillí áirithinte."
   },
   "host": "Mary",
-  "_payment": "No online payment, so Mary has nothing to set up. Optional later: Stripe payment link in booking.depositLink (needs Mary's own Stripe account)."
+  "_payment": "Guests pay Mary directly on arrival; cash welcome (confirm with Mary on the call: cash only, or does she also take card / bank transfer?). No online payment, so nothing for Mary to set up."
 }
