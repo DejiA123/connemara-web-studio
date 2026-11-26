@@ -168,11 +168,12 @@ export function renderClient(site, lang, ctx) {
       </div>
       ${booking.cardPayments || bt ? `<div class="pay-box" data-pay hidden>
         <p class="pb-h" data-pb-h data-live-text="${lang === 'ga' ? '✓ Tá do dhátaí saor! Cuir in áirithe anois:' : '✓ Your dates are free! Book now:'}">${lang === 'ga' ? `${esc(who)} tar éis do dhátaí a dheimhniú?` : `${esc(who)} has confirmed your dates?`}</p>
-        ${booking.cardPayments ? `        <button type="button" class="btn btn-lg btn-pay" data-pay-btn data-slug="${esc(site.slug)}">${icon('shield', 20)} <span>${lang === 'ga' ? 'Íoc' : 'Pay'} <b data-pay-amt></b> ${lang === 'ga' ? 'go slán le cárta' : 'securely by card'}</span></button>
+        ${booking.cardPayments ? `<div class="card-part" data-card-part>
+        <button type="button" class="btn btn-lg btn-pay" data-pay-btn data-slug="${esc(site.slug)}">${icon('shield', 20)} <span>${lang === 'ga' ? 'Íoc' : 'Pay'} <b data-pay-amt></b> ${lang === 'ga' ? 'go slán le cárta' : 'securely by card'}</span></button>
         <p class="pb-cards"><span>Visa</span> · <span>Mastercard</span> · <span>Apple Pay</span> · <span>Google Pay</span></p>
         <p class="small">${lang === 'ga' ? `Íocaíocht shlán trí Stripe. Téann an t-airgead díreach chuig ${esc(who)}, gan táillí áirithinte.` : `Secure payment by Stripe. The money goes straight to ${esc(who)}, with no booking fees.`}</p>
         <p class="small pb-err" data-pay-err hidden></p>
-        ${isSample ? `<div class="pb-demo" data-pay-demo hidden><b>${lang === 'ga' ? 'Suíomh samplach' : 'Sample site'}</b> · ${lang === 'ga' ? `Ar an suíomh beo, osclaíonn an cnaipe seo leathanach íocaíochta slán le cárta. Téann an t-airgead díreach isteach i gcuntas bainc ${esc(who)}.` : `On the live site this button opens a secure card payment page. The money goes straight into ${esc(who)}’s bank account.`}</div>` : ''}` : ''}
+        ${isSample ? `<div class="pb-demo" data-pay-demo hidden><b>${lang === 'ga' ? 'Suíomh samplach' : 'Sample site'}</b> · ${lang === 'ga' ? `Ar an suíomh beo, osclaíonn an cnaipe seo leathanach íocaíochta slán le cárta. Téann an t-airgead díreach isteach i gcuntas bainc ${esc(who)}.` : `On the live site this button opens a secure card payment page. The money goes straight into ${esc(who)}’s bank account.`}</div>` : ''}</div>` : ''}
         ${bankTransferBox()}
       </div>
       <div class="paid-ok" data-paid hidden>${icon('check', 22)} <div><b>${lang === 'ga' ? 'Go raibh maith agat! Fuarthas d’íocaíocht.' : 'Thank you! Your payment has been received.'}</b><br>${lang === 'ga' ? `Tá admháil ar a bealach chuig do ríomhphost. Feicfidh ${esc(who)} thú go luath!` : `A receipt is on its way to your email. ${esc(who)} looks forward to welcoming you!`}</div></div>` : ''}

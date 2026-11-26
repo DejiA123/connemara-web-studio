@@ -52,14 +52,48 @@ function parseIcs(text) {
 }
 
 function stripeKey(slug) { return process.env[envName('STRIPE_KEY_', slug)] || ''; }
+
+// ---- Stripe Connect ("2-minute setup"): one Stripe account for the studio (the platform);
+// each owner gets their own connected account by tapping a link (api/onboard.js). Their account is found by metadata.slug.
+const platformKey = () => process.env.STRIPE_PLATFORM_KEY || '';
+const stripeGet = (path, key) => fetch('https://api.stripe.com/v1/' + path, { headers: { Authorization: 'Bearer ' + key } });
+const stripePost = (path, key, form) => fetch('https://api.stripe.com/v1/' + path, { method: 'POST', headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/x-www-form-urlencoded' }, body: form });
+const acctCache = {};
+async function connectedAccount(slug, fresh) {
+  const key = platformKey();
+  if (!key) return null;
+  const c = acctCache[slug];
+  if (!fresh && c && Date.now() - c.at < 5 * 60e3) return c.acct;
+  let after = '', found = null;
+  for (let page = 0; page < 10 && !found; page++) {
+    const r = await stripeGet('accounts?limit=100' + (after ? '&starting_after=' + after : ''), key);
+    if (!r.ok) throw new Error('stripe ' + r.status);
+    const j = await r.json();
+    found = (j.data || []).find((a) => (a.metadata || {}).slug === slug) || null;
+    if (!j.has_more || !(j.data || []).length) break;
+    after = j.data[j.data.length - 1].id;
+  }
+  acctCache[slug] = { at: Date.now(), acct: found };
+  return found;
+}
+// How to take payments for this client: their own key, or the studio platform key + their connected account.
+async function stripeAuth(slug) {
+  const own = stripeKey(slug);
+  if (own) return { key: own, account: null };
+  if (!platformKey()) return null;
+  const acct = await connectedAccount(slug);
+  if (!acct || !acct.charges_enabled) return null;
+  return { key: platformKey(), account: acct.id };
+}
 function calendarSources(slug) {
   try { return JSON.parse(process.env[envName('CAL_', slug)] || '{}'); } catch { return {}; }
 }
 
 // Website bookings from the owner's Stripe account: paid ones, plus checkouts open in the last 35 minutes (hold).
 async function websiteBookings(slug) {
-  const key = stripeKey(slug);
-  if (!key) return { ok: false, list: [] };
+  const auth = await stripeAuth(slug).catch(() => null);
+  if (!auth) return { ok: false, list: [] };
+  const key = auth.key, strict = !!auth.account; // platform key sees every client's sessions: only count this client's
   const list = [];
   let after = '';
   const since = Math.floor(Date.now() / 1000) - 400 * 86400;
@@ -69,7 +103,7 @@ async function websiteBookings(slug) {
     const j = await r.json();
     for (const s of j.data || []) {
       const m = s.metadata || {};
-      if (m.slug && m.slug !== slug) continue;
+      if ((m.slug || strict) && m.slug !== slug) continue;
       const paid = s.status === 'complete' && s.payment_status === 'paid';
       const holding = s.status === 'open' && Date.now() / 1000 - s.created < 35 * 60;
       if ((paid || holding) && m.room_id && isoOk(m.arrive) && isoOk(m.depart)) list.push({ room: m.room_id, range: [m.arrive, m.depart], paid, id: s.id });
@@ -116,4 +150,4 @@ function send(res, code, obj, cache) {
   res.end(JSON.stringify(obj));
 }
 
-module.exports = { studio, SITES, T, euros, isoOk, roomId, findRoom, quote, parseIcs, stripeKey, calendarSources, websiteBookings, availability, overlaps, send, addDays, todayIso };
+module.exports = { studio, SITES, T, euros, isoOk, roomId, findRoom, quote, parseIcs, stripeKey, platformKey, connectedAccount, stripeAuth, stripeGet, stripePost, calendarSources, websiteBookings, availability, overlaps, send, addDays, todayIso };

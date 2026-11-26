@@ -464,3 +464,5 @@ html.lb-on{overflow:hidden}
 .bt-dl dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-top:8px}
 .bt-dl dt:first-child{margin-top:0}
 .bt-dl dd{word-break:normal;overflow-wrap:anywhere;justify-content:space-between;font-size:1rem}
+.card-part[hidden]{display:none}
+.pay-box.pay-off{display:none!important}

@@ -58,6 +58,19 @@
         if (navigator.clipboard) navigator.clipboard.writeText(v).then(done2, done2); else done2();
       });
     });
+    // live site: only show the card button once card payments really work (otherwise bank transfer / call, never an error)
+    var cardPart = form.querySelector('[data-card-part]');
+    if (cardPart && form.dataset.sample !== '1') {
+      cardPart.hidden = true;
+      var btBox = form.querySelector('[data-bt]');
+      var noCard = function () {
+        if (btBox) { btBox.open = true; btBox.querySelector('summary').textContent = lang === 'ga' ? 'Íoc le haistriú bainc' : 'Pay by bank transfer'; }
+        else if (pay) pay.classList.add('pay-off');
+      };
+      fetch('/api/status?slug=' + encodeURIComponent(form.dataset.slug)).then(function (r) { return r.ok ? r.json() : {}; }).then(function (j) {
+        if (j.card) cardPart.hidden = false; else noCard();
+      }).catch(noCard);
+    }
     var paidOk = form.querySelector('[data-paid]');
     if (paidOk && /[?&]paid=1/.test(location.search)) { paidOk.hidden = false; setTimeout(function () { paidOk.scrollIntoView({ block: 'center' }); }, 300); }
 

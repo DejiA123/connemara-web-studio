@@ -6,7 +6,7 @@
 // then create a Stripe Checkout page in the CLIENT'S OWN Stripe account. The nights are held for 30 minutes
 // while the guest pays. The money goes straight to the client's bank account; Stripe emails them each payment.
 // Setup: docs/card-payments-setup.md
-const { studio, SITES, T, isoOk, findRoom, quote, stripeKey, availability, overlaps, send, todayIso } = require('./_lib');
+const { studio, SITES, T, isoOk, findRoom, quote, stripeAuth, availability, overlaps, send, todayIso } = require('./_lib');
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return send(res, 405, { error: 'POST only' });
@@ -18,8 +18,8 @@ module.exports = async (req, res) => {
 
   const site = SITES[b.slug];
   if (!site || !(site.booking || {}).cardPayments) return send(res, 404, { error: say('Card payments are not set up for this site.', 'Níl íocaíochtaí cárta socraithe don suíomh seo.') });
-  const key = stripeKey(b.slug);
-  if (!key) return send(res, 503, { error: say('Card payments are not switched on yet. Please ring to book.', 'Níl íocaíochtaí cárta ar siúl fós. Glaoigh chun áirithint a dhéanamh, le do thoil.') });
+  const auth = await stripeAuth(b.slug).catch(() => null);
+  if (!auth) return send(res, 503, { error: say('Card payments are not switched on yet. Please ring to book.', 'Níl íocaíochtaí cárta ar siúl fós. Glaoigh chun áirithint a dhéanamh, le do thoil.') });
 
   const found = findRoom(site, String(b.room || ''));
   if (!found || !quote(found.room, '2030-01-01', '2030-01-02').total) return send(res, 400, { error: say('Please choose a room.', 'Roghnaigh seomra, le do thoil.') });
@@ -58,11 +58,16 @@ module.exports = async (req, res) => {
     cancel_url: base + '#book',
   });
   for (const [k, v] of Object.entries(meta)) { form.set(`metadata[${k}]`, v); form.set(`payment_intent_data[metadata][${k}]`, v); }
+  if (auth.account) {
+    // 2-minute setup (Stripe Connect): money goes to the owner's connected account, and they are the seller on the receipt
+    form.set('payment_intent_data[transfer_data][destination]', auth.account);
+    form.set('payment_intent_data[on_behalf_of]', auth.account);
+  }
 
   try {
     const r = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
-      headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { Authorization: 'Bearer ' + auth.key, 'Content-Type': 'application/x-www-form-urlencoded' },
       body: form,
     });
     const j = await r.json();

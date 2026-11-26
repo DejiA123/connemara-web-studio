@@ -41,7 +41,7 @@ and re-checks just before taking a payment, so a guest can never pay for a night
 Guests pay by card on the B&B's own website (Visa, Mastercard, Apple Pay, Google Pay), as on Airbnb.
 The money goes **straight into the owner's bank account**. No card machine needed.
 
-**How it works for the guest (Clifden Farmhouse):** pick dates and room → ring Mary to check they're free →
+**How it works for the guest (Clifden Farmhouse):** pick room and dates on the live calendar (booked nights crossed out) →
 tap **"Pay €175 securely by card"** → Stripe's secure payment page → back to Mary's site with "Thank you! Your payment has been received."
 
 The price is worked out on the server from the client's file (`clients/<slug>.json`), so a guest cannot change it.
@@ -49,52 +49,63 @@ The code is `api/checkout.js`.
 
 ---
 
-## What the owner has to do (one time, about 10 minutes, sit with them)
+## The 2-minute way (recommended): the owner just taps a link
 
-The law requires that whoever receives card payments proves who they are. Nobody can do this for them.
-It's the same check Airbnb and Booking.com did when they first set up payouts.
+You set this up **once for your studio** (about 15 minutes). After that, each owner gets a link,
+taps it on their phone, and card payments switch on by themselves. No Stripe dashboard, settings or keys for the owner.
 
-They need:
-- **An email address** (Stripe sends payment notices there)
-- **Photo ID** (passport or driving licence)
-- **Their bank account IBAN** (where the money goes)
-- **A mobile phone** for the security code (or you set up an authenticator app for them)
+### Once, for your studio (you)
+1. Log in to **your** Stripe account (Book Direct Connemara) → **Connect** → Get started → choose **Express** accounts.
+   Answer the platform questions (you build websites with booking for B&Bs; the B&B owners are paid directly).
+2. Connect → Settings → **Branding**: name "Book Direct Connemara", your icon, colour `#36543b`.
+   This is what owners see on the Stripe form, so it looks friendly and familiar.
+3. Developers → API keys → copy the **Secret key** (`sk_live_…`).
+4. **Vercel** → Settings → Environment Variables (Production):
+   - `STRIPE_PLATFORM_KEY` = that secret key
+   - `ONBOARD_KEY` = a long password you make up (it protects your setup page)
+   Then Deployments → Redeploy.
+5. Stripe → Settings → **Emails**: turn on **Successful payments** (you get an email for every booking paid)
+   and **Customer emails → Successful payments** (the guest gets a receipt).
 
-Steps, on your laptop with them beside you:
-1. Go to **dashboard.stripe.com/register** and sign up with **their** email.
-2. Business type: **Individual / sole trader**. Industry: **Hotels, B&Bs and lodging**. Website: their site address.
-3. Enter their name, date of birth, home address, IBAN, and take a photo of their ID when asked.
-4. Done. From now on they do nothing.
+### For each owner (them: about 2 minutes)
+1. Open **your setup page** on your phone:
+   `https://bookdirectconnemara.vercel.app/api/onboard?slug=clifden-farmhouse&key=YOUR-ONBOARD_KEY`
+2. Tap **Send to Mary by WhatsApp** (or text, or "Open it on this phone" and hand her your phone).
+3. Mary taps the link. Her B&B's details are already filled in. She adds:
+   the code Stripe texts to **her mobile**, date of birth, home address, **bank IBAN**, and a photo of her ID only if Stripe asks.
+4. She lands on "Thank you, Mary! You're all set." Your setup page shows **✓ Card payments ON**.
+   From that moment the card button appears on her website by itself.
 
-## What you do (about 10 minutes)
+**Have ready:** Mary's mobile phone (Stripe texts a code; a landline can't receive it), and her bank card/IBAN.
 
-1. **In their Stripe account:** Developers → API keys → **Create restricted key**.
-   Name it `website`. Set **Checkout Sessions: Write** (this includes Read, which the calendar needs to see website bookings) and leave everything else at None. Copy the key (`rk_live_…`).
-2. **In Vercel** (vercel.com → the `bookdirectconnemara` project → Settings → Environment Variables), add:
-   - Name: `STRIPE_KEY_CLIFDEN_FARMHOUSE` (for another client: `STRIPE_KEY_` + their slug in capitals, `-` → `_`)
-   - Value: the `rk_live_…` key. Environment: Production.
-3. **In their Stripe account → Settings:**
-   - *Business details → Public details*: business name "Clifden Farmhouse B&B", phone, so receipts look right.
-   - *Emails*: turn on **Successful payments** (the owner gets an email for every payment, showing room, dates and guest phone)
-     and **Customer emails → Successful payments** (the guest gets a receipt).
-   - *Payouts*: automatic, daily.
-4. **In `clients/clifden-farmhouse.json`:** remove `"sample": true` (the client file already has `"cardPayments": true`). Commit and push.
-5. **Test it:** book a 1-night stay yourself with your own card, then refund it in Stripe (Payments → the payment → Refund).
+### Good to know
+- Until Mary's setup is finished and approved, the website **hides** the card button and shows bank transfer / "Call Mary" instead,
+  so guests never see an error.
+- **Booking notices:** you get Stripe's email for every payment (room, dates, guest name and phone). The nights are also
+  blocked on Airbnb/Booking.com automatically (section A). Ring or text Mary about new bookings,
+  or, once she has an email/mobile, ask for an automatic booking notice to her to be added.
+- With this kind of setup Stripe treats you as the "platform": if a guest disputes a payment and the owner's balance can't cover it,
+  Stripe can recover it from your account. This is rare for B&B bookings. Keep the owner's refund policy clear on the site.
+- Payouts go to the owner's bank automatically. Refunds: your Stripe dashboard → Payments → the payment → Refund.
+- Fees: roughly 1.5% + 25c per European card (check stripe.com/ie/pricing). No monthly fee. Airbnb takes about 15%.
+- You can later charge your monthly fee through the same system (Stripe "application fee"). Ask when you want it.
 
-To try it with no real money first, use a **test** restricted key (`rk_test_…`) and the test card `4242 4242 4242 4242`, any future date, any CVC.
+## Alternative: the owner has their own Stripe account (more work for them)
 
-## Day to day
+Only if an owner already uses Stripe. They sign up at dashboard.stripe.com, then in **their** account:
+Developers → API keys → **Create restricted key** with **Checkout Sessions: Write**. Put it in Vercel as
+`STRIPE_KEY_CLIFDEN_FARMHOUSE` (`STRIPE_KEY_` + slug in capitals, `-` → `_`). This takes priority over the 2-minute way.
 
-- Every payment: the owner gets an email from Stripe, and the guest gets a receipt.
-- **The owner still blocks the dates on Airbnb / Booking.com.** They confirmed the booking on the phone, so they already know.
-- Refunds (cancellations): Stripe dashboard → Payments → Refund. You can do this for them.
-- Fees: Stripe takes a small cut of each card payment, roughly 1.5% + 25c for European cards and more for cards from outside Europe (check stripe.com/ie/pricing). No monthly fee. Compare: Airbnb takes about 15%.
+## Test before going live
+- Use test keys (`sk_test_…`) first, and the test card `4242 4242 4242 4242`, any future date, any CVC.
+- Then, live: book 1 night yourself with your own card, check it appears on the calendar, then refund it.
+- Remove `"sample": true` from the client file to go live (commit and push).
 
 ## To add card payments for another client
 
-1. In `api/checkout.js`, add a line to `SITES`, e.g. `'teach-na-mara': require('../clients/teach-na-mara.json'),`
+1. In `api/_lib.js`, add a line to `SITES`, e.g. `'teach-na-mara': require('../clients/teach-na-mara.json'),`
 2. In their JSON: `"booking": { "mode": "call", "cardPayments": true, "liveAvailability": true }`, each room an `"id"`, and rooms need a `"price"` (optional `"priceHigh"` + `"highMonths": [7, 8]`).
-3. Follow the steps above with their Stripe account.
+3. Open your setup page with `slug=<their slug>` and send them their link.
 
 ---
 
